@@ -58,21 +58,18 @@ body {
     }
 
     .idol-card {
-      position: relative;
       background: #4c5ff5;
       border-radius: 15px;
       padding: 15px;
       display: flex;
-      flex-direction: column; 
-      gap: 10px;
+      gap: 15px;
       align-items: flex-start;
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
       transition: transform 0.2s ease-in-out;
-      cursor: pointer;
-      overflow: visible;
     }
 
     .idol-card:hover {
       transform: translateY(-5px);
 
     }
+
