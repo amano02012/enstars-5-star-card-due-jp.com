@@ -49,7 +49,7 @@ body {
     .footer {
       margin-top: 40px;
       font-size: 1.1rem;
-      background: #2d3264;
+      background: #23286e;
       padding: 50px;
       border-radius: 10px;
       height: 350px;        
@@ -74,4 +74,5 @@ body {
 
     .idol-card:hover {
       transform: translateY(-5px);
+
     }
