@@ -3,77 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Ensemble Stars!! Music 5 star card due (JP)</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #3a4be0;
-      color: #fff;
-      margin: 0;
-      padding: 20px;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 3rem;
-      margin-bottom: 30px;
-    }
-
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
-    .idol-card {
-      background: #4c5ff5;
-      border-radius: 15px;
-      padding: 15px;
-      display: flex;
-      gap: 15px;
-      align-items: flex-start;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      transition: transform 0.2s ease-in-out;
-    }
-
-    .idol-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .idol-card img {
-      width: 70px;
-      height: 70px;
-      border-radius: 10px;
-      object-fit: cover;
-    }
-
-    .idol-info {
-      flex: 1;
-    }
-
-    .idol-info h2 {
-      margin: 0;
-      font-size: 1.2rem;
-      color: #ffe57f;
-    }
-
-    .idol-info p {
-      margin: 5px 0;
-      font-size: 0.95rem;
-    }
-
-    .footer {
-      margin-top: 40px;
-      font-size: 1.1rem;
-      background: #3442db;
-      padding: 15px;
-      border-radius: 10px;
-      height: 350px;        
-      overflow-y: auto;     
-      text-align: left;     
-    }
-  </style>
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script>
 </head>
 <body>
 
@@ -147,37 +78,9 @@
       <p>images are owned by Happy Elements K.K.</p>
     </span></h3>
 
-  <script>
-    function updateAndSort() {
-      const now = new Date().toLocaleString("en-US", { timeZone: "Asia/Tokyo" });
-      const today = new Date(now);
-
-      const container = document.getElementById("idolContainer");
-      const cards = Array.from(container.querySelectorAll(".idol-card"));
-
-      
-      cards.forEach(card => {
-        const startDate = new Date(card.getAttribute("data-start"));
-        const diffTime = today - startDate;
-        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-        card.querySelector(".days").textContent = diffDays >= 0 ? diffDays : 0;
-        card.setAttribute("data-days", diffDays >= 0 ? diffDays : 0);
-      });
-
-      
-      cards.sort((a, b) => b.getAttribute("data-days") - a.getAttribute("data-days"));
-
-      
-      container.innerHTML = "";
-      cards.forEach(card => container.appendChild(card));
-    }
-
-    updateAndSort();
-    setInterval(updateAndSort, 1000 * 60 * 60);
-  </script>
-
 </body>
 </html>
+
 
 
 
