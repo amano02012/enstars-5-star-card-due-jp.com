@@ -57,6 +57,12 @@ body {
       text-align: left;     
     }
 
+    .footer-text {
+      margin-top: -300px;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
     .idol-card {
       background: #4c5ff5;
       border-radius: 15px;
@@ -72,4 +78,5 @@ body {
       transform: translateY(-5px);
 
     }
+
 
