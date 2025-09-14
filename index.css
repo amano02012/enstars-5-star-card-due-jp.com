@@ -1,82 +1,156 @@
 body {
-      font-family: Arial, sans-serif;
-      background: #3a4be0;
-      color: #fff;
-      margin: 0;
-      padding: 20px;
-    }
+  margin: 0;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  background: #1a1c25;
+  color: #E0FBFC;
+  overflow-x: hidden;
+  position: relative;
+}
 
-    h1 {
-      text-align: center;
-      font-size: 3rem;
-      margin-bottom: 30px;
-    }
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, #ee6c4d, #ff00cc, #8338ec);
+  opacity: 0.8;
+  transform: rotate(45deg);
+  z-index: 0;
+  filter: blur(1px);
+}
 
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
+body::before {
+  top: -100px;
+  left: -80px;
+}
 
-    .idol-card:hover {
-      transform: translateY(-5px);
-    }
+body::after {
+  bottom: -120px;
+  right: -100px;
+}
 
-    .idol-card img {
-      width: 70px;
-      height: 70px;
-      border-radius: 10px;
-      object-fit: cover;
-    }
+.bg-square {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, #ff6f91, #ff9671, #ffc75f);
+  transform: rotate(45deg);
+  opacity: 0.7;
+  z-index: 0;
+  filter: blur(0.5px);
+}
 
-    .idol-info {
-      flex: 1;
-    }
+.bg-square.small {
+  width: 60px;
+  height: 60px;
+}
 
-    .idol-info h2 {
-      margin: 0;
-      font-size: 1.2rem;
-      color: #ffe57f;
-    }
-
-    .idol-info p {
-      margin: 5px 0;
-      font-size: 0.95rem;
-    }
-
-    .footer {
-      margin-top: 40px;
-      font-size: 1.1rem;
-      background: #23286e;
-      padding: 50px;
-      border-radius: 10px;
-      height: 350px;        
-      overflow-y: auto;     
-      text-align: left;     
-    }
-
-    .footer-text {
-      margin-top: -300px;
-      font-size: 2.5rem;
-      text-align: center;
-    }
-
-    .idol-card {
-      background: #4c5ff5;
-      border-radius: 15px;
-      padding: 15px;
-      display: flex;
-      gap: 15px;
-      align-items: flex-start;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      transition: transform 0.2s ease-in-out;
-    }
-
-    .idol-card:hover {
-      transform: translateY(-5px);
-
-    }
+.bg-square.one { top: 20%; left: 10%; }
+.bg-square.two { top: 50%; right: 15%; }
+.bg-square.three { bottom: 25%; left: 40%; }
+.bg-square.four { top: 70%; right: 35%; }
 
 
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #E0FBFC;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.idol-card {
+  background: rgba(61, 90, 128, 0.25); 
+  border-radius: 18px;
+  padding: 18px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
+  cursor: pointer;
+
+  border: 1px solid rgba(152, 193, 217, 0.4);
+  backdrop-filter: blur(14px) saturate(150%);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+}
+
+.idol-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.6), 0 0 20px rgba(238, 108, 77, 0.5);
+  border-color: rgba(224, 251, 252, 0.8); 
+}
+
+.idol-info h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #98c1d9, #e0fbfc, #ee6c4d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.idol-info p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  color: #e0fbfc;
+}
+
+
+
+.idol-card img {
+  width: 75px;
+  height: 75px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 3px solid #98C1D9;
+}
+
+.idol-info {
+  flex: 1;
+}
+
+.footer {
+  margin-top: 50px;
+  font-size: 1rem;
+  background: #3D5A80;
+  padding: 20px;
+  border-radius: 15px;
+  height: 250px;
+  overflow-y: auto;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  color: #E0FBFC;
+}
+
+.footer-text {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #EE6C4D; 
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footer::-webkit-scrollbar {
+  width: 8px;
+}
+.footer::-webkit-scrollbar-thumb {
+  background: #EE6C4D; 
+  border-radius: 10px;
+}
+.footer::-webkit-scrollbar-track {
+  background: #293241;
+}
