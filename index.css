@@ -1,91 +1,103 @@
 body {
   font-family: 'Poppins', sans-serif;
-  background: radial-gradient(circle at center, #111428 0%, #0b0e1a 100%);
-  color: #fff;
   margin: 0;
   padding: 20px;
+  color: #fff;
+  position: relative; 
+  min-height: 100vh;
   overflow-x: hidden;
-  position: relative;
 }
 
 body::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background:
-    radial-gradient(circle, #ff00ff 0 2px, transparent 3px) 10% 20%,
-    radial-gradient(circle, #00eaff 0 2px, transparent 3px) 40% 80%,
-    radial-gradient(circle, #ffff00 0 2px, transparent 3px) 70% 50%,
-    radial-gradient(circle, #ff6b6b 0 2px, transparent 3px) 90% 10%,
-    radial-gradient(circle, #00ffcc 0 2px, transparent 3px) 25% 60%,
-    radial-gradient(circle, #ffa500 0 2px, transparent 3px) 80% 30%;
-  background-size: 200px 200px;
-  animation: twinkle 6s infinite alternate;
-  z-index: -1;
-  opacity: 0.8;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("images/Sphere_Stage_\(Exterior\)_Full.webp") no-repeat center center;
+  background-size: cover;
+  filter: blur(8px); 
+  z-index: -1; 
 }
 
-
-
-h1 {
-  text-align: center;
-  font-size: 3rem;
-  margin-bottom: 30px;
-  color: #fdfdfd;
-  text-shadow: 0 0 5px rgba(255, 0, 255, 0.6),
-               0 0 10px rgba(0, 234, 255, 0.5);
+.h1-title {
+  text-align: left;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: linear-gradient(to right, #00e2a5, #0affb7, #7dff86); 
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7); 
 }
 
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  max-width: 1800px;
-  margin: 0 auto;
+#idol-container {
+  display: flex;
+  flex-wrap: wrap;         
+  gap: 16px;               
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  max-width: 3000px;       
+  margin: 0 auto;          
 }
 
 .idol-card {
-  background: rgba(25, 25, 50, 0.65);
-  border-radius: 20px;
-  padding: 20px;
-  display: flex;
-  gap: 15px;
-  align-items: flex-start;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(12px);
-  border: 1.5px solid rgba(255, 255, 255, 0.15);
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
-}
-
-.idol-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 10px rgba(255, 0, 255, 0.5),
-              0 0 18px rgba(0, 234, 255, 0.5),
-              0 0 28px rgba(255, 255, 100, 0.4);
-  border-image: linear-gradient(45deg, #ff66ff, #33ddff, #ffee77) 1;
+  background: #fff;
+  border: 4px solid #d1d5db;
+  border-radius: 12px;
+  width: 180px;
+  padding-bottom: 2.5rem;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .idol-card img {
-  width: 75px;
-  height: 75px;
-  border-radius: 12px;
+  width: 100%;
+  height: 200px;
   object-fit: cover;
-  border: 2px solid #fff;
-  box-shadow: 0 0 8px rgba(0, 234, 255, 0.6);
+  border-radius: 8px;
 }
 
-.idol-info h2 {
-  margin: 0;
-  font-size: 1.3rem;
-  color: #ffdd88;
-  text-shadow: 0 0 4px rgba(255, 221, 136, 0.6);
+.idol-name {
+  text-align: center;
+  margin-top: 4px;
+  font-weight: 500;
+  color: #374151;
 }
 
-.idol-info p {
-  margin: 6px 0;
-  font-size: 0.95rem;
-  color: #dff6f9;
-  text-shadow: 0 0 4px rgba(0, 234, 255, 0.4);
+.idol-description {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 300;
+  color: #111827;
+  padding: 0 3px;
 }
+
+.combo {
+  text-align: center;
+  margin-top: 4px;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background: linear-gradient(to right, #f97316, #dc2626);
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.ribbon {
+  position: absolute;
+  bottom: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 96px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 2px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.ribbon.gold { background: linear-gradient(to right, #fde047, #facc15); color: #78350f; }
+.ribbon.silver { background: linear-gradient(to right, #d1d5db, #9ca3af); color: #111827; }
+.ribbon.bronze { background: linear-gradient(to right, #fb923c, #ea580c); color: white; }
+.ribbon.ten { background: linear-gradient(to right, #bfdbfe, #60a5fa); color: #1e3a8a; }
+.ribbon.other { background: linear-gradient(to right, #00e2a5, #0affb7 57%, #7dff86); color: #0f4054; }
