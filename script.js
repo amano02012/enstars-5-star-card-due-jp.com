@@ -71,8 +71,8 @@ const idols = [{
   name: `Mao Isara`,
   avatar: `images/btn-isara_mao.webp`,
   borderColor: "#941F57",
-  startDate: `2025-07-10`,
-  description: "Latest Card: Cross Scout"
+  startDate: `2025-10-25`,
+  description: "Latest Card: Bright me up!! Scout Stage"
 },
 {
   id: 9,
