@@ -173,4 +173,10 @@ body::before {
   transform: rotate(-10deg);
   border: 2px solid white; 
   z-index: 5;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: rotate(-10deg) scale(1); }
+  50% { opacity: 0.8; transform: rotate(-10deg) scale(1.1); }
 }
