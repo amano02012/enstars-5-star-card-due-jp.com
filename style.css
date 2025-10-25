@@ -158,3 +158,19 @@ body::before {
 .ribbon.bronze { background: linear-gradient(to right, #fb923c, #ea580c); color: white; }
 .ribbon.ten { background: linear-gradient(to right, #bfdbfe, #60a5fa); color: #1e3a8a; }
 .ribbon.other { background: linear-gradient(to right, #00e2a5, #0affb7 57%, #7dff86); color: #0f4054; }
+
+.new-label {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  background: linear-gradient(135deg, #ff3d00, #ff9100);
+  color: white;
+  font-weight: bold;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transform: rotate(-10deg);
+  border: 2px solid white; 
+  z-index: 5;
+}
