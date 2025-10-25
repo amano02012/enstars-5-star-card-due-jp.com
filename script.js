@@ -450,7 +450,30 @@ const idols = [{
   startDate: `-`,
   description: "-"
 },
-];
+{
+  id: 56,
+  name: `Nozomi Madoka`,
+  avatar: `images/btn-madoka_nozomi.webp`,
+  borderColor: "#881f4a",
+  startDate: `-`,
+  description: "-"
+},
+{
+  id: 57,
+  name: `Mashu Kuon`,
+  avatar: `images/btn-kuon_mashu.webp`,
+  borderColor: "#ec938c",
+  startDate: `-`,
+  description: "-"
+},
+{
+  id: 58,
+  name: `Chitose Tsuzura`,
+  avatar: `images/btn-tsuzura_chitose.webp`,
+  borderColor: "#424355",
+  startDate: `-`,
+  description: "-"
+}];
 
 function getRibbonClass(rank) {
   if (rank === 1) return "ribbon gold";

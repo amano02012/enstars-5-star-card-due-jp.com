@@ -5,6 +5,16 @@
   font-style: normal;
 }
 
+:root {
+  color-scheme: only light;
+}
+
+@media (max-width: 600px) {
+  .idol-card {
+    width: 100%;
+  }
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
