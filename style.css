@@ -126,6 +126,33 @@ body::before {
   padding: 2px;
   border-radius: 6px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+.ribbon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  animation: shine 2s infinite;
+}
+
+/* 🔁 Animation keyframes */
+@keyframes shine {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
 }
 .ribbon.gold { background: linear-gradient(to right, #fde047, #facc15); color: #78350f; }
 .ribbon.silver { background: linear-gradient(to right, #d1d5db, #9ca3af); color: #111827; }
