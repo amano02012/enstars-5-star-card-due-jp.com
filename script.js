@@ -448,7 +448,7 @@ const idols = [{
   avatar: `images/btn-kojika_juis.webp`,
   borderColor: "#70ab5e",
   startDate: `-`,
-  description: "-"
+  description: "NEW"
 },
 {
   id: 56,
@@ -456,7 +456,7 @@ const idols = [{
   avatar: `images/btn-madoka_nozomi.webp`,
   borderColor: "#881f4a",
   startDate: `-`,
-  description: "-"
+  description: "NEW"
 },
 {
   id: 57,
@@ -464,7 +464,7 @@ const idols = [{
   avatar: `images/btn-kuon_mashu.webp`,
   borderColor: "#ec938c",
   startDate: `-`,
-  description: "-"
+  description: "NEW"
 },
 {
   id: 58,
@@ -472,7 +472,7 @@ const idols = [{
   avatar: `images/btn-tsuzura_chitose.webp`,
   borderColor: "#424355",
   startDate: `-`,
-  description: "-"
+  description: "NEW"
 }];
 
 function getRibbonClass(rank) {
