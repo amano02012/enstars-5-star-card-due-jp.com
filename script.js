@@ -381,7 +381,7 @@ const idols = [{
 {
   id: 47,
   name: `Natsume Sakasaki`,
-  avatar: `images/btn-amagi_hiiro.webp`,
+  avatar: `images/btn-sakasaki_natsume.webp`,
   borderColor: "#D70035",
   startDate: `2025-05-31`,
   description: "Latest Card: Unit Event"
