@@ -67,140 +67,140 @@ const idolList = [
   name: `Midori Takamine`,
   avatar: `images/btn-takamine_midori.webp`,
   borderColor: "#00533F",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 9, four: 14, three: 17 }
 },
 {
   id: 11,
   name: `Shinobu Sengoku`,
   avatar: `images/btn-sengoku_shinobu.webp`,
   borderColor: "#FFDC00",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 10, four: 16, three: 14 }
 },
 {
   id: 12,
   name: `Chiaki Morisawa`,
   avatar: `images/btn-morisawa_chiaki.webp`,
   borderColor: "#E60033",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 11, four: 15, three: 16 }
 },
 {
   id: 13,
   name: `Kanata Shinkai`,
   avatar: `images/btn-shinkai_kanata.webp`,
   borderColor: "#008DB7",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 9, four: 17, three: 15 }
 },
 {
   id: 14,
   name: `Hiiro Amagi`,
   avatar: `images/btn-amagi_hiiro.webp`,
   borderColor: "#BA2636",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 10, four: 15, three: 15 }
 },
 {
   id: 15,
   name: `Aira Shiratori`,
   avatar: `images/btn-shiratori_aira.webp`,
   borderColor: "#FFF1CF",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 9, four: 14, three: 16 }
 },
 {
   id: 16,
   name: `Mayoi Ayase`,
   avatar: `images/btn-ayase_mayoi.webp`,
   borderColor: "#522F60",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 9, four: 15, three: 16 }
 },
 {
   id: 17,
   name: `Tatsumi Kazehaya`,
   avatar: `images/btn-kazehaya_tatsumi.webp`,
   borderColor: "#7EBEA5",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 8, four: 15, three: 14 }
 },
 {
   id: 18,
   name: `Nagisa Ran`,
   avatar: `images/btn-ran_nagisa.webp`,
   borderColor: "#A73836",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 11, four: 13, three: 19 }
 },
 {
   id: 19,
   name: `Hiyori Tomoe`,
   avatar: `images/btn-tomoe_hiyori.webp`,
   borderColor: "#B8D200",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 9, four: 15, three: 16 }
 },
 {
   id: 20,
   name: `Ibara Saegusa`,
   avatar: `images/btn-saegusa_ibara.webp`,
   borderColor: "#74325C",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 11, four: 14, three: 16 }
 },
 {
   id: 21,
   name: `Jun Sazanami`,
   avatar: `images/btn-sazanami_jun.webp`,
   borderColor: "#192F60",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 10, four: 15, three: 15 }
 },
 {
   id: 22,
   name: `Shu Itsuki`,
   avatar: `images/btn-itsuki_shu.webp`,
   borderColor: "#E3ACAE",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 13, four: 15, three: 14 }
 },
 {
   id: 23,
   name: `Mika Kagehira`,
   avatar: `images/btn-kagehira_mika.webp`,
   borderColor: "#006A6C",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 11, four: 14, three: 17 }
 },
 {
   id: 24,
   name: `Hinata Aoi`,
   avatar: `images/btn-aoi_hinata.webp`,
   borderColor: "#EB6EA0",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 11, four: 16, three: 15 }
 },
 {
   id: 25,
   name: `Yuta Aoi`,
   avatar: `images/btn-aoi_yuta.webp`,
   borderColor: "#00A1E9",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 11, four: 16, three: 14 }
 },
 {
   id: 26,
   name: `Rinne Amagi`,
   avatar: `images/btn-amagi_rinne.webp`,
   borderColor: "#B7282E",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 11, four: 14, three: 15 }
 },
 {
   id: 27,
   name: `HiMERU`,
   avatar: `images/btn-himeru.webp`,
   borderColor: "#89C3EB",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 9, four: 15, three: 14 }
 },
 {
   id: 28,
   name: `Kohaku Oukawa`,
   avatar: `images/btn-oukawa_kohaku.webp`,
   borderColor: "#F4B3C2",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 9, four: 18, three: 16 }
 },
 {
   id: 29,
   name: `Niki Shiina`,
   avatar: `images/btn-shiina_niki.webp`,
   borderColor: "#507EA5",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 9, four: 16, three: 15 }
 },
 {
   id: 30,

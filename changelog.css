@@ -178,6 +178,5 @@ body::before {
 }
 
 .changelog-entry.active .changelog-content {
-  max-height: 200px;
   padding-bottom: 1rem;
 }
