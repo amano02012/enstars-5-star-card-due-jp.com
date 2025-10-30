@@ -25,7 +25,7 @@ const idolList = [
   name: `Yuzuru Fushimi`,
   avatar: `images/btn-fushimi_yuzuru.webp`,
   borderColor: "#3E62AD",
-  stars: { five: 11, four: 15, three: 16 }
+  stars: { five: 11, four: 16, three: 16 }
 },
 {
   id: 5,
@@ -53,7 +53,7 @@ const idolList = [
   name: `Mao Isara`,
   avatar: `images/btn-isara_mao.webp`,
   borderColor: "#941F57",
-  stars: { five: 11, four: 16, three: 16 }
+  stars: { five: 11, four: 16, three: 17 }
 },
 {
   id: 9,
@@ -207,175 +207,175 @@ const idolList = [
   name: `Rei Sakuma`,
   avatar: `images/btn-sakuma_rei.webp`,
   borderColor: "#47266E",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 12, four: 17, three: 16 }
 },
 {
   id: 31,
   name: `Kaoru Hakaze`,
   avatar: `images/btn-hakaze_kaoru.webp`,
   borderColor: "#FDD35C",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 11, four: 14, three: 19 }
 },
 {
   id: 32,
   name: `Koga Oogami`,
   avatar: `images/btn-ogami_koga.webp`,
   borderColor: "#C9CACA",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 10, four: 18, three: 17 }
 },
 {
   id: 33,
   name: `Adonis Otogari`,
   avatar: `images/btn-otogari_adonis.webp`,
   borderColor: "#915DA3",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 10, four: 15, three: 18 }
 },
 {
   id: 34,
   name: `Tomoya Mashiro`,
   avatar: `images/btn-mashiro_tomoya.webp`,
   borderColor: "#EEDCB3",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 12, four: 13, three: 19 }
 },
 {
   id: 35,
   name: `Nazuna Nito`,
   avatar: `images/btn-nito_nazuna.webp`,
   borderColor: "#FFEC47",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 10, four: 15, three: 18 }
 },
 {
   id: 36,
   name: `Mitsuru Tenma`,
   avatar: `images/btn-tenma_mitsuru.webp`,
   borderColor: "#ED6D35",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 10, four: 15, three: 18 }
 },
 {
   id: 37,
   name: `Hajime Shino`,
   avatar: `images/btn-shino_hajime.webp`,
   borderColor: "#CAB8D9",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 13, four: 16, three: 18 }
 },
 {
   id: 38,
   name: `Keito Hasumi`,
   avatar: `images/btn-hasumi_keito.webp`,
   borderColor: "#316745",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 11, four: 14, three: 15 }
 },
 {
   id: 39,
   name: `Kuro Kiryu`,
   avatar: `images/btn-kiryu_kuro.webp`,
   borderColor: "#E83929",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 10, four: 15, three: 17 }
 },
 {
   id: 40,
   name: `Souma Kanzaki`,
   avatar: `images/btn-kanzaki_souma.webp`,
   borderColor: "#5654A2",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 9, four: 16, three: 15 }
 },
 {
   id: 41,
   name: `Ibuki Taki`,
   avatar: `images/btn-taki_ibuki.webp`,
   borderColor: "#66BBCC",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 1, four: 5, three: 2 }
 },
 {
   id: 42,
   name: `Tsukasa Suou`,
   avatar: `images/btn-suou_tsukasa.webp`,
   borderColor: "#942343",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 12, four: 15, three: 16 }
 },
 {
   id: 43,
   name: `Leo Tsukinaga`,
   avatar: `images/btn-tsukinaga_leo.webp`,
   borderColor: "#EC6D51",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 11, four: 16, three: 16 }
 },
 {
   id: 44,
   name: `Izumi Sena`,
   avatar: `images/btn-sena_izumi.webp`,
   borderColor: "#BBDBF3",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 11, four: 16, three: 16 }
 },
 {
   id: 45,
   name: `Ritsu Sakuma`,
   avatar: `images/btn-sakuma_ritsu.webp`,
   borderColor: "#001E43",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 12, four: 17, three: 15 }
 },
 {
   id: 46,
   name: `Arashi Narukami`,
   avatar: `images/btn-narukami_arashi.webp`,
   borderColor: "#EDDE7B",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 11, four: 15, three: 17 }
 },
 {
   id: 47,
   name: `Natsume Sakasaki`,
   avatar: `images/btn-sakasaki_natsume.webp`,
   borderColor: "#D70035",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 12, four: 14, three: 14 }
 },
 {
   id: 48,
   name: `Tsumugi Aoba`,
   avatar: `images/btn-aoba_tsumugi.webp`,
   borderColor: "#00608D",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 10, four: 15, three: 17 }
 },
 {
   id: 49,
   name: `Sora Harukawa`,
   avatar: `images/btn-harukawa_sora.webp`,
   borderColor: "#FFF352",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 10, four: 16, three: 15 }
 },
 {
   id: 50,
   name: `Madara Mikejima`,
   avatar: `images/btn-mikejima_madara.webp`,
   borderColor: "#622D18",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 14, four: 15, three: 13 }
 },
 {
   id: 51,
   name: `Esu Sagiri`,
   avatar: `images/btn-esu.webp`,
   borderColor: "#80FFF4",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 3, four: 4, three: 4 }
 },
 {
   id: 52,
   name: `Kanna Natsu`,
   avatar: `images/btn-kanna.webp`,
   borderColor: "#8ACCB8",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 2, four: 4, three: 5 }
 },
 {
   id: 53,
   name: `Fuyume Hanamura`,
   avatar: `images/btn-yume.webp`,
   borderColor: "#CCADD9",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 2, four: 5, three: 4 }
 },
 {
   id: 54,
   name: `Raika Hojo`,
   avatar: `images/btn-raika.webp`,
   borderColor: "#298C7C",
-  stars: { five: "-", four: "-", three: "-" }
+  stars: { five: 2, four: 5, three: 2 }
 },
 {
   id: 55,
