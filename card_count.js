@@ -67,7 +67,7 @@ const idolList = [
   name: `Midori Takamine`,
   avatar: `images/btn-takamine_midori.webp`,
   borderColor: "#00533F",
-  stars: { five: 9, four: 14, three: 17 }
+  stars: { five: 10, four: 14, three: 17 }
 },
 {
   id: 11,

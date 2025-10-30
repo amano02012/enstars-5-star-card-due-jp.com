@@ -87,8 +87,8 @@ const idols = [{
   name: `Midori Takamine`,
   avatar: `images/btn-takamine_midori.webp`,
   borderColor: "#00533F",
-  startDate: `2024-12-14`,
-  description: "Latest Card: Cross Scout"
+  startDate: `2025-10-30`,
+  description: "Latest Card: Theme Scout"
 },
 {
   id: 11,
