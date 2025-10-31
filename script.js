@@ -159,8 +159,8 @@ const idols = [{
   name: `Hiyori Tomoe`,
   avatar: `images/btn-tomoe_hiyori.webp`,
   borderColor: "#B8D200",
-  startDate: `2025-01-14`,
-  description: "Latest Card: Cross Scout"
+  startDate: `2025-10-31`,
+  description: "Latest Card: Unit Event"
 },
 {
   id: 20,

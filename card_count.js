@@ -123,28 +123,28 @@ const idolList = [
   name: `Nagisa Ran`,
   avatar: `images/btn-ran_nagisa.webp`,
   borderColor: "#A73836",
-  stars: { five: 11, four: 13, three: 19 }
+  stars: { five: 11, four: 13, three: 20 }
 },
 {
   id: 19,
   name: `Hiyori Tomoe`,
   avatar: `images/btn-tomoe_hiyori.webp`,
   borderColor: "#B8D200",
-  stars: { five: 9, four: 15, three: 16 }
+  stars: { five: 10, four: 15, three: 16 }
 },
 {
   id: 20,
   name: `Ibara Saegusa`,
   avatar: `images/btn-saegusa_ibara.webp`,
   borderColor: "#74325C",
-  stars: { five: 11, four: 14, three: 16 }
+  stars: { five: 11, four: 14, three: 17 }
 },
 {
   id: 21,
   name: `Jun Sazanami`,
   avatar: `images/btn-sazanami_jun.webp`,
   borderColor: "#192F60",
-  stars: { five: 10, four: 15, three: 15 }
+  stars: { five: 10, four: 16, three: 15 }
 },
 {
   id: 22,
