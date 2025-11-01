@@ -116,7 +116,7 @@ const idolList = [
   name: `Tatsumi Kazehaya`,
   avatar: `images/btn-kazehaya_tatsumi.webp`,
   borderColor: "#7EBEA5",
-  stars: { five: 8, four: 15, three: 14 }
+  stars: { five: 9, four: 15, three: 14 }
 },
 {
   id: 18,
@@ -172,7 +172,7 @@ const idolList = [
   name: `Yuta Aoi`,
   avatar: `images/btn-aoi_yuta.webp`,
   borderColor: "#00A1E9",
-  stars: { five: 11, four: 16, three: 14 }
+  stars: { five: 12, four: 16, three: 14 }
 },
 {
   id: 26,
@@ -270,7 +270,7 @@ const idolList = [
   name: `Kuro Kiryu`,
   avatar: `images/btn-kiryu_kuro.webp`,
   borderColor: "#E83929",
-  stars: { five: 10, four: 15, three: 17 }
+  stars: { five: 11, four: 15, three: 17 }
 },
 {
   id: 40,

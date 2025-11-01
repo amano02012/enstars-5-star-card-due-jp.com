@@ -135,7 +135,7 @@ body::before {
 
 .changelog-entry {
   background: white;
-  border: 3px solid #7a0b1d;
+  border: 3px linear-gradient(to right, #00e2a5, #0affb7, #7dff86);
   border-radius: 10px;
   margin-bottom: 1rem;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
@@ -144,7 +144,7 @@ body::before {
 
 .changelog-date {
   width: 100%;
-  background: #7a0b1d;
+  background: #0f4054;
   color: white;
   font-size: 1.1rem;
   font-weight: bold;
@@ -157,7 +157,7 @@ body::before {
 }
 
 .changelog-date:hover {
-  background: #9c1026;
+  background: #1a6685;
 }
 
 .changelog-content {
