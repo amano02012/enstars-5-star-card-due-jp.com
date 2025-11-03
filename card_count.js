@@ -447,4 +447,10 @@ idolList.forEach((idol) => {
   card.appendChild(info);
 
   listContainer.appendChild(card);
-});
+
+  if (idol.isNew) {
+  const newLabel = document.createElement("div");
+  newLabel.className = "new-label";
+  newLabel.textContent = "NEW";
+  card.appendChild(newLabel);
+}});
