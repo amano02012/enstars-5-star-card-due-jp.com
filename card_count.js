@@ -102,7 +102,7 @@ const idolList = [
   name: `Aira Shiratori`,
   avatar: `images/btn-shiratori_aira.webp`,
   borderColor: "#FFF1CF",
-  stars: { five: 9, four: 14, three: 16 }
+  stars: { five: 10, four: 14, three: 16 }
 },
 {
   id: 16,
@@ -165,7 +165,7 @@ const idolList = [
   name: `Hinata Aoi`,
   avatar: `images/btn-aoi_hinata.webp`,
   borderColor: "#EB6EA0",
-  stars: { five: 11, four: 16, three: 15 }
+  stars: { five: 12, four: 16, three: 15 }
 },
 {
   id: 25,
@@ -263,7 +263,7 @@ const idolList = [
   name: `Keito Hasumi`,
   avatar: `images/btn-hasumi_keito.webp`,
   borderColor: "#316745",
-  stars: { five: 11, four: 14, three: 15 }
+  stars: { five: 12, four: 14, three: 15 }
 },
 {
   id: 39,
