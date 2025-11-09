@@ -312,12 +312,13 @@ body::before {
 }
 
 .modal-content img {
-  width: 640px;
-  height: 800px;
-  max-width: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 15px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto 1rem;
 }
 
 .modal-content h2 {
