@@ -95,7 +95,7 @@ const idolList = [
   name: `Hiiro Amagi`,
   avatar: `images/btn-amagi_hiiro.webp`,
   borderColor: "#BA2636",
-  stars: { five: 10, four: 15, three: 15 }
+  stars: { five: 11, four: 15, three: 15 }
 },
 {
   id: 15,
@@ -116,7 +116,7 @@ const idolList = [
   name: `Tatsumi Kazehaya`,
   avatar: `images/btn-kazehaya_tatsumi.webp`,
   borderColor: "#7EBEA5",
-  stars: { five: 9, four: 15, three: 14 }
+  stars: { five: 9, four: 15, three: 15 }
 },
 {
   id: 18,
@@ -144,7 +144,7 @@ const idolList = [
   name: `Jun Sazanami`,
   avatar: `images/btn-sazanami_jun.webp`,
   borderColor: "#192F60",
-  stars: { five: 10, four: 16, three: 15 }
+  stars: { five: 10, four: 16, three: 16 }
 },
 {
   id: 22,
@@ -214,7 +214,7 @@ const idolList = [
   name: `Kaoru Hakaze`,
   avatar: `images/btn-hakaze_kaoru.webp`,
   borderColor: "#FDD35C",
-  stars: { five: 11, four: 14, three: 19 }
+  stars: { five: 11, four: 14, three: 20 }
 },
 {
   id: 32,
@@ -277,7 +277,7 @@ const idolList = [
   name: `Souma Kanzaki`,
   avatar: `images/btn-kanzaki_souma.webp`,
   borderColor: "#5654A2",
-  stars: { five: 9, four: 16, three: 15 }
+  stars: { five: 10, four: 16, three: 15 }
 },
 {
   id: 41,
@@ -326,7 +326,7 @@ const idolList = [
   name: `Natsume Sakasaki`,
   avatar: `images/btn-sakasaki_natsume.webp`,
   borderColor: "#D70035",
-  stars: { five: 12, four: 14, three: 14 }
+  stars: { five: 12, four: 14, three: 15 }
 },
 {
   id: 48,
@@ -361,7 +361,7 @@ const idolList = [
   name: `Kanna Natsu`,
   avatar: `images/btn-kanna.webp`,
   borderColor: "#8ACCB8",
-  stars: { five: 2, four: 4, three: 5 }
+  stars: { five: 2, four: 4, three: 6 }
 },
 {
   id: 53,
