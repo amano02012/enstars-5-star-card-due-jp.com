@@ -335,10 +335,10 @@ const idols = [{
   name: `Adonis Otogari`,
   avatar: `images/btn-otogari_adonis.webp`,
   borderColor: "#915DA3",
-  startDate: `2024-11-10`,
-  description: "Latest Card: Cross Scout",
-  detailsImage: "cards/UNDEAD/Seeker's_Willpower_Adonis_Otogari.webp",
-  detailsDescription: "(Seeker's Willpower) Adonis Otogari"
+  startDate: `2025-11-10`,
+  description: "Latest Card: Bright me up!! Scout Stage",
+  detailsImage: "cards/UNDEAD/夢の周りにあるもの_Adonis_Otogari.webp",
+  detailsDescription: "[夢の周りにあるもの] Adonis Otogari"
 },
 {
   id: 34,

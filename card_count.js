@@ -186,7 +186,7 @@ const idolList = [
   name: `HiMERU`,
   avatar: `images/btn-himeru.webp`,
   borderColor: "#89C3EB",
-  stars: { five: 9, four: 15, three: 14 }
+  stars: { five: 9, four: 16, three: 14 }
 },
 {
   id: 28,
@@ -228,7 +228,7 @@ const idolList = [
   name: `Adonis Otogari`,
   avatar: `images/btn-otogari_adonis.webp`,
   borderColor: "#915DA3",
-  stars: { five: 10, four: 15, three: 18 }
+  stars: { five: 11, four: 15, three: 18 }
 },
 {
   id: 34,
@@ -326,7 +326,7 @@ const idolList = [
   name: `Natsume Sakasaki`,
   avatar: `images/btn-sakasaki_natsume.webp`,
   borderColor: "#D70035",
-  stars: { five: 12, four: 14, three: 15 }
+  stars: { five: 12, four: 14, three: 16 }
 },
 {
   id: 48,
