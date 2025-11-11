@@ -155,7 +155,7 @@ body::before {
   display: flex;
   flex-wrap: wrap;         
   gap: 16px;               
-  justify-content: flex-start; 
+  justify-content: center; 
   align-items: flex-start; 
   max-width: 3000px;       
   margin: 0 auto;          
