@@ -355,10 +355,10 @@ const idols = [{
   name: `Nazuna Nito`,
   avatar: `images/btn-nito_nazuna.webp`,
   borderColor: "#FFEC47",
-  startDate: `2025-02-27`,
-  description: "Latest Card: Cross Scout",
-  detailsImage: "cards/Ra_bits/Concerned_Talk_Nazuna_Nito.webp",
-  detailsDescription: "(Concerned Talk) Nazuna Nito"
+  startDate: `2025-11-15`,
+  description: "Latest Card: Shuffle Event",
+  detailsImage: "cards/Ra_bits/フレフレレスQ_Nazuna_Nito.webp",
+  detailsDescription: "[フレフレレスQ] Nazuna Nito"
 },
 {
   id: 36,
@@ -435,10 +435,10 @@ const idols = [{
   name: `Leo Tsukinaga`,
   avatar: `images/btn-tsukinaga_leo.webp`,
   borderColor: "#EC6D51",
-  startDate: `2025-06-14`,
-  description: "Latest Card: Cross Scout",
-  detailsImage: "cards/Knights/Fairy's_Aid_Leo_Tsukinaga.webp",
-  detailsDescription: "(Fairy's Aid) Leo Tsukinaga"
+  startDate: `2025-11-14`,
+  description: "Latest Card: Theme Scout",
+  detailsImage: "cards/Knights/ゴーファイレスQ_Leo_Tsukinaga.webp",
+  detailsDescription: "[ゴーファイレスQ] Leo Tsukinaga"
 },
 {
   id: 44,

@@ -18,7 +18,7 @@ const idolList = [
   name: `Tori Himemiya`,
   avatar: `images/btn-himemiya_tori.webp`,
   borderColor: "#F5B2B2",
-  stars: { five: 11, four: 15, three: 15 }
+  stars: { five: 11, four: 16, three: 15 }
 },
 {
   id: 4,
@@ -46,7 +46,7 @@ const idolList = [
   name: `Makoto Yuuki`,
   avatar: `images/btn-yuuki_makoto.webp`,
   borderColor: "#65AB31",
-  stars: { five: 10, four: 17, three: 18 }
+  stars: { five: 10, four: 18, three: 18 }
 },
 {
   id: 8,
@@ -109,7 +109,7 @@ const idolList = [
   name: `Mayoi Ayase`,
   avatar: `images/btn-ayase_mayoi.webp`,
   borderColor: "#522F60",
-  stars: { five: 9, four: 15, three: 16 }
+  stars: { five: 10, four: 15, three: 16 }
 },
 {
   id: 17,
@@ -242,7 +242,7 @@ const idolList = [
   name: `Nazuna Nito`,
   avatar: `images/btn-nito_nazuna.webp`,
   borderColor: "#FFEC47",
-  stars: { five: 10, four: 15, three: 18 }
+  stars: { five: 11, four: 15, three: 18 }
 },
 {
   id: 36,
@@ -284,7 +284,7 @@ const idolList = [
   name: `Ibuki Taki`,
   avatar: `images/btn-taki_ibuki.webp`,
   borderColor: "#66BBCC",
-  stars: { five: 1, four: 5, three: 2 }
+  stars: { five: 2, four: 5, three: 2 }
 },
 {
   id: 42,
@@ -298,7 +298,7 @@ const idolList = [
   name: `Leo Tsukinaga`,
   avatar: `images/btn-tsukinaga_leo.webp`,
   borderColor: "#EC6D51",
-  stars: { five: 11, four: 16, three: 16 }
+  stars: { five: 12, four: 16, three: 16 }
 },
 {
   id: 44,
@@ -361,7 +361,7 @@ const idolList = [
   name: `Kanna Natsu`,
   avatar: `images/btn-kanna.webp`,
   borderColor: "#8ACCB8",
-  stars: { five: 2, four: 4, three: 6 }
+  stars: { five: 2, four: 5, three: 6 }
 },
 {
   id: 53,

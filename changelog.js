@@ -17,3 +17,31 @@ document.querySelectorAll(".changelog-date").forEach(button => {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  document.querySelectorAll(".changelog-entry").forEach(entry => {
+    const btn = entry.querySelector(".changelog-date");
+    btn.addEventListener("click", () => {
+      entry.classList.toggle("open");
+    });
+  });
+
+  document.querySelectorAll(".changelog-content ul").forEach(ul => {
+    const text = ul.textContent.trim().toLowerCase();
+
+    if (text === "5 star card due") {
+      ul.classList.add("changelog-header-green");
+    } 
+    else if (text === "card count") {
+      ul.classList.add("changelog-header-red");
+    } 
+    else if (text === "others") {
+      ul.classList.add("changelog-header-blue");
+    } 
+    else if (/^\d{1,2}:\d{2}\s*jst$/i.test(text)) {
+      ul.classList.add("changelog-header-time");
+    }
+  });
+
+  });
