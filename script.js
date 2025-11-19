@@ -538,7 +538,7 @@ const idols = [{
   startDate: `2024-11-30`,
   description: "Latest Card: Unit Event",
   detailsImage: "cards/Special_for_Princess/Märchen_White_Yume.webp",
-  detailsDescription: "(Märchen White) Fuyume Hanamura"
+  detailsDescription: "(Märchen White) Yume"
 },
 {
   id: 54,
