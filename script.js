@@ -337,8 +337,8 @@ const idols = [{
   borderColor: "#915DA3",
   startDate: `2025-11-10`,
   description: "Latest Card: Bright me up!! Scout Stage",
-  detailsImage: "cards/UNDEAD/夢の周りにあるもの_Adonis_Otogari.webp",
-  detailsDescription: "[夢の周りにあるもの] Adonis Otogari"
+  detailsImage: "cards/UNDEAD/What_Surrounds_Dreams_Adonis_Otogari.webp",
+  detailsDescription: "(What Surrounds Dreams) Adonis Otogari"
 },
 {
   id: 34,
@@ -357,8 +357,8 @@ const idols = [{
   borderColor: "#FFEC47",
   startDate: `2025-11-15`,
   description: "Latest Card: Shuffle Event",
-  detailsImage: "cards/Ra_bits/フレフレレスQ_Nazuna_Nito.webp",
-  detailsDescription: "[フレフレレスQ] Nazuna Nito"
+  detailsImage: "cards/Ra_bits/Hooray_Hooray_ResQ_Nazuna_Nito.webp",
+  detailsDescription: "(Hooray, Hooray, ResQ) Nazuna Nito"
 },
 {
   id: 36,
@@ -437,8 +437,8 @@ const idols = [{
   borderColor: "#EC6D51",
   startDate: `2025-11-14`,
   description: "Latest Card: Theme Scout",
-  detailsImage: "cards/Knights/ゴーファイレスQ_Leo_Tsukinaga.webp",
-  detailsDescription: "[ゴーファイレスQ] Leo Tsukinaga"
+  detailsImage: "cards/Knights/Go_Fight_ResQ_Leo_Tsukinaga.webp",
+  detailsDescription: "(Go, Fight, ResQ) Leo Tsukinaga"
 },
 {
   id: 44,
