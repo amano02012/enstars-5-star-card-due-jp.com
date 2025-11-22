@@ -237,7 +237,10 @@ flex-wrap: wrap;
 .blue:hover  { background-color: rgba(37,99,235,1); }
 .red:hover   { background-color: rgba(220,38,38,1); }
 
-/* Convert table into stacked cards on narrow screens */
+.mobile-layout body,
+.mobile-layout #app {
+}
+
 @media (max-width: 700px) {
   table {
     display: block;
@@ -247,11 +250,13 @@ flex-wrap: wrap;
     background: transparent;
   }
 
-  thead, th {
-    display: none; /* hide headers for card layout */
+  thead,
+  th {
+    display: none;
   }
 
-  tbody, tr {
+  tbody,
+  tr {
     display: block;
     margin-bottom: 14px;
   }
@@ -274,7 +279,6 @@ flex-wrap: wrap;
     gap: 10px;
   }
 
-  /* key label on left, value on right */
   td::before {
     content: attr(data-label);
     flex: 1 0 45%;
@@ -293,7 +297,6 @@ flex-wrap: wrap;
     gap: 8px;
   }
 
-  /* images scale down and fit row height */
   .cover-img,
   .interim1-img,
   .interim-img,
@@ -304,7 +307,6 @@ flex-wrap: wrap;
   }
 }
 
-/* The same stacked-card behavior when a user forces mobile layout via body.mobile-layout */
 body.mobile-layout table {
   display: block;
   width: 100%;
@@ -313,18 +315,18 @@ body.mobile-layout table {
   background: transparent;
 }
 
-body.mobile-layout table thead,
-body.mobile-layout table th {
-  display: none; /* hide headers for card layout */
+body.mobile-layout thead,
+body.mobile-layout th {
+  display: none;
 }
 
-body.mobile-layout table tbody,
-body.mobile-layout table tr {
+body.mobile-layout tbody,
+body.mobile-layout tr {
   display: block;
   margin-bottom: 14px;
 }
 
-body.mobile-layout table tr {
+body.mobile-layout tr {
   background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(250,250,250,0.95));
   border-radius: 12px;
   padding: 12px;
@@ -332,7 +334,7 @@ body.mobile-layout table tr {
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 
-body.mobile-layout table td {
+body.mobile-layout td {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -342,7 +344,7 @@ body.mobile-layout table td {
   gap: 10px;
 }
 
-body.mobile-layout table td::before {
+body.mobile-layout td::before {
   content: attr(data-label);
   flex: 1 0 45%;
   text-align: left;
@@ -350,7 +352,7 @@ body.mobile-layout table td::before {
   color: #333;
 }
 
-body.mobile-layout table td > *:last-child {
+body.mobile-layout td > *:last-child {
   flex: 1 0 55%;
   text-align: right;
 }
@@ -369,7 +371,6 @@ body.mobile-layout .release-img {
   margin: 0;
 }
 
-/* Additional mobile polish for small screens */
 @media (max-width: 420px) {
   td {
     font-size: 13px;
@@ -386,24 +387,20 @@ body.mobile-layout .release-img {
   }
 }
 
-/* Additional mobile polish when user forces mobile layout */
 body.mobile-layout td {
   font-size: 13px;
   padding: 8px;
 }
-
 body.mobile-layout .cover-img,
 body.mobile-layout .interim1-img,
 body.mobile-layout .interim-img,
 body.mobile-layout .release-img {
   max-width: 90px;
 }
-
 body.mobile-layout .nav-logo {
   font-size: 1rem;
 }
 
-/* optional: allow users to force mobile-like compact table even on larger screens */
 body.mobile-layout table td,
 body.mobile-layout table th {
   white-space: normal;
