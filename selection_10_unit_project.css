@@ -159,7 +159,7 @@ td, th {
   margin: 0 auto;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   td, th {
     padding: 8px 10px;
     font-size: 14px;
