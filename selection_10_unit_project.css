@@ -176,19 +176,6 @@ td, th {
     max-width: 120px;
   }
 }
-
-@media (max-width: 400px) {
-  td, th {
-    padding: 6px 8px;
-    font-size: 13px;
-  }
-  .cover-img,
-  .interim1-img,
-  .interim-img,
-  .release-img {
-    max-width: 100px;
-  }
-}
   
 table {
 width: 100%;
@@ -231,14 +218,14 @@ box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 
 
 .interim1-img {
-max-width: 140px;
+max-width: 110px;
 height: auto;
 border-radius: 3px;
 box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 .interim-img {
-max-width: 140px;
+max-width: 110px;
 height: auto;
 border-radius: 3px;
 box-shadow: 0 2px 6px rgba(0,0,0,0.15);
@@ -246,7 +233,7 @@ box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 
 
 .release-img {
-max-width: 140px;
+max-width: 110px;
 height: auto;
 border-radius: 3px;
 box-shadow: 0 2px 6px rgba(0,0,0,0.15);
