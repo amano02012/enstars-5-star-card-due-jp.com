@@ -63,3 +63,35 @@ if (typeof document !== 'undefined') {
     });
   });
 }
+
+// ...existing code...
+
+// Mobile detection + apply mobile layout class
+(function applyMobileLayout() {
+  function isMobileDevice() {
+    // prefer userAgentData when available
+    if (navigator.userAgentData && typeof navigator.userAgentData.mobile === "boolean") {
+      return navigator.userAgentData.mobile;
+    }
+    // fallbacks: coarse pointer OR small viewport OR common mobile UA tokens
+    const ua = navigator.userAgent || "";
+    const smallViewport = window.innerWidth <= 700;
+    const coarsePointer = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
+    const mobileUa = /Mobi|Android|iPhone|iPad|iPod|IEMobile|BlackBerry|Opera Mini/i.test(ua);
+    return smallViewport || coarsePointer || mobileUa;
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    if (isMobileDevice()) {
+      document.body.classList.add("mobile-layout");
+    }
+  });
+
+  // Optional: update on resize if user rotates or changes window
+  window.addEventListener("resize", () => {
+    if (isMobileDevice()) document.body.classList.add("mobile-layout");
+    else document.body.classList.remove("mobile-layout");
+  });
+})();
+
+// ...existing code...
