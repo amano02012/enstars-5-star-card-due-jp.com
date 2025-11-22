@@ -12,6 +12,7 @@
       <li><a href="index.html" class="active">5 star card due</a></li>
       <li><a href="card_count.html">Card Count</a></li>
       <li><a href="changelog.html">Change Log</a></li>
+      <li><a href="selection_10_unit_project.html">Selection 10 Unit Project</a></li>
     </ul>
   </nav>
   <div class="container">
@@ -26,7 +27,18 @@
     <button class="close-btn" id="close-modal">Close</button>
   </div>
   </div>
-    <h2 class="body-desc">made by kuon information corner, images are owned by Happy Elements K.K. contact me at Discord @tetsutora_01 if there's any problem</h2>
+
+  <div class="comment-section">
+  <h2>Comments</h2>
+  <div class="comment-form">
+    <input type="text" id="commentName" placeholder="Enter your name">
+    <textarea id="commentText" placeholder="Write a comment..."></textarea>
+    <button onclick="postComment()">Post Comment</button>
+  </div>
+  <div id="commentList"></div>
+  </div>
+
+  <h2 class="body-desc">made by kuon information corner, images are owned by Happy Elements K.K. contact me at Discord @tetsutora_01 if there's any problem</h2>
   <script src="script.js"></script>
 </body>
 </html>

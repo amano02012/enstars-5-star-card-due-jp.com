@@ -367,3 +367,13 @@ body::before {
   transform: scale(1.05);
   background: linear-gradient(to right, #059669, #047857);
 }
+
+.comment-section { max-width: 700px; margin: 30px auto; padding: 20px; background: rgba(255,255,255,0.25); backdrop-filter: blur(8px); border-radius: 18px; border: 2px solid rgba(255,255,255,0.4); }
+    .comment-form input, .comment-form textarea { width: 100%; margin: 6px 0; padding: 10px; border-radius: 12px; border: none; outline: none; background: #ffffffcc; }
+    .comment-form button { margin-top: 6px; padding: 10px 16px; border-radius: 12px; border: none; background: #6ea8ff; color: white; font-weight: 600; cursor: pointer; }
+    .comment { background: rgba(255,255,255,0.65); border-left: 5px solid #6ea8ff; border-radius: 10px; padding: 10px; margin-top: 12px; }
+    .comment .name { font-weight: bold; }
+    .comment .timestamp { font-size: 12px; opacity: 0.7; }
+    .reply-btn { background: none; border: none; color: #0066ff; font-size: 13px; cursor: pointer; padding: 0; margin-top: 5px; }
+    .reply-box { margin-left: 20px; margin-top: 10px; }
+    .reply { background: rgba(255,255,255,0.8); border-left: 4px solid #9cbfff; border-radius: 8px; padding: 8px; margin-top: 8px; }
