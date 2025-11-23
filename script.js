@@ -1,3 +1,15 @@
+function formatDate(dateString) {
+  if (!dateString || dateString === "-") return "-";
+  const date = new Date(dateString);
+  if (isNaN(date)) return dateString;
+  return date.toLocaleDateString("en-US", { 
+    year: "numeric", 
+    month: "long", 
+    day: "numeric",
+    timeZone: "Asia/Tokyo"
+  });
+}
+
 function getJSTDate() {
   const now = new Date();
   return new Date(now.toLocaleString("en-US", { timeZone: "Asia/Tokyo" }));
@@ -597,20 +609,59 @@ const idols = [{
 
 function openModal(idol) {
   const modal = document.getElementById("details-modal");
-  document.getElementById("modal-name").textContent = idol.name;
-  document.getElementById("modal-image").src = idol.detailsImage; 
-  document.getElementById("modal-description").textContent = idol.detailsDescription; 
+  if (!modal || !idol) return;
+
+  const nameEl = document.getElementById("modal-name");
+  const imgEl = document.getElementById("modal-image");
+  const descEl = document.getElementById("modal-description");
+  const dateEl = document.getElementById("modal-date");
+  const loaderEl = document.getElementById("image-loader");
+
+  if (nameEl) nameEl.textContent = idol.name || "";
+  if (descEl) descEl.textContent = idol.detailsDescription || "";
+  if (dateEl) dateEl.textContent = formatDate(idol.startDate);
+
+  imgEl.style.display = "none";
+  loaderEl.style.display = "flex";
+
+  const img = new Image();
+  img.onload = function() {
+    imgEl.src = idol.detailsImage || "";
+    imgEl.style.display = "block";
+    loaderEl.style.display = "none";
+  };
+  img.onerror = function() {
+    loaderEl.style.display = "none";
+    imgEl.style.display = "block";
+    imgEl.src = "";
+  };
+  img.src = idol.detailsImage || "";
+
   modal.classList.add("active");
 }
 
 function closeModal() {
-  document.getElementById("details-modal").classList.remove("active");
+  const modal = document.getElementById("details-modal");
+  if (modal) {
+    modal.classList.remove("active");
+  }
 }
 
-document.getElementById("details-modal").addEventListener("click", (e) => {
-  if (e.target.id === "details-modal") closeModal();
+document.addEventListener("DOMContentLoaded", () => {
+  const closeBtn = document.querySelector(".close-btn");
+  if (closeBtn) {
+    closeBtn.addEventListener("click", closeModal);
+  }
+
+  const modal = document.getElementById("details-modal");
+  if (modal) {
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+  }
 });
-document.getElementById("close-modal").addEventListener("click", closeModal);
 
 function getRibbonClass(rank) {
   if (rank === 1) return "ribbon gold";
@@ -676,11 +727,11 @@ function renderIdols() {
     card.appendChild(detailsBtn);
 
     if (idol.isNew) {
-    const newLabel = document.createElement("div");
-    newLabel.className = "new-label";
-    newLabel.textContent = "NEW";
-  card.appendChild(newLabel);
-}
+      const newLabel = document.createElement("div");
+      newLabel.className = "new-label";
+      newLabel.textContent = "NEW";
+      card.appendChild(newLabel);
+    }
   });
 }
 

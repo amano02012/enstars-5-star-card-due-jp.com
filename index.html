@@ -26,12 +26,25 @@
   </div>
     <div id="details-modal" class="modal">
   <div class="modal-content">
+
+    <div id="image-loader" class="image-loader" style="display: none;">
+      <div class="loader-spinner"></div>
+      <div class="loader-pulse"></div>
+    </div>
+
+    <img id="modal-image" src="" alt="Idol" style="display: none;">
     <h2 id="modal-name"></h2>
-    <img id="modal-image" src="" alt="Idol Image">
     <p id="modal-description"></p>
-    <button class="close-btn" id="close-modal">Close</button>
+    
+    <div class="modal-date-wrapper">
+      <span class="modal-date-icon">📅</span>
+      <span class="modal-date-text" id="modal-date">-</span>
+    </div>
+
+    <button class="close-btn">✕</button>
+
   </div>
-  </div>
+</div>
 
   <h2 class="body-desc">made by kuon information corner, images are owned by Happy Elements K.K. contact me at Discord @tetsutora_01 if there's any problem</h2>
   <script src="script.js"></script>
