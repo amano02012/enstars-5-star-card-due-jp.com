@@ -11,7 +11,7 @@ const idolList = [
   name: `Wataru Hibiki`,
   avatar: `images/btn-hibiki_wataru.webp`,
   borderColor: "#A1D8E2",
-  stars: { five: 11, four: 14, three: 17 }
+  stars: { five: 11, four: 14, three: 18 }
 },
 {
   id: 3,
@@ -172,7 +172,7 @@ const idolList = [
   name: `Yuta Aoi`,
   avatar: `images/btn-aoi_yuta.webp`,
   borderColor: "#00A1E9",
-  stars: { five: 12, four: 16, three: 15 }
+  stars: { five: 13, four: 16, three: 15 }
 },
 {
   id: 26,
@@ -319,7 +319,7 @@ const idolList = [
   name: `Arashi Narukami`,
   avatar: `images/btn-narukami_arashi.webp`,
   borderColor: "#EDDE7B",
-  stars: { five: 11, four: 15, three: 18 }
+  stars: { five: 11, four: 16, three: 18 }
 },
 {
   id: 47,

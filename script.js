@@ -267,10 +267,10 @@ const idols = [{
   name: `Yuta Aoi`,
   avatar: `images/btn-aoi_yuta.webp`,
   borderColor: "#00A1E9",
-  startDate: `2025-06-30`,
-  description: "Latest Card: Unit Event",
-  detailsImage: "cards/2wink/WINK_of_ThanX_Yuta_Aoi.webp",
-  detailsDescription: "(WINK of ThanX) Yuta Aoi"
+  startDate: `2025-11-25`,
+  description: "Latest Card: Bright me up!! Scout Stage",
+  detailsImage: "cards/2wink/焦がれるスター_Yuta_Aoi.webp",
+  detailsDescription: "[焦がれるスター] Yuta Aoi"
 },
 {
   id: 26,
