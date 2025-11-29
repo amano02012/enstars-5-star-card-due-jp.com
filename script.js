@@ -527,10 +527,10 @@ const idols = [{
   name: `Esu Sagiri`,
   avatar: `images/btn-esu.webp`,
   borderColor: "#80FFF4",
-  startDate: `2025-05-15`,
-  description: "Latest Card: Tour Event",
-  detailsImage: "cards/Special_for_Princess/Destined_Sailing_Ceremony_Esu.webp",
-  detailsDescription: "(Destined Sailing Ceremony) Esu"
+  startDate: `2025-11-29`,
+  description: "Latest Card: Theme Scout",
+  detailsImage: "cards/Special_for_Princess/はじめての世界_Esu.webp",
+  detailsDescription: "[はじめての世界] Esu"
 },
 {
   id: 52,

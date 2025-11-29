@@ -25,7 +25,7 @@ const idolList = [
   name: `Yuzuru Fushimi`,
   avatar: `images/btn-fushimi_yuzuru.webp`,
   borderColor: "#3E62AD",
-  stars: { five: 11, four: 16, three: 17 }
+  stars: { five: 11, four: 16, three: 18 }
 },
 {
   id: 5,
@@ -172,7 +172,7 @@ const idolList = [
   name: `Yuta Aoi`,
   avatar: `images/btn-aoi_yuta.webp`,
   borderColor: "#00A1E9",
-  stars: { five: 13, four: 16, three: 15 }
+  stars: { five: 13, four: 16, three: 16 }
 },
 {
   id: 26,
@@ -347,14 +347,14 @@ const idolList = [
   name: `Madara Mikejima`,
   avatar: `images/btn-mikejima_madara.webp`,
   borderColor: "#622D18",
-  stars: { five: 14, four: 15, three: 14 }
+  stars: { five: 14, four: 16, three: 14 }
 },
 {
   id: 51,
   name: `Esu Sagiri`,
   avatar: `images/btn-esu.webp`,
   borderColor: "#80FFF4",
-  stars: { five: 3, four: 4, three: 5 }
+  stars: { five: 4, four: 4, three: 5 }
 },
 {
   id: 52,
