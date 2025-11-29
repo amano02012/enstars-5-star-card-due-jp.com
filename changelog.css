@@ -183,7 +183,8 @@ body::before {
 
 .changelog-header-green,
   .changelog-header-red,
-  .changelog-header-blue {
+  .changelog-header-blue,
+  .changelog-header-blue2 {
     padding: 8px 12px;
     font-weight: 700;
     border-radius: 6px;
@@ -196,6 +197,7 @@ body::before {
   .changelog-header-green { background: #27ae60; }
   .changelog-header-red { background: #c0392b; }
   .changelog-header-blue { background: #2980b9; }
+  .changelog-header-blue2 { background: #34495e; }
 
   li {
     font-size: 0.95rem;

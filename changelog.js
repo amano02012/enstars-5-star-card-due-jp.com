@@ -42,6 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
     else if (/^\d{1,2}:\d{2}\s*jst$/i.test(text)) {
       ul.classList.add("changelog-header-time");
     }
+    else if (text === "selection 10 unit project") {
+      ul.classList.add("changelog-header-blue2");
+    }  
   });
 
   });
