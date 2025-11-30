@@ -137,10 +137,10 @@ const idols = [{
   name: `Chiaki Morisawa`,
   avatar: `images/btn-morisawa_chiaki.webp`,
   borderColor: "#E60033",
-  startDate: `2025-04-29`,
-  description: "Latest Card: Cross Scout",
-  detailsImage: "cards/RYUSEITAI/Offense-Defense_Ambivalence_Chiaki_Morisawa.webp",
-  detailsDescription: "(Offense-Defense Ambivalence) Chiaki Morisawa"
+  startDate: `2025-11-30`,
+  description: "Latest Card: Unit Event",
+  detailsImage: "cards/RYUSEITAI/灯す正義の光_Chiaki_Morisawa.webp",
+  detailsDescription: "[灯す正義の光] Chiaki Morisawa"
 },
 {
   id: 13,

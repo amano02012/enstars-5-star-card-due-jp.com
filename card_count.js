@@ -60,35 +60,35 @@ const idolList = [
   name: `Tetora Nagumo`,
   avatar: `images/btn-nagumo_tetora.webp`,
   borderColor: "#302833",
-  stars: { five: 10, four: 15, three: 16 }
+  stars: { five: 10, four: 16, three: 16 }
 },
 {
   id: 10,
   name: `Midori Takamine`,
   avatar: `images/btn-takamine_midori.webp`,
   borderColor: "#00533F",
-  stars: { five: 10, four: 14, three: 18 }
+  stars: { five: 10, four: 15, three: 18 }
 },
 {
   id: 11,
   name: `Shinobu Sengoku`,
   avatar: `images/btn-sengoku_shinobu.webp`,
   borderColor: "#FFDC00",
-  stars: { five: 10, four: 16, three: 15 }
+  stars: { five: 10, four: 16, three: 16 }
 },
 {
   id: 12,
   name: `Chiaki Morisawa`,
   avatar: `images/btn-morisawa_chiaki.webp`,
   borderColor: "#E60033",
-  stars: { five: 11, four: 15, three: 17 }
+  stars: { five: 12, four: 15, three: 17 }
 },
 {
   id: 13,
   name: `Kanata Shinkai`,
   avatar: `images/btn-shinkai_kanata.webp`,
   borderColor: "#008DB7",
-  stars: { five: 9, four: 17, three: 16 }
+  stars: { five: 9, four: 17, three: 17 }
 },
 {
   id: 14,
