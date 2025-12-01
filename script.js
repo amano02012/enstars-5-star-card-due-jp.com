@@ -740,34 +740,7 @@ setInterval(renderIdols, 60 * 60 * 1000);
 
 document.addEventListener("DOMContentLoaded", ()=>{const btn=document.querySelector(".hamburger"),body=document.body; if(!btn) return; btn.addEventListener("click", ()=>{const open=body.classList.toggle("nav-open"); btn.setAttribute("aria-expanded", open?"true":"false");}); window.addEventListener("resize", ()=>{ if(window.innerWidth>700 && body.classList.contains("nav-open")){ body.classList.remove("nav-open"); btn.setAttribute("aria-expanded","false"); }}); document.addEventListener("click",(e)=>{ if(!body.classList.contains("nav-open")) return; const inside = e.target.closest(".navbar"); if(!inside){ body.classList.remove("nav-open"); btn.setAttribute("aria-expanded","false"); }});});
 
-// ⚠️ REPLACE WITH YOUR FIREBASE CONFIG
-// Get this from Firebase Console > Project Settings > Your apps
-const firebaseConfig = {
-  apiKey: "AIzaSyCyHWUsaktKrSAnDcLAqyfnNiTQAxaeeXY",
-  authDomain: "my-website-comments-5ea35.firebaseapp.com",
-  databaseURL: "https://my-website-comments-5ea35-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "my-website-comments-5ea35",
-  storageBucket: "my-website-comments-5ea35.firebasestorage.app",
-  messagingSenderId: "305328978160",
-  appId: "1:305328978160:web:3085ac2e3e89c54776aa35"
-};
 
-let app, database;
-(async () => {
-  try {
-    const firebaseApp = await import("https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js");
-    const firebaseDb = await import("https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js");
-    const { initializeApp } = firebaseApp;
-    const { getDatabase, ref, push, onValue, remove, set } = firebaseDb;
-    app = initializeApp(firebaseConfig);
-    database = getDatabase(app);
-    loadComments();
-    loadProfiles();
-  } catch (error) {
-    showError("Firebase not configured. Please add your Firebase config.");
-    console.error("Firebase initialization error:", error);
-  }
-})();
 
 let currentProfilePic = null;
 
@@ -822,7 +795,6 @@ function loadProfiles() {
 
   const profilesRef = ref(database, "profiles");
   onValue(profilesRef, () => {
-    // Profiles loaded for preview
   });
 }
 
