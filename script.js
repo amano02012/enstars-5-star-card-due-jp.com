@@ -739,3 +739,272 @@ renderIdols();
 setInterval(renderIdols, 60 * 60 * 1000);
 
 document.addEventListener("DOMContentLoaded", ()=>{const btn=document.querySelector(".hamburger"),body=document.body; if(!btn) return; btn.addEventListener("click", ()=>{const open=body.classList.toggle("nav-open"); btn.setAttribute("aria-expanded", open?"true":"false");}); window.addEventListener("resize", ()=>{ if(window.innerWidth>700 && body.classList.contains("nav-open")){ body.classList.remove("nav-open"); btn.setAttribute("aria-expanded","false"); }}); document.addEventListener("click",(e)=>{ if(!body.classList.contains("nav-open")) return; const inside = e.target.closest(".navbar"); if(!inside){ body.classList.remove("nav-open"); btn.setAttribute("aria-expanded","false"); }});});
+
+// ⚠️ REPLACE WITH YOUR FIREBASE CONFIG
+// Get this from Firebase Console > Project Settings > Your apps
+const firebaseConfig = {
+  apiKey: "AIzaSyCyHWUsaktKrSAnDcLAqyfnNiTQAxaeeXY",
+  authDomain: "my-website-comments-5ea35.firebaseapp.com",
+  databaseURL: "https://my-website-comments-5ea35-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "my-website-comments-5ea35",
+  storageBucket: "my-website-comments-5ea35.firebasestorage.app",
+  messagingSenderId: "305328978160",
+  appId: "1:305328978160:web:3085ac2e3e89c54776aa35"
+};
+
+let app, database;
+(async () => {
+  try {
+    const firebaseApp = await import("https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js");
+    const firebaseDb = await import("https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js");
+    const { initializeApp } = firebaseApp;
+    const { getDatabase, ref, push, onValue, remove, set } = firebaseDb;
+    app = initializeApp(firebaseConfig);
+    database = getDatabase(app);
+    loadComments();
+    loadProfiles();
+  } catch (error) {
+    showError("Firebase not configured. Please add your Firebase config.");
+    console.error("Firebase initialization error:", error);
+  }
+})();
+
+let currentProfilePic = null;
+
+document.getElementById("postBtn").addEventListener("click", postComment);
+document.getElementById("username").addEventListener("input", updatePreview);
+document
+  .getElementById("profilePic")
+  .addEventListener("change", handleFileSelect);
+
+function showError(message) {
+  const errorDiv = document.getElementById("errorMessage");
+  errorDiv.textContent = message;
+  errorDiv.style.display = "block";
+}
+
+function hideError() {
+  document.getElementById("errorMessage").style.display = "none";
+}
+
+function loadComments() {
+  if (!database) return;
+
+  const commentsList = document.getElementById("commentsList");
+  commentsList.innerHTML = '<div class="loading">Loading comments...</div>';
+
+  const commentsRef = ref(database, "comments");
+  onValue(
+    commentsRef,
+    (snapshot) => {
+      const data = snapshot.val();
+      const comments = [];
+
+      if (data) {
+        Object.keys(data).forEach((key) => {
+          comments.push({ id: key, ...data[key] });
+        });
+      }
+
+      comments.sort((a, b) => b.timestamp - a.timestamp);
+      displayComments(comments);
+    },
+    (error) => {
+      console.error("Error loading comments:", error);
+      commentsList.innerHTML =
+        '<div class="empty-state">Error loading comments. Check your Firebase configuration.</div>';
+    }
+  );
+}
+
+function loadProfiles() {
+  if (!database) return;
+
+  const profilesRef = ref(database, "profiles");
+  onValue(profilesRef, () => {
+    // Profiles loaded for preview
+  });
+}
+
+async function getProfilePic(username) {
+  if (!database) return null;
+
+  const profileRef = ref(
+    database,
+    `profiles/${username.toLowerCase().replace(/[^a-z0-9]/g, "_")}`
+  );
+  return new Promise((resolve) => {
+    onValue(
+      profileRef,
+      (snapshot) => {
+        resolve(snapshot.val());
+      },
+      { onlyOnce: true }
+    );
+  });
+}
+
+function handleFileSelect(e) {
+  const file = e.target.files[0];
+  if (file) {
+    if (file.size > 1000000) {
+      alert("File is too large. Please choose an image under 1MB.");
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = function (event) {
+      currentProfilePic = event.target.result;
+      updatePreview();
+      document.getElementById("fileName").textContent = `✓ ${file.name}`;
+    };
+    reader.readAsDataURL(file);
+  }
+}
+
+async function updatePreview() {
+  const username = document.getElementById("username").value.trim();
+  const preview = document.getElementById("profilePreview");
+
+  if (currentProfilePic) {
+    preview.innerHTML = `<img src="${currentProfilePic}" alt="Profile">`;
+  } else if (username) {
+    const savedPic = await getProfilePic(username);
+    if (savedPic) {
+      preview.innerHTML = `<img src="${savedPic}" alt="Profile">`;
+    } else {
+      preview.innerHTML = `<span>${username.charAt(0).toUpperCase()}</span>`;
+    }
+  } else {
+    preview.innerHTML = '<span id="previewInitial">?</span>';
+  }
+}
+
+async function postComment() {
+  if (!database) {
+    showError("Firebase not initialized. Please check your configuration.");
+    return;
+  }
+
+  const username = document.getElementById("username").value.trim();
+  const commentText = document.getElementById("commentText").value.trim();
+  const postBtn = document.getElementById("postBtn");
+
+  if (!username || !commentText) {
+    alert("Please enter your name and comment");
+    return;
+  }
+
+  hideError();
+  postBtn.disabled = true;
+  postBtn.textContent = "Posting...";
+
+  try {
+    let profilePic = currentProfilePic;
+
+    if (currentProfilePic) {
+      const profileKey = username.toLowerCase().replace(/[^a-z0-9]/g, "_");
+      await set(ref(database, `profiles/${profileKey}`), currentProfilePic);
+    } else {
+      profilePic = await getProfilePic(username);
+    }
+
+    const comment = {
+      text: commentText,
+      username: username,
+      profilePic: profilePic || null,
+      timestamp: Date.now(),
+    };
+
+    await push(ref(database, "comments"), comment);
+
+    document.getElementById("commentText").value = "";
+    alert("Comment posted successfully!");
+  } catch (error) {
+    console.error("Error posting comment:", error);
+    showError("Failed to post comment: " + error.message);
+  } finally {
+    postBtn.disabled = false;
+    postBtn.textContent = "Post Comment";
+  }
+}
+
+window.deleteComment = async function (commentId) {
+  if (!database) return;
+
+  if (confirm("Are you sure you want to delete this comment?")) {
+    try {
+      await remove(ref(database, `comments/${commentId}`));
+    } catch (error) {
+      console.error("Error deleting comment:", error);
+      alert("Failed to delete comment.");
+    }
+  }
+};
+
+function displayComments(comments) {
+  const commentsList = document.getElementById("commentsList");
+  const commentCount = document.getElementById("commentCount");
+
+  commentCount.textContent = comments.length;
+
+  if (comments.length === 0) {
+    commentsList.innerHTML =
+      '<div class="empty-state">No comments yet. Be the first to comment!</div>';
+    return;
+  }
+
+  commentsList.innerHTML = comments
+    .map((comment) => {
+      const avatarContent = comment.profilePic
+        ? `<img src="${comment.profilePic}" alt="${escapeHtml(
+            comment.username
+          )}">`
+        : `<span>${comment.username.charAt(0).toUpperCase()}</span>`;
+
+      return `
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-author">
+                                <div class="avatar">${avatarContent}</div>
+                                <div class="author-info">
+                                    <div class="author-name">${escapeHtml(
+                                      comment.username
+                                    )}</div>
+                                    <div class="comment-time">${formatTime(
+                                      comment.timestamp
+                                    )}</div>
+                                </div>
+                            </div>
+                            <button class="delete-btn" onclick="deleteComment('${
+                              comment.id
+                            }')">🗑️</button>
+                        </div>
+                        <div class="comment-text">${escapeHtml(
+                          comment.text
+                        )}</div>
+                    </div>
+                `;
+    })
+    .join("");
+}
+
+function formatTime(timestamp) {
+  const date = new Date(timestamp);
+  const now = new Date();
+  const diff = now - date;
+  const minutes = Math.floor(diff / 60000);
+  const hours = Math.floor(diff / 3600000);
+  const days = Math.floor(diff / 86400000);
+
+  if (minutes < 1) return "Just now";
+  if (minutes < 60) return `${minutes}m ago`;
+  if (hours < 24) return `${hours}h ago`;
+  return `${days}d ago`;
+}
+
+function escapeHtml(text) {
+  const div = document.createElement("div");
+  div.textContent = text;
+  return div.innerHTML;
+}
