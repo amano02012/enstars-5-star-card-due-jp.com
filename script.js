@@ -740,7 +740,43 @@ setInterval(renderIdols, 60 * 60 * 1000);
 
 document.addEventListener("DOMContentLoaded", ()=>{const btn=document.querySelector(".hamburger"),body=document.body; if(!btn) return; btn.addEventListener("click", ()=>{const open=body.classList.toggle("nav-open"); btn.setAttribute("aria-expanded", open?"true":"false");}); window.addEventListener("resize", ()=>{ if(window.innerWidth>700 && body.classList.contains("nav-open")){ body.classList.remove("nav-open"); btn.setAttribute("aria-expanded","false"); }}); document.addEventListener("click",(e)=>{ if(!body.classList.contains("nav-open")) return; const inside = e.target.closest(".navbar"); if(!inside){ body.classList.remove("nav-open"); btn.setAttribute("aria-expanded","false"); }});});
 
+const firebaseConfig = {
+  apiKey: "AIzaSyCyHWUsaktKrSAnDcLAqyfnNiTQAxaeeXY",
+  authDomain: "my-website-comments-5ea35.firebaseapp.com",
+  databaseURL:
+    "https://my-website-comments-5ea35-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "my-website-comments-5ea35",
+  storageBucket: "my-website-comments-5ea35.firebasestorage.app",
+  messagingSenderId: "305328978160",
+  appId: "1:305328978160:web:3085ac2e3e89c54776aa35",
+};
 
+let firebaseApp, firebaseDatabase;
+let firebaseInitialized = false;
+
+(async () => {
+  try {
+    const [appModule, dbModule] = await Promise.all([
+      import("https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"),
+      import("https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"),
+    ]);
+
+    window.firebaseModules = {
+      app: appModule,
+      db: dbModule,
+    };
+
+    firebaseApp = appModule.initializeApp(firebaseConfig);
+    firebaseDatabase = dbModule.getDatabase(firebaseApp);
+    firebaseInitialized = true;
+
+    console.log("✅ Firebase initialized successfully!");
+    loadComments();
+  } catch (error) {
+    showError("Failed to initialize Firebase: " + error.message);
+    console.error("Firebase initialization error:", error);
+  }
+})();
 
 let currentProfilePic = null;
 
@@ -752,21 +788,33 @@ document
 
 function showError(message) {
   const errorDiv = document.getElementById("errorMessage");
-  errorDiv.textContent = message;
-  errorDiv.style.display = "block";
+  if (errorDiv) {
+    errorDiv.textContent = message;
+    errorDiv.style.display = "block";
+  }
 }
 
 function hideError() {
-  document.getElementById("errorMessage").style.display = "none";
+  const errorDiv = document.getElementById("errorMessage");
+  if (errorDiv) {
+    errorDiv.style.display = "none";
+  }
 }
 
 function loadComments() {
-  if (!database) return;
+  if (!firebaseInitialized || !window.firebaseModules) {
+    setTimeout(loadComments, 100);
+    return;
+  }
 
   const commentsList = document.getElementById("commentsList");
+  if (!commentsList) return;
+
   commentsList.innerHTML = '<div class="loading">Loading comments...</div>';
 
-  const commentsRef = ref(database, "comments");
+  const { ref, onValue } = window.firebaseModules.db;
+  const commentsRef = ref(firebaseDatabase, "comments");
+
   onValue(
     commentsRef,
     (snapshot) => {
@@ -785,26 +833,18 @@ function loadComments() {
     (error) => {
       console.error("Error loading comments:", error);
       commentsList.innerHTML =
-        '<div class="empty-state">Error loading comments. Check your Firebase configuration.</div>';
+        '<div class="empty-state">Error loading comments. Check console.</div>';
     }
   );
 }
 
-function loadProfiles() {
-  if (!database) return;
-
-  const profilesRef = ref(database, "profiles");
-  onValue(profilesRef, () => {
-  });
-}
-
 async function getProfilePic(username) {
-  if (!database) return null;
+  if (!firebaseInitialized || !window.firebaseModules) return null;
 
-  const profileRef = ref(
-    database,
-    `profiles/${username.toLowerCase().replace(/[^a-z0-9]/g, "_")}`
-  );
+  const { ref, onValue } = window.firebaseModules.db;
+  const profileKey = username.toLowerCase().replace(/[^a-z0-9]/g, "_");
+  const profileRef = ref(firebaseDatabase, `profiles/${profileKey}`);
+
   return new Promise((resolve) => {
     onValue(
       profileRef,
@@ -828,7 +868,10 @@ function handleFileSelect(e) {
     reader.onload = function (event) {
       currentProfilePic = event.target.result;
       updatePreview();
-      document.getElementById("fileName").textContent = `✓ ${file.name}`;
+      const fileNameEl = document.getElementById("fileName");
+      if (fileNameEl) {
+        fileNameEl.textContent = `✓ ${file.name}`;
+      }
     };
     reader.readAsDataURL(file);
   }
@@ -837,6 +880,7 @@ function handleFileSelect(e) {
 async function updatePreview() {
   const username = document.getElementById("username").value.trim();
   const preview = document.getElementById("profilePreview");
+  if (!preview) return;
 
   if (currentProfilePic) {
     preview.innerHTML = `<img src="${currentProfilePic}" alt="Profile">`;
@@ -853,8 +897,8 @@ async function updatePreview() {
 }
 
 async function postComment() {
-  if (!database) {
-    showError("Firebase not initialized. Please check your configuration.");
+  if (!firebaseInitialized || !window.firebaseModules) {
+    showError("Firebase not initialized. Please wait...");
     return;
   }
 
@@ -872,11 +916,15 @@ async function postComment() {
   postBtn.textContent = "Posting...";
 
   try {
+    const { ref, set, push } = window.firebaseModules.db;
     let profilePic = currentProfilePic;
 
     if (currentProfilePic) {
       const profileKey = username.toLowerCase().replace(/[^a-z0-9]/g, "_");
-      await set(ref(database, `profiles/${profileKey}`), currentProfilePic);
+      await set(
+        ref(firebaseDatabase, `profiles/${profileKey}`),
+        currentProfilePic
+      );
     } else {
       profilePic = await getProfilePic(username);
     }
@@ -888,7 +936,7 @@ async function postComment() {
       timestamp: Date.now(),
     };
 
-    await push(ref(database, "comments"), comment);
+    await push(ref(firebaseDatabase, "comments"), comment);
 
     document.getElementById("commentText").value = "";
     alert("Comment posted successfully!");
@@ -902,11 +950,12 @@ async function postComment() {
 }
 
 window.deleteComment = async function (commentId) {
-  if (!database) return;
+  if (!firebaseInitialized || !window.firebaseModules) return;
 
   if (confirm("Are you sure you want to delete this comment?")) {
     try {
-      await remove(ref(database, `comments/${commentId}`));
+      const { ref, remove } = window.firebaseModules.db;
+      await remove(ref(firebaseDatabase, `comments/${commentId}`));
     } catch (error) {
       console.error("Error deleting comment:", error);
       alert("Failed to delete comment.");
@@ -917,6 +966,8 @@ window.deleteComment = async function (commentId) {
 function displayComments(comments) {
   const commentsList = document.getElementById("commentsList");
   const commentCount = document.getElementById("commentCount");
+
+  if (!commentsList || !commentCount) return;
 
   commentCount.textContent = comments.length;
 
@@ -935,28 +986,22 @@ function displayComments(comments) {
         : `<span>${comment.username.charAt(0).toUpperCase()}</span>`;
 
       return `
-                    <div class="comment">
-                        <div class="comment-header">
-                            <div class="comment-author">
-                                <div class="avatar">${avatarContent}</div>
-                                <div class="author-info">
-                                    <div class="author-name">${escapeHtml(
-                                      comment.username
-                                    )}</div>
-                                    <div class="comment-time">${formatTime(
-                                      comment.timestamp
-                                    )}</div>
-                                </div>
-                            </div>
-                            <button class="delete-btn" onclick="deleteComment('${
-                              comment.id
-                            }')">🗑️</button>
-                        </div>
-                        <div class="comment-text">${escapeHtml(
-                          comment.text
-                        )}</div>
-                    </div>
-                `;
+        <div class="comment">
+          <div class="comment-header">
+            <div class="comment-author">
+              <div class="avatar">${avatarContent}</div>
+              <div class="author-info">
+                <div class="author-name">${escapeHtml(comment.username)}</div>
+                <div class="comment-time">${formatTime(comment.timestamp)}</div>
+              </div>
+            </div>
+            <button class="delete-btn" onclick="deleteComment('${
+              comment.id
+            }')">🗑️</button>
+          </div>
+          <div class="comment-text">${escapeHtml(comment.text)}</div>
+        </div>
+      `;
     })
     .join("");
 }
