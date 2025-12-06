@@ -743,34 +743,38 @@ document.addEventListener("DOMContentLoaded", ()=>{const btn=document.querySelec
 const firebaseConfig = {
   apiKey: "AIzaSyCyHWUsaktKrSAnDcLAqyfnNiTQAxaeeXY",
   authDomain: "my-website-comments-5ea35.firebaseapp.com",
-  databaseURL:
-    "https://my-website-comments-5ea35-default-rtdb.asia-southeast1.firebasedatabase.app",
+  databaseURL: "https://my-website-comments-5ea35-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "my-website-comments-5ea35",
   storageBucket: "my-website-comments-5ea35.firebasestorage.app",
   messagingSenderId: "305328978160",
-  appId: "1:305328978160:web:3085ac2e3e89c54776aa35",
+  appId: "1:305328978160:web:3085ac2e3e89c54776aa35"
 };
 
 let firebaseApp, firebaseDatabase;
 let firebaseInitialized = false;
+let registeredUsernames = new Set(); 
 
 (async () => {
   try {
     const [appModule, dbModule] = await Promise.all([
       import("https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"),
-      import("https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"),
+      import("https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js")
     ]);
-
+    
     window.firebaseModules = {
       app: appModule,
-      db: dbModule,
+      db: dbModule
     };
-
+    
     firebaseApp = appModule.initializeApp(firebaseConfig);
     firebaseDatabase = dbModule.getDatabase(firebaseApp);
     firebaseInitialized = true;
-
-    console.log("✅ Firebase initialized successfully!");
+    
+    console.log('✅ Firebase initialized successfully!');
+    
+    loadSavedUserData();
+    
+    loadRegisteredUsernames();
     loadComments();
   } catch (error) {
     showError("Failed to initialize Firebase: " + error.message);
@@ -779,12 +783,112 @@ let firebaseInitialized = false;
 })();
 
 let currentProfilePic = null;
+let currentUsername = null;
+let commentImage = null; 
+
+function loadSavedUserData() {
+  const savedUsername = localStorage.getItem('commentUsername');
+  const savedProfilePic = localStorage.getItem('commentProfilePic');
+  
+  if (savedUsername) {
+    document.getElementById("username").value = savedUsername;
+    currentUsername = savedUsername;
+  }
+  
+  if (savedProfilePic) {
+    currentProfilePic = savedProfilePic;
+    updatePreview();
+  }
+}
+
+function saveUserData(username, profilePic) {
+  localStorage.setItem('commentUsername', username);
+  if (profilePic) {
+    localStorage.setItem('commentProfilePic', profilePic);
+  }
+}
+
+function loadRegisteredUsernames() {
+  if (!firebaseInitialized || !window.firebaseModules) {
+    setTimeout(loadRegisteredUsernames, 100);
+    return;
+  }
+
+  const { ref, onValue } = window.firebaseModules.db;
+  const usernamesRef = ref(firebaseDatabase, "registeredUsernames");
+  
+  onValue(usernamesRef, (snapshot) => {
+    const data = snapshot.val();
+    registeredUsernames.clear();
+    
+    if (data) {
+      Object.values(data).forEach(username => {
+        registeredUsernames.add(username.toLowerCase());
+      });
+    }
+    console.log(`📋 Loaded ${registeredUsernames.size} registered usernames`);
+  });
+}
+
+async function isUsernameTaken(username) {
+  return registeredUsernames.has(username.toLowerCase());
+}
+
+async function registerUsername(username) {
+  if (!firebaseInitialized || !window.firebaseModules) return false;
+
+  const { ref, push } = window.firebaseModules.db;
+  const usernamesRef = ref(firebaseDatabase, "registeredUsernames");
+  
+  try {
+    await push(usernamesRef, username);
+    registeredUsernames.add(username.toLowerCase());
+    return true;
+  } catch (error) {
+    console.error("Error registering username:", error);
+    return false;
+  }
+}
 
 document.getElementById("postBtn").addEventListener("click", postComment);
 document.getElementById("username").addEventListener("input", updatePreview);
-document
-  .getElementById("profilePic")
-  .addEventListener("change", handleFileSelect);
+document.getElementById("profilePic").addEventListener("change", handleFileSelect);
+
+const commentImageInput = document.getElementById("commentImage");
+if (commentImageInput) {
+  commentImageInput.addEventListener("change", handleCommentImageSelect);
+}
+
+document.getElementById("username").addEventListener("blur", async function() {
+  await checkUsernameAvailability();
+});
+
+document.getElementById("username").addEventListener("input", function() {
+  hideUsernameError();
+});
+
+async function checkUsernameAvailability() {
+  const username = document.getElementById("username").value.trim();
+  if (!username) {
+    hideUsernameError();
+    return true;
+  }
+  
+  const savedUsername = localStorage.getItem('commentUsername');
+  if (savedUsername && savedUsername.toLowerCase() === username.toLowerCase()) {
+    hideUsernameError();
+    return true;
+  }
+  
+  const taken = await isUsernameTaken(username);
+  if (taken) {
+    showUsernameError("⚠️ This username is already taken. Please choose another.");
+    return false;
+  } else {
+    hideUsernameError();
+    return true;
+  }
+}
 
 function showError(message) {
   const errorDiv = document.getElementById("errorMessage");
@@ -801,6 +905,96 @@ function hideError() {
   }
 }
 
+function showUsernameError(message) {
+  const overlay = document.createElement('div');
+  overlay.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    animation: fadeIn 0.3s ease;
+  `;
+  
+  const modal = document.createElement('div');
+  modal.style.cssText = `
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.3s ease;
+  `;
+  
+  modal.innerHTML = `
+    <div style="text-align: center;">
+      <div style="font-size: 48px; margin-bottom: 15px;">⚠️</div>
+      <h3 style="color: #dc2626; margin-bottom: 10px; font-size: 20px;">Username Taken</h3>
+      <p style="color: #64748b; margin-bottom: 20px; line-height: 1.5;">${message}</p>
+      <button id="closeErrorModal" style="
+        background: linear-gradient(to right, #60a5fa, #818cf8);
+        color: white;
+        border: none;
+        padding: 10px 30px;
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+        font-size: 14px;
+        transition: all 0.3s;
+      ">OK, I'll Choose Another</button>
+    </div>
+  `;
+  
+  overlay.appendChild(modal);
+  document.body.appendChild(overlay);
+  
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  `;
+  document.head.appendChild(style);
+  
+  const closeBtn = document.getElementById('closeErrorModal');
+  closeBtn.addEventListener('click', () => {
+    overlay.style.animation = 'fadeOut 0.3s ease';
+    setTimeout(() => overlay.remove(), 300);
+  });
+  
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+      overlay.style.animation = 'fadeOut 0.3s ease';
+      setTimeout(() => overlay.remove(), 300);
+    }
+  });
+  
+  const usernameInput = document.getElementById("username");
+  usernameInput.style.borderColor = "#dc2626";
+  usernameInput.focus();
+}
+
+function hideUsernameError() {
+  const errorDiv = document.getElementById("usernameError");
+  const usernameInput = document.getElementById("username");
+  
+  if (errorDiv) {
+    errorDiv.style.display = "none";
+  }
+  usernameInput.style.borderColor = "#e2e8f0";
+}
+
 function loadComments() {
   if (!firebaseInitialized || !window.firebaseModules) {
     setTimeout(loadComments, 100);
@@ -809,33 +1003,28 @@ function loadComments() {
 
   const commentsList = document.getElementById("commentsList");
   if (!commentsList) return;
-
+  
   commentsList.innerHTML = '<div class="loading">Loading comments...</div>';
 
   const { ref, onValue } = window.firebaseModules.db;
   const commentsRef = ref(firebaseDatabase, "comments");
+  
+  onValue(commentsRef, (snapshot) => {
+    const data = snapshot.val();
+    const comments = [];
 
-  onValue(
-    commentsRef,
-    (snapshot) => {
-      const data = snapshot.val();
-      const comments = [];
-
-      if (data) {
-        Object.keys(data).forEach((key) => {
-          comments.push({ id: key, ...data[key] });
-        });
-      }
-
-      comments.sort((a, b) => b.timestamp - a.timestamp);
-      displayComments(comments);
-    },
-    (error) => {
-      console.error("Error loading comments:", error);
-      commentsList.innerHTML =
-        '<div class="empty-state">Error loading comments. Check console.</div>';
+    if (data) {
+      Object.keys(data).forEach((key) => {
+        comments.push({ id: key, ...data[key] });
+      });
     }
-  );
+
+    comments.sort((a, b) => b.timestamp - a.timestamp);
+    displayComments(comments);
+  }, (error) => {
+    console.error("Error loading comments:", error);
+    commentsList.innerHTML = '<div class="empty-state">Error loading comments. Check console.</div>';
+  });
 }
 
 async function getProfilePic(username) {
@@ -844,23 +1033,19 @@ async function getProfilePic(username) {
   const { ref, onValue } = window.firebaseModules.db;
   const profileKey = username.toLowerCase().replace(/[^a-z0-9]/g, "_");
   const profileRef = ref(firebaseDatabase, `profiles/${profileKey}`);
-
+  
   return new Promise((resolve) => {
-    onValue(
-      profileRef,
-      (snapshot) => {
-        resolve(snapshot.val());
-      },
-      { onlyOnce: true }
-    );
+    onValue(profileRef, (snapshot) => {
+      resolve(snapshot.val());
+    }, { onlyOnce: true });
   });
 }
 
 function handleFileSelect(e) {
   const file = e.target.files[0];
   if (file) {
-    if (file.size > 1000000) {
-      alert("File is too large. Please choose an image under 1MB.");
+    if (file.size > 5000000) { 
+      alert("File is too large. Please choose an image under 5MB.");
       return;
     }
 
@@ -872,10 +1057,69 @@ function handleFileSelect(e) {
       if (fileNameEl) {
         fileNameEl.textContent = `✓ ${file.name}`;
       }
+      
+      const username = document.getElementById("username").value.trim();
+      if (username) {
+        saveUserData(username, currentProfilePic);
+      }
     };
     reader.readAsDataURL(file);
   }
 }
+
+function handleCommentImageSelect(e) {
+  const file = e.target.files[0];
+  if (file) {
+    if (file.size > 10000000) { 
+      alert("Image is too large. Please choose an image under 10MB.");
+      e.target.value = '';
+      commentImage = null;
+      const preview = document.getElementById("commentImagePreview");
+      if (preview) preview.style.display = 'none';
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = function (event) {
+      commentImage = event.target.result;
+      
+      let preview = document.getElementById("commentImagePreview");
+      if (!preview) {
+        preview = document.createElement('div');
+        preview.id = 'commentImagePreview';
+        preview.style.cssText = 'margin-top: 10px; position: relative;';
+        e.target.parentElement.appendChild(preview);
+      }
+      
+      preview.innerHTML = `
+        <img src="${commentImage}" style="max-width: 200px; max-height: 200px; border-radius: 8px; border: 2px solid #e2e8f0;">
+        <button type="button" onclick="removeCommentImage()" style="
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          background: #ef4444;
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+          cursor: pointer;
+          font-weight: bold;
+        ">×</button>
+      `;
+      preview.style.display = 'block';
+    };
+    reader.readAsDataURL(file);
+  }
+}
+
+window.removeCommentImage = function() {
+  commentImage = null;
+  const input = document.getElementById("commentImage");
+  if (input) input.value = '';
+  const preview = document.getElementById("commentImagePreview");
+  if (preview) preview.style.display = 'none';
+};
 
 async function updatePreview() {
   const username = document.getElementById("username").value.trim();
@@ -888,6 +1132,7 @@ async function updatePreview() {
     const savedPic = await getProfilePic(username);
     if (savedPic) {
       preview.innerHTML = `<img src="${savedPic}" alt="Profile">`;
+      currentProfilePic = savedPic;
     } else {
       preview.innerHTML = `<span>${username.charAt(0).toUpperCase()}</span>`;
     }
@@ -906,12 +1151,46 @@ async function postComment() {
   const commentText = document.getElementById("commentText").value.trim();
   const postBtn = document.getElementById("postBtn");
 
-  if (!username || !commentText) {
-    alert("Please enter your name and comment");
+  if (!username) {
+    alert("Please enter your name");
     return;
   }
 
+  if (!commentText && !commentImage) {
+    alert("Please enter a comment or attach an image");
+    return;
+  }
+
+  const isAvailable = await checkUsernameAvailability();
+  if (!isAvailable) {
+    showError("⚠️ This username is already taken. Please choose another name.");
+    return;
+  }
+
+  const savedUsername = localStorage.getItem('commentUsername');
+  const isOwnUsername = savedUsername && savedUsername.toLowerCase() === username.toLowerCase();
+  
+  if (!isOwnUsername) {
+    const taken = await isUsernameTaken(username);
+    if (taken) {
+      showError("⚠️ This username is already taken. Please choose another name.");
+      showUsernameError("⚠️ This username is already taken.");
+      return;
+    }
+    
+    const registered = await registerUsername(username);
+    if (!registered) {
+      showError("Failed to register username. Please try again.");
+      return;
+    }
+    
+    console.log(`✅ Username "${username}" registered successfully!`);
+  } else {
+    console.log(`✅ Using your registered username: "${username}"`);
+  }
+
   hideError();
+  hideUsernameError();
   postBtn.disabled = true;
   postBtn.textContent = "Posting...";
 
@@ -921,10 +1200,7 @@ async function postComment() {
 
     if (currentProfilePic) {
       const profileKey = username.toLowerCase().replace(/[^a-z0-9]/g, "_");
-      await set(
-        ref(firebaseDatabase, `profiles/${profileKey}`),
-        currentProfilePic
-      );
+      await set(ref(firebaseDatabase, `profiles/${profileKey}`), currentProfilePic);
     } else {
       profilePic = await getProfilePic(username);
     }
@@ -933,12 +1209,25 @@ async function postComment() {
       text: commentText,
       username: username,
       profilePic: profilePic || null,
+      commentImage: commentImage || null,
       timestamp: Date.now(),
+      likes: 0,
+      dislikes: 0,
+      likedBy: {},
+      dislikedBy: {}
     };
 
     await push(ref(firebaseDatabase, "comments"), comment);
 
+    saveUserData(username, profilePic);
+
     document.getElementById("commentText").value = "";
+    commentImage = null;
+    const commentImageInput = document.getElementById("commentImage");
+    if (commentImageInput) commentImageInput.value = '';
+    const preview = document.getElementById("commentImagePreview");
+    if (preview) preview.style.display = 'none';
+    
     alert("Comment posted successfully!");
   } catch (error) {
     console.error("Error posting comment:", error);
@@ -949,17 +1238,97 @@ async function postComment() {
   }
 }
 
-window.deleteComment = async function (commentId) {
+window.likeComment = async function(commentId) {
   if (!firebaseInitialized || !window.firebaseModules) return;
+  
+  const savedUsername = localStorage.getItem('commentUsername');
+  if (!savedUsername) {
+    alert("Please set your username first by posting a comment!");
+    return;
+  }
 
-  if (confirm("Are you sure you want to delete this comment?")) {
-    try {
-      const { ref, remove } = window.firebaseModules.db;
-      await remove(ref(firebaseDatabase, `comments/${commentId}`));
-    } catch (error) {
-      console.error("Error deleting comment:", error);
-      alert("Failed to delete comment.");
+  try {
+    const { ref, get, update } = window.firebaseModules.db;
+    const commentRef = ref(firebaseDatabase, `comments/${commentId}`);
+    const snapshot = await get(commentRef);
+    const comment = snapshot.val();
+    
+    if (!comment) return;
+
+    const likedBy = comment.likedBy || {};
+    const dislikedBy = comment.dislikedBy || {};
+    const userKey = savedUsername.toLowerCase().replace(/[^a-z0-9]/g, "_");
+
+    if (likedBy[userKey]) {
+      delete likedBy[userKey];
+      await update(commentRef, {
+        likes: (comment.likes || 1) - 1,
+        likedBy: likedBy
+      });
+    } else {
+      if (dislikedBy[userKey]) {
+        delete dislikedBy[userKey];
+        await update(commentRef, {
+          dislikes: Math.max(0, (comment.dislikes || 1) - 1),
+          dislikedBy: dislikedBy
+        });
+      }
+      
+      likedBy[userKey] = true;
+      await update(commentRef, {
+        likes: (comment.likes || 0) + 1,
+        likedBy: likedBy
+      });
     }
+  } catch (error) {
+    console.error("Error liking comment:", error);
+  }
+};
+
+window.dislikeComment = async function(commentId) {
+  if (!firebaseInitialized || !window.firebaseModules) return;
+  
+  const savedUsername = localStorage.getItem('commentUsername');
+  if (!savedUsername) {
+    alert("Please set your username first by posting a comment!");
+    return;
+  }
+
+  try {
+    const { ref, get, update } = window.firebaseModules.db;
+    const commentRef = ref(firebaseDatabase, `comments/${commentId}`);
+    const snapshot = await get(commentRef);
+    const comment = snapshot.val();
+    
+    if (!comment) return;
+
+    const likedBy = comment.likedBy || {};
+    const dislikedBy = comment.dislikedBy || {};
+    const userKey = savedUsername.toLowerCase().replace(/[^a-z0-9]/g, "_");
+
+    if (dislikedBy[userKey]) {
+      delete dislikedBy[userKey];
+      await update(commentRef, {
+        dislikes: Math.max(0, (comment.dislikes || 1) - 1),
+        dislikedBy: dislikedBy
+      });
+    } else {
+      if (likedBy[userKey]) {
+        delete likedBy[userKey];
+        await update(commentRef, {
+          likes: Math.max(0, (comment.likes || 1) - 1),
+          likedBy: likedBy
+        });
+      }
+      
+      dislikedBy[userKey] = true;
+      await update(commentRef, {
+        dislikes: (comment.dislikes || 0) + 1,
+        dislikedBy: dislikedBy
+      });
+    }
+  } catch (error) {
+    console.error("Error disliking comment:", error);
   }
 };
 
@@ -972,18 +1341,31 @@ function displayComments(comments) {
   commentCount.textContent = comments.length;
 
   if (comments.length === 0) {
-    commentsList.innerHTML =
-      '<div class="empty-state">No comments yet. Be the first to comment!</div>';
+    commentsList.innerHTML = '<div class="empty-state">No comments yet. Be the first to comment!</div>';
     return;
   }
 
-  commentsList.innerHTML = comments
-    .map((comment) => {
+  const savedUsername = localStorage.getItem('commentUsername');
+  const userKey = savedUsername ? savedUsername.toLowerCase().replace(/[^a-z0-9]/g, "_") : null;
+
+  commentsList.innerHTML = comments.map((comment) => {
       const avatarContent = comment.profilePic
-        ? `<img src="${comment.profilePic}" alt="${escapeHtml(
-            comment.username
-          )}">`
+        ? `<img src="${comment.profilePic}" alt="${escapeHtml(comment.username)}">`
         : `<span>${comment.username.charAt(0).toUpperCase()}</span>`;
+
+      const likes = comment.likes || 0;
+      const dislikes = comment.dislikes || 0;
+      const likedBy = comment.likedBy || {};
+      const dislikedBy = comment.dislikedBy || {};
+      
+      const hasLiked = userKey && likedBy[userKey];
+      const hasDisliked = userKey && dislikedBy[userKey];
+      
+      const commentImageHtml = comment.commentImage 
+        ? `<div class="comment-image-container">
+             <img src="${comment.commentImage}" alt="Comment image" class="comment-image" onclick="openImageModal('${comment.commentImage}')">
+           </div>`
+        : '';
 
       return `
         <div class="comment">
@@ -995,15 +1377,20 @@ function displayComments(comments) {
                 <div class="comment-time">${formatTime(comment.timestamp)}</div>
               </div>
             </div>
-            <button class="delete-btn" onclick="deleteComment('${
-              comment.id
-            }')">🗑️</button>
+            <div class="comment-actions">
+              <button class="reaction-btn ${hasLiked ? 'active' : ''}" onclick="likeComment('${comment.id}')" title="Like">
+                <span>${likes}</span>
+              </button>
+              <button class="reaction-btn ${hasDisliked ? 'active' : ''}" onclick="dislikeComment('${comment.id}')" title="Dislike">
+                <span>${dislikes}</span>
+              </button>
+            </div>
           </div>
-          <div class="comment-text">${escapeHtml(comment.text)}</div>
+          ${comment.text ? `<div class="comment-text">${escapeHtml(comment.text)}</div>` : ''}
+          ${commentImageHtml}
         </div>
       `;
-    })
-    .join("");
+    }).join("");
 }
 
 function formatTime(timestamp) {
@@ -1025,3 +1412,102 @@ function escapeHtml(text) {
   div.textContent = text;
   return div.innerHTML;
 }
+
+window.openImageModal = function(imageSrc) {
+  const overlay = document.createElement('div');
+  overlay.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    cursor: pointer;
+  `;
+  
+  const img = document.createElement('img');
+  img.src = imageSrc;
+  img.style.cssText = `
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  `;
+  
+  overlay.appendChild(img);
+  document.body.appendChild(overlay);
+  
+  overlay.addEventListener('click', () => overlay.remove());
+};
+
+window.removeUsername = async function(username) {
+  if (!firebaseInitialized || !window.firebaseModules) {
+    console.error("Firebase not initialized");
+    return;
+  }
+  
+  const confirmed = confirm(`Are you sure you want to remove username "${username}"? This cannot be undone.`);
+  if (!confirmed) return;
+  
+  try {
+    const { ref, get, remove } = window.firebaseModules.db;
+    const usernamesRef = ref(firebaseDatabase, "registeredUsernames");
+    const snapshot = await get(usernamesRef);
+    const data = snapshot.val();
+    
+    if (!data) {
+      console.log("No usernames found");
+      return;
+    }
+    
+    let removed = false;
+    for (const [key, value] of Object.entries(data)) {
+      if (value.toLowerCase() === username.toLowerCase()) {
+        await remove(ref(firebaseDatabase, `registeredUsernames/${key}`));
+        registeredUsernames.delete(username.toLowerCase());
+        removed = true;
+        console.log(`✅ Username "${username}" has been removed`);
+        break;
+      }
+    }
+    
+    if (!removed) {
+      console.log(`❌ Username "${username}" not found`);
+    }
+  } catch (error) {
+    console.error("Error removing username:", error);
+  }
+};
+
+window.listUsernames = async function() {
+  if (!firebaseInitialized || !window.firebaseModules) {
+    console.error("Firebase not initialized");
+    return;
+  }
+  
+  try {
+    const { ref, get } = window.firebaseModules.db;
+    const usernamesRef = ref(firebaseDatabase, "registeredUsernames");
+    const snapshot = await get(usernamesRef);
+    const data = snapshot.val();
+    
+    if (!data) {
+      console.log("No usernames registered yet");
+      return;
+    }
+    
+    const usernames = Object.values(data);
+    console.log(`📋 Registered Usernames (${usernames.length}):`);
+    usernames.forEach((username, index) => {
+      console.log(`${index + 1}. ${username}`);
+    });
+    
+    return usernames;
+  } catch (error) {
+    console.error("Error listing usernames:", error);
+  }
+};
