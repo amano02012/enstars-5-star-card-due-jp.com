@@ -177,6 +177,34 @@ body::before {
   padding-bottom: 2.5rem;
   position: relative;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.idol-card.rank-changed {
+  animation: rankChangeHighlight 0.8s ease-out;
+}
+
+@keyframes rankChangeHighlight {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  25% {
+    transform: scale(1.08);
+    box-shadow: 0 12px 30px rgba(96, 165, 250, 0.5);
+    border-color: #60a5fa;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(96, 165, 250, 0.4);
+  }
+  75% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .idol-card img {
@@ -211,6 +239,34 @@ body::before {
   background: linear-gradient(to right, #f97316, #dc2626);
   padding: 2px;
   border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.combo.updated {
+  animation: comboUpdate 0.6s ease-out;
+}
+
+@keyframes comboUpdate {
+  0% {
+    transform: scale(1);
+    background: linear-gradient(to right, #f97316, #dc2626);
+  }
+  25% {
+    transform: scale(1.15) translateY(-3px);
+    background: linear-gradient(to right, #fbbf24, #f59e0b);
+    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.5);
+  }
+  50% {
+    transform: scale(1.2) translateY(-5px);
+    background: linear-gradient(to right, #fbbf24, #f59e0b);
+  }
+  75% {
+    transform: scale(1.1) translateY(-2px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    background: linear-gradient(to right, #f97316, #dc2626);
+  }
 }
 
 .ribbon {
@@ -226,6 +282,74 @@ body::before {
   border-radius: 6px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ribbon.rank-up {
+  animation: ribbonRankUp 0.8s ease-out;
+}
+
+.ribbon.rank-down {
+  animation: ribbonRankDown 0.8s ease-out;
+}
+
+@keyframes ribbonRankUp {
+  0% {
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+  15% {
+    transform: translateX(-50%) translateY(-15px) scale(1.15) rotate(5deg);
+  }
+  30% {
+    transform: translateX(-50%) translateY(-20px) scale(1.2) rotate(-5deg);
+  }
+  45% {
+    transform: translateX(-50%) translateY(-15px) scale(1.15) rotate(3deg);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-8px) scale(1.1) rotate(-2deg);
+  }
+  80% {
+    transform: translateX(-50%) translateY(-3px) scale(1.05) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes ribbonRankDown {
+  0% {
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+  15% {
+    transform: translateX(-50%) translateY(15px) scale(0.9) rotate(-5deg);
+  }
+  30% {
+    transform: translateX(-50%) translateY(20px) scale(0.85) rotate(5deg);
+  }
+  45% {
+    transform: translateX(-50%) translateY(15px) scale(0.9) rotate(-3deg);
+  }
+  60% {
+    transform: translateX(-50%) translateY(8px) scale(0.95) rotate(2deg);
+  }
+  80% {
+    transform: translateX(-50%) translateY(3px) scale(0.98) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1) rotate(180deg);
+  }
 }
 
 .ribbon::before {

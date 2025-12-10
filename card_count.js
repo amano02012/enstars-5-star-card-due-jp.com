@@ -102,7 +102,7 @@ const idolList = [
   name: `Aira Shiratori`,
   avatar: `images/btn-shiratori_aira.webp`,
   borderColor: "#FFF1CF",
-  stars: { five: 10, four: 14, three: 17 }
+  stars: { five: 10, four: 15, three: 17 }
 },
 {
   id: 16,
@@ -116,7 +116,7 @@ const idolList = [
   name: `Tatsumi Kazehaya`,
   avatar: `images/btn-kazehaya_tatsumi.webp`,
   borderColor: "#7EBEA5",
-  stars: { five: 9, four: 15, three: 16 }
+  stars: { five: 10, four: 15, three: 16 }
 },
 {
   id: 18,
@@ -193,7 +193,7 @@ const idolList = [
   name: `Kohaku Oukawa`,
   avatar: `images/btn-oukawa_kohaku.webp`,
   borderColor: "#F4B3C2",
-  stars: { five: 9, four: 18, three: 17 }
+  stars: { five: 9, four: 18, three: 18 }
 },
 {
   id: 29,
@@ -256,7 +256,7 @@ const idolList = [
   name: `Hajime Shino`,
   avatar: `images/btn-shino_hajime.webp`,
   borderColor: "#CAB8D9",
-  stars: { five: 13, four: 16, three: 19 }
+  stars: { five: 13, four: 16, three: 20 }
 },
 {
   id: 38,
@@ -312,7 +312,7 @@ const idolList = [
   name: `Ritsu Sakuma`,
   avatar: `images/btn-sakuma_ritsu.webp`,
   borderColor: "#001E43",
-  stars: { five: 12, four: 17, three: 16 }
+  stars: { five: 12, four: 17, three: 17 }
 },
 {
   id: 46,

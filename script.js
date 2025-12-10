@@ -16,11 +16,50 @@ function getJSTDate() {
 }
 
 function calculateDays(startDate) {
-  const now = getJSTDate();
+  const MS_PER_DAY = 1000 * 60 * 60 * 24;
+  const JST_OFFSET_MS = 9 * 60 * 60 * 1000; 
+  const CUTOFF_HOUR = 15; 
+
   const start = new Date(startDate);
-  const diff = now - start;
-  return diff >= 0 ? Math.floor(diff / (1000 * 60 * 60 * 24)) : 0;
+  const nowUtc = Date.now();
+  
+  const nowJst = new Date(nowUtc + JST_OFFSET_MS);
+  
+  const todayJstCutoff = new Date(nowJst);
+  todayJstCutoff.setUTCHours(CUTOFF_HOUR, 0, 0, 0);
+  
+  const effectiveNowJst = nowJst < todayJstCutoff 
+    ? new Date(nowJst.getTime() - MS_PER_DAY) 
+    : nowJst;
+  
+  const daysNowJST = Math.floor(effectiveNowJst.getTime() / MS_PER_DAY);
+  const daysStartJST = Math.floor((start.getTime() + JST_OFFSET_MS) / MS_PER_DAY);
+
+  return Math.max(0, daysNowJST - daysStartJST);
 }
+
+function scheduleDailyRefreshAt15JST() {
+  const nowJst = getJSTDate();
+  
+  const targetJst = new Date(nowJst);
+  targetJst.setHours(15, 0, 0, 0);
+  
+  if (targetJst <= nowJst) {
+    targetJst.setDate(targetJst.getDate() + 1);
+  }
+  
+  const delay = targetJst.getTime() - nowJst.getTime();
+  
+  console.log(`Next refresh in ${Math.round(delay / 1000 / 60)} minutes at 15:00 JST`);
+  
+  setTimeout(() => {
+    console.log('⏰ Refreshing idols at 15:00 JST...');
+    renderIdols();
+    scheduleDailyRefreshAt15JST(); 
+  }, delay);
+}
+
+scheduleDailyRefreshAt15JST();
 
 const idols = [{
   id: 1,
@@ -139,8 +178,8 @@ const idols = [{
   borderColor: "#E60033",
   startDate: `2025-11-30`,
   description: "Latest Card: Unit Event",
-  detailsImage: "cards/RYUSEITAI/灯す正義の光_Chiaki_Morisawa.webp",
-  detailsDescription: "[灯す正義の光] Chiaki Morisawa"
+  detailsImage: "cards/RYUSEITAI/Light_Up_the_Light_of_Justice_Chiaki_Morisawa.webp",
+  detailsDescription: "(Light Up the Light of Justice) Chiaki Morisawa"
 },
 {
   id: 13,
@@ -187,10 +226,10 @@ const idols = [{
   name: `Tatsumi Kazehaya`,
   avatar: `images/btn-kazehaya_tatsumi.webp`,
   borderColor: "#7EBEA5",
-  startDate: `2024-05-30`,
-  description: "Latest Card: Cross Scout",
-  detailsImage: "cards/Alkaloid/Composed_Droplet_Tatsumi_Kazehaya.webp",
-  detailsDescription: "(Composed Droplet) Tatsumi Kazehaya"
+  startDate: `2025-12-10`,
+  description: "Latest Card: Bright me up!! Scout Stage",
+  detailsImage: "cards/Alkaloid/舞い込む幸運_Tatsumi_Kazehaya.webp",
+  detailsDescription: "[舞い込む幸運] Tatsumi Kazehaya"
 },
 {
   id: 18,
@@ -269,8 +308,8 @@ const idols = [{
   borderColor: "#00A1E9",
   startDate: `2025-11-25`,
   description: "Latest Card: Bright me up!! Scout Stage",
-  detailsImage: "cards/2wink/焦がれるスター_Yuta_Aoi.webp",
-  detailsDescription: "[焦がれるスター] Yuta Aoi"
+  detailsImage: "cards/2wink/A_Longing_Star_Yuta_Aoi.webp",
+  detailsDescription: "(A Longing Star) Yuta Aoi"
 },
 {
   id: 26,
@@ -529,8 +568,8 @@ const idols = [{
   borderColor: "#80FFF4",
   startDate: `2025-11-29`,
   description: "Latest Card: Theme Scout",
-  detailsImage: "cards/Special_for_Princess/はじめての世界_Esu.webp",
-  detailsDescription: "[はじめての世界] Esu"
+  detailsImage: "cards/Special_for_Princess/Brand_New_World_Esu.webp",
+  detailsDescription: "(Brand New World) Esu"
 },
 {
   id: 52,
@@ -675,67 +714,298 @@ function getRibbonText(rank) {
   return `${rank}位`;
 }
 
-function renderIdols() {
-  const container = document.getElementById("idol-container");
-  container.innerHTML = "";
+let previousIdolState = [];
+let isFirstLoad = true;
 
+function renderIdols() {
   idols.forEach(idol => {
     idol.days = calculateDays(idol.startDate);
   });
 
   idols.sort((a, b) => b.days - a.days);
-
+  
   idols.forEach((idol, index) => {
     idol.rank = index + 1;
-
-    const card = document.createElement("div");
-    card.className = "idol-card";
-    card.style.borderColor = idol.borderColor;
-
-    const img = document.createElement("img");
-    img.src = idol.avatar;
-    img.alt = idol.name;
-
-    const name = document.createElement("div");
-    name.className = "idol-name";
-    name.textContent = idol.name;
-
-    const days = document.createElement("div");
-    days.className = "combo";
-    days.textContent = `${idol.days} day/s`;
-
-    const desc = document.createElement("div");
-    desc.className = "idol-description";
-    desc.textContent = idol.description;
-
-    const ribbon = document.createElement("div");
-    ribbon.className = getRibbonClass(idol.rank);
-    ribbon.textContent = getRibbonText(idol.rank);
-
-    card.appendChild(img);
-    card.appendChild(name);
-    card.appendChild(days);
-    card.appendChild(desc);
-    card.appendChild(ribbon);
-
-    container.appendChild(card);
-
-    const detailsBtn = document.createElement("button");
-    detailsBtn.className = "details-btn";
-    detailsBtn.textContent = "Details";
-    detailsBtn.addEventListener("click", () => openModal(idol));
-    card.appendChild(detailsBtn);
-
-    if (idol.isNew) {
-      const newLabel = document.createElement("div");
-      newLabel.className = "new-label";
-      newLabel.textContent = "NEW";
-      card.appendChild(newLabel);
-    }
   });
+
+  const storedState = localStorage.getItem('idolLeaderboardState');
+  
+  if (isFirstLoad) {
+    isFirstLoad = false;
+    
+    if (storedState) {
+      previousIdolState = JSON.parse(storedState);
+      
+      const hasChanges = idols.some(idol => {
+        const prev = previousIdolState.find(p => p.id === idol.id);
+        return !prev || prev.days !== idol.days || prev.rank !== idol.rank;
+      });
+      
+      if (hasChanges) {
+        renderCardsWithStoredState();
+        setTimeout(() => {
+          animateLeaderboardChanges();
+        }, 500);
+      } else {
+        renderCardsInitial();
+      }
+    } else {
+      renderCardsInitial();
+    }
+  } else {
+    animateLeaderboardChanges();
+  }
+  
+  const currentState = idols.map(idol => ({
+    id: idol.id,
+    rank: idol.rank,
+    days: idol.days
+  }));
+  localStorage.setItem('idolLeaderboardState', JSON.stringify(currentState));
 }
 
-renderIdols();
+function renderCardsInitial() {
+  const container = document.getElementById("idol-container");
+  container.innerHTML = "";
+  
+  idols.forEach((idol, index) => {
+    const card = createIdolCard(idol);
+    
+    card.style.transition = 'all 0.5s ease';
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
+    
+    container.appendChild(card);
+    
+    card.offsetHeight;
+    
+    setTimeout(() => {
+      card.style.opacity = '1';
+      card.style.transform = 'translateY(0)';
+    }, index * 50 + 50); 
+  });
+  
+  previousIdolState = idols.map(idol => ({
+    id: idol.id,
+    rank: idol.rank,
+    days: idol.days
+  }));
+}
+
+function renderCardsWithStoredState() {
+  const container = document.getElementById("idol-container");
+  container.innerHTML = "";
+  
+  previousIdolState.forEach((prevIdol, index) => {
+    const currentIdol = idols.find(i => i.id === prevIdol.id);
+    if (!currentIdol) return;
+    
+    const tempRank = currentIdol.rank;
+    const tempDays = currentIdol.days;
+    currentIdol.rank = prevIdol.rank;
+    currentIdol.days = prevIdol.days;
+    
+    const card = createIdolCard(currentIdol);
+    card.style.opacity = '1';
+    container.appendChild(card);
+    
+    currentIdol.rank = tempRank;
+    currentIdol.days = tempDays;
+  });
+  
+  const sortedCards = Array.from(container.children).sort((a, b) => {
+    const aId = parseInt(a.dataset.idolId);
+    const bId = parseInt(b.dataset.idolId);
+    const aOldRank = previousIdolState.find(p => p.id === aId)?.rank || 999;
+    const bOldRank = previousIdolState.find(p => p.id === bId)?.rank || 999;
+    return aOldRank - bOldRank;
+  });
+  
+  container.innerHTML = '';
+  sortedCards.forEach(card => container.appendChild(card));
+}
+
+function animateLeaderboardChanges() {
+  const container = document.getElementById("idol-container");
+  
+  idols.forEach(idol => {
+    const previousIdol = previousIdolState.find(p => p.id === idol.id);
+    if (!previousIdol) return;
+    
+    const oldDays = previousIdol.days;
+    const newDays = idol.days;
+    
+    if (oldDays !== newDays) {
+      const cardElement = Array.from(container.children).find(card => {
+        const nameEl = card.querySelector('.idol-name');
+        return nameEl && nameEl.textContent === idol.name;
+      });
+      
+      if (cardElement) {
+        const daysElement = cardElement.querySelector('.combo');
+        if (daysElement) {
+          animateDayCount(daysElement, oldDays, newDays);
+          
+          setTimeout(() => {
+            daysElement.classList.add('updated');
+            setTimeout(() => daysElement.classList.remove('updated'), 600);
+          }, 500);
+        }
+      }
+    }
+  });
+  
+  setTimeout(() => {
+    reorganizeLeaderboard();
+  }, 1500);
+}
+
+function animateDayCount(element, oldValue, newValue) {
+  const duration = 1000; 
+  const steps = 30;
+  const stepDuration = duration / steps;
+  const valueChange = newValue - oldValue;
+  const stepValue = valueChange / steps;
+  
+  let currentStep = 0;
+  
+  const interval = setInterval(() => {
+    currentStep++;
+    const currentValue = Math.round(oldValue + (stepValue * currentStep));
+    element.textContent = `${currentValue} day/s`;
+    
+    if (currentStep >= steps) {
+      clearInterval(interval);
+      element.textContent = `${newValue} day/s`;
+    }
+  }, stepDuration);
+}
+
+function reorganizeLeaderboard() {
+  const container = document.getElementById("idol-container");
+  
+  const currentCards = Array.from(container.children).map(card => {
+    const nameEl = card.querySelector('.idol-name');
+    const name = nameEl ? nameEl.textContent : '';
+    const idol = idols.find(i => i.name === name);
+    return {
+      element: card,
+      idol: idol,
+      oldRank: previousIdolState.find(p => p.id === idol?.id)?.rank || 0
+    };
+  });
+  
+  currentCards.sort((a, b) => (a.idol?.rank || 999) - (b.idol?.rank || 999));
+  
+  currentCards.forEach((cardData, newIndex) => {
+    const card = cardData.element;
+    const idol = cardData.idol;
+    if (!idol) return;
+    
+    const oldRank = cardData.oldRank;
+    const newRank = idol.rank;
+    
+    card.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+    
+    if (oldRank !== newRank) {
+      card.classList.add('rank-changed');
+      
+      const ribbon = card.querySelector('.ribbon');
+      if (ribbon) {
+        ribbon.className = getRibbonClass(newRank);
+        ribbon.textContent = getRibbonText(newRank);
+        
+        if (newRank < oldRank) {
+          ribbon.classList.add('rank-up');
+        } else {
+          ribbon.classList.add('rank-down');
+        }
+        
+        setTimeout(() => {
+          ribbon.classList.remove('rank-up', 'rank-down');
+        }, 800);
+      }
+      
+      setTimeout(() => {
+        card.classList.remove('rank-changed');
+      }, 800);
+    }
+    
+    container.appendChild(card);
+  });
+  
+  previousIdolState = idols.map(idol => ({
+    id: idol.id,
+    rank: idol.rank,
+    days: idol.days
+  }));
+}
+
+function createIdolCard(idol) {
+  const card = document.createElement("div");
+  card.className = "idol-card";
+  card.style.borderColor = idol.borderColor;
+  card.dataset.idolId = idol.id;
+
+  const img = document.createElement("img");
+  img.src = idol.avatar;
+  img.alt = idol.name;
+
+  const name = document.createElement("div");
+  name.className = "idol-name";
+  name.textContent = idol.name;
+
+  const days = document.createElement("div");
+  days.className = "combo";
+  days.textContent = `${idol.days} day/s`;
+
+  const desc = document.createElement("div");
+  desc.className = "idol-description";
+  desc.textContent = idol.description;
+
+  const ribbon = document.createElement("div");
+  ribbon.className = getRibbonClass(idol.rank);
+  ribbon.textContent = getRibbonText(idol.rank);
+
+  card.appendChild(img);
+  card.appendChild(name);
+  card.appendChild(days);
+  card.appendChild(desc);
+  card.appendChild(ribbon);
+
+  const detailsBtn = document.createElement("button");
+  detailsBtn.className = "details-btn";
+  detailsBtn.textContent = "Details";
+  detailsBtn.addEventListener("click", () => openModal(idol));
+  card.appendChild(detailsBtn);
+
+  if (idol.isNew) {
+    const newLabel = document.createElement("div");
+    newLabel.className = "new-label";
+    newLabel.textContent = "NEW";
+    card.appendChild(newLabel);
+  }
+
+  return card;
+}
+
+function updateIdolStartDate(idolId, newStartDate) {
+  const idol = idols.find(i => i.id === idolId);
+  if (idol) {
+    idol.startDate = newStartDate;
+    console.log(`Updated ${idol.name} to start date: ${newStartDate}`);
+    renderIdols();
+  } else {
+    console.log(`Idol with ID ${idolId} not found`);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    renderIdols();
+  }, 100);
+});
+
 setInterval(renderIdols, 60 * 60 * 1000);
 
 document.addEventListener("DOMContentLoaded", ()=>{const btn=document.querySelector(".hamburger"),body=document.body; if(!btn) return; btn.addEventListener("click", ()=>{const open=body.classList.toggle("nav-open"); btn.setAttribute("aria-expanded", open?"true":"false");}); window.addEventListener("resize", ()=>{ if(window.innerWidth>700 && body.classList.contains("nav-open")){ body.classList.remove("nav-open"); btn.setAttribute("aria-expanded","false"); }}); document.addEventListener("click",(e)=>{ if(!body.classList.contains("nav-open")) return; const inside = e.target.closest(".navbar"); if(!inside){ body.classList.remove("nav-open"); btn.setAttribute("aria-expanded","false"); }});});
