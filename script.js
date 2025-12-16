@@ -276,10 +276,10 @@ const idols = [{
   name: `Shu Itsuki`,
   avatar: `images/btn-itsuki_shu.webp`,
   borderColor: "#E3ACAE",
-  startDate: `2025-08-15`,
-  description: "Latest Card: Tour Event",
-  detailsImage: "cards/Valkyrie/PARADOX_BUNNY_Shu_Itsuki.webp",
-  detailsDescription: "(PARADOX BUNNY) Shu Itsuki"
+  startDate: `2025-12-15`,
+  description: "Latest Card: Unit Event",
+  detailsImage: "cards/Valkyrie/情熱の針先_Shu_Itsuki.webp",
+  detailsDescription: "[情熱の針先] Shu Itsuki"
 },
 {
   id: 23,
@@ -436,10 +436,10 @@ const idols = [{
   name: `Keito Hasumi`,
   avatar: `images/btn-hasumi_keito.webp`,
   borderColor: "#316745",
-  startDate: `2024-12-31`,
-  description: "Latest Card: Unit Event",
-  detailsImage: "cards/Akatsuki/The_Legend_of_KAGETSU_of_Revolution_Keito_Hasumi.webp",
-  detailsDescription: "(The Legend of KAGETSU of Revolution) Keito Hasumi"
+  startDate: `2025-12-14`,
+  description: "Latest Card: Theme Scout",
+  detailsImage: "cards/Akatsuki/フェイク·デッド_Keito_Hasumi.webp",
+  detailsDescription: "[フェイク·デッド] Keito Hasumi"
 },
 {
   id: 39,

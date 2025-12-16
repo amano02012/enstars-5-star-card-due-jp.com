@@ -11,7 +11,7 @@ const idolList = [
   name: `Wataru Hibiki`,
   avatar: `images/btn-hibiki_wataru.webp`,
   borderColor: "#A1D8E2",
-  stars: { five: 11, four: 14, three: 18 }
+  stars: { five: 11, four: 14, three: 19 }
 },
 {
   id: 3,
@@ -151,14 +151,14 @@ const idolList = [
   name: `Shu Itsuki`,
   avatar: `images/btn-itsuki_shu.webp`,
   borderColor: "#E3ACAE",
-  stars: { five: 13, four: 15, three: 15 }
+  stars: { five: 14, four: 15, three: 15 }
 },
 {
   id: 23,
   name: `Mika Kagehira`,
   avatar: `images/btn-kagehira_mika.webp`,
   borderColor: "#006A6C",
-  stars: { five: 11, four: 14, three: 18 }
+  stars: { five: 11, four: 15, three: 18 }
 },
 {
   id: 24,
@@ -263,7 +263,7 @@ const idolList = [
   name: `Keito Hasumi`,
   avatar: `images/btn-hasumi_keito.webp`,
   borderColor: "#316745",
-  stars: { five: 12, four: 14, three: 16 }
+  stars: { five: 13, four: 14, three: 16 }
 },
 {
   id: 39,
@@ -319,21 +319,21 @@ const idolList = [
   name: `Arashi Narukami`,
   avatar: `images/btn-narukami_arashi.webp`,
   borderColor: "#EDDE7B",
-  stars: { five: 11, four: 16, three: 18 }
+  stars: { five: 11, four: 16, three: 19 }
 },
 {
   id: 47,
   name: `Natsume Sakasaki`,
   avatar: `images/btn-sakasaki_natsume.webp`,
   borderColor: "#D70035",
-  stars: { five: 12, four: 14, three: 17 }
+  stars: { five: 12, four: 15, three: 17 }
 },
 {
   id: 48,
   name: `Tsumugi Aoba`,
   avatar: `images/btn-aoba_tsumugi.webp`,
   borderColor: "#00608D",
-  stars: { five: 10, four: 15, three: 18 }
+  stars: { five: 10, four: 15, three: 19 }
 },
 {
   id: 49,
@@ -368,7 +368,7 @@ const idolList = [
   name: `Fuyume Hanamura`,
   avatar: `images/btn-yume.webp`,
   borderColor: "#CCADD9",
-  stars: { five: 2, four: 5, three: 5 }
+  stars: { five: 2, four: 5, three: 6 }
 },
 {
   id: 54,
@@ -456,3 +456,4 @@ idolList.forEach((idol) => {
 }});
 
 document.addEventListener("DOMContentLoaded", ()=>{const btn=document.querySelector(".hamburger"),body=document.body; if(!btn) return; btn.addEventListener("click", ()=>{const open=body.classList.toggle("nav-open"); btn.setAttribute("aria-expanded", open?"true":"false");}); window.addEventListener("resize", ()=>{ if(window.innerWidth>700 && body.classList.contains("nav-open")){ body.classList.remove("nav-open"); btn.setAttribute("aria-expanded","false"); }}); document.addEventListener("click",(e)=>{ if(!body.classList.contains("nav-open")) return; const inside = e.target.closest(".navbar"); if(!inside){ body.classList.remove("nav-open"); btn.setAttribute("aria-expanded","false"); }});});
+window.recentUpdates.track.cardCount(idolList);
