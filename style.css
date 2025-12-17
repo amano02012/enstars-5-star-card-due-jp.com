@@ -608,6 +608,59 @@ body::before {
   letter-spacing: 0.3px;
 }
 
+.modal-card-stats {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 15px;
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.1), rgba(220, 38, 38, 0.1));
+  border-radius: 10px;
+  border-left: 4px solid #f97316;
+}
+
+.card-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  color: #1e293b;
+  font-weight: 800;
+}
+
+@media (max-width: 700px) {
+  .modal-card-stats {
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .card-stat-item {
+    padding: 8px 15px;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+  }
+
+  .stat-value {
+    font-size: 1.2rem;
+  }
+}
+
 @media (max-width: 700px) {
   .modal-date-wrapper {
     padding: 10px 12px;
@@ -1216,5 +1269,212 @@ textarea {
   
   .comment-image {
     max-height: 300px;
+  }
+}
+
+.main-layout {
+  display: flex;
+  gap: 20px;
+  max-width: 3200px;
+  margin: 0 auto;
+  align-items: flex-start;
+  position: relative;
+}
+
+.container {
+  flex: 1;
+  min-width: 0;
+}
+
+.side-panel {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 320px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  flex-shrink: 0;
+  z-index: 100;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+.side-panel.active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: all;
+}
+
+.side-panel-content {
+  padding: 20px;
+}
+
+.side-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.side-panel-header h2 {
+  font-size: 1.2rem;
+  color: #1e293b;
+  margin: 0;
+}
+
+.side-close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #64748b;
+  cursor: pointer;
+  padding: 5px;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.side-close-btn:hover {
+  color: #dc2626;
+}
+
+.side-panel-body {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.side-panel-img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.side-image-loader {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%);
+}
+
+.side-info-section {
+  padding: 12px;
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.1), rgba(129, 140, 248, 0.1));
+  border-radius: 8px;
+  border-left: 4px solid #60a5fa;
+}
+
+.side-description {
+  color: #1e293b;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.side-date-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(245, 158, 11, 0.1));
+  border-radius: 8px;
+  border-left: 4px solid #fbbf24;
+}
+
+.side-date-icon {
+  font-size: 1.2rem;
+}
+
+.side-date-text {
+  color: #1e293b;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.side-card-stats {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(16, 185, 129, 0.1));
+  border-radius: 8px;
+  border-left: 4px solid #22c55e;
+}
+
+.side-stat-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.side-stat-label {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.side-stat-value {
+  font-size: 1.3rem;
+  color: #1e293b;
+  font-weight: 800;
+}
+
+@media (max-width: 1200px) {
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .side-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 9998;
+    border-radius: 0;
+    transform: translateX(100%);
+  }
+
+  .side-panel.active {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 500px) {
+  .side-panel {
+    max-width: 100%;
+  }
+
+  .side-card-stats {
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .side-stat-item {
+    padding: 8px;
+  }
+
+  .side-stat-label {
+    font-size: 0.75rem;
+  }
+
+  .side-stat-value {
+    font-size: 1.1rem;
   }
 }

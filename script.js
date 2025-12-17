@@ -646,19 +646,62 @@ const idols = [{
   isNew: true
 }];
 
-function openModal(idol) {
-  const modal = document.getElementById("details-modal");
-  if (!modal || !idol) return;
+const cardCountData = {
+  1: { five: 12, four: 14, three: 17 }, 2: { five: 11, four: 14, three: 19 },
+  3: { five: 11, four: 16, three: 16 }, 4: { five: 11, four: 16, three: 18 },
+  5: { five: 13, four: 14, three: 15 }, 6: { five: 11, four: 16, three: 20 },
+  7: { five: 10, four: 18, three: 19 }, 8: { five: 11, four: 16, three: 18 },
+  9: { five: 10, four: 16, three: 16 }, 10: { five: 10, four: 15, three: 18 },
+  11: { five: 10, four: 16, three: 16 }, 12: { five: 12, four: 15, three: 17 },
+  13: { five: 9, four: 17, three: 17 }, 14: { five: 11, four: 15, three: 16 },
+  15: { five: 10, four: 15, three: 17 }, 16: { five: 10, four: 15, three: 17 },
+  17: { five: 10, four: 15, three: 16 }, 18: { five: 11, four: 13, three: 21 },
+  19: { five: 10, four: 15, three: 17 }, 20: { five: 11, four: 14, three: 18 },
+  21: { five: 10, four: 16, three: 17 }, 22: { five: 14, four: 15, three: 15 },
+  23: { five: 11, four: 15, three: 18 }, 24: { five: 12, four: 16, three: 16 },
+  25: { five: 13, four: 16, three: 16 }, 26: { five: 11, four: 14, three: 16 },
+  27: { five: 9, four: 16, three: 15 }, 28: { five: 9, four: 18, three: 18 },
+  29: { five: 9, four: 16, three: 16 }, 30: { five: 12, four: 17, three: 17 },
+  31: { five: 11, four: 14, three: 21 }, 32: { five: 10, four: 18, three: 18 },
+  33: { five: 11, four: 15, three: 19 }, 34: { five: 12, four: 13, three: 20 },
+  35: { five: 11, four: 15, three: 19 }, 36: { five: 10, four: 15, three: 19 },
+  37: { five: 13, four: 16, three: 20 }, 38: { five: 13, four: 14, three: 16 },
+  39: { five: 11, four: 15, three: 18 }, 40: { five: 10, four: 16, three: 16 },
+  41: { five: 2, four: 5, three: 3 }, 42: { five: 12, four: 15, three: 17 },
+  43: { five: 12, four: 16, three: 17 }, 44: { five: 11, four: 16, three: 17 },
+  45: { five: 12, four: 17, three: 17 }, 46: { five: 11, four: 16, three: 19 },
+  47: { five: 12, four: 15, three: 17 }, 48: { five: 10, four: 15, three: 19 },
+  49: { five: 10, four: 16, three: 16 }, 50: { five: 14, four: 16, three: 14 },
+  51: { five: 4, four: 4, three: 5 }, 52: { five: 2, four: 5, three: 7 },
+  53: { five: 2, four: 5, three: 6 }, 54: { five: 2, four: 5, three: 3 },
+  55: { five: "-", four: "-", three: "-" }, 56: { five: "-", four: "-", three: "-" },
+  57: { five: "-", four: "-", three: "-" }, 58: { five: "-", four: "-", three: "-" }
+};
 
-  const nameEl = document.getElementById("modal-name");
-  const imgEl = document.getElementById("modal-image");
-  const descEl = document.getElementById("modal-description");
-  const dateEl = document.getElementById("modal-date");
-  const loaderEl = document.getElementById("image-loader");
+function openSidePanel(idol) {
+  const panel = document.getElementById("side-panel");
+  if (!panel || !idol) return;
+
+  const nameEl = document.getElementById("side-panel-name");
+  const imgEl = document.getElementById("side-panel-image");
+  const descEl = document.getElementById("side-panel-description");
+  const dateEl = document.getElementById("side-panel-date");
+  const loaderEl = document.getElementById("side-image-loader");
+  const statsEl = document.getElementById("side-card-stats");
 
   if (nameEl) nameEl.textContent = idol.name || "";
-  if (descEl) descEl.textContent = idol.detailsDescription || "";
+  if (descEl) descEl.textContent = idol.detailsDescription || "-";
   if (dateEl) dateEl.textContent = formatDate(idol.startDate);
+
+  const cardStats = cardCountData[idol.id];
+  if (cardStats && statsEl) {
+    document.getElementById("side-stat-five").textContent = cardStats.five;
+    document.getElementById("side-stat-four").textContent = cardStats.four;
+    document.getElementById("side-stat-three").textContent = cardStats.three;
+    statsEl.style.display = "flex";
+  } else if (statsEl) {
+    statsEl.style.display = "none";
+  }
 
   imgEl.style.display = "none";
   loaderEl.style.display = "flex";
@@ -676,29 +719,20 @@ function openModal(idol) {
   };
   img.src = idol.detailsImage || "";
 
-  modal.classList.add("active");
+  panel.classList.add("active");
 }
 
-function closeModal() {
-  const modal = document.getElementById("details-modal");
-  if (modal) {
-    modal.classList.remove("active");
+function closeSidePanel() {
+  const panel = document.getElementById("side-panel");
+  if (panel) {
+    panel.classList.remove("active");
   }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const closeBtn = document.querySelector(".close-btn");
+  const closeBtn = document.querySelector(".side-close-btn");
   if (closeBtn) {
-    closeBtn.addEventListener("click", closeModal);
-  }
-
-  const modal = document.getElementById("details-modal");
-  if (modal) {
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        closeModal();
-      }
-    });
+    closeBtn.addEventListener("click", closeSidePanel);
   }
 });
 
@@ -976,7 +1010,7 @@ function createIdolCard(idol) {
   const detailsBtn = document.createElement("button");
   detailsBtn.className = "details-btn";
   detailsBtn.textContent = "Details";
-  detailsBtn.addEventListener("click", () => openModal(idol));
+  detailsBtn.addEventListener("click", () => openSidePanel(idol));
   card.appendChild(detailsBtn);
 
   if (idol.isNew) {
