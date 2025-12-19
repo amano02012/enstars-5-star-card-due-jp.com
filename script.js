@@ -689,37 +689,102 @@ function openSidePanel(idol) {
   const loaderEl = document.getElementById("side-image-loader");
   const statsEl = document.getElementById("side-card-stats");
 
-  if (nameEl) nameEl.textContent = idol.name || "";
-  if (descEl) descEl.textContent = idol.detailsDescription || "-";
-  if (dateEl) dateEl.textContent = formatDate(idol.startDate);
+  const isAlreadyOpen = panel.classList.contains("active");
 
-  const cardStats = cardCountData[idol.id];
-  if (cardStats && statsEl) {
-    document.getElementById("side-stat-five").textContent = cardStats.five;
-    document.getElementById("side-stat-four").textContent = cardStats.four;
-    document.getElementById("side-stat-three").textContent = cardStats.three;
-    statsEl.style.display = "flex";
-  } else if (statsEl) {
-    statsEl.style.display = "none";
+  if (isAlreadyOpen) {
+    nameEl.classList.add("fade-out");
+    imgEl.classList.add("fade-out");
+    descEl.parentElement.classList.add("fade-out-right");
+    dateEl.parentElement.classList.add("fade-out-right");
+    if (statsEl.style.display === "flex") {
+      statsEl.classList.add("fade-out-right");
+    }
+
+    setTimeout(() => {
+      nameEl.textContent = idol.name || "";
+      descEl.textContent = idol.detailsDescription || "-";
+      dateEl.textContent = formatDate(idol.startDate);
+
+      const cardStats = cardCountData[idol.id];
+      if (cardStats && statsEl) {
+        document.getElementById("side-stat-five").textContent = cardStats.five;
+        document.getElementById("side-stat-four").textContent = cardStats.four;
+        document.getElementById("side-stat-three").textContent = cardStats.three;
+        statsEl.style.display = "flex";
+      } else if (statsEl) {
+        statsEl.style.display = "none";
+      }
+
+      imgEl.style.display = "none";
+      loaderEl.style.display = "flex";
+
+      const img = new Image();
+      img.onload = function() {
+        imgEl.src = idol.detailsImage || "";
+        imgEl.style.display = "block";
+        loaderEl.style.display = "none";
+      };
+      img.onerror = function() {
+        loaderEl.style.display = "none";
+        imgEl.style.display = "block";
+        imgEl.src = "";
+      };
+      img.src = idol.detailsImage || "";
+      
+      nameEl.classList.remove("fade-out");
+      nameEl.classList.add("fade-in");
+      imgEl.classList.remove("fade-out");
+      imgEl.classList.add("fade-in");
+      descEl.parentElement.classList.remove("fade-out-right");
+      descEl.parentElement.classList.add("fade-in-left");
+      dateEl.parentElement.classList.remove("fade-out-right");
+      dateEl.parentElement.classList.add("fade-in-left");
+      if (statsEl.style.display === "flex") {
+        statsEl.classList.remove("fade-out-right");
+        statsEl.classList.add("fade-in-left");
+      }
+
+      setTimeout(() => {
+        nameEl.classList.remove("fade-in");
+        imgEl.classList.remove("fade-in");
+        descEl.parentElement.classList.remove("fade-in-left");
+        dateEl.parentElement.classList.remove("fade-in-left");
+        statsEl.classList.remove("fade-in-left");
+      }, 300);
+    }, 300);
+  } else {
+    nameEl.textContent = idol.name || "";
+    descEl.textContent = idol.detailsDescription || "-";
+    dateEl.textContent = formatDate(idol.startDate);
+
+    const cardStats = cardCountData[idol.id];
+    if (cardStats && statsEl) {
+      document.getElementById("side-stat-five").textContent = cardStats.five;
+      document.getElementById("side-stat-four").textContent = cardStats.four;
+      document.getElementById("side-stat-three").textContent = cardStats.three;
+      statsEl.style.display = "flex";
+    } else if (statsEl) {
+      statsEl.style.display = "none";
+    }
+
+    imgEl.style.display = "none";
+    loaderEl.style.display = "flex";
+
+    const img = new Image();
+    img.onload = function() {
+      imgEl.src = idol.detailsImage || "";
+      imgEl.style.display = "block";
+      loaderEl.style.display = "none";
+    };
+    img.onerror = function() {
+      loaderEl.style.display = "none";
+      imgEl.style.display = "block";
+      imgEl.src = "";
+    };
+    img.src = idol.detailsImage || "";
+
+    panel.classList.add("active");
   }
-
-  imgEl.style.display = "none";
-  loaderEl.style.display = "flex";
-
-  const img = new Image();
-  img.onload = function() {
-    imgEl.src = idol.detailsImage || "";
-    imgEl.style.display = "block";
-    loaderEl.style.display = "none";
-  };
-  img.onerror = function() {
-    loaderEl.style.display = "none";
-    imgEl.style.display = "block";
-    imgEl.src = "";
-  };
-  img.src = idol.detailsImage || "";
-
-  panel.classList.add("active");
 }
 
 function closeSidePanel() {
