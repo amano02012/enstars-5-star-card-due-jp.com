@@ -228,8 +228,8 @@ const idols = [{
   borderColor: "#7EBEA5",
   startDate: `2025-12-10`,
   description: "Latest Card: Bright me up!! Scout Stage",
-  detailsImage: "cards/Alkaloid/舞い込む幸運_Tatsumi_Kazehaya.webp",
-  detailsDescription: "[舞い込む幸運] Tatsumi Kazehaya"
+  detailsImage: "cards/Alkaloid/Good_Fortune_Comes_Unexpectedly_Tatsumi_Kazehaya.webp",
+  detailsDescription: "(Good Fortune Comes Unexpectedly) Tatsumi Kazehaya"
 },
 {
   id: 18,
@@ -278,8 +278,8 @@ const idols = [{
   borderColor: "#E3ACAE",
   startDate: `2025-12-15`,
   description: "Latest Card: Unit Event",
-  detailsImage: "cards/Valkyrie/情熱の針先_Shu_Itsuki.webp",
-  detailsDescription: "[情熱の針先] Shu Itsuki"
+  detailsImage: "cards/Valkyrie/A_Needle's_Tip_of_Passion_Shu_Itsuki.webp",
+  detailsDescription: "(A Needle's Tip of Passion) Shu Itsuki"
 },
 {
   id: 23,
@@ -438,8 +438,8 @@ const idols = [{
   borderColor: "#316745",
   startDate: `2025-12-14`,
   description: "Latest Card: Theme Scout",
-  detailsImage: "cards/Akatsuki/フェイク·デッド_Keito_Hasumi.webp",
-  detailsDescription: "[フェイク·デッド] Keito Hasumi"
+  detailsImage: "cards/Akatsuki/Fake_Dead_Keito_Hasumi.webp",
+  detailsDescription: "(Fake Dead) Keito Hasumi"
 },
 {
   id: 39,
@@ -563,7 +563,7 @@ const idols = [{
 },
 {
   id: 51,
-  name: `Esu Sagiri`,
+  name: `Esu`,
   avatar: `images/btn-esu.webp`,
   borderColor: "#80FFF4",
   startDate: `2025-11-29`,
@@ -573,7 +573,7 @@ const idols = [{
 },
 {
   id: 52,
-  name: `Kanna Natsu`,
+  name: `Kanna`,
   avatar: `images/btn-kanna.webp`,
   borderColor: "#8ACCB8",
   startDate: `2025-09-15`,
@@ -583,7 +583,7 @@ const idols = [{
 },
 {
   id: 53,
-  name: `Fuyume Hanamura`,
+  name: `Yume`,
   avatar: `images/btn-yume.webp`,
   borderColor: "#CCADD9",
   startDate: `2024-11-30`,
@@ -593,7 +593,7 @@ const idols = [{
 },
 {
   id: 54,
-  name: `Raika Hojo`,
+  name: `Raika`,
   avatar: `images/btn-raika.webp`,
   borderColor: "#298C7C",
   startDate: `2025-10-15`,
