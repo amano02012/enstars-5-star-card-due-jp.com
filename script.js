@@ -356,10 +356,10 @@ const idols = [{
   name: `Rei Sakuma`,
   avatar: `images/btn-sakuma_rei.webp`,
   borderColor: "#47266E",
-  startDate: `2025-04-15`,
-  description: "Latest Card: Tour Event",
-  detailsImage: "cards/UNDEAD/Future_of_the_Four_Kings_of_the_Sky_Rei_Sakuma.webp",
-  detailsDescription: "(Future of the Four Kings of the Sky) Rei Sakuma"
+  startDate: `2025-12-25`,
+  description: "Latest Card: Bright me up!! Scout Stage",
+  detailsImage: "cards/UNDEAD/嵐の前の静けさ_Rei_Sakuma.webp",
+  detailsDescription: "[嵐の前の静けさ] Rei Sakuma"
 },
 {
   id: 31,
@@ -657,11 +657,11 @@ const cardCountData = {
   15: { five: 10, four: 15, three: 17 }, 16: { five: 10, four: 15, three: 17 },
   17: { five: 10, four: 15, three: 16 }, 18: { five: 11, four: 13, three: 21 },
   19: { five: 10, four: 15, three: 17 }, 20: { five: 11, four: 14, three: 18 },
-  21: { five: 10, four: 16, three: 17 }, 22: { five: 14, four: 15, three: 15 },
+  21: { five: 10, four: 17, three: 17 }, 22: { five: 14, four: 15, three: 15 },
   23: { five: 11, four: 15, three: 18 }, 24: { five: 12, four: 16, three: 16 },
   25: { five: 13, four: 16, three: 16 }, 26: { five: 11, four: 14, three: 16 },
   27: { five: 9, four: 16, three: 15 }, 28: { five: 9, four: 18, three: 18 },
-  29: { five: 9, four: 16, three: 16 }, 30: { five: 12, four: 17, three: 17 },
+  29: { five: 9, four: 16, three: 17 }, 30: { five: 13, four: 17, three: 17 },
   31: { five: 11, four: 14, three: 21 }, 32: { five: 10, four: 18, three: 18 },
   33: { five: 11, four: 15, three: 19 }, 34: { five: 12, four: 13, three: 20 },
   35: { five: 11, four: 15, three: 19 }, 36: { five: 10, four: 15, three: 19 },
