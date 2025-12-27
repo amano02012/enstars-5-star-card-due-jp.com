@@ -579,3 +579,89 @@ body::before {
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
+
+@media (max-width: 420px) {
+  .navbar {
+    padding: 8px 12px;
+  }
+
+  .nav-logo {
+    font-size: 1rem;
+  }
+
+  .hamburger {
+    padding: 12px;
+  }
+
+  .scout-nav {
+    padding: 0 12px;
+    margin: 20px auto;
+    gap: 10px;
+  }
+
+  .scout-nav-btn {
+    padding: 10px 14px;
+    font-size: 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .date-banner {
+    height: 64px;
+    font-size: 16px;
+    border-radius: 10px;
+    width: calc(100% - 24px);
+    margin: 0 auto;
+    padding: 0 12px;
+  }
+
+  .idols-container {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .scout-section,
+  .section-divider {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .scout-idols-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  .scout-idol-cell {
+    border-width: 1px;
+  }
+
+  .scout-table {
+    font-size: 14px;
+    overflow-x: auto;
+    display: block;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .scout-title-cell,
+  .scout-star-cell,
+  .scout-date-cell {
+    padding: 12px;
+  }
+
+  .idol-card {
+    padding: 12px;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .idol-image {
+    width: 56px;
+    height: 56px;
+  }
+
+  .idol-name { font-size: 18px; }
+  .idol-title { font-size: 12px; }
+
+  body::before { filter: blur(10px); background-position: center top; }
+}
