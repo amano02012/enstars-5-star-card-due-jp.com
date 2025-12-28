@@ -288,12 +288,12 @@ function renderScouts() {
 
 const themePickupData = [
     {
-        date: 'Scout Announcement at 12/28/2025 15:00 JST',
+        date: '12/29/2025',
         idols: [
-            { star: 5, title: '(Card name)', name: 'Idol', image: '' },
-            { star: 4, title: '(Card name)', name: 'Idol', image: '' },
-            { star: 3, title: '(Card name)', name: 'Idol', image: '' },
-            { star: 3, title: '(Card name)', name: 'Idol', image: '' }
+            { star: 5, title: '(Card name)', name: 'Hiiro Amagi', image: '' },
+            { star: 4, title: '(Card name)', name: 'Hinata Aoi', image: '' },
+            { star: 3, title: '(Card name)', name: 'Kohaku Oukawa', image: '' },
+            { star: 3, title: '(Card name)', name: 'Raika', image: '' }
         ]
     },
     {
