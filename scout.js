@@ -1,6 +1,6 @@
 const pickupData = [
     {
-        date: '12/25/2025',
+        date: '(12/25/2025) Bright me up!! Scout -Stage: Rei',
         idols: [
             { star: 5, title: '(Card Name)', name: 'Rei Sakuma', image: '' },
             { star: 4, title: '(Card Name)', name: 'Jun Sazanami', image: '' },
@@ -8,7 +8,7 @@ const pickupData = [
         ]
     },
     {
-        date: '12/10/2025',
+        date: '(12/10/2025) Bright me up!! Scout -Stage: Tatsumi',
         idols: [
             { star: 5, title: '(Good Fortune Comes Unexpectedly)', name: 'Tatsumi Kazehaya', image: 'card_square2_4627_evolution' },
             { star: 4, title: '(Game START)', name: 'Aira Shiratori', image: 'card_square2_4628_evolution' },
@@ -16,7 +16,7 @@ const pickupData = [
         ]
     },
     {
-        date: '11/25/2025',
+        date: '(11/25/2025) Bright me up!! Scout -Stage: Yuta',
         idols: [
             { star: 5, title: '(A Longing Star)', name: 'Yuta Aoi', image: 'card_square2_4559_evolution' },
             { star: 4, title: '(Stage Model)', name: 'Arashi Narukami', image: 'card_square2_4560_evolution' },
@@ -24,7 +24,7 @@ const pickupData = [
         ]
     },
     {
-        date: '11/10/2025',
+        date: '(11/10/2025) Bright me up!! Scout -Stage: Adonis',
         idols: [
             { star: 5, title: '(What Surrounds Dreams)', name: 'Adonis Otogari', image: 'card_square2_4546_evolution' },
             { star: 4, title: '(Bonds of a Unit)', name: 'HiMERU', image: 'card_square2_4547_evolution' },
@@ -32,7 +32,7 @@ const pickupData = [
         ]
     },
     {
-        date: '10/25/2025',
+        date: '(10/25/2025) Bright me up!! Scout -Stage: Mao',
         idols: [
             { star: 5, title: '(Moving Beyond Expectations)', name: 'Mao Isara', image: 'card_square2_4525_evolution' },
             { star: 4, title: '(Words of Confidence)', name: 'Keito Hasumi', image: 'card_square2_4526_evolution' },
@@ -40,7 +40,7 @@ const pickupData = [
         ]
     },
     {
-        date: '10/10/2025',
+        date: '(10/10/2025) Bright me up!! Scout -Stage: Sora',
         idols: [
             { star: 5, title: '(Adding Up Smiles)', name: 'Sora Harukawa', image: 'card_square2_4507_evolution' },
             { star: 4, title: '(Sympathetic Heart)', name: 'Hokuto Hidaka', image: 'card_square2_4508_evolution' },
@@ -48,7 +48,7 @@ const pickupData = [
         ]
     },
     {
-        date: '9/25/2025',
+        date: '(9/25/2025) Bright me up!! Scout -Stage: Shinobu',
         idols: [
             { star: 5, title: '(The Charm of Perseverance)', name: 'Shinobu Sengoku', image: 'card_square2_4496_evolution' },
             { star: 4, title: '(À la Mode Aesthetics)', name: 'Ritsu Sakuma', image: 'card_square2_4497_evolution' },
@@ -56,7 +56,7 @@ const pickupData = [
         ]
     },
     {
-        date: '9/10/2025',
+        date: '(9/10/2025) Bright me up!! Scout -Stage: Kohaku',
         idols: [
             { star: 5, title: '(My Own Distance)', name: 'Kohaku Oukawa', image: 'card_square2_4480_evolution' },
             { star: 4, title: '(Similar Positions)', name: 'Makoto Yuuki', image: 'card_square2_4481_evolution' },
@@ -64,7 +64,7 @@ const pickupData = [
         ]
     },
     {
-        date: '8/25/2025',
+        date: '(8/25/2025) Bright me up!! Scout -Stage: Yuzuru',
         idols: [
             { star: 5, title: '(Route to Broadened Possibilities)', name: 'Yuzuru Fushimi', image: 'card_square2_4469_evolution' },
             { star: 4, title: '(Everyone\'s Nii~chan)', name: 'Nazuna Nito', image: 'card_square2_4470_evolution' },
@@ -72,7 +72,7 @@ const pickupData = [
         ]
     },
     {
-        date: '8/10/2025',
+        date: '(8/10/2025) Bright me up!! Scout -Stage: Koga',
         idols: [
             { star: 5, title: '(Calling Out Who I Am)', name: 'Koga Oogami', image: 'card_square2_4449_evolution' },
             { star: 4, title: '(Delicious Playfulness)', name: 'Eichi Tenshouin', image: 'card_square2_4450_evolution' },
@@ -288,7 +288,7 @@ function renderScouts() {
 
 const themePickupData = [
     {
-        date: '12/29/2025',
+        date: '(12/29/2025) Scout! -',
         idols: [
             { star: 5, title: '(Card name)', name: 'Hiiro Amagi', image: '' },
             { star: 4, title: '(Card name)', name: 'Hinata Aoi', image: '' },
@@ -297,7 +297,7 @@ const themePickupData = [
         ]
     },
     {
-        date: '12/14/2025',
+        date: '(12/14/2025) Scout! Arsène',
         idols: [
             { star: 5, title: '(Fake Dead)', name: 'Keito Hasumi', image: 'card_square2_4636_evolution' },
             { star: 4, title: '(Fake Magic)', name: 'Natsume Sakasaki', image: 'card_square2_4637_evolution' },
@@ -306,7 +306,7 @@ const themePickupData = [
         ]
     },
     {
-        date: '11/29/2025',
+        date: '(11/29/2025) Scout! White Wonderland',
         idols: [
             { star: 5, title: '(Brand New World)', name: 'Esu', image: 'card_square2_4623_evolution' },
             { star: 4, title: '(Familiar World)', name: 'Madara Mikejima', image: 'card_square2_4624_evolution' },
@@ -315,7 +315,7 @@ const themePickupData = [
         ]
     },
     {
-        date: '10/30/2025',
+        date: '(10/30/2025) Scout! Arcadian',
         idols: [
             { star: 5, title: '(Guardian of Peace)', name: 'Midori Takamine', image: 'card_square2_4542_evolution' },
             { star: 4, title: '(Guardian of the Undiscovered)', name: 'Yuzuru Fushimi', image: 'card_square2_4543_evolution' },
@@ -324,7 +324,7 @@ const themePickupData = [
         ]
     },
     {
-        date: '10/14/2025',
+        date: '(10/14/2025) Scout! Nightfall Séance',
         idols: [
             { star: 5, title: '(Séance Lead)', name: 'Izumi Sena', image: 'card_square2_4521_evolution' },
             { star: 4, title: '(Séance Witness)', name: 'Koga Oogami', image: 'card_square2_4522_evolution' },
@@ -333,7 +333,7 @@ const themePickupData = [
         ]
     },
     {
-        date: '9/29/2025',
+        date: '(9/29/2025) Scout! Witchcraft',
         idols: [
             { star: 5, title: '(Search Witch)', name: 'Arashi Narukami', image: 'card_square2_4503_evolution' },
             { star: 4, title: '(Reach Witch)', name: 'Chiaki Morisawa', image: 'card_square2_4504_evolution' },
@@ -342,7 +342,7 @@ const themePickupData = [
         ]
     },
     {
-        date: '9/14/2025',
+        date: '(9/14/2025) Scout! Royal Flush',
         idols: [
             { star: 5, title: '(Attempting a Gamble)', name: 'Rinne Amagi', image: 'card_square2_4492_evolution' },
             { star: 4, title: '(Succeeding a Gamble)', name: 'Kaoru Hakaze', image: 'card_square2_4493_evolution' },
@@ -351,7 +351,7 @@ const themePickupData = [
         ]
     },
     {
-        date: '8/14/2025',
+        date: '(8/14/2025) Scout! Oniyasha',
         idols: [
             { star: 5, title: '(Oniyasha\'s Karma)', name: 'Kuro Kiryu', image: 'card_square2_4465_evolution' },
             { star: 4, title: '(Oniyasha\'s Mystery)', name: 'Suou Tsukasa', image: 'card_square2_4466_evolution' },
@@ -360,7 +360,7 @@ const themePickupData = [
         ]
     },
     {
-        date: '7/14/2025',
+        date: '(7/14/2025) Scout! Heated Gaze',
         idols: [
             { star: 5, title: '(Unbreakable Gaze)', name: 'Hajime Shino', image: 'card_square2_4437_evolution' },
             { star: 4, title: '(Captivating Gaze)', name: 'Tatsumi Kazehaya', image: 'card_square2_4438_evolution' },
