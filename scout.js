@@ -288,7 +288,7 @@ function renderScouts() {
 
 const themePickupData = [
     {
-        date: '(12/29/2025) Scout! -',
+        date: '(12/30/2025) Scout! -',
         idols: [
             { star: 5, title: '(Card name)', name: 'Hiiro Amagi', image: '' },
             { star: 4, title: '(Card name)', name: 'Hinata Aoi', image: '' },
