@@ -196,10 +196,10 @@ const idols = [{
   name: `Hiiro Amagi`,
   avatar: `images/btn-amagi_hiiro.webp`,
   borderColor: "#BA2636",
-  startDate: `2025-01-30`,
-  description: "Latest Card: Cross Scout",
-  detailsImage: "cards/Alkaloid/Devoted_Enthusiasm_Hiiro_Amagi.webp",
-  detailsDescription: "(Devoted Enthusiasm) Hiiro Amagi"
+  startDate: `2025-12-30`,
+  description: "Latest Card: Theme Scout",
+  detailsImage: "cards/Alkaloid/天に通ず想い_Hiiro_Amagi.webp",
+  detailsDescription: "[天に通ず想い] Hiiro Amagi"
 },
 {
   id: 15,
@@ -647,35 +647,64 @@ const idols = [{
 }];
 
 const cardCountData = {
-  1: { five: 12, four: 14, three: 17 }, 2: { five: 11, four: 14, three: 19 },
-  3: { five: 11, four: 16, three: 16 }, 4: { five: 11, four: 16, three: 18 },
-  5: { five: 13, four: 14, three: 15 }, 6: { five: 11, four: 16, three: 20 },
-  7: { five: 10, four: 18, three: 19 }, 8: { five: 11, four: 16, three: 18 },
-  9: { five: 10, four: 16, three: 16 }, 10: { five: 10, four: 15, three: 18 },
-  11: { five: 10, four: 16, three: 16 }, 12: { five: 12, four: 15, three: 17 },
-  13: { five: 9, four: 17, three: 17 }, 14: { five: 11, four: 15, three: 16 },
-  15: { five: 10, four: 15, three: 17 }, 16: { five: 10, four: 15, three: 17 },
-  17: { five: 10, four: 15, three: 16 }, 18: { five: 11, four: 13, three: 21 },
-  19: { five: 10, four: 15, three: 17 }, 20: { five: 11, four: 14, three: 18 },
-  21: { five: 10, four: 17, three: 17 }, 22: { five: 14, four: 15, three: 15 },
-  23: { five: 11, four: 15, three: 18 }, 24: { five: 12, four: 16, three: 16 },
-  25: { five: 13, four: 16, three: 16 }, 26: { five: 11, four: 14, three: 16 },
-  27: { five: 9, four: 16, three: 15 }, 28: { five: 9, four: 18, three: 18 },
-  29: { five: 9, four: 16, three: 17 }, 30: { five: 13, four: 17, three: 17 },
-  31: { five: 11, four: 14, three: 21 }, 32: { five: 10, four: 18, three: 18 },
-  33: { five: 11, four: 15, three: 19 }, 34: { five: 12, four: 13, three: 20 },
-  35: { five: 11, four: 15, three: 19 }, 36: { five: 10, four: 15, three: 19 },
-  37: { five: 13, four: 16, three: 20 }, 38: { five: 13, four: 14, three: 16 },
-  39: { five: 11, four: 15, three: 18 }, 40: { five: 10, four: 16, three: 16 },
-  41: { five: 2, four: 5, three: 3 }, 42: { five: 12, four: 15, three: 17 },
-  43: { five: 12, four: 16, three: 17 }, 44: { five: 11, four: 16, three: 17 },
-  45: { five: 12, four: 17, three: 17 }, 46: { five: 11, four: 16, three: 19 },
-  47: { five: 12, four: 15, three: 17 }, 48: { five: 10, four: 15, three: 19 },
-  49: { five: 10, four: 16, three: 16 }, 50: { five: 14, four: 16, three: 14 },
-  51: { five: 4, four: 4, three: 5 }, 52: { five: 2, four: 5, three: 7 },
-  53: { five: 2, four: 5, three: 6 }, 54: { five: 2, four: 5, three: 3 },
-  55: { five: "-", four: "-", three: "-" }, 56: { five: "-", four: "-", three: "-" },
-  57: { five: "-", four: "-", three: "-" }, 58: { five: "-", four: "-", three: "-" }
+  1: { five: 12, four: 14, three: 17 }, // Eichi Tenshouin
+  2: { five: 11, four: 14, three: 19 }, // Wataru Hibiki
+  3: { five: 11, four: 16, three: 16 }, // Tori Himemiya
+  4: { five: 11, four: 16, three: 18 }, // Yuzuru Fushimi
+  5: { five: 13, four: 14, three: 15 }, // Hokuto Hidka
+  6: { five: 11, four: 16, three: 20 }, // Subaru Akehoshi
+  7: { five: 10, four: 18, three: 19 }, // Makoto Yuuki
+  8: { five: 11, four: 16, three: 18 }, // Mao Isara
+  9: { five: 10, four: 16, three: 16 }, // Tetora Nagumo
+  10: { five: 10, four: 15, three: 18 }, // Midori Takamine
+  11: { five: 10, four: 16, three: 16 }, // Shinobu Sengoku
+  12: { five: 12, four: 15, three: 17 }, // Chiaki Morisawa
+  13: { five: 9, four: 17, three: 17 }, // Kanata Shinkai
+  14: { five: 12, four: 15, three: 16 }, // Hiiro Amagi
+  15: { five: 10, four: 15, three: 17 }, // Aira Shiratori
+  16: { five: 10, four: 15, three: 17 }, // Mayoi Ayase
+  17: { five: 10, four: 15, three: 16 }, // Tatsumi Kazehaya
+  18: { five: 11, four: 13, three: 21 }, // Nagisa Ran
+  19: { five: 10, four: 15, three: 17 }, // Hiyori Tomoe
+  20: { five: 11, four: 14, three: 18 }, // Ibara Saegusa
+  21: { five: 10, four: 17, three: 17 }, // Jun Sazanami
+  22: { five: 14, four: 15, three: 15 }, // Shu Itsuki
+  23: { five: 11, four: 15, three: 18 }, // Mika Kagehira
+  24: { five: 12, four: 17, three: 16 }, // Hinata Aoi
+  25: { five: 13, four: 16, three: 16 }, // Yuta Aoi
+  26: { five: 11, four: 14, three: 16 }, // Rinne Amagi
+  27: { five: 9, four: 16, three: 15 }, // HiMERU
+  28: { five: 9, four: 18, three: 19 }, // Kohaku Oukawa
+  29: { five: 9, four: 16, three: 17 }, // Niki Shiina
+  30: { five: 13, four: 17, three: 17 }, // Rei Sakuma
+  31: { five: 11, four: 14, three: 21 }, // Kaoru Hakaze
+  32: { five: 10, four: 18, three: 18 }, // Koga Oogami
+  33: { five: 11, four: 15, three: 19 }, // Adonis Otogari
+  34: { five: 12, four: 13, three: 20 }, // Tomoya Mashiro
+  35: { five: 11, four: 15, three: 19 }, // Nazuna Nito
+  36: { five: 10, four: 15, three: 19 }, // Mitsuru Tenma
+  37: { five: 13, four: 16, three: 20 }, // Hajime Shino
+  38: { five: 13, four: 14, three: 16 }, // Keito Hasumi
+  39: { five: 11, four: 15, three: 18 }, // Kuro Kiryu
+  40: { five: 10, four: 16, three: 16 }, // Souma Kanzaki
+  41: { five: 2, four: 5, three: 3 }, // Ibuki Taki
+  42: { five: 12, four: 15, three: 17 }, // Tsukasa Suou
+  43: { five: 12, four: 16, three: 17 }, // Leo Tsukinaga
+  44: { five: 11, four: 16, three: 17 }, // Izumi Sena
+  45: { five: 12, four: 17, three: 17 }, // Ritsu Sakuma
+  46: { five: 11, four: 16, three: 19 }, // Arashi Narukami
+  47: { five: 12, four: 15, three: 17 }, // Natsume Sakasaki
+  48: { five: 10, four: 15, three: 19 }, // Tsumugi Aoba
+  49: { five: 10, four: 16, three: 16 }, // Sora Harukawa
+  50: { five: 14, four: 16, three: 14 }, // Madara Mikejima
+  51: { five: 4, four: 4, three: 5 }, // Esu
+  52: { five: 2, four: 5, three: 7 }, // Kanna
+  53: { five: 2, four: 5, three: 6 }, // Yume
+  54: { five: 2, four: 5, three: 4 }, // Raika
+  55: { five: "-", four: "-", three: "-" }, // Juis Kojika
+  56: { five: "-", four: "-", three: "-" }, // Nozomi Madoka
+  57: { five: "-", four: "-", three: "-" }, // Mashu Kuon
+  58: { five: "-", four: "-", three: "-" } // Chitose Tsuzura
 };
 
 function openSidePanel(idol) {
