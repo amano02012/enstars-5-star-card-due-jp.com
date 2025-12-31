@@ -103,7 +103,7 @@ const idols = [{
 },
 {
   id: 5,
-  name: `Hokuto Hidka`,
+  name: `Hokuto Hidaka`,
   avatar: `images/btn-hidaka_hokuto.webp`,
   borderColor: "#0068B7",
   startDate: `2025-04-30`,
@@ -126,10 +126,10 @@ const idols = [{
   name: `Makoto Yuuki`,
   avatar: `images/btn-yuuki_makoto.webp`,
   borderColor: "#65AB31",
-  startDate: `2025-04-10`,
-  description: "Latest Card: Cross Scout",
-  detailsImage: "cards/Trickstar/ACE's_Character_Makoto_Yuuki.webp",
-  detailsDescription: "(ACE's Character) Makoto Yuuki"
+  startDate: `2025-12-31`,
+  description: "Latest Card: Tour Event",
+  detailsImage: "cards/Trickstar/ダイヤモンドの希望_Makoto_Yuuki.webp",
+  detailsDescription: "[ダイヤモンドの希望] Makoto Yuuki"
 },
 {
   id: 8,
@@ -376,10 +376,10 @@ const idols = [{
   name: `Koga Oogami`,
   avatar: `images/btn-ogami_koga.webp`,
   borderColor: "#C9CACA",
-  startDate: `2025-08-10`,
-  description: "Latest Card: Bright me up!! Scout Stage",
-  detailsImage: "cards/UNDEAD/Calling_Out_Who_I_Am_Koga_Ogami.webp",
-  detailsDescription: "(Calling Out Who I Am) Koga Oogami"
+  startDate: `2025-12-31`,
+  description: "Latest Card: Tour Event",
+  detailsImage: "cards/UNDEAD/タイヤモンドの野望_Koga_Oogami.webp",
+  detailsDescription: "[タイヤモンドの野望] Koga Oogami"
 },
 {
   id: 33,
@@ -653,7 +653,7 @@ const cardCountData = {
   4: { five: 11, four: 16, three: 18 }, // Yuzuru Fushimi
   5: { five: 13, four: 14, three: 15 }, // Hokuto Hidka
   6: { five: 11, four: 16, three: 20 }, // Subaru Akehoshi
-  7: { five: 10, four: 18, three: 19 }, // Makoto Yuuki
+  7: { five: 11, four: 18, three: 19 }, // Makoto Yuuki
   8: { five: 11, four: 16, three: 18 }, // Mao Isara
   9: { five: 10, four: 16, three: 16 }, // Tetora Nagumo
   10: { five: 10, four: 15, three: 18 }, // Midori Takamine
@@ -662,7 +662,7 @@ const cardCountData = {
   13: { five: 9, four: 17, three: 17 }, // Kanata Shinkai
   14: { five: 12, four: 15, three: 16 }, // Hiiro Amagi
   15: { five: 10, four: 15, three: 17 }, // Aira Shiratori
-  16: { five: 10, four: 15, three: 17 }, // Mayoi Ayase
+  16: { five: 10, four: 16, three: 17 }, // Mayoi Ayase
   17: { five: 10, four: 15, three: 16 }, // Tatsumi Kazehaya
   18: { five: 11, four: 13, three: 21 }, // Nagisa Ran
   19: { five: 10, four: 15, three: 17 }, // Hiyori Tomoe
@@ -673,12 +673,12 @@ const cardCountData = {
   24: { five: 12, four: 17, three: 16 }, // Hinata Aoi
   25: { five: 13, four: 16, three: 16 }, // Yuta Aoi
   26: { five: 11, four: 14, three: 16 }, // Rinne Amagi
-  27: { five: 9, four: 16, three: 15 }, // HiMERU
+  27: { five: 9, four: 16, three: 16 }, // HiMERU
   28: { five: 9, four: 18, three: 19 }, // Kohaku Oukawa
   29: { five: 9, four: 16, three: 17 }, // Niki Shiina
   30: { five: 13, four: 17, three: 17 }, // Rei Sakuma
   31: { five: 11, four: 14, three: 21 }, // Kaoru Hakaze
-  32: { five: 10, four: 18, three: 18 }, // Koga Oogami
+  32: { five: 11, four: 18, three: 18 }, // Koga Oogami
   33: { five: 11, four: 15, three: 19 }, // Adonis Otogari
   34: { five: 12, four: 13, three: 20 }, // Tomoya Mashiro
   35: { five: 11, four: 15, three: 19 }, // Nazuna Nito
@@ -687,10 +687,10 @@ const cardCountData = {
   38: { five: 13, four: 14, three: 16 }, // Keito Hasumi
   39: { five: 11, four: 15, three: 18 }, // Kuro Kiryu
   40: { five: 10, four: 16, three: 16 }, // Souma Kanzaki
-  41: { five: 2, four: 5, three: 3 }, // Ibuki Taki
+  41: { five: 2, four: 5, three: 4 }, // Ibuki Taki
   42: { five: 12, four: 15, three: 17 }, // Tsukasa Suou
   43: { five: 12, four: 16, three: 17 }, // Leo Tsukinaga
-  44: { five: 11, four: 16, three: 17 }, // Izumi Sena
+  44: { five: 11, four: 17, three: 17 }, // Izumi Sena
   45: { five: 12, four: 17, three: 17 }, // Ritsu Sakuma
   46: { five: 11, four: 16, three: 19 }, // Arashi Narukami
   47: { five: 12, four: 15, three: 17 }, // Natsume Sakasaki
