@@ -128,8 +128,8 @@ const idols = [{
   borderColor: "#65AB31",
   startDate: `2025-12-31`,
   description: "Latest Card: Tour Event",
-  detailsImage: "cards/Trickstar/ダイヤモンドの希望_Makoto_Yuuki.webp",
-  detailsDescription: "[ダイヤモンドの希望] Makoto Yuuki"
+  detailsImage: "cards/Trickstar/Diamond_Hope_Makoto_Yuuki.webp",
+  detailsDescription: "(Diamond Hope) Makoto Yuuki"
 },
 {
   id: 8,
@@ -198,8 +198,8 @@ const idols = [{
   borderColor: "#BA2636",
   startDate: `2025-12-30`,
   description: "Latest Card: Theme Scout",
-  detailsImage: "cards/Alkaloid/天に通ず想い_Hiiro_Amagi.webp",
-  detailsDescription: "[天に通ず想い] Hiiro Amagi"
+  detailsImage: "cards/Alkaloid/The_Heavens_Will_Reward_Feelings_Hiiro_Amagi.webp",
+  detailsDescription: "(The Heavens Will Reward Feelings) Hiiro Amagi"
 },
 {
   id: 15,
@@ -358,8 +358,8 @@ const idols = [{
   borderColor: "#47266E",
   startDate: `2025-12-25`,
   description: "Latest Card: Bright me up!! Scout Stage",
-  detailsImage: "cards/UNDEAD/嵐の前の静けさ_Rei_Sakuma.webp",
-  detailsDescription: "[嵐の前の静けさ] Rei Sakuma"
+  detailsImage: "cards/UNDEAD/The_Calm_Before_the_Storm_Rei_Sakuma.webp",
+  detailsDescription: "(The Calm Before the Storm) Rei Sakuma"
 },
 {
   id: 31,
@@ -373,13 +373,13 @@ const idols = [{
 },
 {
   id: 32,
-  name: `Koga Oogami`,
+  name: `Koga Ogami`,
   avatar: `images/btn-ogami_koga.webp`,
   borderColor: "#C9CACA",
   startDate: `2025-12-31`,
   description: "Latest Card: Tour Event",
-  detailsImage: "cards/UNDEAD/タイヤモンドの野望_Koga_Oogami.webp",
-  detailsDescription: "[タイヤモンドの野望] Koga Oogami"
+  detailsImage: "cards/UNDEAD/Diamond_Ambition_Koga_Ogami.webp",
+  detailsDescription: "(Diamond Ambition) Koga Ogami"
 },
 {
   id: 33,
@@ -678,7 +678,7 @@ const cardCountData = {
   29: { five: 9, four: 16, three: 17 }, // Niki Shiina
   30: { five: 13, four: 17, three: 17 }, // Rei Sakuma
   31: { five: 11, four: 14, three: 21 }, // Kaoru Hakaze
-  32: { five: 11, four: 18, three: 18 }, // Koga Oogami
+  32: { five: 11, four: 18, three: 18 }, // Koga Ogami
   33: { five: 11, four: 15, three: 19 }, // Adonis Otogari
   34: { five: 12, four: 13, three: 20 }, // Tomoya Mashiro
   35: { five: 11, four: 15, three: 19 }, // Nazuna Nito

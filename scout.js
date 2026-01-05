@@ -1,10 +1,18 @@
 const pickupData = [
     {
+        date: 'Scout Announcement on 01/09/2026',
+        idols: [
+            { star: 5, title: '(Card Name)', name: '', image: '' },
+            { star: 4, title: '(Card Name)', name: '', image: '' },
+            { star: 3, title: '(Card Name)', name: '', image: '' }
+        ]
+    },
+    {
         date: '(12/25/2025) Bright me up!! Scout -Stage: Rei',
         idols: [
-            { star: 5, title: '(Card Name)', name: 'Rei Sakuma', image: '' },
-            { star: 4, title: '(Card Name)', name: 'Jun Sazanami', image: '' },
-            { star: 3, title: '(Card Name)', name: 'Niki Shiina', image: '' }
+            { star: 5, title: '(The Calm Before the Storm)', name: 'Rei Sakuma', image: 'card_square2_4640_evolution' },
+            { star: 4, title: '(Path to Victory)', name: 'Jun Sazanami', image: 'card_square2_4641_evolution' },
+            { star: 3, title: '(An Honest-to-Goodness Taste)', name: 'Niki Shiina', image: 'card_square2_4642_evolution' }
         ]
     },
     {
@@ -74,7 +82,7 @@ const pickupData = [
     {
         date: '(8/10/2025) Bright me up!! Scout -Stage: Koga',
         idols: [
-            { star: 5, title: '(Calling Out Who I Am)', name: 'Koga Oogami', image: 'card_square2_4449_evolution' },
+            { star: 5, title: '(Calling Out Who I Am)', name: 'Koga Ogami', image: 'card_square2_4449_evolution' },
             { star: 4, title: '(Delicious Playfulness)', name: 'Eichi Tenshouin', image: 'card_square2_4450_evolution' },
             { star: 3, title: '(Closed-off Room)', name: 'Nagisa Ran', image: 'card_square2_4451_evolution' }
         ]
@@ -290,10 +298,10 @@ const themePickupData = [
     {
         date: '(12/30/2025) Scout! -',
         idols: [
-            { star: 5, title: '(Card name)', name: 'Hiiro Amagi', image: '' },
-            { star: 4, title: '(Card name)', name: 'Hinata Aoi', image: '' },
-            { star: 3, title: '(Card name)', name: 'Kohaku Oukawa', image: '' },
-            { star: 3, title: '(Card name)', name: 'Raika', image: '' }
+            { star: 5, title: '(The Heavens Will Reward Feelings)', name: 'Hiiro Amagi', image: 'card_square2_4651_evolution' },
+            { star: 4, title: '(The Heavens Will Reward Hard Effort) ', name: 'Hinata Aoi', image: 'card_square2_4652_evolution' },
+            { star: 3, title: '(The Heavens Will Reward Spirit)', name: 'Kohaku Oukawa', image: 'card_square2_4653_evolution' },
+            { star: 3, title: '(The Heavens Will Reward Hard Work) ', name: 'Raika', image: 'card_square2_4654_evolution' }
         ]
     },
     {
@@ -327,7 +335,7 @@ const themePickupData = [
         date: '(10/14/2025) Scout! Nightfall Séance',
         idols: [
             { star: 5, title: '(Séance Lead)', name: 'Izumi Sena', image: 'card_square2_4521_evolution' },
-            { star: 4, title: '(Séance Witness)', name: 'Koga Oogami', image: 'card_square2_4522_evolution' },
+            { star: 4, title: '(Séance Witness)', name: 'Koga Ogami', image: 'card_square2_4522_evolution' },
             { star: 3, title: '(Séance Host)', name: 'Kanata Shinkai', image: 'card_square2_4523_evolution' },
             { star: 3, title: '(Séance Participant)', name: 'Tatsumi Kazehaya', image: 'card_square2_4524_evolution' }
         ]
