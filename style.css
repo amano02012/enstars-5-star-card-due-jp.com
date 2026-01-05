@@ -998,6 +998,12 @@ textarea {
   position: relative;
 }
 
+.loader-spinner {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
 .container {
   flex: 1;
   min-width: 0;
