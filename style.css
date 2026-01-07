@@ -115,6 +115,12 @@ body {
   position: relative;
   min-height: 100vh;
   overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 body::before {
@@ -1060,6 +1066,12 @@ textarea {
   z-index: 100;
   max-height: calc(100vh - 100px);
   overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.side-panel::-webkit-scrollbar {
+  display: none;
 }
 
 .side-panel.active {
