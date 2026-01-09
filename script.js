@@ -217,7 +217,7 @@ const idols = [{
   avatar: `images/btn-ayase_mayoi.webp`,
   borderColor: "#522F60",
   startDate: `2025-07-30`,
-  description: "Latest Card: Theme Scout",
+  description: "Latest Card: Shuffle Scout",
   detailsImage: "cards/Alkaloid/A_Summer_With_You_Mayoi_Ayase.webp",
   detailsDescription: "(A Summer With You) Mayoi Ayase"
 },
@@ -477,7 +477,7 @@ const idols = [{
   avatar: `images/btn-suou_tsukasa.webp`,
   borderColor: "#942343",
   startDate: `2025-03-14`,
-  description: "Latest Card: Theme Scout",
+  description: "Latest Card: Shuffle Scout",
   detailsImage: "cards/Knights/The_Fallen_Angel's_Warning_Tsukasa_Suou.webp",
   detailsDescription: "(The Fallen Angel's Warning) Tsukasa Suou"
 },
@@ -487,7 +487,7 @@ const idols = [{
   avatar: `images/btn-tsukinaga_leo.webp`,
   borderColor: "#EC6D51",
   startDate: `2025-11-14`,
-  description: "Latest Card: Theme Scout",
+  description: "Latest Card: Shuffle Scout",
   detailsImage: "cards/Knights/Go_Fight_ResQ_Leo_Tsukinaga.webp",
   detailsDescription: "(Go, Fight, ResQ) Leo Tsukinaga"
 },

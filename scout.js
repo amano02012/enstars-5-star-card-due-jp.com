@@ -1,10 +1,10 @@
 const pickupData = [
     {
-        date: 'Scout Announcement on 01/09/2026',
+        date: '(01/10/2026) Bright me up!! Scout -Stage: Kanata',
         idols: [
-            { star: 5, title: '(Card Name)', name: '', image: '' },
-            { star: 4, title: '(Card Name)', name: '', image: '' },
-            { star: 3, title: '(Card Name)', name: '', image: '' }
+            { star: 5, title: '(Card Name)', name: 'Kanata Shinkai', image: '' },
+            { star: 4, title: '(Card Name)', name: 'Shinobu Sengoku', image: '' },
+            { star: 3, title: '(Card Name)', name: 'Subaru Akehoshi', image: '' }
         ]
     },
     {
@@ -103,7 +103,6 @@ const scoutData = [
       `images/btn-nagumo_tetora.webp`,
       `images/btn-takamine_midori.webp`,
       `images/btn-morisawa_chiaki.webp`,
-      `images/btn-shinkai_kanata.webp`,
       `images/btn-amagi_hiiro.webp`,
       `images/btn-shiratori_aira.webp`,
       `images/btn-ayase_mayoi.webp`,
@@ -151,7 +150,6 @@ const scoutData = [
       `images/btn-isara_mao.webp`,
       `images/btn-nagumo_tetora.webp`,
       `images/btn-takamine_midori.webp`,
-      `images/btn-sengoku_shinobu.webp`,
       `images/btn-morisawa_chiaki.webp`,
       `images/btn-shinkai_kanata.webp`,
       `images/btn-amagi_hiiro.webp`,
