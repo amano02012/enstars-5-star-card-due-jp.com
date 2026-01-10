@@ -186,10 +186,10 @@ const idols = [{
   name: `Kanata Shinkai`,
   avatar: `images/btn-shinkai_kanata.webp`,
   borderColor: "#008DB7",
-  startDate: `2025-07-31`,
-  description: "Latest Card: Shuffle Event",
-  detailsImage: "cards/RYUSEITAI/A_Summer_to_Remember_Kanata_Shinkai.webp",
-  detailsDescription: "(A Summer to Remember) Kanata Shinkai"
+  startDate: `2026-01-10`,
+  description: "Latest Card: Bright me up!! Scout Stage",
+  detailsImage: "cards/RYUSEITAI/じゆうなたび_Kanata_Shinkai.webp",
+  detailsDescription: "[じゆうなたび] Kanata Shinkai"
 },
 {
   id: 14,
@@ -652,14 +652,14 @@ const cardCountData = {
   3: { five: 11, four: 16, three: 16 }, // Tori Himemiya
   4: { five: 11, four: 16, three: 18 }, // Yuzuru Fushimi
   5: { five: 13, four: 14, three: 15 }, // Hokuto Hidka
-  6: { five: 11, four: 16, three: 20 }, // Subaru Akehoshi
+  6: { five: 11, four: 16, three: 21 }, // Subaru Akehoshi
   7: { five: 11, four: 18, three: 19 }, // Makoto Yuuki
   8: { five: 11, four: 16, three: 18 }, // Mao Isara
   9: { five: 10, four: 16, three: 16 }, // Tetora Nagumo
   10: { five: 10, four: 15, three: 18 }, // Midori Takamine
-  11: { five: 10, four: 16, three: 16 }, // Shinobu Sengoku
+  11: { five: 10, four: 17, three: 16 }, // Shinobu Sengoku
   12: { five: 12, four: 15, three: 17 }, // Chiaki Morisawa
-  13: { five: 9, four: 17, three: 17 }, // Kanata Shinkai
+  13: { five: 10, four: 17, three: 17 }, // Kanata Shinkai
   14: { five: 12, four: 15, three: 16 }, // Hiiro Amagi
   15: { five: 10, four: 15, three: 17 }, // Aira Shiratori
   16: { five: 10, four: 16, three: 17 }, // Mayoi Ayase
