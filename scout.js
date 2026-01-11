@@ -294,7 +294,7 @@ function renderScouts() {
 
 const themePickupData = [
     {
-        date: '(12/30/2025) Scout! -',
+        date: '(12/30/2025) Scout! Sincerity Will Be Rewarded',
         idols: [
             { star: 5, title: '(The Heavens Will Reward Feelings)', name: 'Hiiro Amagi', image: 'card_square2_4651_evolution' },
             { star: 4, title: '(The Heavens Will Reward Hard Effort) ', name: 'Hinata Aoi', image: 'card_square2_4652_evolution' },
