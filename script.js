@@ -96,10 +96,10 @@ const idols = [{
   name: `Yuzuru Fushimi`,
   avatar: `images/btn-fushimi_yuzuru.webp`,
   borderColor: "#3E62AD",
-  startDate: `2025-08-25`,
-  description: "Latest Card: Bright me up!! Scout Stage",
-  detailsImage: "cards/Fine/Route_to_Broadened_Possibilities_Yuzuru_Fushimi.webp",
-  detailsDescription: "(Route to Broadened Possibilities) Yuzuru Fushimi"
+  startDate: `2026-01-15`,
+  description: "Latest Card: Unit Event",
+  detailsImage: "cards/Fine/高鳴るMusica_Yuzuru_Fushimi.webp",
+  detailsDescription: "[高鳴るMusica] Yuzuru Fushimi"
 },
 {
   id: 5,
@@ -396,10 +396,10 @@ const idols = [{
   name: `Tomoya Mashiro`,
   avatar: `images/btn-mashiro_tomoya.webp`,
   borderColor: "#EEDCB3",
-  startDate: `2025-08-31`,
-  description: "Latest Card: Unit Event",
-  detailsImage: "cards/Ra_bits/RaRaRa＊Realization_Tomoya_Mashiro.webp",
-  detailsDescription: "(RaRaRa＊Realization) Tomoya Mashiro"
+  startDate: `2026-01-14`,
+  description: "Latest Card: Theme Scout",
+  detailsImage: "cards/Ra_bits/駆ける舞台_Tomoya_Mashiro.webp",
+  detailsDescription: "[駆ける舞台] Tomoya Mashiro"
 },
 {
   id: 35,
@@ -647,11 +647,11 @@ const idols = [{
 }];
 
 const cardCountData = {
-  1: { five: 12, four: 14, three: 17 }, // Eichi Tenshouin
-  2: { five: 11, four: 14, three: 19 }, // Wataru Hibiki
-  3: { five: 11, four: 16, three: 16 }, // Tori Himemiya
-  4: { five: 11, four: 16, three: 18 }, // Yuzuru Fushimi
-  5: { five: 13, four: 14, three: 15 }, // Hokuto Hidka
+  1: { five: 12, four: 14, three: 18 }, // Eichi Tenshouin
+  2: { five: 11, four: 15, three: 19 }, // Wataru Hibiki
+  3: { five: 11, four: 16, three: 17 }, // Tori Himemiya
+  4: { five: 12, four: 16, three: 18 }, // Yuzuru Fushimi
+  5: { five: 13, four: 14, three: 16 }, // Hokuto Hidaka
   6: { five: 11, four: 16, three: 21 }, // Subaru Akehoshi
   7: { five: 11, four: 18, three: 19 }, // Makoto Yuuki
   8: { five: 11, four: 16, three: 18 }, // Mao Isara
@@ -680,16 +680,16 @@ const cardCountData = {
   31: { five: 11, four: 14, three: 21 }, // Kaoru Hakaze
   32: { five: 11, four: 18, three: 18 }, // Koga Ogami
   33: { five: 11, four: 15, three: 19 }, // Adonis Otogari
-  34: { five: 12, four: 13, three: 20 }, // Tomoya Mashiro
+  34: { five: 13, four: 13, three: 20 }, // Tomoya Mashiro
   35: { five: 11, four: 15, three: 19 }, // Nazuna Nito
   36: { five: 10, four: 15, three: 19 }, // Mitsuru Tenma
   37: { five: 13, four: 16, three: 20 }, // Hajime Shino
   38: { five: 13, four: 14, three: 16 }, // Keito Hasumi
   39: { five: 11, four: 15, three: 18 }, // Kuro Kiryu
-  40: { five: 10, four: 16, three: 16 }, // Souma Kanzaki
+  40: { five: 10, four: 17, three: 16 }, // Souma Kanzaki
   41: { five: 2, four: 5, three: 4 }, // Ibuki Taki
   42: { five: 12, four: 15, three: 17 }, // Tsukasa Suou
-  43: { five: 12, four: 16, three: 17 }, // Leo Tsukinaga
+  43: { five: 12, four: 16, three: 18 }, // Leo Tsukinaga
   44: { five: 11, four: 17, three: 17 }, // Izumi Sena
   45: { five: 12, four: 17, three: 17 }, // Ritsu Sakuma
   46: { five: 11, four: 16, three: 19 }, // Arashi Narukami
