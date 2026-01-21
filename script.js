@@ -68,8 +68,11 @@ const idols = [{
   borderColor: "#FFF3B8",
   startDate: `2024-10-15`, 
   description: "Latest Card: Unit Event",
-  detailsImage: "cards/Fine/Fairy_Tale_of_Allegories_Eichi_Tenshouin.webp",
-  detailsDescription: "(Fairy Tale of Allegories) Eichi Tenshouin"
+  detailsDescription: "(Fairy Tale of Allegories) Eichi Tenshouin",
+  unbloomedThumb: "icons/card_square2_4184_normal.webp",
+  bloomedThumb: "icons/card_square2_4184_evolution.webp",
+  unbloomedImage: "cards/UNDEAD/Diamond_Ambition_Koga_Ogami.webp",
+  bloomedImage: "cards/Fine/Fairy_Tale_of_Allegories_Eichi_Tenshouin.webp"
 },
 {
   id: 2,
@@ -78,8 +81,11 @@ const idols = [{
   borderColor: "#A1D8E2",
   startDate: `2025-05-25`,
   description: "Latest Card: Cross Scout",
-  detailsImage: "cards/Fine/Canister_Cowboy_Wataru_Hibiki.webp",
-  detailsDescription: "(Canister Cowboy) Wataru Hibiki"
+  detailsDescription: "(Canister Cowboy) Wataru Hibiki",
+  unbloomedThumb: 'icons/card_square2_4377_normal.webp',
+  bloomedThumb: 'icons/card_square2_4377_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4377_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4377_evolution.webp'
 },
 {
   id: 3,
@@ -88,8 +94,11 @@ const idols = [{
   borderColor: "#F5B2B2",
   startDate: `2025-04-15`,
   description: "Latest Card: Tour Event",
-  detailsImage: "cards/Fine/Charm_of_the_Four_Kings_of_the_Sky_Tori_Himemiya.webp",
-  detailsDescription: "(Charm of the Four Kings of the Sky) Tori Himemiya"
+  detailsDescription: "(Charm of the Four Kings of the Sky) Tori Himemiya",
+  unbloomedThumb: 'icons/card_square2_4323_normal.webp',
+  bloomedThumb: 'icons/card_square2_4323_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4323_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4323_evolution.webp'
 },
 {
   id: 4,
@@ -98,8 +107,11 @@ const idols = [{
   borderColor: "#3E62AD",
   startDate: `2026-01-15`,
   description: "Latest Card: Unit Event",
-  detailsImage: "cards/Fine/高鳴るMusica_Yuzuru_Fushimi.webp",
-  detailsDescription: "[高鳴るMusica] Yuzuru Fushimi"
+  detailsDescription: "(Heart-pounding Musica) Yuzuru Fushimi",
+  unbloomedThumb: 'icons/card_square2_4658_normal.webp',
+  bloomedThumb: 'icons/card_square2_4658_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4658_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4658_evolution.webp'
 },
 {
   id: 5,
@@ -108,8 +120,11 @@ const idols = [{
   borderColor: "#0068B7",
   startDate: `2025-04-30`,
   description: "Latest Card: Unit Event",
-  detailsImage: "cards/Trickstar/The_Anniversary_We_Strive_Onward_Hokuto_Hidaka.webp",
-  detailsDescription: "(The Anniversary We Strive Onward) Hokuto Hidka"
+  detailsDescription: "(The Anniversary We Strive Onward) Hokuto Hidka",
+  unbloomedThumb: 'icons/card_square2_4353_normal.webp',
+  bloomedThumb: 'icons/card_square2_4353_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4353_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4353_evolution.webp'
 },
 {
   id: 6,
@@ -118,8 +133,11 @@ const idols = [{
   borderColor: "#F3981D",
   startDate: `2025-05-15`,
   description: "Latest Card: Tour Event",
-  detailsImage: "cards/Trickstar/Sparkling_Sailing_Ceremony_Subaru_Akehoshi.webp",
-  detailsDescription: "(Sparkling Sailing Ceremony) Subaru Akehoshi"
+  detailsDescription: "(Sparkling Sailing Ceremony) Subaru Akehoshi",
+  unbloomedThumb: 'icons/card_square2_4371_normal.webp',
+  bloomedThumb: 'icons/card_square2_4371_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4371_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4371_evolution.webp'
 },
 {
   id: 7,
@@ -128,8 +146,11 @@ const idols = [{
   borderColor: "#65AB31",
   startDate: `2025-12-31`,
   description: "Latest Card: Tour Event",
-  detailsImage: "cards/Trickstar/Diamond_Hope_Makoto_Yuuki.webp",
-  detailsDescription: "(Diamond Hope) Makoto Yuuki"
+  detailsDescription: "(Diamond Hope) Makoto Yuuki",
+  unbloomedThumb: 'icons/card_square2_4645_normal.webp',
+  bloomedThumb: 'icons/card_square2_4645_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4645_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4645_evolution.webp'
 },
 {
   id: 8,
@@ -138,8 +159,11 @@ const idols = [{
   borderColor: "#941F57",
   startDate: `2025-10-25`,
   description: "Latest Card: Bright me up!! Scout Stage",
-  detailsImage: "cards/Trickstar/Moving_Beyond_Expectations_Mao_Isara.webp",
-  detailsDescription: "(Moving Beyond Expectations) Mao Isara"
+  detailsDescription: "(Moving Beyond Expectations) Mao Isara",
+  unbloomedThumb: 'icons/card_square2_4525_normal.webp',
+  bloomedThumb: 'icons/card_square2_4525_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4525_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4525_evolution.webp'
 },
 {
   id: 9,
@@ -148,8 +172,11 @@ const idols = [{
   borderColor: "#302833",
   startDate: `2025-06-29`,
   description: "Latest Card: Cross Scout",
-  detailsImage: "cards/RYUSEITAI/Central_Pillar_of_All_Trades_Tetora_Nagumo.webp",
-  detailsDescription: "(Central Pillar of All Trades) Tetora Nagumo"
+  detailsDescription: "(Central Pillar of All Trades) Tetora Nagumo",
+  unbloomedThumb: 'icons/card_square2_4405_normal.webp',
+  bloomedThumb: 'icons/card_square2_4405_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4405_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4405_evolution.webp'
 },
 {
   id: 10,
@@ -158,8 +185,11 @@ const idols = [{
   borderColor: "#00533F",
   startDate: `2025-10-30`,
   description: "Latest Card: Theme Scout",
-  detailsImage: "cards/RYUSEITAI/Guardian_of_Peace_Midori_Takamine.webp",
-  detailsDescription: "(Guardian of Peace) Midori Takamine"
+  detailsDescription: "(Guardian of Peace) Midori Takamine",
+  unbloomedThumb: 'icons/card_square2_4542_normal.webp',
+  bloomedThumb: 'icons/card_square2_4542_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4542_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4542_evolution.webp'
 },
 {
   id: 11,
@@ -168,8 +198,11 @@ const idols = [{
   borderColor: "#FFDC00",
   startDate: `2025-09-25`,
   description: "Latest Card: Bright me up!! Scout Stage",
-  detailsImage: "cards/RYUSEITAI/The_Charm_of_Perseverance_Shinobu_Sengoku.webp",
-  detailsDescription: "(The Charm of Perseverance) Shinobu Sengoku"
+  detailsDescription: "(The Charm of Perseverance) Shinobu Sengoku",
+  unbloomedThumb: 'icons/card_square2_4496_normal.webp',
+  bloomedThumb: 'icons/card_square2_4496_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4496_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4496_evolution.webp'
 },
 {
   id: 12,
@@ -178,8 +211,11 @@ const idols = [{
   borderColor: "#E60033",
   startDate: `2025-11-30`,
   description: "Latest Card: Unit Event",
-  detailsImage: "cards/RYUSEITAI/Light_Up_the_Light_of_Justice_Chiaki_Morisawa.webp",
-  detailsDescription: "(Light Up the Light of Justice) Chiaki Morisawa"
+  detailsDescription: "(Light Up the Light of Justice) Chiaki Morisawa",
+  unbloomedThumb: 'icons/card_square2_4618_normal.webp',
+  bloomedThumb: 'icons/card_square2_4618_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4618_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4618_evolution.webp'
 },
 {
   id: 13,
@@ -188,8 +224,11 @@ const idols = [{
   borderColor: "#008DB7",
   startDate: `2026-01-10`,
   description: "Latest Card: Bright me up!! Scout Stage",
-  detailsImage: "cards/RYUSEITAI/じゆうなたび_Kanata_Shinkai.webp",
-  detailsDescription: "[じゆうなたび] Kanata Shinkai"
+  detailsDescription: "(Journey Filled With Freedom) Kanata Shinkai",
+  unbloomedThumb: 'icons/card_square2_4655_normal.webp',
+  bloomedThumb: 'icons/card_square2_4655_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4655_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4655_evolution.webp'
 },
 {
   id: 14,
@@ -198,8 +237,11 @@ const idols = [{
   borderColor: "#BA2636",
   startDate: `2025-12-30`,
   description: "Latest Card: Theme Scout",
-  detailsImage: "cards/Alkaloid/The_Heavens_Will_Reward_Feelings_Hiiro_Amagi.webp",
-  detailsDescription: "(The Heavens Will Reward Feelings) Hiiro Amagi"
+  detailsDescription: "(The Heavens Will Reward Feelings) Hiiro Amagi",
+  unbloomedThumb: 'icons/card_square2_4651_normal.webp',
+  bloomedThumb: 'icons/card_square2_4651_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4651_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4651_evolution.webp'
 },
 {
   id: 15,
@@ -208,8 +250,11 @@ const idols = [{
   borderColor: "#FFF1CF",
   startDate: `2025-04-14`,
   description: "Latest Card: Cross Scout",
-  detailsImage: "cards/Alkaloid/Path_to_Becoming_an_ACE_Aira_Shiratori.webp",
-  detailsDescription: "(Path to Becoming an ACE) Aira Shiratori"
+  detailsDescription: "(Path to Becoming an ACE) Aira Shiratori",
+  unbloomedThumb: 'icons/card_square2_4319_normal.webp',
+  bloomedThumb: 'icons/card_square2_4319_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4319_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4319_evolution.webp'
 },
 {
   id: 16,
@@ -218,8 +263,11 @@ const idols = [{
   borderColor: "#522F60",
   startDate: `2025-07-30`,
   description: "Latest Card: Shuffle Scout",
-  detailsImage: "cards/Alkaloid/A_Summer_With_You_Mayoi_Ayase.webp",
-  detailsDescription: "(A Summer With You) Mayoi Ayase"
+  detailsDescription: "(A Summer With You) Mayoi Ayase",
+  unbloomedThumb: 'icons/card_square2_4447_normal.webp',
+  bloomedThumb: 'icons/card_square2_4447_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4447_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4447_evolution.webp'
 },
 {
   id: 17,
@@ -228,8 +276,11 @@ const idols = [{
   borderColor: "#7EBEA5",
   startDate: `2025-12-10`,
   description: "Latest Card: Bright me up!! Scout Stage",
-  detailsImage: "cards/Alkaloid/Good_Fortune_Comes_Unexpectedly_Tatsumi_Kazehaya.webp",
-  detailsDescription: "(Good Fortune Comes Unexpectedly) Tatsumi Kazehaya"
+  detailsDescription: "(Good Fortune Comes Unexpectedly) Tatsumi Kazehaya",
+  unbloomedThumb: 'icons/card_square2_4627_normal.webp',
+  bloomedThumb: 'icons/card_square2_4627_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4627_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4627_evolution.webp'
 },
 {
   id: 18,
@@ -238,8 +289,11 @@ const idols = [{
   borderColor: "#A73836",
   startDate: `2025-08-30`,
   description: "Latest Card: Theme Scout",
-  detailsImage: "cards/Eden/The_Beginning_of_Mythos_Nagisa_Ran.webp",
-  detailsDescription: "(The Beginning of Mythos) Nagisa Ran"
+  detailsDescription: "(The Beginning of Mythos) Nagisa Ran",
+  unbloomedThumb: 'icons/card_square2_4476_normal.webp',
+  bloomedThumb: 'icons/card_square2_4476_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4476_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4476_evolution.webp'
 },
 {
   id: 19,
@@ -248,8 +302,11 @@ const idols = [{
   borderColor: "#B8D200",
   startDate: `2025-10-31`,
   description: "Latest Card: Unit Event",
-  detailsImage: "cards/Eden/La_Vérité_We_Cannot_Conceal_Hiyori_Tomoe.webp",
-  detailsDescription: "(La Vérité We Cannot Conceal) Hiyori Tomoe"
+  detailsDescription: "(La Vérité We Cannot Conceal) Hiyori Tomoe",
+  unbloomedThumb: 'icons/card_square2_4538_normal.webp',
+  bloomedThumb: 'icons/card_square2_4538_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4538_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4538_evolution.webp'
 },
 {
   id: 20,
@@ -258,8 +315,11 @@ const idols = [{
   borderColor: "#74325C",
   startDate: `2025-10-15`,
   description: "Latest Card: Tour Event",
-  detailsImage: "cards/Eden/Trick_Performer_Ibara_Saegusa.webp",
-  detailsDescription: "(Trick Performer) Ibara Saegusa"
+  detailsDescription: "(Trick Performer) Ibara Saegusa",
+  unbloomedThumb: 'icons/card_square2_4515_normal.webp',
+  bloomedThumb: 'icons/card_square2_4515_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4515_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4515_evolution.webp'
 },
 {
   id: 21,
@@ -268,8 +328,11 @@ const idols = [{
   borderColor: "#192F60",
   startDate: `2025-05-14`,
   description: "Latest Card: Cross Scout",
-  detailsImage: "cards/Eden/Showdown_Crisis_Jun_Sazanami.webp",
-  detailsDescription: "(Showdown Crisis) Jun Sazanami"
+  detailsDescription: "(Showdown Crisis) Jun Sazanami",
+  unbloomedThumb: 'icons/card_square2_4360_normal.webp',
+  bloomedThumb: 'icons/card_square2_4360_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4360_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4360_evolution.webp'
 },
 {
   id: 22,
@@ -278,8 +341,11 @@ const idols = [{
   borderColor: "#E3ACAE",
   startDate: `2025-12-15`,
   description: "Latest Card: Unit Event",
-  detailsImage: "cards/Valkyrie/A_Needle's_Tip_of_Passion_Shu_Itsuki.webp",
-  detailsDescription: "(A Needle's Tip of Passion) Shu Itsuki"
+  detailsDescription: "(A Needle's Tip of Passion) Shu Itsuki",
+  unbloomedThumb: 'icons/card_square2_4632_normal.webp',
+  bloomedThumb: 'icons/card_square2_4632_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4632_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4632_evolution.webp'
 },
 {
   id: 23,
@@ -288,8 +354,11 @@ const idols = [{
   borderColor: "#006A6C",
   startDate: `2025-05-30`,
   description: "Latest Card: Cross Scout",
-  detailsImage: "cards/Valkyrie/Partner_Cowboy_Mika_Kagehira.webp",
-  detailsDescription: "(Partner Cowboy) Mika Kagehira"
+  detailsDescription: "(Partner Cowboy) Mika Kagehira",
+  unbloomedThumb: 'icons/card_square2_4380_normal.webp',
+  bloomedThumb: 'icons/card_square2_4380_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4380_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4380_evolution.webp'
 },
 {
   id: 24,
@@ -298,8 +367,11 @@ const idols = [{
   borderColor: "#EB6EA0",
   startDate: `2025-05-10`,
   description: "Latest Card: Cross Scout",
-  detailsImage: "cards/2wink/Resolute_Crisis_Hinata_Aoi.webp",
-  detailsDescription: "(Resolute Crisis) Hinata Aoi"
+  detailsDescription: "(Resolute Crisis) Hinata Aoi",
+  unbloomedThumb: 'icons/card_square2_4357_normal.webp',
+  bloomedThumb: 'icons/card_square2_4357_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4357_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4357_evolution.webp'
 },
 {
   id: 25,
@@ -308,8 +380,11 @@ const idols = [{
   borderColor: "#00A1E9",
   startDate: `2025-11-25`,
   description: "Latest Card: Bright me up!! Scout Stage",
-  detailsImage: "cards/2wink/A_Longing_Star_Yuta_Aoi.webp",
-  detailsDescription: "(A Longing Star) Yuta Aoi"
+  detailsDescription: "(A Longing Star) Yuta Aoi",
+  unbloomedThumb: 'icons/card_square2_4559_normal.webp',
+  bloomedThumb: 'icons/card_square2_4559_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4559_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4559_evolution.webp'
 },
 {
   id: 26,
@@ -318,8 +393,11 @@ const idols = [{
   borderColor: "#B7282E",
   startDate: `2025-09-14`,
   description: "Latest Card: Theme Scout",
-  detailsImage: "cards/Crazy_B/Attempting_a_Gamble_Rinne_Amagi.webp",
-  detailsDescription: "(Attempting a Gamble) Rinne Amagi"
+  detailsDescription: "(Attempting a Gamble) Rinne Amagi",
+  unbloomedThumb: 'icons/card_square2_4492_normal.webp',
+  bloomedThumb: 'icons/card_square2_4492_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4492_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4492_evolution.webp'
 },
 {
   id: 27,
@@ -328,8 +406,11 @@ const idols = [{
   borderColor: "#89C3EB",
   startDate: `2025-04-25`,
   description: "Latest Card: Cross Scout",
-  detailsImage: "cards/Crazy_B/Front-Back_Ambivalence_HiMERU.webp",
-  detailsDescription: "(Front-Back Ambivalence) HiMERU"
+  detailsDescription: "(Front-Back Ambivalence) HiMERU",
+  unbloomedThumb: 'icons/card_square2_4346_normal.webp',
+  bloomedThumb: 'icons/card_square2_4346_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4346_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4346_evolution.webp'
 },
 {
   id: 28,
@@ -338,8 +419,11 @@ const idols = [{
   borderColor: "#F4B3C2",
   startDate: `2025-09-10`,
   description: "Latest Card: Bright me up!! Scout Stage",
-  detailsImage: "cards/Crazy_B/My_Own_Distance_Kohaku_Oukawa.webp",
-  detailsDescription: "(My Own Distance) Kohaku Oukawa"
+  detailsDescription: "(My Own Distance) Kohaku Oukawa",
+  unbloomedThumb: 'icons/card_square2_4480_normal.webp',
+  bloomedThumb: 'icons/card_square2_4480_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4480_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4480_evolution.webp'
 },
 {
   id: 29,
@@ -348,8 +432,11 @@ const idols = [{
   borderColor: "#507EA5",
   startDate: `2025-06-15`,
   description: "Latest Card: Unit Event",
-  detailsImage: "cards/Crazy_B/Matching_Pair-ring_Niki_Shiina.webp",
-  detailsDescription: "(Matching Pair-ring) Niki Shiina"
+  detailsDescription: "(Matching Pair-ring) Niki Shiina",
+  unbloomedThumb: 'icons/card_square2_4398_normal.webp',
+  bloomedThumb: 'icons/card_square2_4398_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4398_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4398_evolution.webp'
 },
 {
   id: 30,
@@ -358,8 +445,11 @@ const idols = [{
   borderColor: "#47266E",
   startDate: `2025-12-25`,
   description: "Latest Card: Bright me up!! Scout Stage",
-  detailsImage: "cards/UNDEAD/The_Calm_Before_the_Storm_Rei_Sakuma.webp",
-  detailsDescription: "(The Calm Before the Storm) Rei Sakuma"
+  detailsDescription: "(The Calm Before the Storm) Rei Sakuma",
+  unbloomedThumb: 'icons/card_square2_4640_normal.webp',
+  bloomedThumb: 'icons/card_square2_4640_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4640_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4640_evolution.webp'
 },
 {
   id: 31,
@@ -368,8 +458,11 @@ const idols = [{
   borderColor: "#FDD35C",
   startDate: `2025-07-15`,
   description: "Latest Card: Unit Event",
-  detailsImage: "cards/UNDEAD/Captain_of_the_Ghost_Ship_Kaoru_Hakaze.webp",
-  detailsDescription: "(Captain of the Ghost Ship) Kaoru Hakaze"
+  detailsDescription: "(Captain of the Ghost Ship) Kaoru Hakaze",
+  unbloomedThumb: 'icons/card_square2_4433_normal.webp',
+  bloomedThumb: 'icons/card_square2_4433_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4433_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4433_evolution.webp'
 },
 {
   id: 32,
@@ -378,8 +471,11 @@ const idols = [{
   borderColor: "#C9CACA",
   startDate: `2025-12-31`,
   description: "Latest Card: Tour Event",
-  detailsImage: "cards/UNDEAD/Diamond_Ambition_Koga_Ogami.webp",
-  detailsDescription: "(Diamond Ambition) Koga Ogami"
+  detailsDescription: "(Diamond Ambition) Koga Ogami",
+  unbloomedThumb: 'icons/card_square2_4646_normal.webp',
+  bloomedThumb: 'icons/card_square2_4646_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4646_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4646_evolution.webp'
 },
 {
   id: 33,
@@ -388,8 +484,11 @@ const idols = [{
   borderColor: "#915DA3",
   startDate: `2025-11-10`,
   description: "Latest Card: Bright me up!! Scout Stage",
-  detailsImage: "cards/UNDEAD/What_Surrounds_Dreams_Adonis_Otogari.webp",
-  detailsDescription: "(What Surrounds Dreams) Adonis Otogari"
+  detailsDescription: "(What Surrounds Dreams) Adonis Otogari",
+  unbloomedThumb: 'icons/card_square2_4546_normal.webp',
+  bloomedThumb: 'icons/card_square2_4546_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4546_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4546_evolution.webp'
 },
 {
   id: 34,
@@ -398,8 +497,11 @@ const idols = [{
   borderColor: "#EEDCB3",
   startDate: `2026-01-14`,
   description: "Latest Card: Theme Scout",
-  detailsImage: "cards/Ra_bits/駆ける舞台_Tomoya_Mashiro.webp",
-  detailsDescription: "[駆ける舞台] Tomoya Mashiro"
+  detailsDescription: "(Galloping Stage) Tomoya Mashiro",
+  unbloomedThumb: 'icons/card_square2_4662_normal.webp',
+  bloomedThumb: 'icons/card_square2_4662_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4662_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4662_evolution.webp'
 },
 {
   id: 35,
@@ -408,8 +510,11 @@ const idols = [{
   borderColor: "#FFEC47",
   startDate: `2025-11-15`,
   description: "Latest Card: Shuffle Event",
-  detailsImage: "cards/Ra_bits/Hooray_Hooray_ResQ_Nazuna_Nito.webp",
-  detailsDescription: "(Hooray, Hooray, ResQ) Nazuna Nito"
+  detailsDescription: "(Hooray, Hooray, ResQ) Nazuna Nito",
+  unbloomedThumb: 'icons/card_square2_4554_normal.webp',
+  bloomedThumb: 'icons/card_square2_4554_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4554_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4554_evolution.webp'
 },
 {
   id: 36,
@@ -418,8 +523,11 @@ const idols = [{
   borderColor: "#ED6D35",
   startDate: `2025-06-25`,
   description: "Latest Card: Cross Scout",
-  detailsImage: "cards/Ra_bits/Rising_Star_of_All_Trades_Mitsuru_Tenma.webp",
-  detailsDescription: "(Rising Star of All Trades) Mitsuru Tenma"
+  detailsDescription: "(Rising Star of All Trades) Mitsuru Tenma",
+  unbloomedThumb: 'icons/card_square2_4402_normal.webp',
+  bloomedThumb: 'icons/card_square2_4402_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4402_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4402_evolution.webp'
 },
 {
   id: 37,
@@ -428,8 +536,11 @@ const idols = [{
   borderColor: "#CAB8D9",
   startDate: `2025-07-14`,
   description: "Latest Card: Theme Scout",
-  detailsImage: "cards/Ra_bits/Unbreakable_Gaze_Hajime_Shino.webp",
-  detailsDescription: "(Unbreakable Gaze) Hajime Shino"
+  detailsDescription: "(Unbreakable Gaze) Hajime Shino",
+  unbloomedThumb: 'icons/card_square2_4437_normal.webp',
+  bloomedThumb: 'icons/card_square2_4437_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4437_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4437_evolution.webp'
 },
 {
   id: 38,
@@ -438,8 +549,11 @@ const idols = [{
   borderColor: "#316745",
   startDate: `2025-12-14`,
   description: "Latest Card: Theme Scout",
-  detailsImage: "cards/Akatsuki/Fake_Dead_Keito_Hasumi.webp",
-  detailsDescription: "(Fake Dead) Keito Hasumi"
+  detailsDescription: "(Fake Dead) Keito Hasumi",
+  unbloomedThumb: 'icons/card_square2_4636_normal.webp',
+  bloomedThumb: 'icons/card_square2_4636_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4636_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4636_evolution.webp'
 },
 {
   id: 39,
@@ -448,8 +562,11 @@ const idols = [{
   borderColor: "#E83929",
   startDate: `2025-08-14`,
   description: "Latest Card: Theme Scout",
-  detailsImage: "cards/Akatsuki/Oniyasha's_Karma_Kuro_Kiryu.webp",
-  detailsDescription: "(Oniyasha's Karma) Kuro Kiryu"
+  detailsDescription: "(Oniyasha's Karma) Kuro Kiryu",
+  unbloomedThumb: 'icons/card_square2_4465_normal.webp',
+  bloomedThumb: 'icons/card_square2_4465_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4465_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4465_evolution.webp'
 },
 {
   id: 40,
@@ -458,8 +575,11 @@ const idols = [{
   borderColor: "#5654A2",
   startDate: `2025-09-30`,
   description: "Latest Card: Unit Event",
-  detailsImage: "cards/Akatsuki/Butterfly_That_Seeks_Freedom_Souma_Kanzaki.webp",
-  detailsDescription: "(Butterfly That Seeks Freedom) Souma Kanzaki"
+  detailsDescription: "(Butterfly That Seeks Freedom) Souma Kanzaki",
+  unbloomedThumb: 'icons/card_square2_4499_normal.webp',
+  bloomedThumb: 'icons/card_square2_4499_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4499_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4499_evolution.webp'
 },
 {
   id: 41,
@@ -468,8 +588,11 @@ const idols = [{
   borderColor: "#66BBCC",
   startDate: `2025-07-25`,
   description: "Latest Card: Feature Scout 2",
-  detailsImage: "cards/Akatsuki/Spontaneous_Daybreak_Ibuki_Taki.webp",
-  detailsDescription: "(Spontaneous Daybreak) Ibuki Taki"
+  detailsDescription: "(Spontaneous Daybreak) Ibuki Taki",
+  unbloomedThumb: 'icons/card_square2_4441_normal.webp',
+  bloomedThumb: 'icons/card_square2_4441_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4441_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4441_evolution.webp'
 },
 {
   id: 42,
@@ -478,8 +601,11 @@ const idols = [{
   borderColor: "#942343",
   startDate: `2025-03-14`,
   description: "Latest Card: Shuffle Scout",
-  detailsImage: "cards/Knights/The_Fallen_Angel's_Warning_Tsukasa_Suou.webp",
-  detailsDescription: "(The Fallen Angel's Warning) Tsukasa Suou"
+  detailsDescription: "(The Fallen Angel's Warning) Tsukasa Suou",
+  unbloomedThumb: 'icons/card_square2_4304_normal.webp',
+  bloomedThumb: 'icons/card_square2_4304_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4304_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4304_evolution.webp'
 },
 {
   id: 43,
@@ -488,8 +614,11 @@ const idols = [{
   borderColor: "#EC6D51",
   startDate: `2025-11-14`,
   description: "Latest Card: Shuffle Scout",
-  detailsImage: "cards/Knights/Go_Fight_ResQ_Leo_Tsukinaga.webp",
-  detailsDescription: "(Go, Fight, ResQ) Leo Tsukinaga"
+  detailsDescription: "(Go, Fight, ResQ) Leo Tsukinaga",
+  unbloomedThumb: 'icons/card_square2_4557_normal.webp',
+  bloomedThumb: 'icons/card_square2_4557_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4557_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4557_evolution.webp'
 },
 {
   id: 44,
@@ -498,8 +627,11 @@ const idols = [{
   borderColor: "#BBDBF3",
   startDate: `2025-10-14`,
   description: "Latest Card: Theme Scout",
-  detailsImage: "cards/Knights/Séance_Lead_Izumi_Sena.webp",
-  detailsDescription: "(Séance Lead) Izumi Sena"
+  detailsDescription: "(Séance Lead) Izumi Sena",
+  unbloomedThumb: 'icons/card_square2_4521_normal.webp',
+  bloomedThumb: 'icons/card_square2_4521_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4521_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4521_evolution.webp'
 },
 {
   id: 45,
@@ -508,8 +640,11 @@ const idols = [{
   borderColor: "#001E43",
   startDate: `2025-08-15`,
   description: "Latest Card: Tour Event",
-  detailsImage: "cards/Knights/FEARLESS_BUNNY_Ritsu_Sakuma.webp",
-  detailsDescription: "(FEARLESS BUNNY) Ritsu Sakuma"
+  detailsDescription: "(FEARLESS BUNNY) Ritsu Sakuma",
+  unbloomedThumb: 'icons/card_square2_4460_normal.webp',
+  bloomedThumb: 'icons/card_square2_4460_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4460_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4460_evolution.webp'
 },
 {
   id: 46,
@@ -518,8 +653,11 @@ const idols = [{
   borderColor: "#EDDE7B",
   startDate: `2025-09-29`,
   description: "Latest Card: Theme Scout",
-  detailsImage: "cards/Knights/Search_Witch_Arashi_Narukami.webp",
-  detailsDescription: "(Search Witch) Arashi Narukami"
+  detailsDescription: "(Search Witch) Arashi Narukami",
+  unbloomedThumb: 'icons/card_square2_4503_normal.webp',
+  bloomedThumb: 'icons/card_square2_4503_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4503_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4503_evolution.webp'
 },
 {
   id: 47,
@@ -528,8 +666,11 @@ const idols = [{
   borderColor: "#D70035",
   startDate: `2025-05-31`,
   description: "Latest Card: Unit Event",
-  detailsImage: "cards/Switch/Connecting_Dimensions_and_Worlds_Natsume_Sakasaki.webp",
-  detailsDescription: "(Connecting Dimensions and Worlds) Natsume Sakasaki"
+  detailsDescription: "(Connecting Dimensions and Worlds) Natsume Sakasaki",
+  unbloomedThumb: 'icons/card_square2_4383_normal.webp',
+  bloomedThumb: 'icons/card_square2_4383_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4383_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4383_evolution.webp'
 },
 {
   id: 48,
@@ -538,8 +679,11 @@ const idols = [{
   borderColor: "#00608D",
   startDate: `2025-06-10`,
   description: "Latest Card: Cross Scout",
-  detailsImage: "cards/Switch/Fairy's_Pastime_Tsumugi_Aoba.webp",
-  detailsDescription: "(Fairy's Pastime) Tsumugi Aoba"
+  detailsDescription: "(Fairy's Pastime) Tsumugi Aoba",
+  unbloomedThumb: 'icons/card_square2_4387_normal.webp',
+  bloomedThumb: 'icons/card_square2_4387_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4387_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4387_evolution.webp'
 },
 {
   id: 49,
@@ -548,8 +692,11 @@ const idols = [{
   borderColor: "#FFF352",
   startDate: `2025-10-10`,
   description: "Latest Card: Bright me up!! Scout Stage",
-  detailsImage: "cards/Switch/Adding_Up_Smiles_Sora_Harukawa.webp",
-  detailsDescription: "(Adding Up Smiles) Sora Harukawa"
+  detailsDescription: "(Adding Up Smiles) Sora Harukawa",
+  unbloomedThumb: 'icons/card_square2_4507_normal.webp',
+  bloomedThumb: 'icons/card_square2_4507_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4507_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4507_evolution.webp'
 },
 {
   id: 50,
@@ -558,8 +705,11 @@ const idols = [{
   borderColor: "#622D18",
   startDate: `2024-10-31`,
   description: "Latest Card: Unit Event",
-  detailsImage: "cards/MaM/Lupine's_True_Feelings_Madara_Mikejima.webp",
-  detailsDescription: "(Lupine's True Feelings) Madara Mikejima"
+  detailsDescription: "(Lupine's True Feelings) Madara Mikejima",
+  unbloomedThumb: 'icons/card_square2_4194_normal.webp',
+  bloomedThumb: 'icons/card_square2_4194_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4194_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4194_evolution.webp'
 },
 {
   id: 51,
@@ -568,8 +718,11 @@ const idols = [{
   borderColor: "#80FFF4",
   startDate: `2025-11-29`,
   description: "Latest Card: Theme Scout",
-  detailsImage: "cards/Special_for_Princess/Brand_New_World_Esu.webp",
-  detailsDescription: "(Brand New World) Esu"
+  detailsDescription: "(Brand New World) Esu",
+  unbloomedThumb: 'icons/card_square2_4623_normal.webp',
+  bloomedThumb: 'icons/card_square2_4623_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4623_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4623_evolution.webp'
 },
 {
   id: 52,
@@ -578,8 +731,11 @@ const idols = [{
   borderColor: "#8ACCB8",
   startDate: `2025-09-15`,
   description: "Latest Card: Unit Event",
-  detailsImage: "cards/Special_for_Princess/Unicorn's_Smile_Kanna.webp",
-  detailsDescription: "(Unicorn's Smile) Kanna"
+  detailsDescription: "(Unicorn's Smile) Kanna",
+  unbloomedThumb: 'icons/card_square2_4488_normal.webp',
+  bloomedThumb: 'icons/card_square2_4488_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4488_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4488_evolution.webp'
 },
 {
   id: 53,
@@ -588,8 +744,11 @@ const idols = [{
   borderColor: "#CCADD9",
   startDate: `2024-11-30`,
   description: "Latest Card: Unit Event",
-  detailsImage: "cards/Special_for_Princess/Märchen_White_Yume.webp",
-  detailsDescription: "(Märchen White) Yume"
+  detailsDescription: "(Märchen White) Yume",
+  unbloomedThumb: 'icons/card_square2_4226_normal.webp',
+  bloomedThumb: 'icons/card_square2_4226_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4226_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4226_evolution.webp'
 },
 {
   id: 54,
@@ -598,8 +757,11 @@ const idols = [{
   borderColor: "#298C7C",
   startDate: `2025-10-15`,
   description: "Latest Card: Tour Event",
-  detailsImage: "cards/Special_for_Princess/Monstrous_Performer_Raika.webp",
-  detailsDescription: "(Monstrous Performer) Raika"
+  detailsDescription: "(Monstrous Performer) Raika",
+  unbloomedThumb: 'icons/card_square2_4516_normal.webp',
+  bloomedThumb: 'icons/card_square2_4516_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4516_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4516_evolution.webp'
 },
 {
   id: 55,
@@ -608,7 +770,6 @@ const idols = [{
   borderColor: "#70ab5e",
   startDate: `-`,
   description: "-",
-  detailsImage: "cards/MELLOW_DEAR_US/full-kojika_juis.webp",
   detailsDescription: "-",
   isNew: true
 },
@@ -619,7 +780,6 @@ const idols = [{
   borderColor: "#881f4a",
   startDate: `-`,
   description: "-",
-  detailsImage: "cards/MELLOW_DEAR_US/full-madoka_nozomi.webp",
   detailsDescription: "-",
   isNew: true
 },
@@ -630,7 +790,6 @@ const idols = [{
   borderColor: "#ec938c",
   startDate: `-`,
   description: "-",
-  detailsImage: "cards/MELLOW_DEAR_US/full-kuon_mashu.webp",
   detailsDescription: "-",
   isNew: true
 },
@@ -641,7 +800,6 @@ const idols = [{
   borderColor: "#424355",
   startDate: `-`,
   description: "-",
-  detailsImage: "cards/MELLOW_DEAR_US/full-tsuzura_chitose.webp",
   detailsDescription: "-",
   isNew: true
 }];
@@ -707,6 +865,57 @@ const cardCountData = {
   58: { five: "-", four: "-", three: "-" } // Chitose Tsuzura
 };
 
+let currentView = 'grid';
+let currentSort = 'highest';
+
+function initializeControls() {
+  const viewBtns = document.querySelectorAll('.view-btn');
+  const sortSelect = document.getElementById('sortSelect');
+  const container = document.getElementById('idol-container');
+  
+  viewBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      viewBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentView = btn.dataset.view;
+      
+      container.style.transition = 'none';
+      
+      if (currentView === 'list') {
+        container.classList.add('list-view');
+      } else {
+        container.classList.remove('list-view');
+      }
+      
+      const cards = container.querySelectorAll('.idol-card');
+      cards.forEach(card => {
+        card.style.transition = 'none';
+      });
+      
+      setTimeout(() => {
+        container.style.transition = '';
+        cards.forEach(card => {
+          card.style.transition = '';
+        });
+      }, 50);
+    });
+  });
+  
+  if (sortSelect) {
+    sortSelect.addEventListener('change', (e) => {
+      currentSort = e.target.value;
+      renderIdols();
+    });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initializeControls();
+  setTimeout(() => {
+    renderIdols();
+  }, 100);
+});
+
 function openSidePanel(idol) {
   const panel = document.getElementById("side-panel");
   if (!panel || !idol) return;
@@ -717,6 +926,7 @@ function openSidePanel(idol) {
   const dateEl = document.getElementById("side-panel-date");
   const loaderEl = document.getElementById("side-image-loader");
   const statsEl = document.getElementById("side-card-stats");
+  const variantsEl = document.getElementById("card-variants");
 
   const isAlreadyOpen = panel.classList.contains("active");
 
@@ -727,6 +937,9 @@ function openSidePanel(idol) {
     dateEl.parentElement.classList.add("fade-out-right");
     if (statsEl.style.display === "flex") {
       statsEl.classList.add("fade-out-right");
+    }
+    if (variantsEl.style.display === "flex") {
+      variantsEl.classList.add("fade-out");
     }
 
     setTimeout(() => {
@@ -744,12 +957,20 @@ function openSidePanel(idol) {
         statsEl.style.display = "none";
       }
 
+      if (idol.unbloomedThumb && idol.bloomedThumb && idol.unbloomedImage && idol.bloomedImage) {
+        setupCardVariants(idol);
+        variantsEl.style.display = "flex";
+      } else {
+        variantsEl.style.display = "none";
+      }
+
       imgEl.style.display = "none";
       loaderEl.style.display = "flex";
 
+      const defaultImage = idol.bloomedImage || idol.detailsImage;
       const img = new Image();
       img.onload = function() {
-        imgEl.src = idol.detailsImage || "";
+        imgEl.src = defaultImage;
         imgEl.style.display = "block";
         loaderEl.style.display = "none";
       };
@@ -758,7 +979,7 @@ function openSidePanel(idol) {
         imgEl.style.display = "block";
         imgEl.src = "";
       };
-      img.src = idol.detailsImage || "";
+      img.src = defaultImage;
       
       nameEl.classList.remove("fade-out");
       nameEl.classList.add("fade-in");
@@ -772,6 +993,10 @@ function openSidePanel(idol) {
         statsEl.classList.remove("fade-out-right");
         statsEl.classList.add("fade-in-left");
       }
+      if (variantsEl.style.display === "flex") {
+        variantsEl.classList.remove("fade-out");
+        variantsEl.classList.add("fade-in");
+      }
 
       setTimeout(() => {
         nameEl.classList.remove("fade-in");
@@ -779,6 +1004,7 @@ function openSidePanel(idol) {
         descEl.parentElement.classList.remove("fade-in-left");
         dateEl.parentElement.classList.remove("fade-in-left");
         statsEl.classList.remove("fade-in-left");
+        variantsEl.classList.remove("fade-in");
       }, 300);
     }, 300);
   } else {
@@ -796,12 +1022,20 @@ function openSidePanel(idol) {
       statsEl.style.display = "none";
     }
 
+    if (idol.unbloomedThumb && idol.bloomedThumb && idol.unbloomedImage && idol.bloomedImage) {
+      setupCardVariants(idol);
+      variantsEl.style.display = "flex";
+    } else {
+      variantsEl.style.display = "none";
+    }
+
     imgEl.style.display = "none";
     loaderEl.style.display = "flex";
 
+    const defaultImage = idol.bloomedImage || idol.detailsImage;
     const img = new Image();
     img.onload = function() {
-      imgEl.src = idol.detailsImage || "";
+      imgEl.src = defaultImage;
       imgEl.style.display = "block";
       loaderEl.style.display = "none";
     };
@@ -810,10 +1044,43 @@ function openSidePanel(idol) {
       imgEl.style.display = "block";
       imgEl.src = "";
     };
-    img.src = idol.detailsImage || "";
+    img.src = defaultImage;
 
     panel.classList.add("active");
   }
+}
+
+function setupCardVariants(idol) {
+  const unbloomedPreview = document.getElementById("unbloomed-preview");
+  const bloomedPreview = document.getElementById("bloomed-preview");
+  const variantOptions = document.querySelectorAll(".variant-option");
+  const mainImage = document.getElementById("side-panel-image");
+
+  unbloomedPreview.src = idol.unbloomedThumb;
+  bloomedPreview.src = idol.bloomedThumb;
+
+  variantOptions.forEach(option => {
+    option.classList.remove("active");
+  });
+  document.querySelector('[data-type="bloomed"]').classList.add("active");
+
+  variantOptions.forEach(option => {
+    option.onclick = function() {
+      const type = this.dataset.type;
+      const newImage = type === "unbloomed" ? idol.unbloomedImage : idol.bloomedImage;
+      
+      mainImage.style.transition = "opacity 0.2s ease";
+      mainImage.style.opacity = "0";
+      
+      setTimeout(() => {
+        mainImage.src = newImage;
+        mainImage.style.opacity = "1";
+      }, 200);
+
+      variantOptions.forEach(opt => opt.classList.remove("active"));
+      this.classList.add("active");
+    };
+  });
 }
 
 function closeSidePanel() {
@@ -850,7 +1117,11 @@ function renderIdols() {
     idol.days = calculateDays(idol.startDate);
   });
 
-  idols.sort((a, b) => b.days - a.days);
+  if (currentSort === 'highest') {
+    idols.sort((a, b) => b.days - a.days);
+  } else {
+    idols.sort((a, b) => a.days - b.days);
+  }
   
   idols.forEach((idol, index) => {
     idol.rank = index + 1;
@@ -1079,6 +1350,10 @@ function createIdolCard(idol) {
   img.src = idol.avatar;
   img.alt = idol.name;
 
+  const ribbon = document.createElement("div");
+  ribbon.className = getRibbonClass(idol.rank);
+  ribbon.textContent = getRibbonText(idol.rank);
+
   const name = document.createElement("div");
   name.className = "idol-name";
   name.textContent = idol.name;
@@ -1091,20 +1366,16 @@ function createIdolCard(idol) {
   desc.className = "idol-description";
   desc.textContent = idol.description;
 
-  const ribbon = document.createElement("div");
-  ribbon.className = getRibbonClass(idol.rank);
-  ribbon.textContent = getRibbonText(idol.rank);
+  const detailsBtn = document.createElement("button");
+  detailsBtn.className = "details-btn";
+  detailsBtn.textContent = "Details";
+  detailsBtn.addEventListener("click", () => openSidePanel(idol));
 
   card.appendChild(img);
   card.appendChild(name);
   card.appendChild(days);
   card.appendChild(desc);
   card.appendChild(ribbon);
-
-  const detailsBtn = document.createElement("button");
-  detailsBtn.className = "details-btn";
-  detailsBtn.textContent = "Details";
-  detailsBtn.addEventListener("click", () => openSidePanel(idol));
   card.appendChild(detailsBtn);
 
   if (idol.isNew) {
@@ -1736,9 +2007,12 @@ function displayComments(comments) {
 
   if (!commentsList || !commentCount) return;
 
-  commentCount.textContent = comments.length;
+  const topLevelComments = comments.filter(c => !c.parentId);
+  const replies = comments.filter(c => c.parentId);
+  
+  commentCount.textContent = topLevelComments.length;
 
-  if (comments.length === 0) {
+  if (topLevelComments.length === 0) {
     commentsList.innerHTML = '<div class="empty-state">No comments yet. Be the first to comment!</div>';
     return;
   }
@@ -1746,50 +2020,147 @@ function displayComments(comments) {
   const savedUsername = localStorage.getItem('commentUsername');
   const userKey = savedUsername ? savedUsername.toLowerCase().replace(/[^a-z0-9]/g, "_") : null;
 
-  commentsList.innerHTML = comments.map((comment) => {
-      const avatarContent = comment.profilePic
-        ? `<img src="${comment.profilePic}" alt="${escapeHtml(comment.username)}">`
-        : `<span>${comment.username.charAt(0).toUpperCase()}</span>`;
+  function renderComment(comment, isReply = false) {
+    const avatarContent = comment.profilePic
+      ? `<img src="${comment.profilePic}" alt="${escapeHtml(comment.username)}">`
+      : `<span>${comment.username.charAt(0).toUpperCase()}</span>`;
 
-      const likes = comment.likes || 0;
-      const dislikes = comment.dislikes || 0;
-      const likedBy = comment.likedBy || {};
-      const dislikedBy = comment.dislikedBy || {};
-      
-      const hasLiked = userKey && likedBy[userKey];
-      const hasDisliked = userKey && dislikedBy[userKey];
-      
-      const commentImageHtml = comment.commentImage 
-        ? `<div class="comment-image-container">
-             <img src="${comment.commentImage}" alt="Comment image" class="comment-image" onclick="openImageModal('${comment.commentImage}')">
-           </div>`
-        : '';
+    const likes = comment.likes || 0;
+    const dislikes = comment.dislikes || 0;
+    const likedBy = comment.likedBy || {};
+    const dislikedBy = comment.dislikedBy || {};
+    
+    const hasLiked = userKey && likedBy[userKey];
+    const hasDisliked = userKey && dislikedBy[userKey];
+    
+    const commentImageHtml = comment.commentImage 
+      ? `<div class="comment-image-container">
+           <img src="${comment.commentImage}" alt="Comment image" class="comment-image" onclick="openImageModal('${comment.commentImage}')">
+         </div>`
+      : '';
 
-      return `
-        <div class="comment">
-          <div class="comment-header">
-            <div class="comment-author">
-              <div class="avatar">${avatarContent}</div>
-              <div class="author-info">
-                <div class="author-name">${escapeHtml(comment.username)}</div>
-                <div class="comment-time">${formatTime(comment.timestamp)}</div>
-              </div>
-            </div>
-            <div class="comment-actions">
-              <button class="reaction-btn ${hasLiked ? 'active' : ''}" onclick="likeComment('${comment.id}')" title="Like">
-                <span>${likes}</span>
-              </button>
-              <button class="reaction-btn ${hasDisliked ? 'active' : ''}" onclick="dislikeComment('${comment.id}')" title="Dislike">
-                <span>${dislikes}</span>
-              </button>
+    const commentReplies = replies.filter(r => r.parentId === comment.id);
+    const replyCountHtml = commentReplies.length > 0 
+      ? `<span class="reply-count">${commentReplies.length} ${commentReplies.length === 1 ? 'reply' : 'replies'}</span>`
+      : '';
+
+    return `
+      <div class="comment ${isReply ? 'comment-reply' : ''}" data-comment-id="${comment.id}">
+        <div class="comment-header">
+          <div class="comment-author">
+            <div class="avatar">${avatarContent}</div>
+            <div class="author-info">
+              <div class="author-name">${escapeHtml(comment.username)}</div>
+              <div class="comment-time">${formatTime(comment.timestamp)}</div>
             </div>
           </div>
-          ${comment.text ? `<div class="comment-text">${escapeHtml(comment.text)}</div>` : ''}
-          ${commentImageHtml}
+          <div class="comment-actions">
+            <button class="reaction-btn ${hasLiked ? 'active' : ''}" onclick="likeComment('${comment.id}')" title="Like">
+              <span>${likes}</span>
+            </button>
+            <button class="reaction-btn ${hasDisliked ? 'active' : ''}" onclick="dislikeComment('${comment.id}')" title="Dislike">
+              <span>${dislikes}</span>
+            </button>
+            ${!isReply ? `<button class="reply-btn" onclick="replyToComment('${comment.id}', '${escapeHtml(comment.username)}')" title="Reply">Reply</button>` : ''}
+          </div>
         </div>
-      `;
-    }).join("");
+        ${comment.text ? `<div class="comment-text">${escapeHtml(comment.text)}</div>` : ''}
+        ${commentImageHtml}
+        ${replyCountHtml}
+        <div class="replies-container">
+          ${commentReplies.map(reply => renderComment(reply, true)).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  commentsList.innerHTML = topLevelComments.map(comment => renderComment(comment)).join("");
 }
+
+window.replyToComment = function(commentId, username) {
+  const comment = document.querySelector(`[data-comment-id="${commentId}"]`);
+  if (!comment) return;
+  
+  let replyForm = comment.querySelector('.reply-form');
+  if (replyForm) {
+    replyForm.remove();
+    return;
+  }
+  
+  replyForm = document.createElement('div');
+  replyForm.className = 'reply-form';
+  replyForm.innerHTML = `
+    <textarea class="reply-input" placeholder="Write your reply to ${username}..."></textarea>
+    <div class="reply-actions">
+      <button class="reply-cancel-btn" onclick="cancelReply('${commentId}')">Cancel</button>
+      <button class="reply-submit-btn" onclick="submitReply('${commentId}')">Reply</button>
+    </div>
+  `;
+  
+  comment.appendChild(replyForm);
+  replyForm.querySelector('.reply-input').focus();
+};
+
+window.cancelReply = function(commentId) {
+  const comment = document.querySelector(`[data-comment-id="${commentId}"]`);
+  if (!comment) return;
+  
+  const replyForm = comment.querySelector('.reply-form');
+  if (replyForm) replyForm.remove();
+};
+
+window.submitReply = async function(parentId) {
+  if (!firebaseInitialized || !window.firebaseModules) {
+    showError("Firebase not initialized. Please wait...");
+    return;
+  }
+
+  const savedUsername = localStorage.getItem('commentUsername');
+  if (!savedUsername) {
+    alert("Please set your username first by posting a comment!");
+    return;
+  }
+
+  const comment = document.querySelector(`[data-comment-id="${parentId}"]`);
+  const replyInput = comment.querySelector('.reply-input');
+  const replyText = replyInput.value.trim();
+
+  if (!replyText) {
+    alert("Please enter a reply");
+    return;
+  }
+
+  const submitBtn = comment.querySelector('.reply-submit-btn');
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Posting...";
+
+  try {
+    const { ref, push } = window.firebaseModules.db;
+    const profilePic = await getProfilePic(savedUsername);
+
+    const reply = {
+      text: replyText,
+      username: savedUsername,
+      profilePic: profilePic || null,
+      timestamp: Date.now(),
+      likes: 0,
+      dislikes: 0,
+      likedBy: {},
+      dislikedBy: {},
+      parentId: parentId
+    };
+
+    await push(ref(firebaseDatabase, "comments"), reply);
+    
+    const replyForm = comment.querySelector('.reply-form');
+    if (replyForm) replyForm.remove();
+  } catch (error) {
+    console.error("Error posting reply:", error);
+    showError("Failed to post reply: " + error.message);
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Reply";
+  }
+};
 
 function formatTime(timestamp) {
   const date = new Date(timestamp);

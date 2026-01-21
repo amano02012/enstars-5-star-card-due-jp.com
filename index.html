@@ -24,48 +24,89 @@
       <li><a href="changelog.html">Change Log</a></li>
     </ul>
   </nav>
-  
+
   <div class="main-layout">
     <div class="container">
       <h1 class="title"></h1>
+      <div class="view-controls">
+        <div class="view-toggle">
+          <button class="view-btn active" data-view="grid" title="Grid View">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+            </svg>
+          </button>
+          <button class="view-btn" data-view="list" title="List View">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="8" y1="6" x2="21" y2="6"></line>
+              <line x1="8" y1="12" x2="21" y2="12"></line>
+              <line x1="8" y1="18" x2="21" y2="18"></line>
+              <line x1="3" y1="6" x2="3.01" y2="6"></line>
+              <line x1="3" y1="12" x2="3.01" y2="12"></line>
+              <line x1="3" y1="18" x2="3.01" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <div class="sort-controls">
+          <label for="sortSelect">Sort by:</label>
+          <select id="sortSelect" class="sort-select">
+            <option value="highest">Highest to Lowest Days</option>
+            <option value="lowest">Lowest to Highest Days</option>
+          </select>
+        </div>
+      </div>
       <div id="idol-container"></div>
     </div>
+  </div>
 
-    <div id="side-panel" class="side-panel">
-      <div class="side-panel-content">
-        <div class="side-panel-header">
-          <h2 id="side-panel-name">Select an idol</h2>
-          <button class="side-close-btn">✕</button>
+  <div id="side-panel" class="side-panel">
+    <div class="side-panel-content">
+      <div class="side-panel-header">
+        <h2 id="side-panel-name">Select an idol</h2>
+        <button class="side-close-btn">✕</button>
+      </div>
+      
+      <div class="side-panel-body">
+        <div id="side-image-loader" class="side-image-loader" style="display: none">
+          <div class="loader-spinner"></div>
+        </div>
+        <img id="side-panel-image" src="" alt="Idol" class="side-panel-img" style="display: none" />
+        
+        <div id="card-variants" class="card-variants" style="display: none">
+          <div class="variant-option" data-type="unbloomed">
+            <img id="unbloomed-preview" src="" alt="Unbloomed" class="variant-image">
+            <span class="variant-label">Unbloomed</span>
+          </div>
+          <div class="variant-option active" data-type="bloomed">
+            <img id="bloomed-preview" src="" alt="Bloomed" class="variant-image">
+            <span class="variant-label">Bloomed</span>
+          </div>
         </div>
         
-        <div class="side-panel-body">
-          <div id="side-image-loader" class="side-image-loader" style="display: none">
-            <div class="loader-spinner"></div>
+        <div class="side-info-section">
+          <p id="side-panel-description" class="side-description">-</p>
+        </div>
+        
+        <div class="side-date-section">
+          <span class="side-date-icon">📅</span>
+          <span id="side-panel-date" class="side-date-text">-</span>
+        </div>
+        
+        <div id="side-card-stats" class="side-card-stats" style="display: none">
+          <div class="side-stat-item">
+            <span class="side-stat-label">5⭐</span>
+            <span id="side-stat-five" class="side-stat-value">-</span>
           </div>
-          <img id="side-panel-image" src="" alt="Idol" class="side-panel-img" style="display: none" />
-          
-          <div class="side-info-section">
-            <p id="side-panel-description" class="side-description">-</p>
+          <div class="side-stat-item">
+            <span class="side-stat-label">4⭐</span>
+            <span id="side-stat-four" class="side-stat-value">-</span>
           </div>
-          
-          <div class="side-date-section">
-            <span class="side-date-icon">📅</span>
-            <span id="side-panel-date" class="side-date-text">-</span>
-          </div>
-          
-          <div id="side-card-stats" class="side-card-stats" style="display: none">
-            <div class="side-stat-item">
-              <span class="side-stat-label">5⭐</span>
-              <span id="side-stat-five" class="side-stat-value">-</span>
-            </div>
-            <div class="side-stat-item">
-              <span class="side-stat-label">4⭐</span>
-              <span id="side-stat-four" class="side-stat-value">-</span>
-            </div>
-            <div class="side-stat-item">
-              <span class="side-stat-label">3⭐</span>
-              <span id="side-stat-three" class="side-stat-value">-</span>
-            </div>
+          <div class="side-stat-item">
+            <span class="side-stat-label">3⭐</span>
+            <span id="side-stat-three" class="side-stat-value">-</span>
           </div>
         </div>
       </div>
@@ -132,5 +173,4 @@
   </h2>
   <script src="script.js"></script>
 </body>
-
 </html>
