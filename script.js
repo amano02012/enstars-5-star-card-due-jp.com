@@ -300,13 +300,13 @@ const idols = [{
   name: `Hiyori Tomoe`,
   avatar: `images/btn-tomoe_hiyori.webp`,
   borderColor: "#B8D200",
-  startDate: `2025-10-31`,
-  description: "Latest Card: Unit Event",
-  detailsDescription: "(La Vérité We Cannot Conceal) Hiyori Tomoe",
-  unbloomedThumb: 'icons/card_square2_4538_normal.webp',
-  bloomedThumb: 'icons/card_square2_4538_evolution.webp',
-  unbloomedImage: 'cards2/card_rectangle2_4538_normal.webp',
-  bloomedImage: 'cards2/card_rectangle2_4538_evolution.webp'
+  startDate: `2026-01-25`,
+  description: "Latest Card: Bright me up!! Scout Stage",
+  detailsDescription: "[貴公子の装い] Hiyori Tomoe",
+  unbloomedThumb: 'icons/',
+  bloomedThumb: 'icons/',
+  unbloomedImage: 'cards2/photo_2026-01-25_14-01-57.webp',
+  bloomedImage: 'cards2/photo_2026-01-24_14-01-53.webp'
 },
 {
   id: 20,
@@ -823,7 +823,7 @@ const cardCountData = {
   16: { five: 10, four: 16, three: 17 }, // Mayoi Ayase
   17: { five: 10, four: 15, three: 16 }, // Tatsumi Kazehaya
   18: { five: 11, four: 13, three: 21 }, // Nagisa Ran
-  19: { five: 10, four: 15, three: 17 }, // Hiyori Tomoe
+  19: { five: 11, four: 15, three: 17 }, // Hiyori Tomoe
   20: { five: 11, four: 14, three: 18 }, // Ibara Saegusa
   21: { five: 10, four: 17, three: 17 }, // Jun Sazanami
   22: { five: 14, four: 15, three: 15 }, // Shu Itsuki
@@ -856,7 +856,7 @@ const cardCountData = {
   49: { five: 10, four: 16, three: 16 }, // Sora Harukawa
   50: { five: 14, four: 16, three: 14 }, // Madara Mikejima
   51: { five: 4, four: 4, three: 5 }, // Esu
-  52: { five: 2, four: 5, three: 7 }, // Kanna
+  52: { five: 2, four: 5, three: 8 }, // Kanna
   53: { five: 2, four: 5, three: 6 }, // Yume
   54: { five: 2, four: 5, three: 4 }, // Raika
   55: { five: "-", four: "-", three: "-" }, // Juis Kojika

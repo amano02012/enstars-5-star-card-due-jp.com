@@ -1251,7 +1251,7 @@ textarea {
     right: 0;
     width: 100%;
     max-width: 400px;
-    height: 100vh;
+    height: auto;
     overflow-y: auto;
     z-index: 9998;
     border-radius: 0;
