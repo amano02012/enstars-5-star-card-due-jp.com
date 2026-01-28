@@ -1,11 +1,20 @@
 const theme3PickupData = [
     {
-        date: '(01/14/2026) Scout! -',
+        date: '(01/30/2026) Scout! -',
         idols: [
-            { star: 5, title: '(card name)', name: 'Tomoya Mashiro', image: '' },
-            { star: 4, title: '(card name)', name: 'Souma Kanzaki', image: '' },
-            { star: 3, title: '(card name)', name: 'Leo Tsukinaga', image: '' },
-            { star: 3, title: '(card name)', name: 'Hokuto Hidaka', image: '' }
+            { star: 5, title: '(Card name)', name: 'Idol name', image: '' },
+            { star: 4, title: '(Card name)', name: 'Idol name', image: '' },
+            { star: 3, title: '(Card name)', name: 'Idol name', image: '' },
+            { star: 3, title: '(Card name)', name: 'Idol name', image: '' }
+        ]
+    },
+    {
+        date: '(01/14/2026) Scout! As Unbridled as a Heavenly Steed',
+        idols: [
+            { star: 5, title: '(Galloping Stage)', name: 'Tomoya Mashiro', image: 'card_square2_4662_evolution' },
+            { star: 4, title: '(Galloping Confidence)', name: 'Souma Kanzaki', image: 'card_square2_4663_evolution' },
+            { star: 3, title: '(Galloping Freedom)', name: 'Leo Tsukinaga', image: 'card_square2_4664_evolution' },
+            { star: 3, title: '(Galloping Experience)', name: 'Hokuto Hidaka', image: 'card_square2_4665_evolution' }
         ]
     },
     {

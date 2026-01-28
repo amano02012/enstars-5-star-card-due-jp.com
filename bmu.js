@@ -1,10 +1,18 @@
 const bmupickupData = [
     {
+        date: '(01/25/2026) Bright me up!! Scout -Stage: Hiyori',
+        idols: [
+            { star: 5, title: '(Card name)', name: 'Hiyori Tomoe', image: '' },
+            { star: 4, title: '(Card name)', name: 'Shu Itsuki', image: '' },
+            { star: 3, title: '(Card name)', name: 'Kanna', image: '' }
+        ]
+    },
+    {
         date: '(01/10/2026) Bright me up!! Scout -Stage: Kanata',
         idols: [
-            { star: 5, title: '(Card Name)', name: 'Kanata Shinkai', image: '' },
-            { star: 4, title: '(Card Name)', name: 'Shinobu Sengoku', image: '' },
-            { star: 3, title: '(Card Name)', name: 'Subaru Akehoshi', image: '' }
+            { star: 5, title: '(Journey Filled With Freedom)', name: 'Kanata Shinkai', image: 'card_square2_4655_evolution' },
+            { star: 4, title: '(Star Shining on the Surface)', name: 'Shinobu Sengoku', image: 'card_square2_4656_evolution' },
+            { star: 3, title: '(In My Own Words)', name: 'Subaru Akehoshi', image: 'card_square2_4657_evolution' }
         ]
     },
     {
