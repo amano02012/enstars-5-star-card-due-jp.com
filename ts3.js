@@ -2,10 +2,10 @@ const theme3PickupData = [
     {
         date: '(01/30/2026) Scout! -',
         idols: [
-            { star: 5, title: '(Card name)', name: 'Idol name', image: '' },
-            { star: 4, title: '(Card name)', name: 'Idol name', image: '' },
-            { star: 3, title: '(Card name)', name: 'Idol name', image: '' },
-            { star: 3, title: '(Card name)', name: 'Idol name', image: '' }
+            { star: 5, title: '(Card name)', name: 'Kaoru Hakaze', image: '' },
+            { star: 4, title: '(Card name)', name: 'Kohaku Oukawa', image: '' },
+            { star: 3, title: '(Card name)', name: 'Shu Itsuki', image: '' },
+            { star: 3, title: '(Card name)', name: 'Ibuki Taki', image: '' }
         ]
     },
     {
@@ -132,7 +132,6 @@ const theme3ScoutData = [
             `images/btn-oukawa_kohaku.webp`,
             `images/btn-shiina_niki.webp`,
             `images/btn-sakuma_rei.webp`,
-            `images/btn-hakaze_kaoru.webp`,
             `images/btn-ogami_koga.webp`,
             `images/btn-otogari_adonis.webp`,
             `images/btn-nito_nazuna.webp`,
@@ -178,7 +177,6 @@ const theme3ScoutData = [
             `images/btn-aoi_yuta.webp`,
             `images/btn-amagi_rinne.webp`,
             `images/btn-himeru.webp`,
-            `images/btn-oukawa_kohaku.webp`,
             `images/btn-shiina_niki.webp`,
             `images/btn-sakuma_rei.webp`,
             `images/btn-otogari_adonis.webp`,
