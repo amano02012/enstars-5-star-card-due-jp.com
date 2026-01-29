@@ -71,8 +71,8 @@ const idols = [{
   detailsDescription: "(Fairy Tale of Allegories) Eichi Tenshouin",
   unbloomedThumb: "icons/card_square2_4184_normal.webp",
   bloomedThumb: "icons/card_square2_4184_evolution.webp",
-  unbloomedImage: "cards/UNDEAD/Diamond_Ambition_Koga_Ogami.webp",
-  bloomedImage: "cards/Fine/Fairy_Tale_of_Allegories_Eichi_Tenshouin.webp"
+  unbloomedImage: "cards2/card_rectangle2_4184_normal.webp",
+  bloomedImage: "cards2/card_rectangle2_4184_evolution.webp"
 },
 {
   id: 2,
@@ -771,6 +771,10 @@ const idols = [{
   startDate: `-`,
   description: "-",
   detailsDescription: "-",
+  unbloomedThumb: 'icons/',
+  bloomedThumb: 'icons/',
+  unbloomedImage: 'cards2/',
+  bloomedImage: 'cards2/',
   isNew: true
 },
 {
@@ -781,6 +785,10 @@ const idols = [{
   startDate: `-`,
   description: "-",
   detailsDescription: "-",
+  unbloomedThumb: 'icons/',
+  bloomedThumb: 'icons/',
+  unbloomedImage: 'cards2/',
+  bloomedImage: 'cards2/',
   isNew: true
 },
 {
@@ -791,6 +799,10 @@ const idols = [{
   startDate: `-`,
   description: "-",
   detailsDescription: "-",
+  unbloomedThumb: 'icons/',
+  bloomedThumb: 'icons/',
+  unbloomedImage: 'cards2/',
+  bloomedImage: 'cards2/',
   isNew: true
 },
 {
@@ -801,6 +813,10 @@ const idols = [{
   startDate: `-`,
   description: "-",
   detailsDescription: "-",
+  unbloomedThumb: 'icons/',
+  bloomedThumb: 'icons/',
+  unbloomedImage: 'cards2/',
+  bloomedImage: 'cards2/',
   isNew: true
 }];
 
@@ -1055,9 +1071,39 @@ function setupCardVariants(idol) {
   const bloomedPreview = document.getElementById("bloomed-preview");
   const variantOptions = document.querySelectorAll(".variant-option");
   const mainImage = document.getElementById("side-panel-image");
+  const mainLoader = document.getElementById("side-image-loader");
 
-  unbloomedPreview.src = idol.unbloomedThumb;
-  bloomedPreview.src = idol.bloomedThumb;
+  const unbloomedLoader = variantOptions[0].querySelector('.variant-loader');
+  const bloomedLoader = variantOptions[1].querySelector('.variant-loader');
+
+  unbloomedPreview.classList.add('loading');
+  bloomedPreview.classList.add('loading');
+  unbloomedLoader.classList.add('active');
+  bloomedLoader.classList.add('active');
+
+  const unbloomedImg = new Image();
+  unbloomedImg.onload = function() {
+    unbloomedPreview.src = idol.unbloomedThumb;
+    unbloomedPreview.classList.remove('loading');
+    unbloomedLoader.classList.remove('active');
+  };
+  unbloomedImg.onerror = function() {
+    unbloomedPreview.classList.remove('loading');
+    unbloomedLoader.classList.remove('active');
+  };
+  unbloomedImg.src = idol.unbloomedThumb;
+
+  const bloomedImg = new Image();
+  bloomedImg.onload = function() {
+    bloomedPreview.src = idol.bloomedThumb;
+    bloomedPreview.classList.remove('loading');
+    bloomedLoader.classList.remove('active');
+  };
+  bloomedImg.onerror = function() {
+    bloomedPreview.classList.remove('loading');
+    bloomedLoader.classList.remove('active');
+  };
+  bloomedImg.src = idol.bloomedThumb;
 
   variantOptions.forEach(option => {
     option.classList.remove("active");
@@ -1069,13 +1115,20 @@ function setupCardVariants(idol) {
       const type = this.dataset.type;
       const newImage = type === "unbloomed" ? idol.unbloomedImage : idol.bloomedImage;
       
-      mainImage.style.transition = "opacity 0.2s ease";
-      mainImage.style.opacity = "0";
+      mainImage.style.display = "none";
+      mainLoader.style.display = "flex";
       
-      setTimeout(() => {
+      const img = new Image();
+      img.onload = function() {
         mainImage.src = newImage;
-        mainImage.style.opacity = "1";
-      }, 200);
+        mainImage.style.display = "block";
+        mainLoader.style.display = "none";
+      };
+      img.onerror = function() {
+        mainLoader.style.display = "none";
+        mainImage.style.display = "block";
+      };
+      img.src = newImage;
 
       variantOptions.forEach(opt => opt.classList.remove("active"));
       this.classList.add("active");

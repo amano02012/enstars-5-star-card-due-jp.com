@@ -1247,25 +1247,32 @@ textarea {
 
   .side-panel {
     position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
+    top: 50%;
+    right: -420px;
+    transform: translateY(-50%);
+    width: 90%;
     max-width: 400px;
-    height: 100vh;
+    height: auto;
+    max-height: 90vh;
     overflow-y: auto;
     z-index: 9998;
-    border-radius: 0;
-    transform: translateX(100%);
+    border-radius: 12px;
+    transition: right 0.3s ease;
   }
 
   .side-panel.active {
-    transform: translateX(0);
+    right: 20px;
   }
 }
 
 @media (max-width: 500px) {
   .side-panel {
-    max-width: 100%;
+    max-width: 95%;
+    right: -100%;
+  }
+
+  .side-panel.active {
+    right: 2.5%;
   }
 
   .side-card-stats {
@@ -1527,6 +1534,7 @@ textarea {
   padding: 15px;
   background: #f8fafc;
   border-radius: 8px;
+  position: relative;
 }
 
 .variant-option {
@@ -1537,6 +1545,7 @@ textarea {
   gap: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
+  position: relative;
 }
 
 .variant-image {
@@ -1548,6 +1557,10 @@ textarea {
   transition: all 0.3s ease;
   background: white;
   padding: 4px;
+}
+
+.variant-image.loading {
+  opacity: 0.3;
 }
 
 .variant-option:hover .variant-image {
@@ -1569,6 +1582,46 @@ textarea {
 
 .variant-option.active .variant-label {
   color: #60a5fa;
+}
+
+.variant-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  display: none;
+}
+
+.variant-loader.active {
+  display: block;
+}
+
+.variant-loader::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-top-color: #60a5fa;
+  border-right-color: #818cf8;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.variant-loader::after {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: 15%;
+  left: 15%;
+  border: 2px solid transparent;
+  border-bottom-color: #34d399;
+  border-left-color: #10b981;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite reverse;
 }
 
 .reply-btn {

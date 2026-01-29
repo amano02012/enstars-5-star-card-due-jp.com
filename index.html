@@ -68,33 +68,35 @@
         <h2 id="side-panel-name">Select an idol</h2>
         <button class="side-close-btn">✕</button>
       </div>
-      
+
       <div class="side-panel-body">
         <div id="side-image-loader" class="side-image-loader" style="display: none">
           <div class="loader-spinner"></div>
         </div>
         <img id="side-panel-image" src="" alt="Idol" class="side-panel-img" style="display: none" />
-        
+
         <div id="card-variants" class="card-variants" style="display: none">
           <div class="variant-option" data-type="unbloomed">
+            <div class="variant-loader"></div>
             <img id="unbloomed-preview" src="" alt="Unbloomed" class="variant-image">
             <span class="variant-label">Unbloomed</span>
           </div>
           <div class="variant-option active" data-type="bloomed">
+            <div class="variant-loader"></div>
             <img id="bloomed-preview" src="" alt="Bloomed" class="variant-image">
             <span class="variant-label">Bloomed</span>
           </div>
         </div>
-        
+
         <div class="side-info-section">
           <p id="side-panel-description" class="side-description">-</p>
         </div>
-        
+
         <div class="side-date-section">
           <span class="side-date-icon">📅</span>
           <span id="side-panel-date" class="side-date-text">-</span>
         </div>
-        
+
         <div id="side-card-stats" class="side-card-stats" style="display: none">
           <div class="side-stat-item">
             <span class="side-stat-label">5⭐</span>
@@ -173,4 +175,5 @@
   </h2>
   <script src="script.js"></script>
 </body>
+
 </html>
