@@ -261,13 +261,13 @@ const idols = [{
   name: `Mayoi Ayase`,
   avatar: `images/btn-ayase_mayoi.webp`,
   borderColor: "#522F60",
-  startDate: `2025-07-30`,
-  description: "Latest Card: Shuffle Scout",
-  detailsDescription: "(A Summer With You) Mayoi Ayase",
-  unbloomedThumb: 'icons/card_square2_4447_normal.webp',
-  bloomedThumb: 'icons/card_square2_4447_evolution.webp',
-  unbloomedImage: 'cards2/card_rectangle2_4447_normal.webp',
-  bloomedImage: 'cards2/card_rectangle2_4447_evolution.webp'
+  startDate: `2026-01-31`,
+  description: "Latest Card: Unit Event",
+  detailsDescription: "[伝えたいコトノハ] Mayoi Ayase",
+  unbloomedThumb: 'icons/card_square2_4692_normal.webp',
+  bloomedThumb: 'icons/card_square2_4692_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4692_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4692_evolution.webp'
 },
 {
   id: 17,
@@ -303,10 +303,10 @@ const idols = [{
   startDate: `2026-01-25`,
   description: "Latest Card: Bright me up!! Scout Stage",
   detailsDescription: "[貴公子の装い] Hiyori Tomoe",
-  unbloomedThumb: 'icons/',
-  bloomedThumb: 'icons/',
-  unbloomedImage: 'cards2/photo_2026-01-25_14-01-57.webp',
-  bloomedImage: 'cards2/photo_2026-01-24_14-01-53.webp'
+  unbloomedThumb: 'icons/card_square2_4666_normal.webp',
+  bloomedThumb: 'icons/card_square2_4666_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4666_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4666_evolution.webp'
 },
 {
   id: 20,
@@ -456,13 +456,13 @@ const idols = [{
   name: `Kaoru Hakaze`,
   avatar: `images/btn-hakaze_kaoru.webp`,
   borderColor: "#FDD35C",
-  startDate: `2025-07-15`,
-  description: "Latest Card: Unit Event",
-  detailsDescription: "(Captain of the Ghost Ship) Kaoru Hakaze",
-  unbloomedThumb: 'icons/card_square2_4433_normal.webp',
-  bloomedThumb: 'icons/card_square2_4433_evolution.webp',
-  unbloomedImage: 'cards2/card_rectangle2_4433_normal.webp',
-  bloomedImage: 'cards2/card_rectangle2_4433_evolution.webp'
+  startDate: `2026-01-30`,
+  description: "Latest Card: Theme Scout",
+  detailsDescription: "(Perfect Shot) Kaoru Hakaze",
+  unbloomedThumb: 'icons/card_square2_4696_normal.webp',
+  bloomedThumb: 'icons/card_square2_4696_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4696_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4696_evolution.webp'
 },
 {
   id: 32,
@@ -833,25 +833,25 @@ const cardCountData = {
   10: { five: 10, four: 15, three: 18 }, // Midori Takamine
   11: { five: 10, four: 17, three: 16 }, // Shinobu Sengoku
   12: { five: 12, four: 15, three: 17 }, // Chiaki Morisawa
-  13: { five: 10, four: 17, three: 17 }, // Kanata Shinkai
-  14: { five: 12, four: 15, three: 16 }, // Hiiro Amagi
-  15: { five: 10, four: 15, three: 17 }, // Aira Shiratori
-  16: { five: 10, four: 16, three: 17 }, // Mayoi Ayase
-  17: { five: 10, four: 15, three: 16 }, // Tatsumi Kazehaya
+  13: { five: 11, four: 17, three: 17 }, // Kanata Shinkai
+  14: { five: 12, four: 15, three: 17 }, // Hiiro Amagi
+  15: { five: 10, four: 15, three: 18 }, // Aira Shiratori
+  16: { five: 11, four: 16, three: 17 }, // Mayoi Ayase
+  17: { five: 10, four: 16, three: 16 }, // Tatsumi Kazehaya
   18: { five: 11, four: 13, three: 21 }, // Nagisa Ran
   19: { five: 11, four: 15, three: 17 }, // Hiyori Tomoe
   20: { five: 11, four: 14, three: 18 }, // Ibara Saegusa
   21: { five: 10, four: 17, three: 17 }, // Jun Sazanami
-  22: { five: 14, four: 15, three: 15 }, // Shu Itsuki
+  22: { five: 14, four: 15, three: 16 }, // Shu Itsuki
   23: { five: 11, four: 15, three: 18 }, // Mika Kagehira
   24: { five: 12, four: 17, three: 16 }, // Hinata Aoi
   25: { five: 13, four: 16, three: 16 }, // Yuta Aoi
-  26: { five: 11, four: 14, three: 16 }, // Rinne Amagi
+  26: { five: 12, four: 14, three: 16 }, // Rinne Amagi
   27: { five: 9, four: 16, three: 16 }, // HiMERU
-  28: { five: 9, four: 18, three: 19 }, // Kohaku Oukawa
+  28: { five: 9, four: 19, three: 19 }, // Kohaku Oukawa
   29: { five: 9, four: 16, three: 17 }, // Niki Shiina
   30: { five: 13, four: 17, three: 17 }, // Rei Sakuma
-  31: { five: 11, four: 14, three: 21 }, // Kaoru Hakaze
+  31: { five: 12, four: 14, three: 21 }, // Kaoru Hakaze
   32: { five: 11, four: 18, three: 18 }, // Koga Ogami
   33: { five: 11, four: 15, three: 19 }, // Adonis Otogari
   34: { five: 13, four: 13, three: 20 }, // Tomoya Mashiro
@@ -861,7 +861,7 @@ const cardCountData = {
   38: { five: 13, four: 14, three: 16 }, // Keito Hasumi
   39: { five: 11, four: 15, three: 18 }, // Kuro Kiryu
   40: { five: 10, four: 17, three: 16 }, // Souma Kanzaki
-  41: { five: 2, four: 5, three: 4 }, // Ibuki Taki
+  41: { five: 2, four: 5, three: 5 }, // Ibuki Taki
   42: { five: 12, four: 15, three: 17 }, // Tsukasa Suou
   43: { five: 12, four: 16, three: 18 }, // Leo Tsukinaga
   44: { five: 11, four: 17, three: 17 }, // Izumi Sena
@@ -874,7 +874,7 @@ const cardCountData = {
   51: { five: 4, four: 4, three: 5 }, // Esu
   52: { five: 2, four: 5, three: 8 }, // Kanna
   53: { five: 2, four: 5, three: 6 }, // Yume
-  54: { five: 2, four: 5, three: 4 }, // Raika
+  54: { five: 3, four: 5, three: 4 }, // Raika
   55: { five: "-", four: "-", three: "-" }, // Juis Kojika
   56: { five: "-", four: "-", three: "-" }, // Nozomi Madoka
   57: { five: "-", four: "-", three: "-" }, // Mashu Kuon
