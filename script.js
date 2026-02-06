@@ -1399,36 +1399,41 @@ function createIdolCard(idol) {
   card.style.borderColor = idol.borderColor;
   card.dataset.idolId = idol.id;
 
+  const ribbon = document.createElement("div");
+  ribbon.className = getRibbonClass(idol.rank);
+  ribbon.textContent = getRibbonText(idol.rank);
+
   const img = document.createElement("img");
   img.src = idol.avatar;
   img.alt = idol.name;
 
-  const ribbon = document.createElement("div");
-  ribbon.className = getRibbonClass(idol.rank);
-  ribbon.textContent = getRibbonText(idol.rank);
+  const contentWrapper = document.createElement("div");
+  contentWrapper.className = "idol-card-content";
 
   const name = document.createElement("div");
   name.className = "idol-name";
   name.textContent = idol.name;
 
-  const days = document.createElement("div");
-  days.className = "combo";
-  days.textContent = `${idol.days} day/s`;
-
   const desc = document.createElement("div");
   desc.className = "idol-description";
   desc.textContent = idol.description;
+
+  contentWrapper.appendChild(name);
+  contentWrapper.appendChild(desc);
+
+  const days = document.createElement("div");
+  days.className = "combo";
+  days.textContent = `${idol.days} day/s`;
 
   const detailsBtn = document.createElement("button");
   detailsBtn.className = "details-btn";
   detailsBtn.textContent = "Details";
   detailsBtn.addEventListener("click", () => openSidePanel(idol));
 
-  card.appendChild(img);
-  card.appendChild(name);
-  card.appendChild(days);
-  card.appendChild(desc);
   card.appendChild(ribbon);
+  card.appendChild(img);
+  card.appendChild(contentWrapper);
+  card.appendChild(days);
   card.appendChild(detailsBtn);
 
   if (idol.isNew) {
