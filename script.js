@@ -829,7 +829,7 @@ const cardCountData = {
   6: { five: 11, four: 16, three: 21 }, // Subaru Akehoshi
   7: { five: 11, four: 18, three: 19 }, // Makoto Yuuki
   8: { five: 11, four: 16, three: 18 }, // Mao Isara
-  9: { five: 10, four: 16, three: 16 }, // Tetora Nagumo
+  9: { five: 11, four: 16, three: 16 }, // Tetora Nagumo
   10: { five: 10, four: 15, three: 18 }, // Midori Takamine
   11: { five: 10, four: 17, three: 16 }, // Shinobu Sengoku
   12: { five: 12, four: 15, three: 17 }, // Chiaki Morisawa
@@ -868,12 +868,12 @@ const cardCountData = {
   45: { five: 12, four: 17, three: 17 }, // Ritsu Sakuma
   46: { five: 11, four: 16, three: 19 }, // Arashi Narukami
   47: { five: 12, four: 15, three: 17 }, // Natsume Sakasaki
-  48: { five: 10, four: 15, three: 19 }, // Tsumugi Aoba
+  48: { five: 11, four: 15, three: 19 }, // Tsumugi Aoba
   49: { five: 10, four: 16, three: 16 }, // Sora Harukawa
   50: { five: 14, four: 16, three: 14 }, // Madara Mikejima
   51: { five: 4, four: 4, three: 5 }, // Esu
   52: { five: 2, four: 5, three: 8 }, // Kanna
-  53: { five: 2, four: 5, three: 6 }, // Yume
+  53: { five: 3, four: 5, three: 6 }, // Yume
   54: { five: 3, four: 5, three: 4 }, // Raika
   55: { five: "-", four: "-", three: "-" }, // Juis Kojika
   56: { five: "-", four: "-", three: "-" }, // Nozomi Madoka
@@ -1604,7 +1604,7 @@ async function checkUsernameAvailability() {
   
   const taken = await isUsernameTaken(username);
   if (taken) {
-    showUsernameError("⚠️ This username is already taken. Please choose another.");
+    showUsernameError("This username is already taken. Please choose another.");
     return false;
   } else {
     hideUsernameError();
