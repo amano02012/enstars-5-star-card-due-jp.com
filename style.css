@@ -5,6 +5,111 @@
   font-style: normal;
 }
 
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #446ae7 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loading-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loading-spinner {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+.registration-box {
+  background: linear-gradient(135deg, #667eea 0%, #0a54f5 100%);
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  color: white;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+}
+
+.registration-box h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.registration-box p {
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.registration-box .input-group {
+  text-align: left;
+}
+
+.registration-box .input-group label {
+  color: white;
+  font-weight: 600;
+}
+
+.registration-box input {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.registration-box .btn {
+  background: white;
+  color: #667eea;
+  font-weight: 700;
+  width: 100%;
+}
+
+.registration-box .btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+}
+
+.registration-error {
+  color: #ffeb3b;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  min-height: 20px;
+  font-weight: 500;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .navbar a.active {
   border-bottom: 3px solid yellow;
 }
@@ -117,6 +222,12 @@ body {
   overflow-x: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  opacity: 0;
+}
+
+body.loaded {
+  opacity: 1;
+  transition: opacity 0.6s ease;
 }
 
 body::-webkit-scrollbar {
@@ -128,13 +239,14 @@ body::before {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("images/Sphere_Stage_\(Exterior\)_Full.webp") no-repeat center
-    center;
+  width: 100vw;
+  height: 100vh;
+  background: url("images/Sphere_Stage_\(Exterior\)_Full.webp") no-repeat center center;
   background-size: cover;
+  background-attachment: fixed;
   filter: blur(8px);
   z-index: -1;
+  will-change: auto;
 }
 
 .body-desc {
@@ -229,15 +341,16 @@ body::before {
 
 .idol-description {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 4px;
   font-weight: 300;
   color: #111827;
   padding: 0 3px;
+  font-size: 0.9rem;
 }
 
 .combo {
   text-align: center;
-  margin-top: 4px;
+  margin-top: 8px;
   font-size: 25px;
   font-weight: bold;
   text-transform: uppercase;
@@ -1440,20 +1553,21 @@ textarea {
 #idol-container.list-view .idol-card {
   width: 100%;
   height: auto;
-  min-height: 160px;
-  display: flex;
-  flex-direction: row;
+  min-height: 140px;
+  display: grid;
+  grid-template-columns: 80px 140px 1fr auto auto;
+  grid-template-areas: "rank avatar content days details";
   align-items: center;
-  padding: 20px;
+  padding: 16px 20px;
   gap: 20px;
   position: relative;
-  padding-bottom: 20px;
 }
 
 #idol-container.list-view .ribbon {
+  grid-area: rank;
   position: static;
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1462,36 +1576,49 @@ textarea {
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   flex-shrink: 0;
-  transform: none;
-  bottom: auto;
-  left: auto;
-  margin: 0;
-  position: relative;
-  overflow: hidden;
 }
 
 #idol-container.list-view .ribbon::before {
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
+  display: none;
 }
 
 #idol-container.list-view .idol-card img {
-  width: 150px;
-  height: 150px;
+  grid-area: avatar;
+  width: 140px;
+  height: 140px;
   flex-shrink: 0;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#idol-container.list-view .idol-card-content {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  justify-content: center;
 }
 
 #idol-container.list-view .idol-name {
   position: static;
   text-align: left;
-  font-size: 1.6rem;
-  margin: 0 0 8px 0;
+  font-size: 1.5rem;
+  margin: 0;
   font-weight: 700;
+  color: #1f2937;
+}
+
+#idol-container.list-view .combo {
+  position: static;
+  text-align: left;
+  margin: 0;
+  font-size: 1.4rem;
+  padding: 8px 16px;
+  display: inline-block;
+  width: fit-content;
+  border-radius: 6px;
 }
 
 #idol-container.list-view .idol-description {
@@ -1499,84 +1626,59 @@ textarea {
   text-align: left;
   margin: 0;
   padding: 0;
-  font-size: 1rem;
-}
-
-#idol-container.list-view .combo {
-  position: static;
-  width: 200px;
-  text-align: center;
-  margin: 0 20px 0 auto;
-  font-size: 1.8rem;
-  padding: 15px 20px;
-  flex-shrink: 0;
+  font-size: 0.95rem;
+  color: #6b7280;
+  font-weight: 400;
 }
 
 #idol-container.list-view .details-btn {
+  grid-area: details;
   position: static;
-  width: 140px;
-  padding: 14px 20px;
+  width: 120px;
+  padding: 12px 20px;
   flex-shrink: 0;
   margin: 0;
-  bottom: auto;
-  right: auto;
-}
-
-#idol-container.list-view .new-label {
-  top: 15px;
-  left: 15px;
-}
-
-#idol-container.list-view .idol-card-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  min-width: 0;
 }
 
 @media (max-width: 1100px) {
   #idol-container.list-view .idol-card {
-    flex-wrap: wrap;
-    min-height: auto;
+    grid-template-columns: 70px 120px 1fr;
+    grid-template-areas: 
+      "rank avatar content"
+      "rank avatar details";
+    gap: 15px;
+    padding: 15px;
   }
 
   #idol-container.list-view .ribbon {
-    width: 75px;
-    height: 75px;
+    width: 70px;
+    height: 70px;
     font-size: 1.5rem;
   }
 
   #idol-container.list-view .idol-card img {
-    width: 130px;
-    height: 130px;
+    width: 120px;
+    height: 120px;
   }
 
   #idol-container.list-view .idol-name {
-    font-size: 1.4rem;
-  }
-
-  #idol-container.list-view .combo {
-    width: 100%;
-    margin: 10px 0 0 0;
-    order: 10;
+    font-size: 1.3rem;
   }
 
   #idol-container.list-view .details-btn {
     width: 100%;
-    order: 11;
-    margin-top: 10px;
-  }
-
-  #idol-container.list-view .idol-card-content {
-    flex: 1;
-    min-width: 200px;
+    margin-top: 8px;
   }
 }
 
 @media (max-width: 600px) {
   #idol-container.list-view .idol-card {
-    padding: 15px;
+    grid-template-columns: 60px 1fr;
+    grid-template-areas: 
+      "rank content"
+      "avatar content"
+      "avatar details";
+    padding: 12px;
     gap: 12px;
   }
 
@@ -1592,16 +1694,21 @@ textarea {
   }
 
   #idol-container.list-view .idol-name {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   #idol-container.list-view .idol-description {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 
   #idol-container.list-view .combo {
-    font-size: 1.5rem;
-    padding: 12px;
+    font-size: 1.2rem;
+    padding: 6px 12px;
+  }
+
+  #idol-container.list-view .details-btn {
+    width: 100%;
+    padding: 10px;
   }
 }
 

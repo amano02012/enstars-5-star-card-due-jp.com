@@ -8,6 +8,11 @@
 </head>
 
 <body>
+  <div id="loading-overlay" class="loading-overlay">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Loading...</div>
+  </div>
+
   <nav class="navbar">
     <div class="nav-logo">kuon information corner</div>
     <button class="hamburger" aria-label="Open menu" aria-expanded="false" type="button">
@@ -120,48 +125,63 @@
 
     <div id="errorMessage" class="error-message" style="display: none;"></div>
 
-    <div class="profile-section">
-      <div class="profile-pic-container">
-        <div class="profile-pic-preview" id="profilePreview">
-          <span id="previewInitial">?</span>
+    <div id="registration-section" style="display: none;">
+      <div class="registration-box">
+        <h2>Register to Comment</h2>
+        <p>Please register a username to start commenting</p>
+        <div class="input-group">
+          <label>Choose Username *</label>
+          <input type="text" id="register-username" placeholder="Enter your username" maxlength="20">
+          <div id="registration-error" class="registration-error"></div>
         </div>
+        <button class="btn" id="register-submit-btn">Register & Continue</button>
       </div>
+    </div>
 
-      <div class="profile-inputs">
-        <div class="input-group">
-          <label>Your Name *</label>
-          <input type="text" id="username" placeholder="Enter your name">
-        </div>
-
-        <div class="input-group">
-          <label>Profile Picture (Optional)</label>
-          <div class="file-input-wrapper">
-            <input type="file" id="profilePic" accept="image/*">
-            <label for="profilePic" class="file-input-label">
-              Choose Picture
-            </label>
+    <div id="comment-section">
+      <div class="profile-section">
+        <div class="profile-pic-container">
+          <div class="profile-pic-preview" id="profilePreview">
+            <span id="previewInitial">?</span>
           </div>
-          <div class="file-name" id="fileName"></div>
+        </div>
+
+        <div class="profile-inputs">
+          <div class="input-group">
+            <label>Your Name *</label>
+            <input type="text" id="username" placeholder="Enter your name" readonly>
+          </div>
+
+          <div class="input-group">
+            <label>Profile Picture (Optional)</label>
+            <div class="file-input-wrapper">
+              <input type="file" id="profilePic" accept="image/*">
+              <label for="profilePic" class="file-input-label">
+                Choose Picture
+              </label>
+            </div>
+            <div class="file-name" id="fileName"></div>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="input-group">
-      <label>Your Comment</label>
-      <textarea id="commentText" placeholder="Share your thoughts..."></textarea>
-    </div>
-
-    <div class="input-group">
-      <label>Attach Image (Optional, Max 10MB)</label>
-      <div class="file-input-wrapper">
-        <input type="file" id="commentImage" accept="image/*">
-        <label for="commentImage" class="file-input-label">
-          Choose Image
-        </label>
+      <div class="input-group">
+        <label>Your Comment</label>
+        <textarea id="commentText" placeholder="Share your thoughts..."></textarea>
       </div>
-    </div>
 
-    <button class="btn" id="postBtn">Post Comment</button>
+      <div class="input-group">
+        <label>Attach Image (Optional, Max 10MB)</label>
+        <div class="file-input-wrapper">
+          <input type="file" id="commentImage" accept="image/*">
+          <label for="commentImage" class="file-input-label">
+            Choose Image
+          </label>
+        </div>
+      </div>
+
+      <button class="btn" id="postBtn">Post Comment</button>
+    </div>
   </div>
 
   <div class="comments-container">
