@@ -193,13 +193,13 @@ const idols = [{
   name: `Eichi Tenshouin`,
   avatar: `images/btn-tenshouin_eichi.webp`, 
   borderColor: "#FFF3B8",
-  startDate: `2024-10-15`, 
-  description: "Latest Card: Unit Event",
-  detailsDescription: "(Fairy Tale of Allegories) Eichi Tenshouin",
-  unbloomedThumb: "icons/card_square2_4184_normal.webp",
-  bloomedThumb: "icons/card_square2_4184_evolution.webp",
-  unbloomedImage: "cards2/card_rectangle2_4184_normal.webp",
-  bloomedImage: "cards2/card_rectangle2_4184_evolution.webp"
+  startDate: `2026-02-14`, 
+  description: "Latest Card: Special Scout",
+  detailsDescription: "[] Eichi Tenshouin",
+  unbloomedThumb: "icons/.webp",
+  bloomedThumb: "icons/.webp",
+  unbloomedImage: "cards2/photo_2026-02-14_14-01-46 (2).webp",
+  bloomedImage: "cards2/photo_2026-02-13_14-02-01.webp"
 },
 {
   id: 2,
@@ -297,13 +297,13 @@ const idols = [{
   name: `Tetora Nagumo`,
   avatar: `images/btn-nagumo_tetora.webp`,
   borderColor: "#302833",
-  startDate: `2025-06-29`,
-  description: "Latest Card: Cross Scout",
-  detailsDescription: "(Central Pillar of All Trades) Tetora Nagumo",
-  unbloomedThumb: 'icons/card_square2_4405_normal.webp',
-  bloomedThumb: 'icons/card_square2_4405_evolution.webp',
-  unbloomedImage: 'cards2/card_rectangle2_4405_normal.webp',
-  bloomedImage: 'cards2/card_rectangle2_4405_evolution.webp'
+  startDate: `2026-02-14`,
+  description: "Latest Card: Special Scout",
+  detailsDescription: "[] Tetora Nagumo",
+  unbloomedThumb: 'icons/.webp',
+  bloomedThumb: 'icons/.webp',
+  unbloomedImage: 'cards2/photo_2026-02-14_14-01-46.webp',
+  bloomedImage: 'cards2/photo_2026-02-13_14-02-01 (2).webp'
 },
 {
   id: 10,
@@ -390,7 +390,7 @@ const idols = [{
   borderColor: "#522F60",
   startDate: `2026-01-31`,
   description: "Latest Card: Unit Event",
-  detailsDescription: "[伝えたいコトノハ] Mayoi Ayase",
+  detailsDescription: "(Meaningful Words I Want to Convey) Mayoi Ayase",
   unbloomedThumb: 'icons/card_square2_4692_normal.webp',
   bloomedThumb: 'icons/card_square2_4692_evolution.webp',
   unbloomedImage: 'cards2/card_rectangle2_4692_normal.webp',
@@ -429,7 +429,7 @@ const idols = [{
   borderColor: "#B8D200",
   startDate: `2026-01-25`,
   description: "Latest Card: Bright me up!! Scout Stage",
-  detailsDescription: "[貴公子の装い] Hiyori Tomoe",
+  detailsDescription: "(Young Nobleman's Attire) Hiyori Tomoe",
   unbloomedThumb: 'icons/card_square2_4666_normal.webp',
   bloomedThumb: 'icons/card_square2_4666_evolution.webp',
   unbloomedImage: 'cards2/card_rectangle2_4666_normal.webp',
@@ -948,7 +948,7 @@ const idols = [{
 }];
 
 const cardCountData = {
-  1: { five: 12, four: 14, three: 18 }, // Eichi Tenshouin
+  1: { five: 13, four: 14, three: 18 }, // Eichi Tenshouin
   2: { five: 11, four: 15, three: 19 }, // Wataru Hibiki
   3: { five: 11, four: 16, three: 17 }, // Tori Himemiya
   4: { five: 12, four: 16, three: 18 }, // Yuzuru Fushimi
@@ -956,9 +956,9 @@ const cardCountData = {
   6: { five: 11, four: 16, three: 21 }, // Subaru Akehoshi
   7: { five: 11, four: 18, three: 19 }, // Makoto Yuuki
   8: { five: 11, four: 16, three: 18 }, // Mao Isara
-  9: { five: 11, four: 16, three: 16 }, // Tetora Nagumo
-  10: { five: 10, four: 15, three: 18 }, // Midori Takamine
-  11: { five: 10, four: 17, three: 16 }, // Shinobu Sengoku
+  9: { five: 12, four: 16, three: 16 }, // Tetora Nagumo
+  10: { five: 11, four: 15, three: 18 }, // Midori Takamine
+  11: { five: 11, four: 17, three: 16 }, // Shinobu Sengoku
   12: { five: 12, four: 15, three: 17 }, // Chiaki Morisawa
   13: { five: 11, four: 17, three: 17 }, // Kanata Shinkai
   14: { five: 12, four: 15, three: 17 }, // Hiiro Amagi
@@ -974,8 +974,8 @@ const cardCountData = {
   24: { five: 12, four: 17, three: 16 }, // Hinata Aoi
   25: { five: 13, four: 16, three: 16 }, // Yuta Aoi
   26: { five: 12, four: 14, three: 16 }, // Rinne Amagi
-  27: { five: 9, four: 16, three: 16 }, // HiMERU
-  28: { five: 9, four: 19, three: 19 }, // Kohaku Oukawa
+  27: { five: 10, four: 16, three: 16 }, // HiMERU
+  28: { five: 10, four: 19, three: 19 }, // Kohaku Oukawa
   29: { five: 9, four: 16, three: 17 }, // Niki Shiina
   30: { five: 13, four: 17, three: 17 }, // Rei Sakuma
   31: { five: 12, four: 14, three: 21 }, // Kaoru Hakaze
@@ -986,19 +986,19 @@ const cardCountData = {
   36: { five: 10, four: 15, three: 19 }, // Mitsuru Tenma
   37: { five: 13, four: 16, three: 20 }, // Hajime Shino
   38: { five: 13, four: 14, three: 16 }, // Keito Hasumi
-  39: { five: 11, four: 15, three: 18 }, // Kuro Kiryu
+  39: { five: 11, four: 16, three: 18 }, // Kuro Kiryu
   40: { five: 10, four: 17, three: 16 }, // Souma Kanzaki
   41: { five: 2, four: 5, three: 5 }, // Ibuki Taki
   42: { five: 12, four: 15, three: 17 }, // Tsukasa Suou
   43: { five: 12, four: 16, three: 18 }, // Leo Tsukinaga
   44: { five: 11, four: 17, three: 17 }, // Izumi Sena
   45: { five: 12, four: 17, three: 17 }, // Ritsu Sakuma
-  46: { five: 11, four: 16, three: 19 }, // Arashi Narukami
+  46: { five: 11, four: 17, three: 19 }, // Arashi Narukami
   47: { five: 12, four: 15, three: 17 }, // Natsume Sakasaki
   48: { five: 11, four: 15, three: 19 }, // Tsumugi Aoba
-  49: { five: 10, four: 16, three: 16 }, // Sora Harukawa
+  49: { five: 11, four: 16, three: 16 }, // Sora Harukawa
   50: { five: 14, four: 16, three: 14 }, // Madara Mikejima
-  51: { five: 4, four: 4, three: 5 }, // Esu
+  51: { five: 5, four: 4, three: 5 }, // Esu
   52: { five: 2, four: 5, three: 8 }, // Kanna
   53: { five: 3, four: 5, three: 6 }, // Yume
   54: { five: 3, four: 5, three: 4 }, // Raika
