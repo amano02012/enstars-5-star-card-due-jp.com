@@ -245,13 +245,13 @@ const idols = [{
   name: `Hokuto Hidaka`,
   avatar: `images/btn-hidaka_hokuto.webp`,
   borderColor: "#0068B7",
-  startDate: `2025-04-30`,
-  description: "Latest Card: Unit Event",
-  detailsDescription: "(The Anniversary We Strive Onward) Hokuto Hidka",
-  unbloomedThumb: 'icons/card_square2_4353_normal.webp',
-  bloomedThumb: 'icons/card_square2_4353_evolution.webp',
-  unbloomedImage: 'cards2/card_rectangle2_4353_normal.webp',
-  bloomedImage: 'cards2/card_rectangle2_4353_evolution.webp'
+  startDate: `2026-02-15`,
+  description: "Latest Card: Large Scale Event",
+  detailsDescription: "[] Hokuto Hidaka",
+  unbloomedThumb: 'icons/.webp',
+  bloomedThumb: 'icons/.webp',
+  unbloomedImage: 'cards2/photo_2026-02-15_14-01-44.webp',
+  bloomedImage: 'cards2/photo_2026-02-12_14-03-10.webp'
 },
 {
   id: 6,
@@ -518,13 +518,13 @@ const idols = [{
   name: `Rinne Amagi`,
   avatar: `images/btn-amagi_rinne.webp`,
   borderColor: "#B7282E",
-  startDate: `2025-09-14`,
-  description: "Latest Card: Theme Scout",
-  detailsDescription: "(Attempting a Gamble) Rinne Amagi",
-  unbloomedThumb: 'icons/card_square2_4492_normal.webp',
-  bloomedThumb: 'icons/card_square2_4492_evolution.webp',
-  unbloomedImage: 'cards2/card_rectangle2_4492_normal.webp',
-  bloomedImage: 'cards2/card_rectangle2_4492_evolution.webp'
+  startDate: `2026-02-15`,
+  description: "Latest Card: Large Scale Event",
+  detailsDescription: "[] Rinne Amagi",
+  unbloomedThumb: 'icons/.webp',
+  bloomedThumb: 'icons/.webp',
+  unbloomedImage: 'cards2/photo_2026-02-15_14-01-45.webp',
+  bloomedImage: 'cards2/photo_2026-02-12_14-03-14.webp'
 },
 {
   id: 27,
@@ -952,7 +952,7 @@ const cardCountData = {
   2: { five: 11, four: 15, three: 19 }, // Wataru Hibiki
   3: { five: 11, four: 16, three: 17 }, // Tori Himemiya
   4: { five: 12, four: 16, three: 18 }, // Yuzuru Fushimi
-  5: { five: 13, four: 14, three: 16 }, // Hokuto Hidaka
+  5: { five: 14, four: 14, three: 16 }, // Hokuto Hidaka
   6: { five: 11, four: 16, three: 21 }, // Subaru Akehoshi
   7: { five: 11, four: 18, three: 19 }, // Makoto Yuuki
   8: { five: 11, four: 16, three: 18 }, // Mao Isara
@@ -973,7 +973,7 @@ const cardCountData = {
   23: { five: 11, four: 15, three: 18 }, // Mika Kagehira
   24: { five: 12, four: 17, three: 16 }, // Hinata Aoi
   25: { five: 13, four: 16, three: 16 }, // Yuta Aoi
-  26: { five: 12, four: 14, three: 16 }, // Rinne Amagi
+  26: { five: 13, four: 14, three: 16 }, // Rinne Amagi
   27: { five: 10, four: 16, three: 16 }, // HiMERU
   28: { five: 10, four: 19, three: 19 }, // Kohaku Oukawa
   29: { five: 9, four: 16, three: 17 }, // Niki Shiina
@@ -986,14 +986,14 @@ const cardCountData = {
   36: { five: 10, four: 15, three: 19 }, // Mitsuru Tenma
   37: { five: 13, four: 16, three: 20 }, // Hajime Shino
   38: { five: 13, four: 14, three: 16 }, // Keito Hasumi
-  39: { five: 11, four: 16, three: 18 }, // Kuro Kiryu
+  39: { five: 11, four: 17, three: 18 }, // Kuro Kiryu
   40: { five: 10, four: 17, three: 16 }, // Souma Kanzaki
   41: { five: 2, four: 5, three: 5 }, // Ibuki Taki
   42: { five: 12, four: 15, three: 17 }, // Tsukasa Suou
   43: { five: 12, four: 16, three: 18 }, // Leo Tsukinaga
   44: { five: 11, four: 17, three: 17 }, // Izumi Sena
   45: { five: 12, four: 17, three: 17 }, // Ritsu Sakuma
-  46: { five: 11, four: 17, three: 19 }, // Arashi Narukami
+  46: { five: 11, four: 18, three: 19 }, // Arashi Narukami
   47: { five: 12, four: 15, three: 17 }, // Natsume Sakasaki
   48: { five: 11, four: 15, three: 19 }, // Tsumugi Aoba
   49: { five: 11, four: 16, three: 16 }, // Sora Harukawa
@@ -1347,7 +1347,7 @@ function renderCardsInitial() {
   const container = document.getElementById("idol-container");
   container.innerHTML = "";
   
-  idols.forEach((idol, index) => {
+  idols.filter(idol => !idol.isNew).forEach((idol, index) => {
     const card = createIdolCard(idol);
     
     card.style.transition = 'all 0.5s ease';
@@ -1377,7 +1377,7 @@ function renderCardsWithStoredState() {
   
   previousIdolState.forEach((prevIdol, index) => {
     const currentIdol = idols.find(i => i.id === prevIdol.id);
-    if (!currentIdol) return;
+    if (!currentIdol || currentIdol.isNew) return;
     
     const tempRank = currentIdol.rank;
     const tempDays = currentIdol.days;
