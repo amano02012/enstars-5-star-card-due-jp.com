@@ -2,9 +2,9 @@ const bmupickupData = [
     {
         date: '(01/25/2026) Bright me up!! Scout -Stage: Hiyori',
         idols: [
-            { star: 5, title: '(Card name)', name: 'Hiyori Tomoe', image: '' },
-            { star: 4, title: '(Card name)', name: 'Shu Itsuki', image: '' },
-            { star: 3, title: '(Card name)', name: 'Kanna', image: '' }
+            { star: 5, title: '(Young Nobleman\'s Attire)', name: 'Hiyori Tomoe', image: 'card_square2_4666_evolution' },
+            { star: 4, title: '(Professional\'s Finish)', name: 'Shu Itsuki', image: 'card_square2_4667_evolution' },
+            { star: 3, title: '(The Heart\'s Secret Ingredient)', name: 'Kanna', image: 'card_square2_4668_evolution' }
         ]
     },
     {

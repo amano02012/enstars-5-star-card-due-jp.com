@@ -1,11 +1,11 @@
 const theme3PickupData = [
     {
-        date: '(01/30/2026) Scout! -',
+        date: '(01/30/2026) Scout! Perfect Sundae',
         idols: [
-            { star: 5, title: '(Card name)', name: 'Kaoru Hakaze', image: '' },
-            { star: 4, title: '(Card name)', name: 'Kohaku Oukawa', image: '' },
-            { star: 3, title: '(Card name)', name: 'Shu Itsuki', image: '' },
-            { star: 3, title: '(Card name)', name: 'Ibuki Taki', image: '' }
+            { star: 5, title: '(Perfect Shot)', name: 'Kaoru Hakaze', image: 'card_square2_4696_evolution' },
+            { star: 4, title: '(Perfect Word)', name: 'Kohaku Oukawa', image: 'card_square2_4697_evolution' },
+            { star: 3, title: '(Perfect Time)', name: 'Shu Itsuki', image: 'card_square2_4698_evolution' },
+            { star: 3, title: '(Perfect Timing)', name: 'Ibuki Taki', image: 'card_square2_4699_evolution' }
         ]
     },
     {
