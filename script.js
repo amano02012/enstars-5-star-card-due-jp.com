@@ -195,11 +195,11 @@ const idols = [{
   borderColor: "#FFF3B8",
   startDate: `2026-02-14`, 
   description: "Latest Card: Special Scout",
-  detailsDescription: "[] Eichi Tenshouin",
-  unbloomedThumb: "icons/.webp",
-  bloomedThumb: "icons/.webp",
-  unbloomedImage: "cards2/photo_2026-02-14_14-01-46 (2).webp",
-  bloomedImage: "cards2/photo_2026-02-13_14-02-01.webp"
+  detailsDescription: "(Bonds That Change Reality) Eichi Tenshouin",
+  unbloomedThumb: "icons/card_square2_4704_normal.webp",
+  bloomedThumb: "icons/card_square2_4704_evolution.webp",
+  unbloomedImage: "cards2/card_rectangle2_4704_normal.webp",
+  bloomedImage: "cards2/card_rectangle2_4704_evolution.webp"
 },
 {
   id: 2,
@@ -247,11 +247,11 @@ const idols = [{
   borderColor: "#0068B7",
   startDate: `2026-02-15`,
   description: "Latest Card: Large Scale Event",
-  detailsDescription: "[] Hokuto Hidaka",
-  unbloomedThumb: 'icons/.webp',
-  bloomedThumb: 'icons/.webp',
-  unbloomedImage: 'cards2/photo_2026-02-15_14-01-44.webp',
-  bloomedImage: 'cards2/photo_2026-02-12_14-03-10.webp'
+  detailsDescription: "(Bonds That Color the World) Hokuto Hidaka",
+  unbloomedThumb: 'icons/card_square2_4700_normal.webp',
+  bloomedThumb: 'icons/card_square2_4700_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4700_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4700_evolution.webp'
 },
 {
   id: 6,
@@ -299,11 +299,11 @@ const idols = [{
   borderColor: "#302833",
   startDate: `2026-02-14`,
   description: "Latest Card: Special Scout",
-  detailsDescription: "[] Tetora Nagumo",
-  unbloomedThumb: 'icons/.webp',
-  bloomedThumb: 'icons/.webp',
-  unbloomedImage: 'cards2/photo_2026-02-14_14-01-46.webp',
-  bloomedImage: 'cards2/photo_2026-02-13_14-02-01 (2).webp'
+  detailsDescription: "(Bonds That Overcome Obstacles) Tetora Nagumo",
+  unbloomedThumb: 'icons/card_square2_4705_normal.webp',
+  bloomedThumb: 'icons/card_square2_4705_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4705_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4705_evolution.webp'
 },
 {
   id: 10,
@@ -520,11 +520,11 @@ const idols = [{
   borderColor: "#B7282E",
   startDate: `2026-02-15`,
   description: "Latest Card: Large Scale Event",
-  detailsDescription: "[] Rinne Amagi",
-  unbloomedThumb: 'icons/.webp',
-  bloomedThumb: 'icons/.webp',
-  unbloomedImage: 'cards2/photo_2026-02-15_14-01-45.webp',
-  bloomedImage: 'cards2/photo_2026-02-12_14-03-14.webp'
+  detailsDescription: "(Bonds That Make You Feel Free) Rinne Amagi",
+  unbloomedThumb: 'icons/card_square2_4701_normal.webp',
+  bloomedThumb: 'icons/card_square2_4701_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4701_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4701_evolution.webp'
 },
 {
   id: 27,
@@ -959,7 +959,7 @@ const cardCountData = {
   9: { five: 12, four: 16, three: 16 }, // Tetora Nagumo
   10: { five: 11, four: 15, three: 18 }, // Midori Takamine
   11: { five: 11, four: 17, three: 16 }, // Shinobu Sengoku
-  12: { five: 12, four: 15, three: 17 }, // Chiaki Morisawa
+  12: { five: 13, four: 15, three: 17 }, // Chiaki Morisawa
   13: { five: 11, four: 17, three: 17 }, // Kanata Shinkai
   14: { five: 12, four: 15, three: 17 }, // Hiiro Amagi
   15: { five: 10, four: 15, three: 18 }, // Aira Shiratori
@@ -976,7 +976,7 @@ const cardCountData = {
   26: { five: 13, four: 14, three: 16 }, // Rinne Amagi
   27: { five: 10, four: 16, three: 16 }, // HiMERU
   28: { five: 10, four: 19, three: 19 }, // Kohaku Oukawa
-  29: { five: 9, four: 16, three: 17 }, // Niki Shiina
+  29: { five: 10, four: 16, three: 17 }, // Niki Shiina
   30: { five: 13, four: 17, three: 17 }, // Rei Sakuma
   31: { five: 12, four: 14, three: 21 }, // Kaoru Hakaze
   32: { five: 11, four: 18, three: 18 }, // Koga Ogami
@@ -994,12 +994,12 @@ const cardCountData = {
   44: { five: 11, four: 17, three: 17 }, // Izumi Sena
   45: { five: 12, four: 17, three: 17 }, // Ritsu Sakuma
   46: { five: 11, four: 18, three: 19 }, // Arashi Narukami
-  47: { five: 12, four: 15, three: 17 }, // Natsume Sakasaki
+  47: { five: 13, four: 15, three: 17 }, // Natsume Sakasaki
   48: { five: 11, four: 15, three: 19 }, // Tsumugi Aoba
   49: { five: 11, four: 16, three: 16 }, // Sora Harukawa
   50: { five: 14, four: 16, three: 14 }, // Madara Mikejima
   51: { five: 5, four: 4, three: 5 }, // Esu
-  52: { five: 2, four: 5, three: 8 }, // Kanna
+  52: { five: 3, four: 5, three: 8 }, // Kanna
   53: { five: 3, four: 5, three: 6 }, // Yume
   54: { five: 3, four: 5, three: 4 }, // Raika
   55: { five: "-", four: "-", three: "-" }, // Juis Kojika
@@ -1268,6 +1268,7 @@ function closeSidePanel() {
   if (panel) {
     panel.classList.remove("active");
   }
+  if (typeof closeRecordsPanel === "function") closeRecordsPanel();
 }
 
 document.addEventListener("DOMContentLoaded", () => {

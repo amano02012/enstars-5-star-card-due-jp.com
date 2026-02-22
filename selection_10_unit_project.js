@@ -13,9 +13,7 @@ if (typeof document !== 'undefined') {
     const getSrc = img => {
       if (!img) return '';
       const dataSrc = tryAttr(img, 'data-src') || tryAttr(img, 'data-srcset');
-      if (dataSrc) {
-        return dataSrc.split(',')[0].trim().split(' ')[0] || '';
-      }
+      if (dataSrc) return dataSrc.split(',')[0].trim().split(' ')[0] || '';
       const src = tryAttr(img, 'src') || tryAttr(img, 'srcset');
       return src ? src.split(',')[0].trim().split(' ')[0] : '';
     };
@@ -30,7 +28,7 @@ if (typeof document !== 'undefined') {
 
     const rows = Array.from(document.querySelectorAll('table tr')).slice(1);
 
-    rows.forEach((row, rowIndex) => {
+    rows.forEach(row => {
       const interimImgs = Array.from(row.querySelectorAll('.interim-img'));
       const releaseImgs = Array.from(row.querySelectorAll('.release-img'));
 
@@ -64,30 +62,29 @@ if (typeof document !== 'undefined') {
   });
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.querySelector(".hamburger");
+  const body = document.body;
+  if (!btn) return;
 
-(function applyMobileLayout() {
-  function isMobileDevice() {
-    if (navigator.userAgentData && typeof navigator.userAgentData.mobile === "boolean") {
-      return navigator.userAgentData.mobile;
-    }
-    const ua = navigator.userAgent || "";
-    const smallViewport = window.innerWidth <= 700;
-    const coarsePointer = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
-    const mobileUa = /Mobi|Android|iPhone|iPad|iPod|IEMobile|BlackBerry|Opera Mini/i.test(ua);
-    return smallViewport || coarsePointer || mobileUa;
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    if (isMobileDevice()) {
-      document.body.classList.add("mobile-layout");
-    }
+  btn.addEventListener("click", () => {
+    const open = body.classList.toggle("nav-open");
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
   });
 
   window.addEventListener("resize", () => {
-    if (isMobileDevice()) document.body.classList.add("mobile-layout");
-    else document.body.classList.remove("mobile-layout");
+    if (window.innerWidth > 700 && body.classList.contains("nav-open")) {
+      body.classList.remove("nav-open");
+      btn.setAttribute("aria-expanded", "false");
+    }
   });
-})();
 
-document.addEventListener("DOMContentLoaded", ()=>{const btn=document.querySelector(".hamburger"),body=document.body; if(!btn) return; btn.addEventListener("click", ()=>{const open=body.classList.toggle("nav-open"); btn.setAttribute("aria-expanded", open?"true":"false");}); window.addEventListener("resize", ()=>{ if(window.innerWidth>700 && body.classList.contains("nav-open")){ body.classList.remove("nav-open"); btn.setAttribute("aria-expanded","false"); }}); document.addEventListener("click",(e)=>{ if(!body.classList.contains("nav-open")) return; const inside = e.target.closest(".navbar"); if(!inside){ body.classList.remove("nav-open"); btn.setAttribute("aria-expanded","false"); }});});
-
+  document.addEventListener("click", e => {
+    if (!body.classList.contains("nav-open")) return;
+    const inside = e.target.closest(".navbar");
+    if (!inside) {
+      body.classList.remove("nav-open");
+      btn.setAttribute("aria-expanded", "false");
+    }
+  });
+});
