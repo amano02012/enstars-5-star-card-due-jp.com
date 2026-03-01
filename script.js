@@ -479,13 +479,13 @@ const idols = [{
   name: `Mika Kagehira`,
   avatar: `images/btn-kagehira_mika.webp`,
   borderColor: "#006A6C",
-  startDate: `2025-05-30`,
-  description: "Latest Card: Cross Scout",
-  detailsDescription: "(Partner Cowboy) Mika Kagehira",
-  unbloomedThumb: 'icons/card_square2_4380_normal.webp',
-  bloomedThumb: 'icons/card_square2_4380_evolution.webp',
-  unbloomedImage: 'cards2/card_rectangle2_4380_normal.webp',
-  bloomedImage: 'cards2/card_rectangle2_4380_evolution.webp'
+  startDate: `2026-02-27`,
+  description: "Latest Card: Theme Scout",
+  detailsDescription: "[] Mika Kagehira",
+  unbloomedThumb: 'icons/card_square2_4720_normal.webp',
+  bloomedThumb: 'icons/card_square2_4720_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4720_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4720_evolution.webp'
 },
 {
   id: 24,
@@ -830,13 +830,13 @@ const idols = [{
   name: `Madara Mikejima`,
   avatar: `images/btn-mikejima_madara.webp`,
   borderColor: "#622D18",
-  startDate: `2024-10-31`,
+  startDate: `2026-02-28`,
   description: "Latest Card: Unit Event",
-  detailsDescription: "(Lupine's True Feelings) Madara Mikejima",
-  unbloomedThumb: 'icons/card_square2_4194_normal.webp',
-  bloomedThumb: 'icons/card_square2_4194_evolution.webp',
-  unbloomedImage: 'cards2/card_rectangle2_4194_normal.webp',
-  bloomedImage: 'cards2/card_rectangle2_4194_evolution.webp'
+  detailsDescription: "[] Madara Mikejima",
+  unbloomedThumb: 'icons/card_square2_4716_normal.webp',
+  bloomedThumb: 'icons/card_square2_4716_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4716_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4716_evolution.webp'
 },
 {
   id: 51,
@@ -869,13 +869,13 @@ const idols = [{
   name: `Yume`,
   avatar: `images/btn-yume.webp`,
   borderColor: "#CCADD9",
-  startDate: `2024-11-30`,
-  description: "Latest Card: Unit Event",
-  detailsDescription: "(Märchen White) Yume",
-  unbloomedThumb: 'icons/card_square2_4226_normal.webp',
-  bloomedThumb: 'icons/card_square2_4226_evolution.webp',
-  unbloomedImage: 'cards2/card_rectangle2_4226_normal.webp',
-  bloomedImage: 'cards2/card_rectangle2_4226_evolution.webp'
+  startDate: `2026-02-25`,
+  description: "Latest Card: Bright me up!! Scout Stage",
+  detailsDescription: "[] Yume",
+  unbloomedThumb: 'icons/card_square2_4708_normal.webp',
+  bloomedThumb: 'icons/card_square2_4708_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4708_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4708_evolution.webp'
 },
 {
   id: 54,
@@ -955,7 +955,7 @@ const cardCountData = {
   5: { five: 14, four: 14, three: 16 }, // Hokuto Hidaka
   6: { five: 11, four: 16, three: 21 }, // Subaru Akehoshi
   7: { five: 11, four: 18, three: 19 }, // Makoto Yuuki
-  8: { five: 11, four: 16, three: 18 }, // Mao Isara
+  8: { five: 11, four: 17, three: 18 }, // Mao Isara
   9: { five: 12, four: 16, three: 16 }, // Tetora Nagumo
   10: { five: 11, four: 15, three: 18 }, // Midori Takamine
   11: { five: 11, four: 17, three: 16 }, // Shinobu Sengoku
@@ -967,40 +967,40 @@ const cardCountData = {
   17: { five: 10, four: 16, three: 16 }, // Tatsumi Kazehaya
   18: { five: 11, four: 13, three: 21 }, // Nagisa Ran
   19: { five: 11, four: 15, three: 17 }, // Hiyori Tomoe
-  20: { five: 11, four: 14, three: 18 }, // Ibara Saegusa
+  20: { five: 11, four: 14, three: 19 }, // Ibara Saegusa
   21: { five: 10, four: 17, three: 17 }, // Jun Sazanami
   22: { five: 14, four: 15, three: 16 }, // Shu Itsuki
-  23: { five: 11, four: 15, three: 18 }, // Mika Kagehira
+  23: { five: 12, four: 15, three: 18 }, // Mika Kagehira
   24: { five: 12, four: 17, three: 16 }, // Hinata Aoi
   25: { five: 13, four: 16, three: 16 }, // Yuta Aoi
   26: { five: 13, four: 14, three: 16 }, // Rinne Amagi
   27: { five: 10, four: 16, three: 16 }, // HiMERU
   28: { five: 10, four: 19, three: 19 }, // Kohaku Oukawa
   29: { five: 10, four: 16, three: 17 }, // Niki Shiina
-  30: { five: 13, four: 17, three: 17 }, // Rei Sakuma
+  30: { five: 13, four: 17, three: 18 }, // Rei Sakuma
   31: { five: 12, four: 14, three: 21 }, // Kaoru Hakaze
   32: { five: 11, four: 18, three: 18 }, // Koga Ogami
-  33: { five: 11, four: 15, three: 19 }, // Adonis Otogari
+  33: { five: 11, four: 16, three: 19 }, // Adonis Otogari
   34: { five: 13, four: 13, three: 20 }, // Tomoya Mashiro
   35: { five: 11, four: 15, three: 19 }, // Nazuna Nito
-  36: { five: 10, four: 15, three: 19 }, // Mitsuru Tenma
+  36: { five: 10, four: 16, three: 19 }, // Mitsuru Tenma
   37: { five: 13, four: 16, three: 20 }, // Hajime Shino
-  38: { five: 13, four: 14, three: 16 }, // Keito Hasumi
+  38: { five: 13, four: 14, three: 17 }, // Keito Hasumi
   39: { five: 11, four: 17, three: 18 }, // Kuro Kiryu
   40: { five: 10, four: 17, three: 16 }, // Souma Kanzaki
   41: { five: 2, four: 5, three: 5 }, // Ibuki Taki
   42: { five: 12, four: 15, three: 17 }, // Tsukasa Suou
   43: { five: 12, four: 16, three: 18 }, // Leo Tsukinaga
   44: { five: 11, four: 17, three: 17 }, // Izumi Sena
-  45: { five: 12, four: 17, three: 17 }, // Ritsu Sakuma
+  45: { five: 12, four: 17, three: 18 }, // Ritsu Sakuma
   46: { five: 11, four: 18, three: 19 }, // Arashi Narukami
   47: { five: 13, four: 15, three: 17 }, // Natsume Sakasaki
-  48: { five: 11, four: 15, three: 19 }, // Tsumugi Aoba
+  48: { five: 11, four: 15, three: 20 }, // Tsumugi Aoba
   49: { five: 11, four: 16, three: 16 }, // Sora Harukawa
-  50: { five: 14, four: 16, three: 14 }, // Madara Mikejima
+  50: { five: 15, four: 16, three: 14 }, // Madara Mikejima
   51: { five: 5, four: 4, three: 5 }, // Esu
   52: { five: 3, four: 5, three: 8 }, // Kanna
-  53: { five: 3, four: 5, three: 6 }, // Yume
+  53: { five: 4, four: 5, three: 6 }, // Yume
   54: { five: 3, four: 5, three: 4 }, // Raika
   55: { five: "-", four: "-", three: "-" }, // Juis Kojika
   56: { five: "-", four: "-", three: "-" }, // Nozomi Madoka

@@ -1,5 +1,14 @@
 const theme3PickupData = [
     {
+        date: '(02/27/2026) Scout! Magic Box',
+        idols: [
+            { star: 5, title: '(Card Name)', name: 'Mika Kagehira', image: 'card_square2_4720_evolution' },
+            { star: 4, title: '(Card Name)', name: 'Mao Isara', image: 'card_square2_4721_evolution' },
+            { star: 3, title: '(Card Name)', name: 'Keito Hasumi', image: 'card_square2_4722_evolution' },
+            { star: 3, title: '(Card Name)', name: 'Ritsu Sakuma', image: 'card_square2_4723_evolution' }
+        ]
+    },
+    {
         date: '(01/30/2026) Scout! Perfect Sundae',
         idols: [
             { star: 5, title: '(Perfect Shot)', name: 'Kaoru Hakaze', image: 'card_square2_4696_evolution' },
@@ -125,7 +134,6 @@ const theme3ScoutData = [
             `images/btn-saegusa_ibara.webp`,
             `images/btn-sazanami_jun.webp`,
             `images/btn-itsuki_shu.webp`,
-            `images/btn-kagehira_mika.webp`,
             `images/btn-aoi_hinata.webp`,
             `images/btn-aoi_yuta.webp`,
             `images/btn-himeru.webp`,
@@ -160,7 +168,6 @@ const theme3ScoutData = [
             `images/btn-hidaka_hokuto.webp`,
             `images/btn-akehoshi_subaru.webp`,
             `images/btn-yuuki_makoto.webp`,
-            `images/btn-isara_mao.webp`,
             `images/btn-nagumo_tetora.webp`,
             `images/btn-takamine_midori.webp`,
             `images/btn-sengoku_shinobu.webp`,
@@ -201,25 +208,34 @@ const theme3ScoutData = [
     },
 ];
 
+function getJapanDate() {
+    const now = new Date();
+    const japanTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }));
+    const year = japanTime.getFullYear();
+    const month = japanTime.getMonth() + 1;
+    const day = japanTime.getDate();
+    return `${year}/${month}/${day}-`;
+}
+
 function renderTheme3Pickups() {
     const container = document.getElementById('theme3-pickup-container');
     if (!container) return;
-    
+
     theme3PickupData.forEach(dateGroup => {
         const dateSection = document.createElement('div');
         dateSection.className = 'date-section';
-        
+
         const dateBanner = document.createElement('div');
         dateBanner.className = 'date-banner';
         dateBanner.textContent = dateGroup.date;
-        
+
         const idolsContainer = document.createElement('div');
         idolsContainer.className = 'idols-container';
-        
+
         dateGroup.idols.forEach(idol => {
             const section = document.createElement('div');
             section.className = 'pickup-section';
-            
+
             section.innerHTML = `
                 <div class="pickup-header">
                     <span>⭐${idol.star}</span>
@@ -232,10 +248,10 @@ function renderTheme3Pickups() {
                     </div>
                 </div>
             `;
-            
+
             idolsContainer.appendChild(section);
         });
-        
+
         dateSection.appendChild(dateBanner);
         dateSection.appendChild(idolsContainer);
         container.appendChild(dateSection);
@@ -245,7 +261,7 @@ function renderTheme3Pickups() {
 function renderTheme3Scouts() {
     const container = document.getElementById('theme3-scout-container');
     if (!container) return;
-    
+
     const divider = document.createElement('div');
     divider.className = 'section-divider';
     divider.innerHTML = `
@@ -253,22 +269,22 @@ function renderTheme3Scouts() {
         <h2 class="section-label">Remaining Idol/s</h2>
     `;
     container.appendChild(divider);
-    
+
     const scoutSection = document.createElement('div');
     scoutSection.className = 'scout-section';
-    
+
     const japanDate = getJapanDate();
-    
+
     theme3ScoutData.forEach(scout => {
         const table = document.createElement('table');
         table.className = 'scout-table';
-        
+
         const maxIdols = 58;
         const idolsArray = [...scout.idols];
         while (idolsArray.length < maxIdols) {
             idolsArray.push('');
         }
-        
+
         table.innerHTML = `
             <tr class="scout-date-row">
                 <td class="scout-date-cell" colspan="2">${japanDate}</td>
@@ -289,72 +305,14 @@ function renderTheme3Scouts() {
                 </td>
             </tr>
         `;
-        
+
         scoutSection.appendChild(table);
     });
-    
+
     container.appendChild(scoutSection);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     renderTheme3Pickups();
     renderTheme3Scouts();
-    
-    const scoutBtns = document.querySelectorAll('.scout-nav-btn');
-    const scoutContents = document.querySelectorAll('.scout-content');
-    
-    scoutBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const targetScout = btn.dataset.scout;
-            const currentActive = document.querySelector('.scout-content.active');
-            const targetContent = document.getElementById(`${targetScout}-content`);
-            
-            if (currentActive === targetContent) return;
-            
-            const overlay = document.createElement('div');
-            overlay.className = 'slide-overlay';
-            document.body.appendChild(overlay);
-            
-            setTimeout(() => overlay.classList.add('sliding-in'), 10);
-            
-            setTimeout(() => {
-                scoutBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                
-                currentActive.classList.remove('active');
-                targetContent.classList.add('active');
-                
-                overlay.classList.remove('sliding-in');
-                overlay.classList.add('sliding-out');
-            }, 500);
-            
-            setTimeout(() => {
-                overlay.remove();
-            }, 1000);
-        });
-    });
-    
-    const hamburger = document.querySelector(".hamburger");
-    if (hamburger) {
-        hamburger.addEventListener("click", () => {
-            const open = document.body.classList.toggle("nav-open");
-            hamburger.setAttribute("aria-expanded", open ? "true" : "false");
-        });
-    }
-    
-    window.addEventListener("resize", () => {
-        if (window.innerWidth > 700 && document.body.classList.contains("nav-open")) {
-            document.body.classList.remove("nav-open");
-            if (hamburger) hamburger.setAttribute("aria-expanded", "false");
-        }
-    });
-    
-    document.addEventListener("click", (e) => {
-        if (!document.body.classList.contains("nav-open")) return;
-        const inside = e.target.closest(".navbar");
-        if (!inside) {
-            document.body.classList.remove("nav-open");
-            if (hamburger) hamburger.setAttribute("aria-expanded", "false");
-        }
-    });
 });

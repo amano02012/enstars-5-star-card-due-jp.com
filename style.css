@@ -317,18 +317,86 @@ body::before {
   will-change: auto;
 }
 
-.body-desc {
+.site-footer {
+  margin-top: 60px;
+  background: linear-gradient(135deg, #1e3a5f 0%, #0f2240 100%);
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+.footer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 36px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
   text-align: center;
-  font-size: 2rem;
-  margin-top: 50px;
-  margin-bottom: 1px;
-  bottom: -14px;
-  padding: 1px;
-  border-radius: 6px;
-  width: auto;
-  background: linear-gradient(to right, #00e2a5, #0affb7, #7dff86);
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #00e2a5, #7dff86);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.5px;
+}
+
+.footer-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(to right, #00e2a5, #7dff86);
+  border-radius: 2px;
+  opacity: 0.5;
+}
+
+.footer-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-disclaimer {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.footer-disclaimer strong {
+  color: #cbd5e1;
+}
+
+.footer-contact {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.footer-discord {
+  font-weight: 600;
+  color: #7dd3fc;
+  background: rgba(125, 211, 252, 0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 14px 24px;
+  text-align: center;
+  font-size: 0.78rem;
+  color: #64748b;
 }
 
 .h1-title {

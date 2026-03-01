@@ -1,5 +1,13 @@
 const bmupickupData = [
     {
+        date: '(02/25/2026) Bright me up!! Scout -Stage: Yume',
+        idols: [
+            { star: 5, title: '(Card Name)', name: 'Yume', image: 'card_square2_4708_evolution' },
+            { star: 4, title: '(Card Name)', name: 'Adonis Otogari', image: 'card_square2_4709_evolution' },
+            { star: 3, title: '(Card Name)', name: 'Ibara Saegusa', image: 'card_square2_4710_evolution' }
+        ]
+    },
+    {
         date: '(01/25/2026) Bright me up!! Scout -Stage: Hiyori',
         idols: [
             { star: 5, title: '(Young Nobleman\'s Attire)', name: 'Hiyori Tomoe', image: 'card_square2_4666_evolution' },
@@ -142,7 +150,6 @@ const bmuscoutData = [
             `images/btn-mikejima_madara.webp`,
             `images/btn-esu.webp`,
             `images/btn-kanna.webp`,
-            `images/btn-yume.webp`,
             `images/btn-raika.webp`
         ],
     },
@@ -174,7 +181,6 @@ const bmuscoutData = [
             `images/btn-sakuma_rei.webp`,
             `images/btn-hakaze_kaoru.webp`,
             `images/btn-ogami_koga.webp`,
-            `images/btn-otogari_adonis.webp`,
             `images/btn-mashiro_tomoya.webp`,
             `images/btn-tenma_mitsuru.webp`,
             `images/btn-shino_hajime.webp`,
@@ -196,34 +202,25 @@ const bmuscoutData = [
     },
 ];
 
-function getJapanDate() {
-    const now = new Date();
-    const japanTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }));
-    const year = japanTime.getFullYear();
-    const month = japanTime.getMonth() + 1;
-    const day = japanTime.getDate();
-    return `${year}/${month}/${day}-`;
-}
-
 function renderbmuPickups() {
     const container = document.getElementById('bmu-pickup-container');
     if (!container) return;
-    
+
     bmupickupData.forEach(dateGroup => {
         const dateSection = document.createElement('div');
         dateSection.className = 'date-section';
-        
+
         const dateBanner = document.createElement('div');
         dateBanner.className = 'date-banner';
         dateBanner.textContent = dateGroup.date;
-        
+
         const idolsContainer = document.createElement('div');
         idolsContainer.className = 'idols-container';
-        
+
         dateGroup.idols.forEach(idol => {
             const section = document.createElement('div');
             section.className = 'pickup-section';
-            
+
             section.innerHTML = `
                 <div class="pickup-header">
                     <span>⭐${idol.star}</span>
@@ -236,10 +233,10 @@ function renderbmuPickups() {
                     </div>
                 </div>
             `;
-            
+
             idolsContainer.appendChild(section);
         });
-        
+
         dateSection.appendChild(dateBanner);
         dateSection.appendChild(idolsContainer);
         container.appendChild(dateSection);
@@ -249,7 +246,7 @@ function renderbmuPickups() {
 function renderbmuScouts() {
     const container = document.getElementById('bmu-scout-container');
     if (!container) return;
-    
+
     const divider = document.createElement('div');
     divider.className = 'section-divider';
     divider.innerHTML = `
@@ -257,22 +254,22 @@ function renderbmuScouts() {
         <h2 class="section-label">Remaining Idol/s</h2>
     `;
     container.appendChild(divider);
-    
+
     const scoutSection = document.createElement('div');
     scoutSection.className = 'scout-section';
-    
+
     const japanDate = getJapanDate();
-    
+
     bmuscoutData.forEach(scout => {
         const table = document.createElement('table');
         table.className = 'scout-table';
-        
+
         const maxIdols = 58;
         const idolsArray = [...scout.idols];
         while (idolsArray.length < maxIdols) {
             idolsArray.push('');
         }
-        
+
         table.innerHTML = `
             <tr class="scout-date-row">
                 <td class="scout-date-cell" colspan="2">${japanDate}</td>
@@ -293,71 +290,14 @@ function renderbmuScouts() {
                 </td>
             </tr>
         `;
-        
+
         scoutSection.appendChild(table);
     });
-    
+
     container.appendChild(scoutSection);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     renderbmuPickups();
     renderbmuScouts();
-    
-    const scoutBtns = document.querySelectorAll('.scout-nav-btn');
-    
-    scoutBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const targetScout = btn.dataset.scout;
-            const currentActive = document.querySelector('.scout-content.active');
-            const targetContent = document.getElementById(`${targetScout}-content`);
-            
-            if (currentActive === targetContent) return;
-            
-            const overlay = document.createElement('div');
-            overlay.className = 'slide-overlay';
-            document.body.appendChild(overlay);
-            
-            setTimeout(() => overlay.classList.add('sliding-in'), 10);
-            
-            setTimeout(() => {
-                scoutBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                
-                currentActive.classList.remove('active');
-                targetContent.classList.add('active');
-                
-                overlay.classList.remove('sliding-in');
-                overlay.classList.add('sliding-out');
-            }, 500);
-            
-            setTimeout(() => {
-                overlay.remove();
-            }, 1000);
-        });
-    });
-    
-    const hamburger = document.querySelector(".hamburger");
-    if (hamburger) {
-        hamburger.addEventListener("click", () => {
-            const open = document.body.classList.toggle("nav-open");
-            hamburger.setAttribute("aria-expanded", open ? "true" : "false");
-        });
-    }
-    
-    window.addEventListener("resize", () => {
-        if (window.innerWidth > 700 && document.body.classList.contains("nav-open")) {
-            document.body.classList.remove("nav-open");
-            if (hamburger) hamburger.setAttribute("aria-expanded", "false");
-        }
-    });
-    
-    document.addEventListener("click", (e) => {
-        if (!document.body.classList.contains("nav-open")) return;
-        const inside = e.target.closest(".navbar");
-        if (!inside) {
-            document.body.classList.remove("nav-open");
-            if (hamburger) hamburger.setAttribute("aria-expanded", "false");
-        }
-    });
 });
