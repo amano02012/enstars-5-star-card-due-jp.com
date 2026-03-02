@@ -312,7 +312,7 @@ body::before {
   background: url("images/Sphere_Stage_\(Exterior\)_Full.webp") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
-  filter: blur(8px);
+  filter: blur(8px) brightness(0.72);
   z-index: -1;
   will-change: auto;
 }
