@@ -2,10 +2,10 @@ const theme3PickupData = [
     {
         date: '(02/27/2026) Scout! Magic Box',
         idols: [
-            { star: 5, title: '(Card Name)', name: 'Mika Kagehira', image: 'card_square2_4720_evolution' },
-            { star: 4, title: '(Card Name)', name: 'Mao Isara', image: 'card_square2_4721_evolution' },
-            { star: 3, title: '(Card Name)', name: 'Keito Hasumi', image: 'card_square2_4722_evolution' },
-            { star: 3, title: '(Card Name)', name: 'Ritsu Sakuma', image: 'card_square2_4723_evolution' }
+            { star: 5, title: '(Keeper of the Music Box)', name: 'Mika Kagehira', image: 'card_square2_4720_evolution' },
+            { star: 4, title: '(Key of the Music Box)', name: 'Mao Isara', image: 'card_square2_4721_evolution' },
+            { star: 3, title: '(Memory of the Music Box)', name: 'Keito Hasumi', image: 'card_square2_4722_evolution' },
+            { star: 3, title: '(Score of the Music Box)', name: 'Ritsu Sakuma', image: 'card_square2_4723_evolution' }
         ]
     },
     {

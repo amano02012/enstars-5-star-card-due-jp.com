@@ -1,18 +1,35 @@
 let registeredUsernames = new Set();
 let contentLoaded = false;
 let assetsLoaded = false;
+let loadingAnimationDone = false;
+let idolsRendered = false;
+const LOADING_MIN_MS = 1500;
+const loadingStartTime = Date.now();
 
 function checkAllLoaded() {
-  if (contentLoaded && assetsLoaded) {
+  if (!contentLoaded || !assetsLoaded) return;
+
+  const elapsed = Date.now() - loadingStartTime;
+  const remaining = Math.max(0, LOADING_MIN_MS - elapsed);
+
+  setTimeout(() => {
+    loadingAnimationDone = true;
+    renderIdolsThenReveal();
+  }, remaining);
+}
+
+function renderIdolsThenReveal() {
+  renderIdols();
+  idolsRendered = true;
+
+  requestAnimationFrame(() => {
+    const loadingOverlay = document.getElementById('loading-overlay');
+    loadingOverlay.classList.add('hidden');
+    document.body.classList.add('loaded');
     setTimeout(() => {
-      const loadingOverlay = document.getElementById('loading-overlay');
-      loadingOverlay.classList.add('hidden');
-      document.body.classList.add('loaded');
-      setTimeout(() => {
-        loadingOverlay.style.display = 'none';
-      }, 500);
-    }, 500);
-  }
+      loadingOverlay.style.display = 'none';
+    }, 600);
+  });
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -481,7 +498,7 @@ const idols = [{
   borderColor: "#006A6C",
   startDate: `2026-02-27`,
   description: "Latest Card: Theme Scout",
-  detailsDescription: "[] Mika Kagehira",
+  detailsDescription: "(Keeper of the Music Box) Mika Kagehira",
   unbloomedThumb: 'icons/card_square2_4720_normal.webp',
   bloomedThumb: 'icons/card_square2_4720_evolution.webp',
   unbloomedImage: 'cards2/card_rectangle2_4720_normal.webp',
@@ -832,7 +849,7 @@ const idols = [{
   borderColor: "#622D18",
   startDate: `2026-02-28`,
   description: "Latest Card: Unit Event",
-  detailsDescription: "[] Madara Mikejima",
+  detailsDescription: "(Orbiting Future) Madara Mikejima",
   unbloomedThumb: 'icons/card_square2_4716_normal.webp',
   bloomedThumb: 'icons/card_square2_4716_evolution.webp',
   unbloomedImage: 'cards2/card_rectangle2_4716_normal.webp',
@@ -871,7 +888,7 @@ const idols = [{
   borderColor: "#CCADD9",
   startDate: `2026-02-25`,
   description: "Latest Card: Bright me up!! Scout Stage",
-  detailsDescription: "[] Yume",
+  detailsDescription: "(Bullish at All Times) Yume",
   unbloomedThumb: 'icons/card_square2_4708_normal.webp',
   bloomedThumb: 'icons/card_square2_4708_evolution.webp',
   unbloomedImage: 'cards2/card_rectangle2_4708_normal.webp',
@@ -1008,6 +1025,116 @@ const cardCountData = {
   58: { five: "-", four: "-", three: "-" } // Chitose Tsuzura
 };
 
+const imageCache = new Map();
+
+function loadImageCached(src) {
+  if (imageCache.has(src)) return Promise.resolve(src);
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => { imageCache.set(src, true); resolve(src); };
+    img.onerror = () => reject(src);
+    img.src = src;
+  });
+}
+
+const birthdayData = {
+  1: { month: 1, day: 10 }, // Eichi Tenshouin
+  2: { month: 2, day: 21 }, // Wataru Hibiki
+  3: { month: 1, day: 13 }, // Tori Himemiya
+  4: { month: 10, day: 18 }, // Yuzuru Fushimi
+  5: { month: 12, day: 17 }, // Hokuto Hidaka
+  6: { month: 6, day: 22 }, // Subaru Akehoshi
+  7: { month: 4, day: 30 }, // Makoto Yuuki
+  8: { month: 3, day: 16 }, // Mao Isara
+  9: { month: 6, day: 15 }, // Tetora Nagumo
+  10: { month: 8, day: 29 }, // Midori Takamine
+  11: { month: 6, day: 9 }, // Shinobu Sengoku
+  12: { month: 9, day: 18 }, // Chiaki Morisawa
+  13: { month: 8, day: 30 }, // Kanata Shinkai
+  14: { month: 1, day: 4 }, // Hiiro Amagi
+  15: { month: 11, day: 27 }, // Aira Shiratori
+  16: { month: 6, day: 6 }, // Mayoi Ayase
+  17: { month: 12, day: 28 }, // Tatsumi Kazehaya
+  18: { month: 10, day: 27 }, // Nagisa Ran
+  19: { month: 7, day: 24 }, // Hiyori Tomoe
+  20: { month: 11, day: 14 }, // Ibara Saegusa
+  21: { month: 8, day: 16 }, // Jun Sazanami
+  22: { month: 10, day: 30 }, // Shu Itsuki
+  23: { month: 12, day: 26 }, // Mika Kagehira
+  24: { month: 3, day: 5 }, // Hinata Aoi
+  25: { month: 3, day: 5 }, // Yuta Aoi
+  26: { month: 5, day: 18 }, // Rinne Amagi
+  27: { month: 7, day: 7 }, // HiMERU
+  28: { month: 2, day: 5 }, // Kohaku Oukawa
+  29: { month: 10, day: 5 }, // Niki Shiina
+  30: { month: 11, day: 2 }, // Rei Sakuma
+  31: { month: 11, day: 3 }, // Kaoru Hakaze
+  32: { month: 7, day: 18 }, // Koga Ogami
+  33: { month: 8, day: 29 }, // Adonis Otogari
+  34: { month: 3, day: 29 }, // Tomoya Mashiro
+  35: { month: 4, day: 27 }, // Nazuna Nito
+  36: { month: 9, day: 7 }, // Mitsuru Tenma
+  37: { month: 7, day: 15 }, // Hajime Shino
+  38: { month: 9, day: 6 }, // Keito Hasumi
+  39: { month: 1, day: 26 }, // Kuro Kiryu
+  40: { month: 4, day: 20 }, // Souma Kanzaki
+  41: { month: 1, day: 21 }, // Ibuki Taki
+  42: { month: 4, day: 6 }, // Tsukasa Suou
+  43: { month: 5, day: 5 }, // Leo Tsukinaga
+  44: { month: 11, day: 2 }, // Izumi Sena
+  45: { month: 9, day: 22 }, // Ritsu Sakuma
+  46: { month: 3, day: 3 }, // Arashi Narukami
+  47: { month: 2, day: 4 }, // Natsume Sakasaki
+  48: { month: 8, day: 7 }, // Tsumugi Aoba
+  49: { month: 7, day: 1 }, // Sora Harukawa
+  50: { month: 5, day: 16 }, // Madara Mikejima
+  51: { month: 9, day: 12 }, // Esu
+  52: { month: 6, day: 1 }, // Kanna
+  53: { month: 12, day: 2 }, // Yume
+  54: { month: 5, day: 22 }, // Raika
+  55: { month: "-", day: "-" }, // Juis Kojika
+  56: { month: "-", day: "-" }, // Nozomi Madoka
+  57: { month: "-", day: "-" }, // Mashu Kuon
+  58: { month: "-", day: "-" }, // Chitose Tsuzura
+};
+
+function isBirthdayToday(idolId) {
+  const bday = birthdayData[idolId];
+  if (!bday) return false;
+  const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }));
+  return now.getMonth() + 1 === bday.month && now.getDate() === bday.day;
+}
+
+const SEEN_CARD_COUNTS_KEY = 'seenCardCounts';
+
+function getSeenCardCounts() {
+  try {
+    return JSON.parse(localStorage.getItem(SEEN_CARD_COUNTS_KEY)) || {};
+  } catch {
+    return {};
+  }
+}
+
+function markCardCountsSeen(idolId, stats) {
+  const seen = getSeenCardCounts();
+  seen[idolId] = { five: stats.five, four: stats.four, three: stats.three };
+  localStorage.setItem(SEEN_CARD_COUNTS_KEY, JSON.stringify(seen));
+}
+
+function setStatWithAnimation(el, newValue, oldValue) {
+  el.textContent = newValue;
+
+  const isNumeric = typeof newValue === 'number' && typeof oldValue === 'number';
+  const diff = isNumeric ? newValue - oldValue : 0;
+
+  if (!isNumeric || diff <= 0) return;
+
+  el.classList.remove('stat-updated');
+  void el.offsetWidth;
+  el.classList.add('stat-updated');
+  setTimeout(() => el.classList.remove('stat-updated'), 1800);
+}
+
 let currentView = 'grid';
 let currentSort = 'highest';
 
@@ -1054,10 +1181,81 @@ function initializeControls() {
 
 document.addEventListener('DOMContentLoaded', () => {
   initializeControls();
-  setTimeout(() => {
-    renderIdols();
-  }, 100);
 });
+
+function applyBirthdayPanel(panel, isBirthday) {
+  const existing = panel.querySelector('.bday-panel-header');
+  if (existing) existing.remove();
+  const existingCanvas = panel.querySelector('.bday-panel-confetti');
+  if (existingCanvas) {
+    existingCanvas._bdayStop = true;
+    existingCanvas.remove();
+  }
+
+  panel.classList.toggle('bday-panel', isBirthday);
+
+  if (!isBirthday) return;
+
+  const content = panel.querySelector('.side-panel-content');
+  const header = panel.querySelector('.side-panel-header');
+
+  const badge = document.createElement('div');
+  badge.className = 'bday-panel-header';
+  badge.innerHTML = `<span class="bday-ph-left">🎀</span><span class="bday-ph-text">🎂 Happy Birthday! 🎂</span><span class="bday-ph-right">🎀</span>`;
+  header.insertAdjacentElement('afterend', badge);
+
+  const canvas = document.createElement('canvas');
+  canvas.className = 'bday-panel-confetti';
+  canvas._bdayStop = false;
+  panel.insertBefore(canvas, panel.firstChild);
+
+  const ctx = canvas.getContext('2d');
+  const COLORS = ['#f472b6','#fb7185','#fbbf24','#34d399','#60a5fa','#a78bfa','#f9a8d4','#fdba74'];
+  const particles = Array.from({ length: 38 }, (_, i) => ({
+    x: Math.random(),
+    y: Math.random(),
+    size: 3 + Math.random() * 4,
+    color: COLORS[i % COLORS.length],
+    speed: 0.0008 + Math.random() * 0.0014,
+    wobble: Math.random() * Math.PI * 2,
+    wobbleSpeed: 0.03 + Math.random() * 0.04,
+    rect: Math.random() > 0.5,
+    rot: Math.random() * Math.PI,
+    rotSpeed: (Math.random() - 0.5) * 0.06,
+  }));
+
+  function draw() {
+    if (canvas._bdayStop) return;
+    canvas.width  = panel.offsetWidth;
+    canvas.height = panel.offsetHeight;
+    const W = canvas.width, H = canvas.height;
+    ctx.clearRect(0, 0, W, H);
+    particles.forEach(p => {
+      p.y += p.speed;
+      p.wobble += p.wobbleSpeed;
+      p.rot += p.rotSpeed;
+      if (p.y > 1.05) { p.y = -0.05; p.x = Math.random(); }
+      const cx = p.x * W + Math.sin(p.wobble) * 18;
+      const cy = p.y * H;
+      ctx.save();
+      ctx.translate(cx, cy);
+      ctx.rotate(p.rot);
+      ctx.globalAlpha = 0.5;
+      ctx.fillStyle = p.color;
+      if (p.rect) {
+        ctx.fillRect(-p.size * 0.5, -p.size, p.size, p.size * 2);
+      } else {
+        ctx.beginPath();
+        ctx.arc(0, 0, p.size * 0.6, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.restore();
+    });
+    requestAnimationFrame(draw);
+  }
+
+  draw();
+}
 
 function openSidePanel(idol) {
   const panel = document.getElementById("side-panel");
@@ -1072,6 +1270,7 @@ function openSidePanel(idol) {
   const variantsEl = document.getElementById("card-variants");
 
   const isAlreadyOpen = panel.classList.contains("active");
+  const isIdolBirthday = isBirthdayToday(idol.id);
 
   if (isAlreadyOpen) {
     nameEl.classList.add("fade-out");
@@ -1092,9 +1291,22 @@ function openSidePanel(idol) {
 
       const cardStats = cardCountData[idol.id];
       if (cardStats && statsEl) {
-        document.getElementById("side-stat-five").textContent = cardStats.five;
-        document.getElementById("side-stat-four").textContent = cardStats.four;
-        document.getElementById("side-stat-three").textContent = cardStats.three;
+        const seen = getSeenCardCounts();
+        const prev = seen[idol.id];
+        const isNew = !prev;
+        const prevFive  = isNew ? cardStats.five  : prev.five;
+        const prevFour  = isNew ? cardStats.four  : prev.four;
+        const prevThree = isNew ? cardStats.three : prev.three;
+
+        const elFive  = document.getElementById("side-stat-five");
+        const elFour  = document.getElementById("side-stat-four");
+        const elThree = document.getElementById("side-stat-three");
+
+        setStatWithAnimation(elFive,  cardStats.five,  isNew ? cardStats.five  : prevFive);
+        setStatWithAnimation(elFour,  cardStats.four,  isNew ? cardStats.four  : prevFour);
+        setStatWithAnimation(elThree, cardStats.three, isNew ? cardStats.three : prevThree);
+
+        markCardCountsSeen(idol.id, cardStats);
         statsEl.style.display = "flex";
       } else if (statsEl) {
         statsEl.style.display = "none";
@@ -1111,19 +1323,16 @@ function openSidePanel(idol) {
       loaderEl.style.display = "flex";
 
       const defaultImage = idol.bloomedImage || idol.detailsImage;
-      const img = new Image();
-      img.onload = function() {
+      loadImageCached(defaultImage).then(() => {
         imgEl.src = defaultImage;
         imgEl.style.display = "block";
         loaderEl.style.display = "none";
-      };
-      img.onerror = function() {
+      }).catch(() => {
         loaderEl.style.display = "none";
         imgEl.style.display = "block";
         imgEl.src = "";
-      };
-      img.src = defaultImage;
-      
+      });
+
       nameEl.classList.remove("fade-out");
       nameEl.classList.add("fade-in");
       imgEl.classList.remove("fade-out");
@@ -1149,6 +1358,7 @@ function openSidePanel(idol) {
         statsEl.classList.remove("fade-in-left");
         variantsEl.classList.remove("fade-in");
       }, 300);
+      applyBirthdayPanel(panel, isIdolBirthday);
     }, 300);
   } else {
     nameEl.textContent = idol.name || "";
@@ -1157,9 +1367,22 @@ function openSidePanel(idol) {
 
     const cardStats = cardCountData[idol.id];
     if (cardStats && statsEl) {
-      document.getElementById("side-stat-five").textContent = cardStats.five;
-      document.getElementById("side-stat-four").textContent = cardStats.four;
-      document.getElementById("side-stat-three").textContent = cardStats.three;
+      const seen = getSeenCardCounts();
+      const prev = seen[idol.id];
+      const isNew = !prev;
+      const prevFive  = isNew ? cardStats.five  : prev.five;
+      const prevFour  = isNew ? cardStats.four  : prev.four;
+      const prevThree = isNew ? cardStats.three : prev.three;
+
+      const elFive  = document.getElementById("side-stat-five");
+      const elFour  = document.getElementById("side-stat-four");
+      const elThree = document.getElementById("side-stat-three");
+
+      setStatWithAnimation(elFive,  cardStats.five,  isNew ? cardStats.five  : prevFive);
+      setStatWithAnimation(elFour,  cardStats.four,  isNew ? cardStats.four  : prevFour);
+      setStatWithAnimation(elThree, cardStats.three, isNew ? cardStats.three : prevThree);
+
+      markCardCountsSeen(idol.id, cardStats);
       statsEl.style.display = "flex";
     } else if (statsEl) {
       statsEl.style.display = "none";
@@ -1176,20 +1399,18 @@ function openSidePanel(idol) {
     loaderEl.style.display = "flex";
 
     const defaultImage = idol.bloomedImage || idol.detailsImage;
-    const img = new Image();
-    img.onload = function() {
+    loadImageCached(defaultImage).then(() => {
       imgEl.src = defaultImage;
       imgEl.style.display = "block";
       loaderEl.style.display = "none";
-    };
-    img.onerror = function() {
+    }).catch(() => {
       loaderEl.style.display = "none";
       imgEl.style.display = "block";
       imgEl.src = "";
-    };
-    img.src = defaultImage;
+    });
 
     panel.classList.add("active");
+    applyBirthdayPanel(panel, isIdolBirthday);
   }
 }
 
@@ -1203,62 +1424,66 @@ function setupCardVariants(idol) {
   const unbloomedLoader = variantOptions[0].querySelector('.variant-loader');
   const bloomedLoader = variantOptions[1].querySelector('.variant-loader');
 
-  unbloomedPreview.classList.add('loading');
-  bloomedPreview.classList.add('loading');
-  unbloomedLoader.classList.add('active');
-  bloomedLoader.classList.add('active');
+  if (!imageCache.has(idol.unbloomedThumb)) {
+    unbloomedPreview.classList.add('loading');
+    unbloomedLoader.classList.add('active');
+  }
+  if (!imageCache.has(idol.bloomedThumb)) {
+    bloomedPreview.classList.add('loading');
+    bloomedLoader.classList.add('active');
+  }
 
-  const unbloomedImg = new Image();
-  unbloomedImg.onload = function() {
+  loadImageCached(idol.unbloomedThumb).then(() => {
     unbloomedPreview.src = idol.unbloomedThumb;
     unbloomedPreview.classList.remove('loading');
     unbloomedLoader.classList.remove('active');
-  };
-  unbloomedImg.onerror = function() {
+  }).catch(() => {
     unbloomedPreview.classList.remove('loading');
     unbloomedLoader.classList.remove('active');
-  };
-  unbloomedImg.src = idol.unbloomedThumb;
+  });
 
-  const bloomedImg = new Image();
-  bloomedImg.onload = function() {
+  loadImageCached(idol.bloomedThumb).then(() => {
     bloomedPreview.src = idol.bloomedThumb;
     bloomedPreview.classList.remove('loading');
     bloomedLoader.classList.remove('active');
-  };
-  bloomedImg.onerror = function() {
+  }).catch(() => {
     bloomedPreview.classList.remove('loading');
     bloomedLoader.classList.remove('active');
-  };
-  bloomedImg.src = idol.bloomedThumb;
-
-  variantOptions.forEach(option => {
-    option.classList.remove("active");
   });
+
+  variantOptions.forEach(option => option.classList.remove("active"));
   document.querySelector('[data-type="bloomed"]').classList.add("active");
 
   variantOptions.forEach(option => {
     option.onclick = function() {
       const type = this.dataset.type;
       const newImage = type === "unbloomed" ? idol.unbloomedImage : idol.bloomedImage;
-      
-      mainImage.style.display = "none";
-      mainLoader.style.display = "flex";
-      
-      const img = new Image();
-      img.onload = function() {
-        mainImage.src = newImage;
-        mainImage.style.display = "block";
-        mainLoader.style.display = "none";
-      };
-      img.onerror = function() {
-        mainLoader.style.display = "none";
-        mainImage.style.display = "block";
-      };
-      img.src = newImage;
 
       variantOptions.forEach(opt => opt.classList.remove("active"));
       this.classList.add("active");
+
+      if (imageCache.has(newImage)) {
+        mainImage.classList.add('slide-out-down');
+        setTimeout(() => {
+          mainImage.src = newImage;
+          mainImage.classList.remove('slide-out-down');
+          mainImage.classList.add('slide-in-down');
+          setTimeout(() => mainImage.classList.remove('slide-in-down'), 350);
+        }, 200);
+      } else {
+        mainImage.style.display = "none";
+        mainLoader.style.display = "flex";
+        loadImageCached(newImage).then(() => {
+          mainImage.src = newImage;
+          mainImage.style.display = "block";
+          mainLoader.style.display = "none";
+          mainImage.classList.add('slide-in-down');
+          setTimeout(() => mainImage.classList.remove('slide-in-down'), 350);
+        }).catch(() => {
+          mainLoader.style.display = "none";
+          mainImage.style.display = "block";
+        });
+      }
     };
   });
 }
@@ -1267,6 +1492,8 @@ function closeSidePanel() {
   const panel = document.getElementById("side-panel");
   if (panel) {
     panel.classList.remove("active");
+    const canvas = panel.querySelector('.bday-panel-confetti');
+    if (canvas) canvas._bdayStop = true;
   }
   if (typeof closeRecordsPanel === "function") closeRecordsPanel();
 }
@@ -1348,21 +1575,27 @@ function renderCardsInitial() {
   const container = document.getElementById("idol-container");
   container.innerHTML = "";
   
-  idols.filter(idol => !idol.isNew).forEach((idol, index) => {
+  const fragment = document.createDocumentFragment();
+  const cards = [];
+
+  idols.filter(idol => !idol.isNew).forEach((idol) => {
     const card = createIdolCard(idol);
-    
-    card.style.transition = 'all 0.5s ease';
     card.style.opacity = '0';
     card.style.transform = 'translateY(20px)';
-    
-    container.appendChild(card);
-    
-    card.offsetHeight;
-    
+    card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+    fragment.appendChild(card);
+    cards.push(card);
+  });
+
+  container.appendChild(fragment);
+
+  cards.forEach((card, index) => {
     setTimeout(() => {
-      card.style.opacity = '1';
-      card.style.transform = 'translateY(0)';
-    }, index * 50 + 50); 
+      requestAnimationFrame(() => {
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      });
+    }, index * 40 + 50);
   });
   
   previousIdolState = idols.map(idol => ({
@@ -1571,6 +1804,25 @@ function createIdolCard(idol) {
     card.appendChild(newLabel);
   }
 
+  if (isBirthdayToday(idol.id)) {
+    card.classList.add('birthday-card');
+
+    const bdayBanner = document.createElement("div");
+    bdayBanner.className = "birthday-banner";
+    bdayBanner.innerHTML = `<span class="bday-cake">🎂</span><span class="bday-text">Happy Birthday!</span><span class="bday-cake">🎉</span>`;
+    card.appendChild(bdayBanner);
+
+    const confettiContainer = document.createElement("div");
+    confettiContainer.className = "bday-confetti";
+    for (let i = 0; i < 12; i++) {
+      const dot = document.createElement("span");
+      dot.className = "bday-dot";
+      dot.style.setProperty('--i', i);
+      confettiContainer.appendChild(dot);
+    }
+    card.appendChild(confettiContainer);
+  }
+
   return card;
 }
 
@@ -1584,12 +1836,6 @@ function updateIdolStartDate(idolId, newStartDate) {
     console.log(`Idol with ID ${idolId} not found`);
   }
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  setTimeout(() => {
-    renderIdols();
-  }, 100);
-});
 
 setInterval(renderIdols, 60 * 60 * 1000);
 

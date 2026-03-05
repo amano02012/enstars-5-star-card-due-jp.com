@@ -2,9 +2,9 @@ const bmupickupData = [
     {
         date: '(02/25/2026) Bright me up!! Scout -Stage: Yume',
         idols: [
-            { star: 5, title: '(Card Name)', name: 'Yume', image: 'card_square2_4708_evolution' },
-            { star: 4, title: '(Card Name)', name: 'Adonis Otogari', image: 'card_square2_4709_evolution' },
-            { star: 3, title: '(Card Name)', name: 'Ibara Saegusa', image: 'card_square2_4710_evolution' }
+            { star: 5, title: '(Bullish at All Times)', name: 'Yume', image: 'card_square2_4708_evolution' },
+            { star: 4, title: '(Form and Line of Sight)', name: 'Adonis Otogari', image: 'card_square2_4709_evolution' },
+            { star: 3, title: '(Perfect Branding)', name: 'Ibara Saegusa', image: 'card_square2_4710_evolution' }
         ]
     },
     {
