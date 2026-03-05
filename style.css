@@ -324,10 +324,21 @@ body {
   overflow-x: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+body.content-hidden .navbar,
+body.content-hidden .main-layout,
+body.content-hidden .header1,
+body.content-hidden .comments-container,
+body.content-hidden .site-footer {
   opacity: 0;
 }
 
-body.loaded {
+body.loaded .navbar,
+body.loaded .main-layout,
+body.loaded .header1,
+body.loaded .comments-container,
+body.loaded .site-footer {
   opacity: 1;
   transition: opacity 0.7s ease;
 }

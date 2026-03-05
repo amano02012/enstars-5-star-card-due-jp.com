@@ -25,9 +25,10 @@ function renderIdolsThenReveal() {
   requestAnimationFrame(() => {
     const loadingOverlay = document.getElementById('loading-overlay');
     loadingOverlay.classList.add('hidden');
-    document.body.classList.add('loaded');
     setTimeout(() => {
       loadingOverlay.style.display = 'none';
+      document.body.classList.remove('content-hidden');
+      document.body.classList.add('loaded');
     }, 600);
   });
 }
