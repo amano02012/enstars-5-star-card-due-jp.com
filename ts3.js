@@ -1,5 +1,14 @@
 const theme3PickupData = [
     {
+        date: '(03/14/2026) Scout! Day to Day',
+        idols: [
+            { star: 5, title: '(A Date Kept Secret)', name: 'Ibara Saegusa', image: 'card_square2_4740_evolution' },
+            { star: 4, title: '(A Date Out of The Blue)', name: 'Esu', image: 'card_square2_4741_evolution' },
+            { star: 3, title: '(A Date Passed By)', name: 'Jun Sazanami', image: 'card_square2_4742_evolution' },
+            { star: 3, title: '(A Date Bound to Happen)', name: 'Koga Ogami', image: 'card_square2_4743_evolution' }
+        ]
+    },
+    {
         date: '(02/27/2026) Scout! Magic Box',
         idols: [
             { star: 5, title: '(Keeper of the Music Box)', name: 'Mika Kagehira', image: 'card_square2_4720_evolution' },
@@ -131,7 +140,6 @@ const theme3ScoutData = [
             `images/btn-kazehaya_tatsumi.webp`,
             `images/btn-ran_nagisa.webp`,
             `images/btn-tomoe_hiyori.webp`,
-            `images/btn-saegusa_ibara.webp`,
             `images/btn-sazanami_jun.webp`,
             `images/btn-itsuki_shu.webp`,
             `images/btn-aoi_hinata.webp`,
@@ -200,7 +208,6 @@ const theme3ScoutData = [
             `images/btn-narukami_arashi.webp`,
             `images/btn-aoba_tsumugi.webp`,
             `images/btn-harukawa_sora.webp`,
-            `images/btn-esu.webp`,
             `images/btn-kanna.webp`,
             `images/btn-yume.webp`,
             `images/btn-raika.webp`,

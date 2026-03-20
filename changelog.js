@@ -1,3 +1,94 @@
+const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const MIN_YEAR = 2025;
+const MIN_MONTH = 0;
+
+function getCurrentMonthYear() {
+  const now = new Date();
+  return { month: now.getMonth(), year: now.getFullYear() };
+}
+
+let activeMonth = getCurrentMonthYear().month;
+let activeYear = getCurrentMonthYear().year;
+
+function getMaxMonthYear() {
+  const entries = document.querySelectorAll(".changelog-entry");
+  let maxY = MIN_YEAR, maxM = MIN_MONTH;
+  entries.forEach(entry => {
+    const label = entry.querySelector(".date-label");
+    if (!label) return;
+    const d = new Date(label.textContent.trim());
+    if (!isNaN(d)) {
+      if (d.getFullYear() > maxY || (d.getFullYear() === maxY && d.getMonth() > maxM)) {
+        maxY = d.getFullYear();
+        maxM = d.getMonth();
+      }
+    }
+  });
+  return { month: maxM, year: maxY };
+}
+
+function filterByMonth(month, year) {
+  const entries = document.querySelectorAll(".changelog-entry");
+  let visible = 0;
+  entries.forEach(entry => {
+    const label = entry.querySelector(".date-label");
+    if (!label) return;
+    const d = new Date(label.textContent.trim());
+    if (!isNaN(d) && d.getMonth() === month && d.getFullYear() === year) {
+      entry.style.display = "";
+      visible++;
+    } else {
+      entry.style.display = "none";
+      if (entry.classList.contains("active")) {
+        entry.classList.remove("active");
+        const content = entry.querySelector(".changelog-content");
+        if (content) content.style.maxHeight = null;
+      }
+    }
+  });
+  const msg = document.getElementById("noEntriesMsg");
+  if (msg) msg.style.display = visible === 0 ? "block" : "none";
+}
+
+function updateMonthDisplay() {
+  const display = document.getElementById("monthDisplay");
+  const prev = document.getElementById("prevMonth");
+  const next = document.getElementById("nextMonth");
+  if (display) display.textContent = MONTHS[activeMonth] + " " + activeYear;
+
+  const isMin = activeYear === MIN_YEAR && activeMonth === MIN_MONTH;
+  if (prev) prev.disabled = isMin;
+
+  const max = getMaxMonthYear();
+  const isMax = activeYear === max.year && activeMonth === max.month;
+  if (next) next.disabled = isMax;
+
+  filterByMonth(activeMonth, activeYear);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const prev = document.getElementById("prevMonth");
+  const next = document.getElementById("nextMonth");
+
+  if (prev) {
+    prev.addEventListener("click", () => {
+      if (activeMonth === 0) { activeMonth = 11; activeYear--; }
+      else { activeMonth--; }
+      updateMonthDisplay();
+    });
+  }
+
+  if (next) {
+    next.addEventListener("click", () => {
+      if (activeMonth === 11) { activeMonth = 0; activeYear++; }
+      else { activeMonth++; }
+      updateMonthDisplay();
+    });
+  }
+
+  updateMonthDisplay();
+});
+
 document.querySelectorAll(".changelog-date").forEach(button => {
   button.addEventListener("click", () => {
     const entry = button.parentElement;

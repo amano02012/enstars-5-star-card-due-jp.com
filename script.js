@@ -458,13 +458,13 @@ const idols = [{
   name: `Ibara Saegusa`,
   avatar: `images/btn-saegusa_ibara.webp`,
   borderColor: "#74325C",
-  startDate: `2025-10-15`,
-  description: "Latest Card: Tour Event",
-  detailsDescription: "(Trick Performer) Ibara Saegusa",
-  unbloomedThumb: 'icons/card_square2_4515_normal.webp',
-  bloomedThumb: 'icons/card_square2_4515_evolution.webp',
-  unbloomedImage: 'cards2/card_rectangle2_4515_normal.webp',
-  bloomedImage: 'cards2/card_rectangle2_4515_evolution.webp'
+  startDate: `2026-03-14`,
+  description: "Latest Card: Theme Scout",
+  detailsDescription: "(A Date Kept Secret) Ibara Saegusa",
+  unbloomedThumb: 'icons/card_square2_4740_normal.webp',
+  bloomedThumb: 'icons/card_square2_4740_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4740_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4740_evolution.webp'
 },
 {
   id: 21,
@@ -913,56 +913,52 @@ const idols = [{
   name: `Juis Kojika`,
   avatar: `images/btn-kojika_juis.webp`,
   borderColor: "#70ab5e",
-  startDate: `-`,
-  description: "-",
-  detailsDescription: "-",
-  unbloomedThumb: 'icons/',
-  bloomedThumb: 'icons/',
-  unbloomedImage: 'cards2/',
-  bloomedImage: 'cards2/',
-  isNew: true
+  startDate: `2026-03-15`,
+  description: "Latest Card: Unit Event",
+  detailsDescription: "(Poppin' BUBBLE GUM) Juis Kojika",
+  unbloomedThumb: 'icons/card_square2_4736_normal.webp',
+  bloomedThumb: 'icons/card_square2_4736_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4736_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4736_evolution.webp'
 },
 {
   id: 56,
   name: `Nozomi Madoka`,
   avatar: `images/btn-madoka_nozomi.webp`,
   borderColor: "#881f4a",
-  startDate: `-`,
-  description: "-",
-  detailsDescription: "-",
-  unbloomedThumb: 'icons/',
-  bloomedThumb: 'icons/',
-  unbloomedImage: 'cards2/',
-  bloomedImage: 'cards2/',
-  isNew: true
+  startDate: `2026-03-15`,
+  description: "Latest Card: -",
+  detailsDescription: "(A Performance Worthy of Gratitude) Nozomi Madoka",
+  unbloomedThumb: 'icons/card_square2_4733_normal.webp',
+  bloomedThumb: 'icons/card_square2_4733_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4733_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4733_evolution.webp'
 },
 {
   id: 57,
   name: `Mashu Kuon`,
   avatar: `images/btn-kuon_mashu.webp`,
   borderColor: "#ec938c",
-  startDate: `-`,
-  description: "-",
-  detailsDescription: "-",
-  unbloomedThumb: 'icons/',
-  bloomedThumb: 'icons/',
-  unbloomedImage: 'cards2/',
-  bloomedImage: 'cards2/',
-  isNew: true
+  startDate: `2026-03-15`,
+  description: "Latest Card: -",
+  detailsDescription: "(Embellished With Words of Gratitude) Mashu Kuon",
+  unbloomedThumb: 'icons/card_square2_4734_normal.webp',
+  bloomedThumb: 'icons/card_square2_4734_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4734_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4734_evolution.webp'
 },
 {
   id: 58,
   name: `Chitose Tsuzura`,
   avatar: `images/btn-tsuzura_chitose.webp`,
   borderColor: "#424355",
-  startDate: `-`,
-  description: "-",
-  detailsDescription: "-",
-  unbloomedThumb: 'icons/',
-  bloomedThumb: 'icons/',
-  unbloomedImage: 'cards2/',
-  bloomedImage: 'cards2/',
-  isNew: true
+  startDate: `2026-03-15`,
+  description: "Latest Card: -",
+  detailsDescription: "(Luck That Makes You Want to Show Gratitude) Chitose Tsuzura",
+  unbloomedThumb: 'icons/card_square2_4735_normal.webp',
+  bloomedThumb: 'icons/card_square2_4735_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4735_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4735_evolution.webp'
 }];
 
 const cardCountData = {
@@ -1020,10 +1016,10 @@ const cardCountData = {
   52: { five: 3, four: 5, three: 8 }, // Kanna
   53: { five: 4, four: 5, three: 6 }, // Yume
   54: { five: 3, four: 5, three: 4 }, // Raika
-  55: { five: "-", four: "-", three: "-" }, // Juis Kojika
-  56: { five: "-", four: "-", three: "-" }, // Nozomi Madoka
-  57: { five: "-", four: "-", three: "-" }, // Mashu Kuon
-  58: { five: "-", four: "-", three: "-" } // Chitose Tsuzura
+  55: { five: 3, four: 0, three: 1 }, // Juis Kojika
+  56: { five: 1, four: 2, three: 1 }, // Nozomi Madoka
+  57: { five: 1, four: 1, three: 2 }, // Mashu Kuon
+  58: { five: 1, four: 1, three: 2 } // Chitose Tsuzura
 };
 
 const imageCache = new Map();
@@ -1093,10 +1089,10 @@ const birthdayData = {
   52: { month: 6, day: 1 }, // Kanna
   53: { month: 12, day: 2 }, // Yume
   54: { month: 5, day: 22 }, // Raika
-  55: { month: "-", day: "-" }, // Juis Kojika
-  56: { month: "-", day: "-" }, // Nozomi Madoka
-  57: { month: "-", day: "-" }, // Mashu Kuon
-  58: { month: "-", day: "-" }, // Chitose Tsuzura
+  55: { month: 8, day: 5 }, // Juis Kojika
+  56: { month: 6, day: 20 }, // Nozomi Madoka
+  57: { month: 14, day: 14 }, // Mashu Kuon
+  58: { month: 11, day: 19 }, // Chitose Tsuzura
 };
 
 function isBirthdayToday(idolId) {

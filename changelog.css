@@ -130,6 +130,66 @@ body::before {
   text-shadow: 0 1px 4px rgba(0,0,0,0.3);
 }
 
+.month-filter-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  margin-top: 0.85rem;
+  background: white;
+  border-radius: 50px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  overflow: hidden;
+}
+
+.month-nav-btn {
+  background: transparent;
+  border: none;
+  color: #1252dd;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 6px 16px;
+  line-height: 1;
+  transition: background 0.18s ease, color 0.18s ease;
+  font-family: inherit;
+}
+
+.month-nav-btn:hover {
+  background: #1252dd;
+  color: white;
+}
+
+.month-nav-btn:disabled {
+  color: #ccc;
+  cursor: default;
+}
+
+.month-nav-btn:disabled:hover {
+  background: transparent;
+  color: #ccc;
+}
+
+.month-display {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #1252dd;
+  padding: 6px 10px;
+  min-width: 140px;
+  text-align: center;
+  white-space: nowrap;
+  border-left: 1px solid rgba(18,82,221,0.12);
+  border-right: 1px solid rgba(18,82,221,0.12);
+}
+
+.no-entries-msg {
+  text-align: center;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.95rem;
+  padding: 2.5rem 0;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  display: none;
+}
+
 .changelog-entry {
   margin-bottom: 1.1rem;
 }
