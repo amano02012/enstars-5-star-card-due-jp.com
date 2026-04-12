@@ -237,13 +237,13 @@ const idols = [{
   name: `Tori Himemiya`,
   avatar: `images/btn-himemiya_tori.webp`,
   borderColor: "#F5B2B2",
-  startDate: `2025-04-15`,
+  startDate: `2026-03-30`,
   description: "Latest Card: Tour Event",
-  detailsDescription: "(Charm of the Four Kings of the Sky) Tori Himemiya",
-  unbloomedThumb: 'icons/card_square2_4323_normal.webp',
-  bloomedThumb: 'icons/card_square2_4323_evolution.webp',
-  unbloomedImage: 'cards2/card_rectangle2_4323_normal.webp',
-  bloomedImage: 'cards2/card_rectangle2_4323_evolution.webp'
+  detailsDescription: "(Decorated Memories) Tori Himemiya",
+  unbloomedThumb: 'icons/card_square2_4752_normal.webp',
+  bloomedThumb: 'icons/card_square2_4752_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4752_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4752_evolution.webp'
 },
 {
   id: 4,
@@ -575,13 +575,13 @@ const idols = [{
   name: `Niki Shiina`,
   avatar: `images/btn-shiina_niki.webp`,
   borderColor: "#507EA5",
-  startDate: `2025-06-15`,
-  description: "Latest Card: Unit Event",
-  detailsDescription: "(Matching Pair-ring) Niki Shiina",
-  unbloomedThumb: 'icons/card_square2_4398_normal.webp',
-  bloomedThumb: 'icons/card_square2_4398_evolution.webp',
-  unbloomedImage: 'cards2/card_rectangle2_4398_normal.webp',
-  bloomedImage: 'cards2/card_rectangle2_4398_evolution.webp'
+  startDate: `2026-03-25`,
+  description: "Latest Card: Bright me up!! Scout Stage",
+  detailsDescription: "(Ample Time to Prepare) Niki Shiina",
+  unbloomedThumb: 'icons/card_square2_4744_normal.webp',
+  bloomedThumb: 'icons/card_square2_4744_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4744_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4744_evolution.webp'
 },
 {
   id: 30,
@@ -744,13 +744,13 @@ const idols = [{
   name: `Tsukasa Suou`,
   avatar: `images/btn-suou_tsukasa.webp`,
   borderColor: "#942343",
-  startDate: `2025-03-14`,
-  description: "Latest Card: Shuffle Scout",
-  detailsDescription: "(The Fallen Angel's Warning) Tsukasa Suou",
-  unbloomedThumb: 'icons/card_square2_4304_normal.webp',
-  bloomedThumb: 'icons/card_square2_4304_evolution.webp',
-  unbloomedImage: 'cards2/card_rectangle2_4304_normal.webp',
-  bloomedImage: 'cards2/card_rectangle2_4304_evolution.webp'
+  startDate: `2026-03-31`,
+  description: "Latest Card: Unit Event",
+  detailsDescription: "(Fingertips Reaching My Princess) Tsukasa Suou",
+  unbloomedThumb: 'icons/card_square2_4747_normal.webp',
+  bloomedThumb: 'icons/card_square2_4747_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4747_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4747_evolution.webp'
 },
 {
   id: 43,
@@ -964,13 +964,13 @@ const idols = [{
 const cardCountData = {
   1: { five: 13, four: 14, three: 18 }, // Eichi Tenshouin
   2: { five: 11, four: 15, three: 19 }, // Wataru Hibiki
-  3: { five: 11, four: 16, three: 17 }, // Tori Himemiya
+  3: { five: 12, four: 16, three: 17 }, // Tori Himemiya
   4: { five: 12, four: 16, three: 18 }, // Yuzuru Fushimi
   5: { five: 14, four: 14, three: 16 }, // Hokuto Hidaka
   6: { five: 11, four: 16, three: 21 }, // Subaru Akehoshi
-  7: { five: 11, four: 18, three: 19 }, // Makoto Yuuki
+  7: { five: 11, four: 18, three: 20 }, // Makoto Yuuki
   8: { five: 11, four: 17, three: 18 }, // Mao Isara
-  9: { five: 12, four: 16, three: 16 }, // Tetora Nagumo
+  9: { five: 12, four: 17, three: 16 }, // Tetora Nagumo
   10: { five: 11, four: 15, three: 18 }, // Midori Takamine
   11: { five: 11, four: 17, three: 16 }, // Shinobu Sengoku
   12: { five: 13, four: 15, three: 17 }, // Chiaki Morisawa
@@ -988,9 +988,9 @@ const cardCountData = {
   24: { five: 12, four: 17, three: 16 }, // Hinata Aoi
   25: { five: 13, four: 16, three: 16 }, // Yuta Aoi
   26: { five: 13, four: 14, three: 16 }, // Rinne Amagi
-  27: { five: 10, four: 16, three: 16 }, // HiMERU
+  27: { five: 10, four: 16, three: 17 }, // HiMERU
   28: { five: 10, four: 19, three: 19 }, // Kohaku Oukawa
-  29: { five: 10, four: 16, three: 17 }, // Niki Shiina
+  29: { five: 11, four: 16, three: 17 }, // Niki Shiina
   30: { five: 13, four: 17, three: 18 }, // Rei Sakuma
   31: { five: 12, four: 14, three: 21 }, // Kaoru Hakaze
   32: { five: 11, four: 18, three: 18 }, // Koga Ogami
@@ -1003,13 +1003,13 @@ const cardCountData = {
   39: { five: 11, four: 17, three: 18 }, // Kuro Kiryu
   40: { five: 10, four: 17, three: 16 }, // Souma Kanzaki
   41: { five: 2, four: 5, three: 5 }, // Ibuki Taki
-  42: { five: 12, four: 15, three: 17 }, // Tsukasa Suou
-  43: { five: 12, four: 16, three: 18 }, // Leo Tsukinaga
-  44: { five: 11, four: 17, three: 17 }, // Izumi Sena
-  45: { five: 12, four: 17, three: 18 }, // Ritsu Sakuma
-  46: { five: 11, four: 18, three: 19 }, // Arashi Narukami
+  42: { five: 13, four: 15, three: 18 }, // Tsukasa Suou
+  43: { five: 12, four: 17, three: 18 }, // Leo Tsukinaga
+  44: { five: 11, four: 17, three: 18 }, // Izumi Sena
+  45: { five: 12, four: 18, three: 18 }, // Ritsu Sakuma
+  46: { five: 11, four: 18, three: 20 }, // Arashi Narukami
   47: { five: 13, four: 15, three: 17 }, // Natsume Sakasaki
-  48: { five: 11, four: 15, three: 20 }, // Tsumugi Aoba
+  48: { five: 11, four: 16, three: 20 }, // Tsumugi Aoba
   49: { five: 11, four: 16, three: 16 }, // Sora Harukawa
   50: { five: 15, four: 16, three: 14 }, // Madara Mikejima
   51: { five: 5, four: 4, three: 5 }, // Esu

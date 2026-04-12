@@ -1,5 +1,13 @@
 const bmupickupData = [
     {
+        date: '(02/25/2026) Bright me up!! Scout -Stage: Niki',
+        idols: [
+            { star: 5, title: '(Ample Time to Prepare)', name: 'Niki Shiina', image: 'card_square2_4744_evolution' },
+            { star: 4, title: '(Forever-Changing Routes)', name: 'Tsumugi Aoba', image: 'card_square2_4745_evolution' },
+            { star: 3, title: '(Stroke of Genius)', name: 'Tsukasa Suou', image: 'card_square2_4746_evolution' }
+        ]
+    },
+    {
         date: '(02/25/2026) Bright me up!! Scout -Stage: Yume',
         idols: [
             { star: 5, title: '(Bullish at All Times)', name: 'Yume', image: 'card_square2_4708_evolution' },
@@ -130,7 +138,6 @@ const bmuscoutData = [
             `images/btn-aoi_hinata.webp`,
             `images/btn-amagi_rinne.webp`,
             `images/btn-himeru.webp`,
-            `images/btn-shiina_niki.webp`,
             `images/btn-hakaze_kaoru.webp`,
             `images/btn-mashiro_tomoya.webp`,
             `images/btn-nito_nazuna.webp`,
@@ -191,7 +198,6 @@ const bmuscoutData = [
             `images/btn-tsukinaga_leo.webp`,
             `images/btn-sena_izumi.webp`,
             `images/btn-sakasaki_natsume.webp`,
-            `images/btn-aoba_tsumugi.webp`,
             `images/btn-harukawa_sora.webp`,
             `images/btn-mikejima_madara.webp`,
             `images/btn-esu.webp`,

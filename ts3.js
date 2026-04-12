@@ -1,5 +1,14 @@
 const theme3PickupData = [
     {
+        date: '(03/30/2026) Scout! DECORATE',
+        idols: [
+            { star: 5, title: '(Decorated Memories)', name: 'Tori Himemiya', image: 'card_square2_4752_evolution' },
+            { star: 4, title: '(Decorated Friendship)', name: 'Tetora Nagumo', image: 'card_square2_4753_evolution' },
+            { star: 3, title: '(Decorated Performance)', name: 'Makoto Yuuki', image: 'card_square2_4754_evolution' },
+            { star: 3, title: '(Decorated Interpretation)', name: 'HiMERU', image: 'card_square2_4755_evolution' }
+        ]
+    },
+    {
         date: '(03/14/2026) Scout! Day to Day',
         idols: [
             { star: 5, title: '(A Date Kept Secret)', name: 'Ibara Saegusa', image: 'card_square2_4740_evolution' },
@@ -125,7 +134,6 @@ const theme3ScoutData = [
         idols: [
             `images/btn-tenshouin_eichi.webp`,
             `images/btn-hibiki_wataru.webp`,
-            `images/btn-himemiya_tori.webp`,
             `images/btn-fushimi_yuzuru.webp`,
             `images/btn-hidaka_hokuto.webp`,
             `images/btn-akehoshi_subaru.webp`,
@@ -176,7 +184,6 @@ const theme3ScoutData = [
             `images/btn-hidaka_hokuto.webp`,
             `images/btn-akehoshi_subaru.webp`,
             `images/btn-yuuki_makoto.webp`,
-            `images/btn-nagumo_tetora.webp`,
             `images/btn-takamine_midori.webp`,
             `images/btn-sengoku_shinobu.webp`,
             `images/btn-shinkai_kanata.webp`,
