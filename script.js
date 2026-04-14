@@ -354,13 +354,13 @@ const idols = [{
   name: `Chiaki Morisawa`,
   avatar: `images/btn-morisawa_chiaki.webp`,
   borderColor: "#E60033",
-  startDate: `2025-11-30`,
-  description: "Latest Card: Unit Event",
-  detailsDescription: "(Light Up the Light of Justice) Chiaki Morisawa",
-  unbloomedThumb: 'icons/card_square2_4618_normal.webp',
-  bloomedThumb: 'icons/card_square2_4618_evolution.webp',
-  unbloomedImage: 'cards2/card_rectangle2_4618_normal.webp',
-  bloomedImage: 'cards2/card_rectangle2_4618_evolution.webp'
+  startDate: `2026-04-14`,
+  description: "Latest Card: Theme Scout",
+  detailsDescription: "[] Chiaki Morisawa",
+  unbloomedThumb: 'icons/card_square2_xxxx_normal.webp',
+  bloomedThumb: 'icons/card_square2_xxxx_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_xxxx_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_xxxx_evolution.webp'
 },
 {
   id: 13,
@@ -971,9 +971,9 @@ const cardCountData = {
   7: { five: 11, four: 18, three: 20 }, // Makoto Yuuki
   8: { five: 11, four: 17, three: 18 }, // Mao Isara
   9: { five: 12, four: 17, three: 16 }, // Tetora Nagumo
-  10: { five: 11, four: 15, three: 18 }, // Midori Takamine
+  10: { five: 11, four: 15, three: 19 }, // Midori Takamine
   11: { five: 11, four: 17, three: 16 }, // Shinobu Sengoku
-  12: { five: 13, four: 15, three: 17 }, // Chiaki Morisawa
+  12: { five: 14, four: 15, three: 17 }, // Chiaki Morisawa
   13: { five: 11, four: 17, three: 17 }, // Kanata Shinkai
   14: { five: 12, four: 15, three: 17 }, // Hiiro Amagi
   15: { five: 10, four: 15, three: 18 }, // Aira Shiratori
@@ -1010,8 +1010,8 @@ const cardCountData = {
   46: { five: 11, four: 18, three: 20 }, // Arashi Narukami
   47: { five: 13, four: 15, three: 17 }, // Natsume Sakasaki
   48: { five: 11, four: 16, three: 20 }, // Tsumugi Aoba
-  49: { five: 11, four: 16, three: 16 }, // Sora Harukawa
-  50: { five: 15, four: 16, three: 14 }, // Madara Mikejima
+  49: { five: 11, four: 17, three: 16 }, // Sora Harukawa
+  50: { five: 15, four: 16, three: 15 }, // Madara Mikejima
   51: { five: 5, four: 4, three: 5 }, // Esu
   52: { five: 3, four: 5, three: 8 }, // Kanna
   53: { five: 4, four: 5, three: 6 }, // Yume

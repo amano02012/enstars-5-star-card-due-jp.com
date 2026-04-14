@@ -1,5 +1,14 @@
 const theme3PickupData = [
     {
+        date: '(04/14/2026) Scout! TEN-CODE',
+        idols: [
+            { star: 5, title: '(Card Name)', name: 'Chiaki Morisawa', image: null },
+            { star: 4, title: '(Card Name)', name: 'Sora Harukawa', image: null },
+            { star: 3, title: '(Card Name)', name: 'Madara Mikejima', image: null },
+            { star: 3, title: '(Card Name)', name: 'Midori Takamine', image: null }
+        ]
+    },
+    {
         date: '(03/30/2026) Scout! DECORATE',
         idols: [
             { star: 5, title: '(Decorated Memories)', name: 'Tori Himemiya', image: 'card_square2_4752_evolution' },
@@ -141,7 +150,6 @@ const theme3ScoutData = [
             `images/btn-isara_mao.webp`,
             `images/btn-nagumo_tetora.webp`,
             `images/btn-sengoku_shinobu.webp`,
-            `images/btn-morisawa_chiaki.webp`,
             `images/btn-shinkai_kanata.webp`,
             `images/btn-shiratori_aira.webp`,
             `images/btn-ayase_mayoi.webp`,
@@ -214,7 +222,6 @@ const theme3ScoutData = [
             `images/btn-sakuma_ritsu.webp`,
             `images/btn-narukami_arashi.webp`,
             `images/btn-aoba_tsumugi.webp`,
-            `images/btn-harukawa_sora.webp`,
             `images/btn-kanna.webp`,
             `images/btn-yume.webp`,
             `images/btn-raika.webp`,

@@ -1,6 +1,6 @@
 const bmupickupData = [
     {
-        date: '(02/25/2026) Bright me up!! Scout -Stage: Niki',
+        date: '(03/25/2026) Bright me up!! Scout -Stage: Niki',
         idols: [
             { star: 5, title: '(Ample Time to Prepare)', name: 'Niki Shiina', image: 'card_square2_4744_evolution' },
             { star: 4, title: '(Forever-Changing Routes)', name: 'Tsumugi Aoba', image: 'card_square2_4745_evolution' },
