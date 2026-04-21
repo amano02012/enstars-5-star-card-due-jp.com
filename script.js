@@ -276,13 +276,13 @@ const idols = [{
   name: `Subaru Akehoshi`,
   avatar: `images/btn-akehoshi_subaru.webp`,
   borderColor: "#F3981D",
-  startDate: `2025-05-15`,
-  description: "Latest Card: Tour Event",
-  detailsDescription: "(Sparkling Sailing Ceremony) Subaru Akehoshi",
-  unbloomedThumb: 'icons/card_square2_4371_normal.webp',
-  bloomedThumb: 'icons/card_square2_4371_evolution.webp',
-  unbloomedImage: 'cards2/card_rectangle2_4371_normal.webp',
-  bloomedImage: 'cards2/card_rectangle2_4371_evolution.webp'
+  startDate: `2026-04-15`,
+  description: "Latest Card: Large Scale Event",
+  detailsDescription: "() Subaru Akehoshi",
+  unbloomedThumb: 'icons/card_square2_xxxx_normal.webp',
+  bloomedThumb: 'icons/card_square2_xxxx_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_xxxx_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_xxxx_evolution.webp'
 },
 {
   id: 7,
@@ -356,7 +356,7 @@ const idols = [{
   borderColor: "#E60033",
   startDate: `2026-04-14`,
   description: "Latest Card: Theme Scout",
-  detailsDescription: "[] Chiaki Morisawa",
+  detailsDescription: "() Chiaki Morisawa",
   unbloomedThumb: 'icons/card_square2_xxxx_normal.webp',
   bloomedThumb: 'icons/card_square2_xxxx_evolution.webp',
   unbloomedImage: 'cards2/card_rectangle2_xxxx_normal.webp',
@@ -380,13 +380,13 @@ const idols = [{
   name: `Hiiro Amagi`,
   avatar: `images/btn-amagi_hiiro.webp`,
   borderColor: "#BA2636",
-  startDate: `2025-12-30`,
-  description: "Latest Card: Theme Scout",
-  detailsDescription: "(The Heavens Will Reward Feelings) Hiiro Amagi",
-  unbloomedThumb: 'icons/card_square2_4651_normal.webp',
-  bloomedThumb: 'icons/card_square2_4651_evolution.webp',
-  unbloomedImage: 'cards2/card_rectangle2_4651_normal.webp',
-  bloomedImage: 'cards2/card_rectangle2_4651_evolution.webp'
+  startDate: `2026-04-15`,
+  description: "Latest Card: Large Scale Event",
+  detailsDescription: "() Hiiro Amagi",
+  unbloomedThumb: 'icons/card_square2_xxxx_normal.webp',
+  bloomedThumb: 'icons/card_square2_xxxx_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_xxxx_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_xxxx_evolution.webp'
 },
 {
   id: 15,
@@ -962,12 +962,12 @@ const idols = [{
 }];
 
 const cardCountData = {
-  1: { five: 13, four: 14, three: 18 }, // Eichi Tenshouin
+  1: { five: 13, four: 15, three: 18 }, // Eichi Tenshouin
   2: { five: 11, four: 15, three: 19 }, // Wataru Hibiki
   3: { five: 12, four: 16, three: 17 }, // Tori Himemiya
   4: { five: 12, four: 16, three: 18 }, // Yuzuru Fushimi
   5: { five: 14, four: 14, three: 16 }, // Hokuto Hidaka
-  6: { five: 11, four: 16, three: 21 }, // Subaru Akehoshi
+  6: { five: 12, four: 16, three: 21 }, // Subaru Akehoshi
   7: { five: 11, four: 18, three: 20 }, // Makoto Yuuki
   8: { five: 11, four: 17, three: 18 }, // Mao Isara
   9: { five: 12, four: 17, three: 16 }, // Tetora Nagumo
@@ -975,7 +975,7 @@ const cardCountData = {
   11: { five: 11, four: 17, three: 16 }, // Shinobu Sengoku
   12: { five: 14, four: 15, three: 17 }, // Chiaki Morisawa
   13: { five: 11, four: 17, three: 17 }, // Kanata Shinkai
-  14: { five: 12, four: 15, three: 17 }, // Hiiro Amagi
+  14: { five: 13, four: 15, three: 17 }, // Hiiro Amagi
   15: { five: 10, four: 15, three: 18 }, // Aira Shiratori
   16: { five: 11, four: 16, three: 17 }, // Mayoi Ayase
   17: { five: 10, four: 16, three: 16 }, // Tatsumi Kazehaya
@@ -991,7 +991,7 @@ const cardCountData = {
   27: { five: 10, four: 16, three: 17 }, // HiMERU
   28: { five: 10, four: 19, three: 19 }, // Kohaku Oukawa
   29: { five: 11, four: 16, three: 17 }, // Niki Shiina
-  30: { five: 13, four: 17, three: 18 }, // Rei Sakuma
+  30: { five: 13, four: 18, three: 18 }, // Rei Sakuma
   31: { five: 12, four: 14, three: 21 }, // Kaoru Hakaze
   32: { five: 11, four: 18, three: 18 }, // Koga Ogami
   33: { five: 11, four: 16, three: 19 }, // Adonis Otogari
@@ -1012,11 +1012,11 @@ const cardCountData = {
   48: { five: 11, four: 16, three: 20 }, // Tsumugi Aoba
   49: { five: 11, four: 17, three: 16 }, // Sora Harukawa
   50: { five: 15, four: 16, three: 15 }, // Madara Mikejima
-  51: { five: 5, four: 4, three: 5 }, // Esu
+  51: { five: 5, four: 4, three: 6 }, // Esu
   52: { five: 3, four: 5, three: 8 }, // Kanna
   53: { five: 4, four: 5, three: 6 }, // Yume
   54: { five: 3, four: 5, three: 4 }, // Raika
-  55: { five: 3, four: 0, three: 1 }, // Juis Kojika
+  55: { five: 3, four: 0, three: 2 }, // Juis Kojika
   56: { five: 1, four: 2, three: 1 }, // Nozomi Madoka
   57: { five: 1, four: 1, three: 2 }, // Mashu Kuon
   58: { five: 1, four: 1, three: 2 } // Chitose Tsuzura
@@ -1103,13 +1103,59 @@ function isBirthdayToday(idolId) {
 }
 
 const SEEN_CARD_COUNTS_KEY = 'seenCardCounts';
+const INFO_SNAPSHOT_KEY = 'idolInfoSnapshot';
+const newCardBadges = {};
+
+function getInfoSnapshot() {
+  try { return JSON.parse(localStorage.getItem(INFO_SNAPSHOT_KEY)) || {}; } catch { return {}; }
+}
+
+function saveInfoSnapshot() {
+  const snap = {};
+  idols.forEach(idol => {
+    const s = cardCountData[idol.id];
+    snap[idol.id] = {
+      days: idol.days,
+      description: idol.description,
+      unbloomedThumb: idol.unbloomedThumb,
+      bloomedThumb: idol.bloomedThumb,
+      unbloomedImage: idol.unbloomedImage,
+      bloomedImage: idol.bloomedImage,
+      five:  s ? s.five  : null,
+      four:  s ? s.four  : null,
+      three: s ? s.three : null
+    };
+  });
+  localStorage.setItem(INFO_SNAPSHOT_KEY, JSON.stringify(snap));
+}
+
+function detectInfoChanges() {
+  Object.keys(newCardBadges).forEach(k => delete newCardBadges[k]);
+  const snap = getInfoSnapshot();
+  if (!Object.keys(snap).length) return;
+  idols.forEach(idol => {
+    const prev = snap[idol.id];
+    if (!prev) return;
+    const s = cardCountData[idol.id];
+    const fiveUp  = s && prev.five  !== null && s.five  > prev.five;
+    const fourUp  = s && prev.four  !== null && s.four  > prev.four;
+    const threeUp = s && prev.three !== null && s.three > prev.three;
+    if (fiveUp || fourUp || threeUp) {
+      newCardBadges[idol.id] = { five: fiveUp, four: fourUp, three: threeUp };
+    }
+  });
+}
+
+function dismissBadge(idolId) {
+  delete newCardBadges[idolId];
+  const container = document.getElementById('idol-container');
+  if (!container) return;
+  const card = Array.from(container.children).find(c => parseInt(c.dataset.idolId) === idolId);
+  if (card) card.querySelectorAll('.new-star-badge').forEach(b => b.remove());
+}
 
 function getSeenCardCounts() {
-  try {
-    return JSON.parse(localStorage.getItem(SEEN_CARD_COUNTS_KEY)) || {};
-  } catch {
-    return {};
-  }
+  try { return JSON.parse(localStorage.getItem(SEEN_CARD_COUNTS_KEY)) || {}; } catch { return {}; }
 }
 
 function markCardCountsSeen(idolId, stats) {
@@ -1135,46 +1181,7 @@ function setStatWithAnimation(el, newValue, oldValue) {
 let currentView = 'grid';
 let currentSort = 'highest';
 
-function initializeControls() {
-  const viewBtns = document.querySelectorAll('.view-btn');
-  const sortSelect = document.getElementById('sortSelect');
-  const container = document.getElementById('idol-container');
-  
-  viewBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      viewBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      currentView = btn.dataset.view;
-      
-      container.style.transition = 'none';
-      
-      if (currentView === 'list') {
-        container.classList.add('list-view');
-      } else {
-        container.classList.remove('list-view');
-      }
-      
-      const cards = container.querySelectorAll('.idol-card');
-      cards.forEach(card => {
-        card.style.transition = 'none';
-      });
-      
-      setTimeout(() => {
-        container.style.transition = '';
-        cards.forEach(card => {
-          card.style.transition = '';
-        });
-      }, 50);
-    });
-  });
-  
-  if (sortSelect) {
-    sortSelect.addEventListener('change', (e) => {
-      currentSort = e.target.value;
-      renderIdols();
-    });
-  }
-}
+function initializeControls() {}
 
 document.addEventListener('DOMContentLoaded', () => {
   initializeControls();
@@ -1198,7 +1205,7 @@ function applyBirthdayPanel(panel, isBirthday) {
 
   const badge = document.createElement('div');
   badge.className = 'bday-panel-header';
-  badge.innerHTML = `<span class="bday-ph-left">🎀</span><span class="bday-ph-text">🎂 Happy Birthday! 🎂</span><span class="bday-ph-right">🎀</span>`;
+  badge.innerHTML = `<span class="bday-ph-text">🎂 Happy Birthday! 🎂</span>`;
   header.insertAdjacentElement('afterend', badge);
 
   const canvas = document.createElement('canvas');
@@ -1263,7 +1270,6 @@ function openSidePanel(idol) {
   const descEl = document.getElementById("side-panel-description");
   const dateEl = document.getElementById("side-panel-date");
   const loaderEl = document.getElementById("side-image-loader");
-  const statsEl = document.getElementById("side-card-stats");
   const variantsEl = document.getElementById("card-variants");
 
   const isAlreadyOpen = panel.classList.contains("active");
@@ -1274,9 +1280,6 @@ function openSidePanel(idol) {
     imgEl.classList.add("fade-out");
     descEl.parentElement.classList.add("fade-out-right");
     dateEl.parentElement.classList.add("fade-out-right");
-    if (statsEl.style.display === "flex") {
-      statsEl.classList.add("fade-out-right");
-    }
     if (variantsEl.style.display === "flex") {
       variantsEl.classList.add("fade-out");
     }
@@ -1285,29 +1288,6 @@ function openSidePanel(idol) {
       nameEl.textContent = idol.name || "";
       descEl.textContent = idol.detailsDescription || "-";
       dateEl.textContent = formatDate(idol.startDate);
-
-      const cardStats = cardCountData[idol.id];
-      if (cardStats && statsEl) {
-        const seen = getSeenCardCounts();
-        const prev = seen[idol.id];
-        const isNew = !prev;
-        const prevFive  = isNew ? cardStats.five  : prev.five;
-        const prevFour  = isNew ? cardStats.four  : prev.four;
-        const prevThree = isNew ? cardStats.three : prev.three;
-
-        const elFive  = document.getElementById("side-stat-five");
-        const elFour  = document.getElementById("side-stat-four");
-        const elThree = document.getElementById("side-stat-three");
-
-        setStatWithAnimation(elFive,  cardStats.five,  isNew ? cardStats.five  : prevFive);
-        setStatWithAnimation(elFour,  cardStats.four,  isNew ? cardStats.four  : prevFour);
-        setStatWithAnimation(elThree, cardStats.three, isNew ? cardStats.three : prevThree);
-
-        markCardCountsSeen(idol.id, cardStats);
-        statsEl.style.display = "flex";
-      } else if (statsEl) {
-        statsEl.style.display = "none";
-      }
 
       if (idol.unbloomedThumb && idol.bloomedThumb && idol.unbloomedImage && idol.bloomedImage) {
         setupCardVariants(idol);
@@ -1338,10 +1318,6 @@ function openSidePanel(idol) {
       descEl.parentElement.classList.add("fade-in-left");
       dateEl.parentElement.classList.remove("fade-out-right");
       dateEl.parentElement.classList.add("fade-in-left");
-      if (statsEl.style.display === "flex") {
-        statsEl.classList.remove("fade-out-right");
-        statsEl.classList.add("fade-in-left");
-      }
       if (variantsEl.style.display === "flex") {
         variantsEl.classList.remove("fade-out");
         variantsEl.classList.add("fade-in");
@@ -1352,7 +1328,6 @@ function openSidePanel(idol) {
         imgEl.classList.remove("fade-in");
         descEl.parentElement.classList.remove("fade-in-left");
         dateEl.parentElement.classList.remove("fade-in-left");
-        statsEl.classList.remove("fade-in-left");
         variantsEl.classList.remove("fade-in");
       }, 300);
       applyBirthdayPanel(panel, isIdolBirthday);
@@ -1361,29 +1336,6 @@ function openSidePanel(idol) {
     nameEl.textContent = idol.name || "";
     descEl.textContent = idol.detailsDescription || "-";
     dateEl.textContent = formatDate(idol.startDate);
-
-    const cardStats = cardCountData[idol.id];
-    if (cardStats && statsEl) {
-      const seen = getSeenCardCounts();
-      const prev = seen[idol.id];
-      const isNew = !prev;
-      const prevFive  = isNew ? cardStats.five  : prev.five;
-      const prevFour  = isNew ? cardStats.four  : prev.four;
-      const prevThree = isNew ? cardStats.three : prev.three;
-
-      const elFive  = document.getElementById("side-stat-five");
-      const elFour  = document.getElementById("side-stat-four");
-      const elThree = document.getElementById("side-stat-three");
-
-      setStatWithAnimation(elFive,  cardStats.five,  isNew ? cardStats.five  : prevFive);
-      setStatWithAnimation(elFour,  cardStats.four,  isNew ? cardStats.four  : prevFour);
-      setStatWithAnimation(elThree, cardStats.three, isNew ? cardStats.three : prevThree);
-
-      markCardCountsSeen(idol.id, cardStats);
-      statsEl.style.display = "flex";
-    } else if (statsEl) {
-      statsEl.style.display = "none";
-    }
 
     if (idol.unbloomedThumb && idol.bloomedThumb && idol.unbloomedImage && idol.bloomedImage) {
       setupCardVariants(idol);
@@ -1531,6 +1483,9 @@ function renderIdols() {
   idols.forEach((idol, index) => {
     idol.rank = index + 1;
   });
+
+  if (isFirstLoad) detectInfoChanges();
+  saveInfoSnapshot();
 
   const storedState = localStorage.getItem('idolLeaderboardState');
   
@@ -1787,12 +1742,39 @@ function createIdolCard(idol) {
   const detailsBtn = document.createElement("button");
   detailsBtn.className = "details-btn";
   detailsBtn.textContent = "Details";
-  detailsBtn.addEventListener("click", () => openSidePanel(idol));
+  detailsBtn.addEventListener("click", () => {
+    openSidePanel(idol);
+    dismissBadge(idol.id);
+  });
 
   card.appendChild(ribbon);
   card.appendChild(img);
   card.appendChild(contentWrapper);
   card.appendChild(detailsBtn);
+
+  const cardStats = cardCountData[idol.id];
+  if (cardStats) {
+    const starUpdate = newCardBadges[idol.id] || {};
+    const pillRow = document.createElement("div");
+    pillRow.className = "card-count-pills";
+    [
+      { label: "5⭐", val: cardStats.five,  key: "five",  cls: "pill-five"  },
+      { label: "4⭐", val: cardStats.four,  key: "four",  cls: "pill-four"  },
+      { label: "3⭐", val: cardStats.three, key: "three", cls: "pill-three" }
+    ].forEach(({ label, val, key, cls }) => {
+      const pill = document.createElement("span");
+      pill.className = `card-count-pill ${cls}`;
+      const lblEl = document.createElement("span");
+      lblEl.textContent = `${label} `;
+      const numEl = document.createElement("span");
+      numEl.className = "pill-num" + (starUpdate[key] ? " pill-updated" : "");
+      numEl.textContent = val;
+      pill.appendChild(lblEl);
+      pill.appendChild(numEl);
+      pillRow.appendChild(pill);
+    });
+    card.appendChild(pillRow);
+  }
 
   if (idol.isNew) {
     const newLabel = document.createElement("div");
@@ -1803,12 +1785,10 @@ function createIdolCard(idol) {
 
   if (isBirthdayToday(idol.id)) {
     card.classList.add('birthday-card');
-
     const bdayBanner = document.createElement("div");
     bdayBanner.className = "birthday-banner";
     bdayBanner.innerHTML = `<span class="bday-cake">🎂</span><span class="bday-text">Happy Birthday!</span><span class="bday-cake">🎉</span>`;
     card.appendChild(bdayBanner);
-
     const confettiContainer = document.createElement("div");
     confettiContainer.className = "bday-confetti";
     for (let i = 0; i < 12; i++) {
@@ -1818,6 +1798,29 @@ function createIdolCard(idol) {
       confettiContainer.appendChild(dot);
     }
     card.appendChild(confettiContainer);
+  }
+
+  const starUpd = newCardBadges[idol.id];
+  if (starUpd) {
+    let txt = "", cls = "";
+    if (starUpd.five)       { txt = "NEW 5⭐ CARD"; cls = "badge-five";  }
+    else if (starUpd.four)  { txt = "NEW 4⭐ CARD"; cls = "badge-four";  }
+    else if (starUpd.three) { txt = "NEW 3⭐ CARD"; cls = "badge-three"; }
+    if (txt) {
+      const badge = document.createElement("div");
+      badge.className = `new-star-badge ${cls}`;
+      badge.textContent = txt;
+      card.appendChild(badge);
+    }
+  }
+
+  if (idol.unbloomedImage && idol.bloomedImage) {
+    card.addEventListener("mouseenter", () => {
+      loadImageCached(idol.unbloomedImage);
+      loadImageCached(idol.bloomedImage);
+      if (idol.unbloomedThumb) loadImageCached(idol.unbloomedThumb);
+      if (idol.bloomedThumb)   loadImageCached(idol.bloomedThumb);
+    }, { once: true });
   }
 
   return card;
@@ -1834,9 +1837,166 @@ function updateIdolStartDate(idolId, newStartDate) {
   }
 }
 
-setInterval(renderIdols, 60 * 60 * 1000);
+setInterval(renderIdols, 6 * 60 * 60 * 1000);
 
-document.addEventListener("DOMContentLoaded", ()=>{const btn=document.querySelector(".hamburger"),body=document.body; if(!btn) return; btn.addEventListener("click", ()=>{const open=body.classList.toggle("nav-open"); btn.setAttribute("aria-expanded", open?"true":"false");}); window.addEventListener("resize", ()=>{ if(window.innerWidth>700 && body.classList.contains("nav-open")){ body.classList.remove("nav-open"); btn.setAttribute("aria-expanded","false"); }}); document.addEventListener("click",(e)=>{ if(!body.classList.contains("nav-open")) return; const inside = e.target.closest(".navbar"); if(!inside){ body.classList.remove("nav-open"); btn.setAttribute("aria-expanded","false"); }});});
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburgerBtn = document.querySelector(".hamburger");
+  if (hamburgerBtn) {
+    hamburgerBtn.addEventListener("click", () => {
+      const open = document.body.classList.toggle("nav-open");
+      hamburgerBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 700 && document.body.classList.contains("nav-open")) {
+        document.body.classList.remove("nav-open");
+        hamburgerBtn.setAttribute("aria-expanded", "false");
+      }
+    });
+    document.addEventListener("click", (e) => {
+      if (!document.body.classList.contains("nav-open")) return;
+      if (!e.target.closest(".navbar")) {
+        document.body.classList.remove("nav-open");
+        hamburgerBtn.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("idol-container");
+  const viewBtns  = document.querySelectorAll(".view-btn");
+  const sortSelect = document.getElementById("sortSelect");
+
+  viewBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      viewBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentView = btn.dataset.view;
+      container.style.transition = "none";
+      container.classList.toggle("list-view", currentView === "list");
+      container.querySelectorAll(".idol-card").forEach(c => { c.style.transition = "none"; });
+      setTimeout(() => {
+        container.style.transition = "";
+        container.querySelectorAll(".idol-card").forEach(c => { c.style.transition = ""; });
+      }, 50);
+      try { localStorage.setItem("prefView", currentView); } catch(e) {}
+    });
+  });
+
+  if (sortSelect) {
+    sortSelect.addEventListener("change", (e) => {
+      currentSort = e.target.value;
+      renderIdols();
+      try { localStorage.setItem("prefSort", currentSort); } catch(e) {}
+    });
+  }
+
+  try {
+    const sv = localStorage.getItem("prefView");
+    const ss = localStorage.getItem("prefSort");
+    if (sv && sv !== "grid") {
+      currentView = sv;
+      container.classList.add("list-view");
+      viewBtns.forEach(b => b.classList.toggle("active", b.dataset.view === sv));
+    }
+    if (ss) {
+      currentSort = ss;
+      if (sortSelect) sortSelect.value = ss;
+    }
+  } catch(e) {}
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const fabSettings  = document.getElementById("fab-settings");
+  const settingsPanel = document.getElementById("settings-panel");
+  const settingsClose = document.getElementById("settings-close");
+  const sidePanel     = document.getElementById("side-panel");
+
+  function toggleSettings(force) {
+    const open = typeof force === "boolean" ? force : !settingsPanel.classList.contains("open");
+    settingsPanel.classList.toggle("open", open);
+    if (fabSettings) fabSettings.classList.toggle("fab-settings-active", open);
+  }
+
+  if (fabSettings) {
+    fabSettings.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (sidePanel && sidePanel.classList.contains("active")) return;
+      toggleSettings();
+    });
+  }
+  if (settingsClose) settingsClose.addEventListener("click", () => toggleSettings(false));
+
+  document.addEventListener("click", (e) => {
+    if (!settingsPanel || !settingsPanel.classList.contains("open")) return;
+    if (!settingsPanel.contains(e.target) && e.target !== fabSettings) toggleSettings(false);
+  });
+
+  if (sidePanel) {
+    sidePanel.addEventListener("transitionend", () => {
+      const panelOpen = sidePanel.classList.contains("active");
+      if (fabSettings) fabSettings.style.visibility = panelOpen ? "hidden" : "visible";
+      if (settingsPanel) settingsPanel.style.visibility = panelOpen ? "hidden" : "visible";
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const uiToggle = document.getElementById("settings-ui-toggle");
+  const label    = document.getElementById("ui-toggle-label");
+  const eyeOn    = uiToggle ? uiToggle.querySelector(".icon-eye")     : null;
+  const eyeOff   = uiToggle ? uiToggle.querySelector(".icon-eye-off") : null;
+  const FOCUS_KEY = "focusModeActive";
+
+  function applyFocus(active) {
+    document.body.classList.toggle("focus-mode", active);
+    if (eyeOn)  eyeOn.style.display  = active ? "none" : "";
+    if (eyeOff) eyeOff.style.display = active ? ""     : "none";
+    if (label)  label.textContent    = active ? "Show UI" : "Hide UI";
+    if (uiToggle) uiToggle.classList.toggle("ui-toggle-active", active);
+    try { localStorage.setItem(FOCUS_KEY, active ? "1" : "0"); } catch(e) {}
+  }
+
+  try { if (localStorage.getItem(FOCUS_KEY) === "1") applyFocus(true); } catch(e) {}
+
+  if (uiToggle) uiToggle.addEventListener("click", () => applyFocus(!document.body.classList.contains("focus-mode")));
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const compactToggle = document.getElementById("settings-compact-toggle");
+  const COMPACT_KEY = "compactModeActive";
+
+  function applyCompact(active) {
+    document.getElementById("idol-container").classList.toggle("compact-mode", active);
+    if (compactToggle) compactToggle.classList.toggle("ui-toggle-active", active);
+    const lbl = document.getElementById("compact-toggle-label");
+    if (lbl) lbl.textContent = active ? "Compact: On" : "Compact: Off";
+    try { localStorage.setItem(COMPACT_KEY, active ? "1" : "0"); } catch(e) {}
+  }
+
+  try { if (localStorage.getItem(COMPACT_KEY) === "1") applyCompact(true); } catch(e) {}
+
+  if (compactToggle) compactToggle.addEventListener("click", () => {
+    const container = document.getElementById("idol-container");
+    applyCompact(!container.classList.contains("compact-mode"));
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const fabTop = document.getElementById("fab-top");
+  if (!fabTop) return;
+  let ticking = false;
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        fabTop.classList.toggle("fab-top-visible", window.scrollY > 400);
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+  fabTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+});
 
 const firebaseConfig = {
   apiKey: "AIzaSyCyHWUsaktKrSAnDcLAqyfnNiTQAxaeeXY",
