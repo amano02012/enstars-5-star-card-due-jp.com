@@ -2,10 +2,10 @@ const theme3PickupData = [
     {
         date: '(04/14/2026) Scout! TEN-CODE',
         idols: [
-            { star: 5, title: '(Card Name)', name: 'Chiaki Morisawa', image: null },
-            { star: 4, title: '(Card Name)', name: 'Sora Harukawa', image: null },
-            { star: 3, title: '(Card Name)', name: 'Madara Mikejima', image: null },
-            { star: 3, title: '(Card Name)', name: 'Midori Takamine', image: null }
+            { star: 5, title: '(Card Name)', name: 'Chiaki Morisawa', image: 'card_square2_4762_evolution' },
+            { star: 4, title: '(Card Name)', name: 'Sora Harukawa', image: 'card_square2_4763_evolution' },
+            { star: 3, title: '(Card Name)', name: 'Madara Mikejima', image: 'card_square2_4764_evolution' },
+            { star: 3, title: '(Card Name)', name: 'Midori Takamine', image: 'card_square2_4765_evolution' }
         ]
     },
     {

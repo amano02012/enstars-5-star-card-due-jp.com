@@ -278,11 +278,11 @@ const idols = [{
   borderColor: "#F3981D",
   startDate: `2026-04-15`,
   description: "Latest Card: Large Scale Event",
-  detailsDescription: "() Subaru Akehoshi",
-  unbloomedThumb: 'icons/card_square2_xxxx_normal.webp',
-  bloomedThumb: 'icons/card_square2_xxxx_evolution.webp',
-  unbloomedImage: 'cards2/card_rectangle2_xxxx_normal.webp',
-  bloomedImage: 'cards2/card_rectangle2_xxxx_evolution.webp'
+  detailsDescription: "(ONLY STAR) Subaru Akehoshi",
+  unbloomedThumb: 'icons/card_square2_4756_normal.webp',
+  bloomedThumb: 'icons/card_square2_4756_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4756_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4756_evolution.webp'
 },
 {
   id: 7,
@@ -356,11 +356,11 @@ const idols = [{
   borderColor: "#E60033",
   startDate: `2026-04-14`,
   description: "Latest Card: Theme Scout",
-  detailsDescription: "() Chiaki Morisawa",
-  unbloomedThumb: 'icons/card_square2_xxxx_normal.webp',
-  bloomedThumb: 'icons/card_square2_xxxx_evolution.webp',
-  unbloomedImage: 'cards2/card_rectangle2_xxxx_normal.webp',
-  bloomedImage: 'cards2/card_rectangle2_xxxx_evolution.webp'
+  detailsDescription: "[次世代の任務] Chiaki Morisawa",
+  unbloomedThumb: 'icons/card_square2_4762_normal.webp',
+  bloomedThumb: 'icons/card_square2_4762_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4762_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4762_evolution.webp'
 },
 {
   id: 13,
@@ -382,11 +382,11 @@ const idols = [{
   borderColor: "#BA2636",
   startDate: `2026-04-15`,
   description: "Latest Card: Large Scale Event",
-  detailsDescription: "() Hiiro Amagi",
-  unbloomedThumb: 'icons/card_square2_xxxx_normal.webp',
-  bloomedThumb: 'icons/card_square2_xxxx_evolution.webp',
-  unbloomedImage: 'cards2/card_rectangle2_xxxx_normal.webp',
-  bloomedImage: 'cards2/card_rectangle2_xxxx_evolution.webp'
+  detailsDescription: "(ONLY SHINE) Hiiro Amagi",
+  unbloomedThumb: 'icons/card_square2_4757_normal.webp',
+  bloomedThumb: 'icons/card_square2_4757_evolution.webp',
+  unbloomedImage: 'cards2/card_rectangle2_4757_normal.webp',
+  bloomedImage: 'cards2/card_rectangle2_4757_evolution.webp'
 },
 {
   id: 15,
